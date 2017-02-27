@@ -1,0 +1,64 @@
+.content{
+    width: 1200px;
+    margin: 30px auto 0;
+}
+.con_title{
+    width: 1200px;
+    height: 22px;
+    line-height: 22px;
+}
+.con_title a,.con_title em,.con_title span{
+    display: block;
+    font-size: 14px;
+    float: left;
+    margin-left: 7px;
+}
+.num{
+    width: 22px;
+    height: 22px;
+    background: url("../images/qyzt/home.png") no-repeat 0 0;
+    margin-left: 0 !important;
+}
+.title{
+    width: 1200px;
+    float: left;
+    margin-top: 16px;
+}
+.title p{
+    width: 65px;
+    height: 15px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc3300;
+    float: left;
+}
+.title span{
+    width: 1135px;
+    height: 15px;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cccccc;
+    float: left;
+}
+
+.con{
+    width: 1200px;
+}
+.con li {
+    width: 285px;
+    height: 224px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.con li:first-child,.con li:nth-child(5){
+    margin-left: 0 !important;
+}
+.con img{
+    width: 285px;
+    height: 200px;
+}
+.con span{
+    display: block;
+    margin-top: 10px;
+}

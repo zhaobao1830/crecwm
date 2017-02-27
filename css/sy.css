@@ -1,0 +1,136 @@
+.content{
+    width:1200px;
+    margin: 30px auto 0;
+}
+.contacts{
+    width: 285px;
+    height: 203px;
+    float: left;
+}
+.ct_title{
+    width: 285px
+}
+.ct_title p,.ei_title p{
+    width: 65px;
+    font-size: 16px;
+    color: #333333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc3300;
+    float: left;
+}
+.ct_title span{
+    width: 220px;
+    height: 26px;
+    float: left;
+    border-bottom: 2px solid #cccccc;
+    display: block;
+}
+.ct_content{
+    width: 285px;
+    position: absolute;
+    top:70px;
+}
+
+.ct_content ul li{
+    width: 285px;
+    float: left;
+}
+
+.ct_content p,.ct_content span,.homePage{
+    display: block;
+    float: left;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.ct_content ul li:first-child>p,.ct_content ul li:first-child>span{
+    margin-top: 0px !important;
+}
+.ct_content a{
+    color: #cc3300;
+}
+.ct_person,.homePage{
+    color: #3399cc !important;
+}
+
+.enterIntro{
+    width: 895px;
+    margin-left: 20px;
+    float: left;
+}
+.ei_title{
+    width: 895px;
+    float: left;
+}
+.ei_title a{
+    width: 830px;
+    height: 16px;
+    line-height: 16px;
+    float: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cccccc;
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    text-align: right;
+}
+.ei_content{
+    width: 895px;
+    height: 158px;
+    overflow: hidden;
+    margin-top: 10px;
+    float: left;
+}
+.ei_content p{
+    line-height: 28px;
+    font-size: 14px;
+    width: 895px;
+}
+
+.corStyle,.productDisplay,.businessHistory,.releQuail{
+    width: 1200px;
+    float: left;
+    margin-top: 40px;
+}
+.corStyle p,.productDisplay p,.businessHistory p,.releQuail p{
+    width: 65px;
+    font-size: 16px;
+    color: #333333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc3300;
+    float: left;
+}
+.corStyle a,.productDisplay a,.businessHistory a,.releQuail a{
+    width: 1135px;
+    height: 16px;
+    line-height: 16px;
+    float: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cccccc;
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    text-align: right;
+}
+.cs_content,.pd_content,.bs_content,.rq_content{
+    width: 1200px;
+    float: left;
+}
+.cs_content ul li,.pd_content ul li,.bs_content ul li,.rq_content ul li{
+    width: 285px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.cs_content ul li:first-child,.pd_content ul li:first-child,.pd_content ul li:nth-child(5),.bs_content ul li:first-child,.rq_content ul li:first-child{
+    margin-left: 0 !important;
+}
+.cs_content ul li img,.pd_content ul li img,.bs_content ul li img,.rq_content ul li img{
+    width: 285px;
+    height: 200px;
+}
+.cs_content ul li span,.pd_content ul li span,.bs_content ul li span,.rq_content ul li span{
+    display: block;
+    margin-top: 10px;
+    color: #666666;
+    font-size: 14px;
+}

@@ -1,0 +1,91 @@
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.conlIst{
+    width: 1200px;
+    height: 360px;
+    margin-top: 80px;
+}
+.conlIst .title{
+    width: 1200px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+}
+.conlIst .title i{
+    width: 5px;
+    height: 24px;
+    background-color: #cc3300;
+    display: block;
+    float: left;
+}
+.conlIst .title span{
+    font-size: 18px;
+    color: #333333;
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.conlIst .con{
+    width: 1200px;
+    margin-top: 12px;
+    float: left;
+}
+.conlIst .con .left{
+    width: 225px;
+    height: 325px;
+    float: left;
+}
+.conlIst .con .right{
+    width: 960px;
+    margin-left: 15px;
+    float: left;
+}
+.ri_nav{
+    width: 960px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #cc3300;
+}
+.ri_nav ul li{
+    float: left;
+    width: 114px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    cursor: pointer;
+}
+.ri_nav a{
+    color: #cc3300;
+    font-size: 12px;
+    float: right;
+}
+.ri_con{
+    width: 960px;
+    height: 290px;
+    float: left;
+}
+
+.ri_con ul li{
+    float: left;
+    width: 218px;
+    height: 126px;
+    border: 1px solid #ffffff;
+    margin: 17px 0 0 26px;
+}
+.ri_con ul li:first-child,.ri_con ul li:nth-child(5){
+    margin-left: 0 !important;
+}
+.ri_con ul li img{
+    width: 218px;
+    height: 126px;
+}
+
+
+.liClick{
+    color: white !important;
+    background-color: #cc3300;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
