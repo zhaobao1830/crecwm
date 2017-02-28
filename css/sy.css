@@ -115,7 +115,7 @@
     width: 1200px;
     float: left;
 }
-.cs_content ul li,.pd_content ul li,.bs_content ul li,.rq_content ul li{
+.cs_content ul li,.pd_content ul li{
     width: 285px;
     float: left;
     margin-top: 20px;
@@ -124,13 +124,91 @@
 .cs_content ul li:first-child,.pd_content ul li:first-child,.pd_content ul li:nth-child(5),.bs_content ul li:first-child,.rq_content ul li:first-child{
     margin-left: 0 !important;
 }
-.cs_content ul li img,.pd_content ul li img,.bs_content ul li img,.rq_content ul li img{
+.cs_content ul li img,.pd_content ul li img,.rq_content ul li img{
     width: 285px;
     height: 200px;
 }
-.cs_content ul li span,.pd_content ul li span,.bs_content ul li span,.rq_content ul li span{
+.cs_content ul li span,.pd_content ul li span,.rq_content ul li span{
     display: block;
     margin-top: 10px;
     color: #666666;
     font-size: 14px;
+}
+
+.bs_content ul li,.rq_content ul li{
+    width: 222px;
+    height: 130px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-width:1px;
+    border-style: solid;
+    border-color: #cccccc;
+    /*border: 1px solid #3399cc;*/
+    border-radius: 6px;
+}
+.bs_content ul li:first-child,.rq_content ul li:first-child{
+    margin-left: 0px !important;
+}
+.bs_content ul li i{
+    width: 104px;
+    height: 104px;
+    display: block;
+    float: left;
+    margin-left: 12px;
+    margin-top: 13px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.bs_1{
+    background-image: url("../images/sy/3_1.png");
+}
+.bs_2{
+    background-image: url("../images/sy/3_2.png");
+}
+.bs_3{
+    background-image: url("../images/sy/3_3.png");
+}
+.bs_4{
+    background-image: url("../images/sy/3_4.png");
+}
+.bs_5{
+    background-image: url("../images/sy/3_5.png");
+}
+.bs_content ul li span,.rq_content ul li span{
+    display: block;
+    float: left;
+    color: #666666;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+.bs_content ul li strong,.rq_content ul li strong{
+    display: block;
+    float: left;
+    /*color: #3399cc;*/
+    color: #666666;
+    font-size: 24px;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+.bs_content ul li:hover,.rq_content ul li:hover{
+    border-color: #3399cc;
+}
+.bs_content ul li:hover > i,.rq_content ul li:hover  > i{
+    background-position: 0 -125px;
+}
+.bs_content ul li:hover > strong,.rq_content ul li:hover  > strong{
+    color: #3399cc;
+}
+.rq_content ul li img{
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin:20px 0 0 20px;
+    float: left;
+}
+
+.releQuail{
+    margin-bottom: 20px;
 }

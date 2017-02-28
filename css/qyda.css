@@ -1,0 +1,119 @@
+.container{
+    width: 1200px;
+    margin: 30px auto 0;
+}
+.con_title{
+    width: 1200px;
+    height: 22px;
+    line-height: 22px;
+}
+.con_title a,.con_title em,.con_title span{
+    display: block;
+    font-size: 14px;
+    float: left;
+    margin-left: 7px;
+}
+.num{
+    width: 22px;
+    height: 22px;
+    background: url("../images/qyzt/home.png") no-repeat 0 0;
+    margin-left: 0 !important;
+}
+.essInformation{
+    width: 1200px;
+    margin-top: 20px;
+    float: left;
+}
+.ei_title p{
+    width: 65px;
+    font-size: 16px;
+    color: #333333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc3300;
+    float: left;
+}
+.ei_title span{
+    width: 1135px;
+    height: 16px;
+    line-height: 16px;
+    float: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cccccc;
+    display: block;
+    font-size: 12px;
+    color: #666666;
+}
+.ei_content{
+    margin-top: 25px;
+    float: left;
+}
+.releQuali{
+    width: 1200px;
+    margin-top: 50px;
+    float: left;
+}
+.rq_title p{
+    width: 1200px;
+    font-size: 16px;
+    color: #333333;
+}
+.tl{
+    width: 65px;
+    font-size: 16px;
+    color: #333333;
+    margin: 20px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc3300;
+}
+.tr{
+    width: 1135px;
+    height: 2px;
+    background-color: #cccccc;
+    float: right;
+    margin-top: -2px;
+    overflow: hidden;
+}
+.rq_title ul{
+    width: 1198px;
+    height: 38px;
+    border: 1px solid #cccccc;
+    background-color: #dddddd;
+}
+.rq_title ul li{
+    float: left;
+    width: auto;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    color: #666666;
+}
+
+.rq_content ul li{
+    width: 224px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.rq_content ul li:first-child{
+    margin-left: 0 !important;
+}
+.rq_content ul li img{
+    width: 222px;
+    height: 160px;
+    border: 1px solid #cccccc;
+}
+.rq_content ul li span{
+    font-size: 14px;
+    color: #666666;
+    display: block;
+    margin-top: 10px;
+}
+
+.liClick{
+    background-color: #cc3300;
+    color: white !important;
+}
