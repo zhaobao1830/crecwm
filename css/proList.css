@@ -1,0 +1,119 @@
+.container{
+    width: 1200px;
+    margin: 30px auto 0;
+}
+.con_title{
+    width: 1200px;
+    height: 22px;
+    line-height: 22px;
+}
+.con_title a,.con_title em,.con_title span{
+    display: block;
+    font-size: 14px;
+    float: left;
+    margin-left: 7px;
+}
+.num{
+    width: 22px;
+    height: 22px;
+    background: url("../images/qyzt/home.png") no-repeat 0 0;
+    margin-left: 0 !important;
+}
+.businessScope,.supplyProduct{
+    width: 1200px;
+    margin-top: 20px;
+    float: left;
+}
+.bs_title p,.sp_title p{
+    width: 65px;
+    font-size: 16px;
+    color: #333333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc3300;
+    float: left;
+}
+.bs_title span,.sp_title span{
+    width: 1135px;
+    height: 16px;
+    line-height: 16px;
+    float: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cccccc;
+    display: block;
+    font-size: 12px;
+    color: #666666;
+}
+.bs_content{
+    margin-top: 25px;
+    float: left;
+}
+.bs_content p{
+    line-height: 20px;
+}
+
+.sp_content{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+}
+.select_set{
+    overflow: hidden;
+    font-size: 12px;
+}
+.select_set_t{
+    float: left;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.select_set_t i{
+    display: inline-block;
+    background: url("../images/proList/1.png") 0 0 no-repeat;
+    width: 5px;
+    height: 9px;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+.select_set_itemList{
+    width: 1139px;
+    overflow: hidden;
+}
+.select_set_item{
+    float: left;
+    margin-right: 10px;
+    height: 22px;
+    line-height: 24px;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    padding-right: 22px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.select_set_item:hover > i{
+    background-position: 0 -30px
+}
+.select_set_item b{
+    color: #3399cc;
+}
+.select_set_item span{
+    color: #cc3300;
+}
+.select_set_item i{
+    width: 25px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../images/proList/2.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.select_list{
+    width: 1200px;
+    overflow: hidden;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
