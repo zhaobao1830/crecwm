@@ -25,15 +25,15 @@
     margin-bottom: 20px;
 }
 .tl{
-    width: 65px;
+    width: 1200px;
     font-size: 16px;
     color: #333333;
-    margin: 20px 0 0 0;
+    /*margin: 20px 0 0 0;*/
     padding-bottom: 10px;
-    border-bottom: 2px solid #cc3300;
+    /*border-bottom: 2px solid #cc3300;*/
 }
 .tr{
-    width: 1135px;
+    width: 1200px;
     height: 2px;
     background-color: #cccccc;
     float: right;
@@ -59,7 +59,14 @@
 .liClick{
     background-color: #cc3300;
     color: white !important;
+    border-bottom: 2px solid #cc3300;
+    padding-top: 2px;
+    position: absolute;
+    margin-top: -2px;
 }
+/*.liClick:after{*/
+    /*border-top: 2px solid #cc3300;*/
+/*}*/
 table{
     width: 100%;
     height: 470px;
