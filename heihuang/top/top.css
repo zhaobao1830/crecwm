@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.top{
+    width: 100%;
+    margin: 0px auto;
+}
+.top-nav{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #222222;
+    color: white;
+    font-size: 14px;
+}
+.top-nav div{
+    width: 1200px;
+    margin: 0px auto;
+}
+.top-nav p{
+    float: left;
+}
+.top-nav ul{
+    float: right;
+}
+.top-nav ul li{
+    float: left;
+    list-style: none;
+}
+.top-nav span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.top-nav img{
+    width: 6px;
+    height: 8px;
+    margin-left: 5px;
+}
+.top-nav a{
+    color: white;
+    text-decoration: none;
+}
+.top-main{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+.top-main-con{
+    width: 1200px;
+    margin: 0px auto;
+}
+.tmain-left,.tmain-right{
+    flex: 1 1 auto;
+}
+.tmain-left{
+    background-color: #ffd427;
+}
+.tmc-img{
+    width: 250px;
+    height: 80px;
+    float: left;
+    background-color: #ffd427;
+}
+.top-main-con ul{
+    float: right;
+    margin-right: 10px;
+}
+.top-main-con ul li{
+    list-style: none;
+    float: left;
+    padding:0 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #555555;
+    line-height: 80px;
+    cursor: pointer;
+}
+.tmcClick{
+    background-color: #ffd427;
+}
+.ad{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ad ul li{
+    width: 1200px;
+    height: 420px;
+    list-style: none;
+}
