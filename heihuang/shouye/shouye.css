@@ -323,8 +323,7 @@
 /*相关资质 start*/
 .relevant-qualification{
     width: 1200px;
-    margin: 0 auto;
-    margin-top: 80px;
+    margin: 80px auto 90px;
     overflow: hidden;
 }
 .rq-title{
