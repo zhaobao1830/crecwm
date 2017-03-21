@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.con-top {
+    width: 1200px;
+    height: 80px;
+    background-color: #ffd427;
+}
+
+/*产品介绍 start*/
+.pro-intro{
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    background: url("./img/1.png") 0 0 no-repeat;
+}
+.pi-logo{
+    margin-left: 123px;
+    float: left;
+}
+.pi-show{
+    width: 800px;
+    margin-top: 60px;
+    margin-left: 100px;
+    overflow: hidden;
+    float: left;
+}
+.show-title{
+    width: 800px;
+    font-size: 18px;
+    color: #ffd427;
+    line-height: 25px;
+}
+
+.equ-infor,.contact-infor{
+    width: 293px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+.equ-infor-title,.contact-infor-title{
+    width: 293px;
+    height: 20px;
+    float: left;
+    margin-top: 30px;
+    font-size: 0;
+}
+.equ-infor-title span,.contact-infor-title span{
+    display: block;
+    width: 4px;
+    height: 20px;
+    background-color: #ffd427;
+    float: left;
+}
+.equ-infor-title p,.contact-infor-title p{
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    float: left;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #ffd427;
+}
+.equ-infor-content,.contact-infor-content{
+    width: 279px;
+    float: left;
+}
+.equ-infor-content div,.contact-infor-content div{
+    width: 279px;
+    float: left;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+.equ-infor-content div span,.equ-infor-content div p,.contact-infor-content p,.contact-infor-content span{
+    width: auto;
+    max-width: 228px;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+.equ-infor-content div > .price{
+    color: #d01d00;
+}
+.contact-infor-content span{
+    color: #d01d00;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pro-logo{
+    width: 206px;
+    height: 620px;
+    float: left;
+    background: url("./img/3.png") 0 0 no-repeat;
+    margin-top: -173px;
+}
+.pro-logo-1{
+    margin-top: 42px;
+    margin-left: 30px;
+}
+.pro-logo-2{
+    margin-top: 48px;
+    margin-left: 30px;
+}
+.pro-logo-3{
+    margin-top: 47px;
+    margin-left: 30px;
+}
+/*产品介绍 end*/
+/*详细说明 start*/
+.deta-desc{
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 130px;
+}
+
+.desc-title{
+    width: 1200px;
+    text-align: center;
+}
+.desc-title p{
+    color: #222222;
+    font-size: 18px;
+}
+.title-img{
+    margin-top: 20px;
+}
+.desc-title .lf,.desc-title .ri{
+    background-color: #555555;
+    width: 65px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.title-img i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffd427;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.desc-content{
+    width: 1200px;
+    min-height: 200px;
+}
+/*详细说明 end*/

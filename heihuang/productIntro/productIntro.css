@@ -300,10 +300,15 @@
 .select_search input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #222222;
 }
-.select_result_l,.select_result_p{
+.select_result_l{
     width: 1200px;
     height: 892px;
     background: url("./img/4.png") 0 0 no-repeat;
+}
+.select_result_p{
+    width: 1200px;
+    height: 950px;
+    background: url("./img/7.png") 0 0 no-repeat;
 }
 .select_result_l ul li{
     width: 1200px;
@@ -354,12 +359,51 @@
     margin-left: 25px;
     margin-top: 40px;
 }
+.select_result_p ul li:first-child,.select_result_p ul li:nth-child(5),.select_result_p ul li:nth-child(9){
+    margin-left: 60px !important;
+}
+.arrow-up{
+    width:0;
+    height:0;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid #fff;
+    position: absolute;
+    z-index: 1;
+    margin-top: -10px;
+    margin-left: 120px;
+}
 .srp-content{
     width: 250px;
     height: 83px;
     background-color: #ffffff;
     font-size: 14px;
 }
+.title{
+    margin-left: 20px;
+    color: #222222;
+    font-size: 14px;
+    line-height: 25px;
+}
+.price,.saleUnit{
+    line-height: 25px;
+    margin-left: 20px;
+}
+.price p{
+    display: inline-block;
+    font-size: 14px;
+    color: #555555;
+}
+.price span{
+    display: inline-block;
+    color: #d01d00;
+    font-size: 16px;
+}
+.saleUnit p{
+    display: inline-block;
+    color: #555555;
+}
+
 /*供应产品 end*/
 
 
