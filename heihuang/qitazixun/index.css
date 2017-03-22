@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.pi_title{
+    width: 1200px;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 20px;
+}
+.pi_title a,.pi_title em,.pi_title span{
+    display: block;
+    font-size: 14px;
+    float: left;
+    color: #222222;
+    text-decoration: none;
+}
+.pi_title em{
+    width: 5px;
+    height: 11px;
+    background: url("./img/lianjie.png") 0 0 no-repeat;
+    margin: 6px 10px 0 10px;
+}
+.num{
+    width: 22px;
+    height: 22px;
+    background: url("./img/home.png") no-repeat 0 0;
+    margin-left: 0 !important;
+}
+/*业务履历 start*/
+.businessHistory{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.bh-title{
+    width: 1200px;
+    text-align: center;
+}
+.bh-title p{
+    color: #222222;
+    font-size: 18px;
+}
+.title-img{
+    margin-top: 20px;
+}
+.bh-title .lf,.bh-title .ri{
+    background-color: #555555;
+    width: 65px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.title-img i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffd427;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.gn-content{
+    width: 1200px;
+    height: auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+table{
+    width: 1200px;
+    table-layout: fixed;
+    border-collapse: collapse
+}
+thead{
+    width: 1200px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ffd427;
+}
+thead tr{
+    border: 1px solid #dddddd;
+}
+thead tr,thead th{
+    color: #222222;
+    height: 45px;
+}
+tbody{
+    width: 1200px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+tbody tr,tbody td{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    height: 40px;
+    color: #222222;
+}
+tbody tr{
+    border-top: 1px dotted #dddddd !important;
+}
+/*业务履历 end*/
+/*相关新闻 start*/
+.relatedNews{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 90px;
+}
+.rd-title{
+    width: 1200px;
+    text-align: center;
+}
+.rd-title p{
+    color: #222222;
+    font-size: 18px;
+}
+.title-img{
+    margin-top: 20px;
+}
+.rd-title .lf,.rd-title .ri{
+    background-color: #555555;
+    width: 65px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.title-img i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffd427;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.rd-content{
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.rd-content img{
+    margin-left: 235px;
+}
+/*相关新闻 end*/
+/*行情 start*/
+.quotation{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 90px;
+}
+.qu-title{
+    width: 1200px;
+    text-align: center;
+}
+.qu-title p{
+    color: #222222;
+    font-size: 18px;
+}
+.title-img{
+    margin-top: 20px;
+}
+.qu-title .lf,.qu-title .ri{
+    background-color: #555555;
+    width: 65px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.title-img i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffd427;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.qu-content{
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.qu-content img{
+    margin-left: 286px;
+}
+/*行情 end*/
