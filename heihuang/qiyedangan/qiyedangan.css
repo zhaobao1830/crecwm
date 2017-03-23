@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.pi_title{
+    width: 1200px;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 20px;
+}
+.pi_title a,.pi_title em,.pi_title span{
+    display: block;
+    font-size: 14px;
+    float: left;
+    color: #222222;
+    text-decoration: none;
+}
+.pi_title em{
+    width: 5px;
+    height: 11px;
+    background: url("./img/lianjie.png") 0 0 no-repeat;
+    margin: 6px 10px 0 10px;
+}
+.num{
+    width: 22px;
+    height: 22px;
+    background: url("./img/home.png") no-repeat 0 0;
+    margin-left: 0 !important;
+}
+/*基本信息 start*/
+.essential-information {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.ei-title{
+    width: 1200px;
+    text-align: center;
+}
+.ei-title p{
+    color: #222222;
+    font-size: 18px;
+}
+.title-img{
+    margin-top: 20px;
+}
+.ei-title .lf,.ei-title .ri{
+    background-color: #555555;
+    width: 65px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.title-img i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffd427;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.ei-content{
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.ei-content img{
+    margin-left: 176px;
+}
+/*基本信息 end*/
+/*相关资质 start*/
+.relevant-qualification{
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 76px;
+}
+.rq-title{
+    width: 1200px;
+    text-align: center;
+}
+.rq-title p{
+    color: #222222;
+    font-size: 18px;
+}
+.title-img{
+    margin-top: 20px;
+}
+.rq-title .lf,.rq-title .ri{
+    background-color: #555555;
+    width: 65px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.title-img i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffd427;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.rq-content{
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.rq-search-list{
+    width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eeeeee;
+}
+.rq-search-list ul li{
+    width: auto;
+    text-align: center;
+    float: left;
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.rq-search-list ul li p,.rq-search-list ul li span{
+    display: block;
+    float: left;
+}
+.rq-search-show{
+    width: 1200px;
+    height: 570px;
+    margin-top: 20px;
+    background: url("./img/2.png") 0 0 no-repeat;
+}
+.rq-search-show ul li{
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.rq-search-show ul li:first-child,.rq-search-show ul li:nth-child(5){
+    margin-left: 60px !important;
+}
+/*相关资质 end*/
+/*公共类 start*/
+.click{
+    background-color: #222222;
+    color: #ffffff;
+}
+/*公共类 end*/
