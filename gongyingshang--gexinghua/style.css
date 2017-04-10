@@ -1,0 +1,364 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+/*头部 start*/
+.header{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+.header a{
+    width: 251px;
+    height: 61px;
+    display: block;
+    overflow: hidden;
+    margin-top: 20px;
+    float: left;
+}
+.header i{
+    width: 1px;
+    height: 20px;
+    background-color: #5b5b5b;
+    margin: 40px 20px;
+    display: block;
+    float: left;
+}
+.header span{
+    float: left;
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    color: #5b5b5b;
+}
+/*头部 end*/
+.container{
+    width: 100%;
+    height: auto;
+}
+/*供应商信息提交 start*/
+.supplier-infor{
+    width: 100%;
+    height: 700px;
+    background: url("./img/supper_01.png") 100% 100% no-repeat;
+}
+.supplier-infor-con{
+    width: 1200px;
+    height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.con-form{
+    width: 550px;
+    height: 700px;
+    float: right;
+    margin-right: 20px;
+    background-color: rgba(8,10,10,0.8);
+}
+.con-form div{
+    width: auto;
+    overflow: hidden;
+    margin-top: 40px;
+    float: left;
+}
+.cf-title{
+    width: 550px !important;
+    text-align: center;
+    margin-top: 30px !important;
+}
+.cf-title-b{
+    color: #f44848;
+    font-size: 26px;
+    margin-top: 20px;
+}
+.cf-title-s{
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.con-form span{
+    display: block;
+    width: 72px;
+    margin-left: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #f1f1f1;
+    float: left;
+}
+.con-form input{
+    width: 140px;
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border: 0;
+    display: block;
+    float: left;
+}
+.name-input{
+    width: 400px !important;
+}
+.tel-span{
+    width: auto !important;
+    margin-left: 46px !important;
+}
+.telephone{
+    margin-left: 20px !important;
+}
+.con-form div ul{
+    width: 417px;
+    margin-left: 5px;
+    float: left;
+}
+.con-form div ul li{
+    list-style: none;
+    float: left;
+    margin-left: 15px;
+    color: #ffffff;
+}
+
+.con-form li i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./img/isCheck.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    float: left;
+}
+.con-form li p{
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 5px;
+}
+.busDescription{
+    width: 400px;
+    height: 100px;
+    margin-left: 20px;
+    resize: none;
+}
+.aSubmit{
+    display: block;
+    width: 180px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background-color: #f44848;
+    border-radius:4px;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 60px;
+    float: left;
+}
+.aLogin{
+    display: block;
+    width: 180px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius:4px;
+    color: #292929;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 80px;
+    float: left;
+}
+.liMp{
+    margin-top: 20px;
+}
+.liChecked{
+    background-position: 0 -35px !important;
+}
+.divMp{
+    margin-top: 30px !important;
+}
+/*供应商信息提交 end*/
+/*鲁班微信 start*/
+.weixin{
+    width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.erweima{
+    width: 200px;
+    height: 280px;
+    background-color: #f44848;
+    margin: 100px 0 0 40px;
+    float: left;
+}
+.erweima img{
+    margin: 17px;
+}
+.erweima p{
+    color: #ffffff;
+    font-size: 17px;
+    margin-left: 17px;
+}
+.wxShow{
+    width: 540px;
+    float: left;
+    margin-left: 140px;
+    margin-top: 150px;
+    overflow: hidden;
+}
+.wxShow div{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.wxShow div img,.wxShow div p{
+    display: block;
+    float: left;
+}
+.wxShow div p{
+    color: #000000;
+    margin-left: 30px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 32px;
+}
+/*鲁班微信 end*/
+/*VIP定制服务 start*/
+.customService{
+    width: 100%;
+    height: 790px;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+.csShow{
+    width: 1200px;
+    height: 790px;
+    margin: 0 auto;
+}
+.csShowTitle{
+    width: 1200px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.title1{
+    font-size: 34px;
+    color: #222222;
+}
+.title2,.title3{
+    color: #777777;
+    font-size: 18px;
+}
+.title2{
+    margin-top: 40px;
+}
+.title3{
+    margin-top: 10px;
+}
+.csUl{
+    width: 850px;
+    margin-left: 173px;
+    overflow: hidden;
+}
+.csUl ul{
+    overflow: hidden;
+}
+.csUl ul li{
+    list-style: none;
+    margin-top: 40px;
+    text-align: center;
+    float: left;
+}
+.csT1{
+    font-size: 18px;
+    color: #000000;
+    margin-top: 20px;
+}
+.csT2{
+    font-size: 14px;
+    color: #777777;
+    line-height: 20px;
+}
+/*VIP定制服务 end*/
+/*有价值的定制服务 start*/
+.valCustomService{
+    width: 100%;
+    height: 500px;
+    background: url("img/vcs1.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*有价值的定制服务 end*/
+/*信息订阅 start*/
+.con{
+    width: 1200px;
+    height: 430px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.conImg{
+    width: 350px;
+    height: 230px;
+    margin: 100px 60px 0 124px;
+    overflow: hidden;
+    float: left;
+}
+.conShow{
+    width: 480px;
+    float: left;
+    margin-top: 100px;
+}
+.conTitl{
+    width: 200px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.conTitl img{
+    display: block;
+    float: left;
+}
+.conTitl span{
+    display: block;
+    float: left;
+    font-size: 26px;
+    color: #2a2a2a;
+    margin-left: 20px;
+}
+.conCon{
+    width: 412px;
+    margin: 12px 0 0 60px;
+    overflow: hidden;
+    float: left;
+}
+.conCon p{
+    color: #818181;
+    height: 30px;
+    line-height: 30px;
+}
+.goA{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 126px;
+    height: 38px;
+    line-height: 38px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #f44848;
+    margin: 20px 0 0 60px;
+    float: left;
+}
+/*信息订阅 end*/
+/*项目信息 start*/
+.proInfor{
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+}
+.conShow1{
+    width: 480px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 124px;
+    margin-right: 116px;
+}
+/*项目信息 end*/
