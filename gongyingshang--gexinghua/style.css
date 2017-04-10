@@ -57,9 +57,9 @@
 }
 .con-form div{
     width: auto;
-    overflow: hidden;
     margin-top: 40px;
     float: left;
+    position: relative;
 }
 .cf-title{
     width: 550px !important;
@@ -116,6 +116,7 @@
     float: left;
     margin-left: 15px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .con-form li i{
@@ -170,8 +171,11 @@
 .liMp{
     margin-top: 20px;
 }
-.liChecked{
+.iChecked{
     background-position: 0 -35px !important;
+}
+.pChecked{
+    color: #f44848 !important;
 }
 .divMp{
     margin-top: 30px !important;
@@ -349,10 +353,11 @@
 }
 /*信息订阅 end*/
 /*项目信息 start*/
-.proInfor{
+.proInfor,.customerRelation{
     width: 100%;
     height: 430px;
     overflow: hidden;
+    background-color: #f3f3f3;
 }
 .conShow1{
     width: 480px;
@@ -361,4 +366,89 @@
     margin-left: 124px;
     margin-right: 116px;
 }
+.conImg1{
+    margin-top: 100px;
+}
 /*项目信息 end*/
+/*轮播图 start*/
+.showList{
+    width: 1200px;
+    height: 550px;
+    margin: 0 auto;
+}
+/*轮播图  end*/
+/*信息列表操作 start*/
+.inforList{
+    width: 100%;
+    height: 610px;
+    overflow: hidden;
+    background-color: #f44848;
+}
+.ilShow{
+    width: 1200px;
+    height: 610px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ilShow ul{
+    width: 1200px;
+    height: 610px;
+    overflow: hidden;
+}
+.ilShow ul li{
+    width: 270px;
+    height: 412px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 100px;
+    background-color: #ffffff;
+    list-style: none;
+}
+.ilShow ul li:first-child{
+    margin-left: 0 !important;
+}
+.il_li .title{
+    color: #555555;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.il_li .content{
+    margin-top: 20px;
+}
+.il_li .content p{
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+    line-height: 25px;
+}
+.il_li  a{
+    text-align: center;
+    text-decoration: none;
+    width: 126px;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    background-color: #f44848;
+    color: #ffffff;
+    margin:20px 70px;
+}
+/*信息列表操作 end*/
+
+/*公共类 start*/
+.pro{
+    position: absolute;
+    font-size: 12px;
+    top:50px;
+    left: 122px;
+    color: #f44848;
+    display: block;
+}
+.proShow{
+    display: block;
+}
+.proHide{
+    display: none;
+}
+/*公共类 end*/
