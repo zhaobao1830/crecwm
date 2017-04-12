@@ -27,7 +27,7 @@ function formSubmit() {
         contactsVal = $(".contacts").val(),  //联系人
         telephoneVal = $(".telephone").val(), //手机号
         emailVal = $(".email").val(), //邮箱
-        addressVal = $(".prov option:selected").val()+"-"+$(".city option:selected").val(), //所在地区
+        addressVal = $(".prov option:selected").val(), //所在地区
         bussNedds = [], //业务需求
         busDescription = $(".busDescription").val() //业务描述
        //获取选择的业务需求
@@ -36,7 +36,6 @@ function formSubmit() {
                 bussNedds.push($(this).find("p").text().trim())
             }
         })
-    console.log(bussNedds)
     var flag = true;
     //判断公司全称是否为空
     if(nameVal){

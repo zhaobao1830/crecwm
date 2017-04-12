@@ -279,9 +279,24 @@
         <!--客户关系/项目跟踪 end-->
         <!--轮播图 start-->
         <div class="showList">
-            <ul>
-                <li></li>
-            </ul>
+           <div class="sl-con">
+               <ul>
+                   <li class="p4">
+                       <img src="./img/sl2.png">
+                   </li>
+                   <li class="p3">
+                       <img src="./img/sl1.png">
+                   </li>
+                   <li class="p2">
+                       <img src="./img/sl2.png">
+                   </li>
+                   <li class="p1">
+                       <img src="./img/sl3.png">
+                   </li>
+               </ul>
+           </div>
+            <a href="javascript:;" class="prev btn"><i></i></a>
+            <a href="javascript:;" class="next btn"><i></i></a>
         </div>
         <!--轮播图 end-->
         <!--信息列表操作 start-->
@@ -472,8 +487,12 @@
     <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.cityselect.js"></script>
+    <script type="text/javascript" src="js/showList1.js"></script>
     <script>
         $("#city").citySelect({prov:"北京",nodata:"none"});
+        showList.init({
+            "$liList":"sl-con"   //图片列表的父类class
+        })
     </script>
 </body>
 </html>
