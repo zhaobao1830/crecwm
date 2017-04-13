@@ -58,14 +58,31 @@ $(document).on("click",".p3",function(){
 });
 
 
-// //			进入页面自动开始定时器
-// var timer=setInterval(nextimg,4000);
-// //			鼠标移入showList时清除定时器
-// $(".showList").mouseover(function(){
-//     clearInterval(timer);
-// })
-//
-// //			鼠标移出showList时开始定时器
-// $(".showList").mouseleave(function(){
-//     timer=setInterval(nextimg,4000);
-// })
+//			进入页面自动开始定时器
+var timer
+function goNextImg() {
+    cArr.push(cArr[0]);
+    cArr.shift();
+    $(".sl-con ul li").each(function(i,e){
+        $(e).removeClass().addClass(cArr[i]);
+    })
+    index++;
+    if (index>listLastIndex) {
+        index=0;
+    }
+    timer=setTimeout(goNextImg,10000);
+}
+
+//			鼠标移入showList时清除定时器
+$(".showList").mouseover(function(){
+    clearTimeout(timer);
+})
+
+//			鼠标移出showList时开始定时器
+$(".showList").mouseleave(function(){
+    timer=setTimeout(goNextImg,10000);
+})
+
+$(function () {
+    goNextImg()
+})

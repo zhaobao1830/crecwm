@@ -584,6 +584,7 @@
     font-size: 18px;
     color: #555555;
     height: 20px;
+    font-weight: bold;
 }
 .line ul li{
     width: 100%;
@@ -591,6 +592,9 @@
     float: left;
     margin-top: 20px;
     list-style: none;
+}
+.line ul li:hover a{
+    color: #f44848
 }
 .line ul li a{
     color: #777777;
@@ -620,6 +624,7 @@
     float: left;
     margin-top: 65px;
 }
+
 .fbc3 p{
     width: 156px;
     font-size: 16px;
@@ -645,6 +650,9 @@
 .fbc4 ul li a{
     text-decoration: none;
     color: #777777;
+}
+.fbc4 ul li:hover a{
+    color: #f44848
 }
 .fbc5{
     float: left;
