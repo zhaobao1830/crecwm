@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体';
+}
+html,body{
+    height: 100%;
+}
+.left{
+    width: 300px;
+    height: 100%;
+    background-color: #16375a;
+}
+.management{
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #0b2643;
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.management p{
+    display: inline-block;
+    float: left;
+}
+#service i{
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+    margin-left: 40px;
+    margin-right: 10px;
+    background-image: url("./img/left1.png");
+    background-repeat: no-repeat;
+    margin-top: 32px;
+    float: left;
+}
+
+.management_list{
+    width: 300px;
+}
+.management_list li{
+    list-style: none;
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 70px;
+    color: #4ea0ea;
+    border-bottom: 1px solid #0c5e8d;
+    cursor: pointer;
+}
+
+/*公共类 start*/
+.displayBlock{
+    display: block;
+}
+.displayNone{
+    display: none;
+}
+.pClick{
+    color: #ffffff;
+
+}
+.iClick{
+    background-position: 0 -25px;
+}
+.pNoClick{
+    color: #4ea0ea;
+}
+.iNoClick{
+    background-position: 0 0;
+}
+/*公共类 end*/
+
