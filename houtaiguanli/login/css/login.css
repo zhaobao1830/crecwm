@@ -15,22 +15,22 @@
 .login_con{
     position: absolute;
     width: 420px;
-    height: 630px;
+    height: 542px;
     top:50%;
     left: 50%;
-    margin-top: -315px;
+    margin-top: -271px;
     margin-left: -210px;
 }
 .login-logo{
-    width: 170px;
-    height: 40px;
-    margin-left: 125px;
+    width: 172px;
+    height: 70px;
+    margin-left: 50px;
 }
 .login-form{
     width: 420px;
     height: auto;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 60px;
     float: left;
 }
 .formDiv{
@@ -38,7 +38,7 @@
     height: 60px;
     line-height: 60px;
     position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 10px;
 }
 .login-form div input{
@@ -138,7 +138,7 @@
 }
 .formBottom{
     width: 422px;
-    margin-top: 120px;
+    margin-top: 90px;
     float: left;
     color: #ffffff;
     font-size: 14px;
