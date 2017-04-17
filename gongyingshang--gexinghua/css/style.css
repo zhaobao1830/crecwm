@@ -75,13 +75,12 @@
 }
 .cf-title-s{
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     font-weight: bold;
 }
 .con-form span{
     display: block;
-    width: auto;
     width: 72px;
     margin-left: 30px;
     height: 40px;
@@ -109,7 +108,7 @@
     margin-left: 36px !important;
 }
 .telephone{
-    margin-left: 20px !important;
+    margin-left: 30px !important;
 }
 .con-form div ul{
     width: 417px;
@@ -140,10 +139,23 @@
     margin-left: 5px;
 }
 .busDescription{
-    width: 400px;
-    height: 100px;
+    width: 390px;
+    height: 90px;
     margin-left: 20px;
     resize: none;
+    padding: 5px;
+}
+.busDescription::-webkit-input-placeholder{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.busDescription::-moz-placeholder{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.busDescription:-ms-input-placeholder{
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .aSubmit{
     display: block;
@@ -203,6 +215,7 @@
     top: -40px;
 }
 .cityCheck select{
+    margin-left: 10px;
     float: left;
     padding: 6px 0;
 }
@@ -228,6 +241,7 @@
     color: #ffffff;
     font-size: 17px;
     margin-left: 17px;
+    line-height: 22px;
 }
 .wxShow{
     width: 540px;
@@ -316,6 +330,12 @@
     height: 500px;
     background: url("../img/vcs1.png") no-repeat;
     background-size: 100% 100%;
+    overflow: hidden;
+}
+.valCustomService .img{
+    width: 663px;
+    height: 205px;
+    margin: 147.5px auto;
 }
 /*有价值的定制服务 end*/
 /*信息订阅 start*/
