@@ -11,6 +11,9 @@ html,body{
     height: 100%;
     background-color: #16375a;
 }
+.left ul li{
+    float: left;
+}
 .management{
     width: 300px;
     height: 80px;
@@ -20,24 +23,33 @@ html,body{
     cursor: pointer;
     overflow: hidden;
 }
-.management p{
-    display: inline-block;
-    float: left;
-}
-#service i{
-    display: inline-block;
+.management i{
     width: 18px;
     height: 15px;
     margin-left: 40px;
     margin-right: 10px;
-    background-image: url("./img/left1.png");
     background-repeat: no-repeat;
     margin-top: 32px;
     float: left;
 }
-
+#service i{
+    background-image: url("./img/left1.png");
+}
+#shortMessage i{
+    background-image: url("./img/left2.png");
+}
+#mailServe i{
+    background-image: url("./img/left3.png");
+}
+#knowledgeBase i{
+    background-image: url("./img/left4.png");
+}
+#userManagement i{
+    background-image: url("./img/left5.png");
+}
 .management_list{
     width: 300px;
+    overflow: hidden;
 }
 .management_list li{
     list-style: none;
@@ -59,7 +71,6 @@ html,body{
 }
 .pClick{
     color: #ffffff;
-
 }
 .iClick{
     background-position: 0 -25px;
