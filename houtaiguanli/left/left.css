@@ -7,15 +7,18 @@ html,body{
     height: 100%;
 }
 .left{
-    width: 300px;
+    width: 260px;
     height: 100%;
+    min-height: 931px;
     background-color: #16375a;
+    position: relative;
+    float: left;
 }
 .left ul li{
     float: left;
 }
 .management{
-    width: 300px;
+    width: 260px;
     height: 80px;
     line-height: 80px;
     border-bottom: 1px solid #0b2643;
@@ -26,7 +29,7 @@ html,body{
 .management i{
     width: 18px;
     height: 15px;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-right: 10px;
     background-repeat: no-repeat;
     margin-top: 32px;
@@ -48,15 +51,15 @@ html,body{
     background-image: url("./img/left5.png");
 }
 .management_list{
-    width: 300px;
+    width: 260px;
     overflow: hidden;
 }
 .management_list li{
     list-style: none;
-    width: 230px;
+    width: 200px;
     height: 50px;
     line-height: 50px;
-    margin-left: 70px;
+    margin-left: 60px;
     color: #4ea0ea;
     border-bottom: 1px solid #0c5e8d;
     cursor: pointer;
@@ -81,5 +84,9 @@ html,body{
 .iNoClick{
     background-position: 0 0;
 }
+/*.row{*/
+    /*margin-bottom:-10000px;*/
+    /*padding-bottom:10000px;!*内外补丁是关键*!*/
+/*}*/
 /*公共类 end*/
 
