@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>服务审核管理</title>
+    <link rel="stylesheet" type="text/css" href="../common/normalize.css">
+    <link rel="stylesheet" type="text/css" href="serviceAuditManagement.css">
+    <link rel="stylesheet" type="text/css" href="../left/left.css">
+    <!--<link rel="stylesheet" type="text/css" href="../head/head.css">-->
+</head>
+<body>
+     <div class="sam">
+         <!--<div class="head">-->
+             <!--<div class="head-logo">-->
+                 <!--<img src="../head/img/head_01.png">-->
+             <!--</div>-->
+             <!--<div class="head-user">-->
+                 <!--<span>欢迎您</span>-->
+                 <!--<img src="../head/img/head_02.png">-->
+                 <!--<p>kaifa</p>-->
+                 <!--<a class="sign-out" href="javascript:;">退出</a>-->
+             <!--</div>-->
+         <!--</div>-->
+         <div class="left">
+             <ul>
+                 <li>
+                     <div id="service" class="management"><i class="triNoClick"></i><p class="pNoClick">服务管理</p></div>
+                     <ul class="service management_list displayNone">
+                         <li>服务审核管理</li>
+                         <li>服务注册管理</li>
+                         <li>套餐注册管理</li>
+                     </ul>
+                 </li>
+                 <li>
+                     <div id="shortMessage" class="management"><i class="triNoClick"></i><p class="pNoClick">短信管理</p></div>
+                 </li>
+                 <li>
+                     <div id="mailServe" class="management"><i class="triNoClick"></i><p class="pNoClick">邮件服务</p></div>
+                 </li>
+                 <li>
+                     <div id="knowledgeBase" class="management"><i class="triNoClick"></i><p class="pNoClick">知识库</p></div>
+                 </li>
+                 <li>
+                     <div id="userManagement" class="management"><i class="triNoClick"></i><p class="pNoClick">用户管理</p></div>
+                 </li>
+             </ul>
+         </div>
+         <div class="samContent">
+             <div class="samTitle">
+                 <img src="img/sam_01.png">
+                 <p>当前位置：</p>
+                 <span>服务管理</span>
+                 <i></i>
+                 <span>服务审核管理</span>
+             </div>
+             <div class="samCon">
+                 <div class="samCon_form">
+                     <form>
+                         <div>
+                             <p>申请时间：</p>
+                             <input class="smallInput" type="text"><i></i><input class="smallInput" type="text">
+                         </div>
+                         <div>
+                             <p>付费时间：</p>
+                             <input class="smallInput" type="text"><i></i><input class="smallInput" type="text">
+                         </div>
+                         <div>
+                             <p>服务名称：</p>
+                             <input type="text">
+                         </div>
+
+                         <div>
+                             <p>套餐名称：</p>
+                             <input type="text">
+                         </div>
+                         <div>
+                             <p>是否付费：</p>
+                             <select>
+                                 <option>全部</option>
+                             </select>
+                         </div>
+                         <div>
+                             <p>是否审批：</p>
+                             <select>
+                                 <option>全部</option>
+                             </select>
+                         </div>
+                         <div>
+                             <p>客户名称：</p>
+                             <input type="text">
+                         </div>
+                         <a class="samSearch" href="javascript:;">查&nbsp;&nbsp;询</a>
+                     </form>
+                 </div>
+                 <div class="samCon_table">
+                     <table>
+                         <thead>
+                         <tr>
+                             <th width="50"><i class="thiNoClick"></i></th>
+                             <th>序号</th>
+                             <th>申请时间</th>
+                             <th>客户名称</th>
+                             <th>企业名称</th>
+                             <th>服务名称</th>
+                             <th>套餐名称</th>
+                             <th>订购数量</th>
+                             <th>订购时间(月)</th>
+                             <th>渠道</th>
+                             <th>是否付费</th>
+                             <th>支付方式</th>
+                             <th>支付金额</th>
+                             <th>应付金额</th>
+                             <th>付费时间</th>
+                             <th>审批结果</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                             <td>
+                                 <i class="triNoClick"></i>
+                             </td>
+                             <td>1</td>
+                             <td>2017-03-31</td>
+                             <td>交流传动机车采购合同</td>
+                             <td>中铁八局集团桥梁公司</td>
+                             <td>郑州铁路局</td>
+                             <td>郑州铁路局</td>
+                             <td>1111</td>
+                             <td>2016-02-09</td>
+                             <td>渠道</td>
+                             <td>是</td>
+                             <td>转账</td>
+                             <td>10,000,000元</td>
+                             <td>10,000,000元</td>
+                             <td>2016-05-25</td>
+                             <td>通过</td>
+                         </tr>
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         <!--<tr>-->
+                             <!--<td>-->
+                                 <!--<i class="triNoClick"></i>-->
+                             <!--</td>-->
+                             <!--<td>1</td>-->
+                             <!--<td>2017-03-31</td>-->
+                             <!--<td>交流传动机车采购合同</td>-->
+                             <!--<td>中铁八局集团桥梁公司</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>郑州铁路局</td>-->
+                             <!--<td>1111</td>-->
+                             <!--<td>2016-02-09</td>-->
+                             <!--<td>渠道</td>-->
+                             <!--<td>是</td>-->
+                             <!--<td>转账</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>10,000,000元</td>-->
+                             <!--<td>2016-05-25</td>-->
+                             <!--<td>通过</td>-->
+                         <!--</tr>-->
+                         </tbody>
+                     </table>
+                 </div>
+                 <div class="table_button">
+                     <div class="tableButton">
+                         <a class="goFirst">首页</a>
+                         <a class="prePage">上一页</a>
+                         <p class="currentPage">3</p>
+                         <a class="nextPage">下一页</a>
+                         <a class="goLast">尾页</a>
+                         <input type="text" value="" class="pages">
+                         <a class="goPage">跳转</a>
+                     </div>
+                 </div>
+         </div>
+             <div class="footer">
+                 <p>中铁鲁班商务网 Copyright © 2014 Crecgec. All Rights Reserved.</p>
+             </div>
+     </div>
+      </div>
+     <script type="text/javascript" src="../common/jquery-3.1.1.js"></script>
+     <script type="text/javascript" src="../left/left.js"></script>
+     <script type="text/javascript" src="./serviceAuditManagement.js"></script>
+</body>
+</html>
