@@ -42,3 +42,12 @@ $(function () {
     })
 
 })
+
+//开启添加框
+function addShow() {
+    $(".add_con").removeClass("displayNone").addClass("displayBlock")
+}
+//关闭添加框
+function addClose() {
+    $(".add_con").removeClass("displayBlock").addClass("displayNone")
+}

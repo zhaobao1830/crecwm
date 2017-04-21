@@ -56,9 +56,9 @@
                 <i></i>
                 <span>服务审核管理</span>
             </div>
-            <div class="sregCon">
+            <div class="sregCon displayNone">
                 <div class="sregCon_operation">
-                    <label>
+                    <label onclick="addShow()">
                         <img src="./img/sre_01.png">
                         <p>添加</p>
                     </label>
@@ -282,9 +282,52 @@
                 <p>中铁鲁班商务网 Copyright © 2014 Crecgec. All Rights Reserved.</p>
             </div>
         </div>
-        <div class="addContent">
-            <div class="addTitle">
-
+        <div class="add_con displayBlock">
+            <div class="addContent">
+                <div class="addTitle">
+                    <p>请在列表中填写添加内容</p>
+                    <a class="addClose" onclick="addClose()">
+                        <img src="./img/sre_05.png">
+                    </a>
+                </div>
+                <div class="addCon">
+                    <div>
+                        <span>类型：</span>
+                        <select>
+                            <option>订阅服务</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>服务名称：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>描述：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>图标：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>订购URL：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>设置URL：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>审核模式：</span>
+                        <select>
+                            <option>即时后生效</option>
+                        </select>
+                    </div>
+                    <div>
+                        <a class="addSave" href="javascript:;">保存</a>
+                        <a class="addCancel" href="javascript:;">取消</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
