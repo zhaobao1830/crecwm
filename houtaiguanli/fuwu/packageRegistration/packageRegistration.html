@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>套餐注册管理</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/commons.css">
+    <link rel="stylesheet" type="text/css" href="packageRegistration.css">
+    <link rel="stylesheet" type="text/css" href="../../left/left.css">
+    <link rel="stylesheet" type="text/css" href="../../head/head.css">
+</head>
+<body>
+    <div class="packReg">
+        <div class="head">
+            <div class="head-logo">
+                <img src="../../head/img/head_01.png">
+            </div>
+            <div class="head-user">
+                <span>欢迎您</span>
+                <img src="../../head/img/head_02.png">
+                <p>kaifa</p>
+                <a class="sign-out" href="javascript:;">退出</a>
+            </div>
+        </div>
+        <div class="left">
+            <ul>
+                <li>
+                    <div id="service" class="management"><i class="triNoClick"></i><p class="pNoClick">服务管理</p></div>
+                    <ul class="service management_list displayNone">
+                        <li>服务审核管理</li>
+                        <li>服务注册管理</li>
+                        <li>套餐注册管理</li>
+                        <li>服务发票管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <div id="shortMessage" class="management"><i class="triNoClick"></i><p class="pNoClick">短信管理</p></div>
+                </li>
+                <li>
+                    <div id="mailServe" class="management"><i class="triNoClick"></i><p class="pNoClick">邮件服务</p></div>
+                </li>
+                <li>
+                    <div id="knowledgeBase" class="management"><i class="triNoClick"></i><p class="pNoClick">知识库</p></div>
+                </li>
+                <li>
+                    <div id="userManagement" class="management"><i class="triNoClick"></i><p class="pNoClick">用户管理</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="packRegContent">
+            <div class="conTitle">
+                <img src="../../common/img/common_01.png">
+                <p>当前位置：</p>
+                <span>服务管理</span>
+                <i></i>
+                <span>套餐注册管理</span>
+            </div>
+            <div class="packRegCon">
+                <div class="packRegCon_operation">
+                    <label onclick="addShow()">
+                        <img src="img/pre_01.png">
+                        <p>添加</p>
+                    </label>
+                    <label>
+                        <img src="img/pre_02.png">
+                        <p>删除</p>
+                    </label>
+                    <label>
+                        <img src="img/pre_03.png">
+                        <p>编辑</p>
+                    </label>
+                </div>
+                <div class="packRegCon_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th width="25">
+                                <img class="thiNoClick" src="img/pre_031.png">
+                            </th>
+                            <th width="50">序号</th>
+                            <th>创建日期</th>
+                            <th>服务ID</th>
+                            <th>类型</th>
+                            <th>服务名称</th>
+                            <th>描述</th>
+                            <th>图标</th>
+                            <th>订阅人数</th>
+                            <th>包含套餐数量</th>
+                            <th>订购URL</th>
+                            <th>设置URL</th>
+                            <th>审核模式</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td title="2017-03-31">2017-03-31</td>
+                            <td>50</td>
+                            <td title="提醒服务">提醒服务</td>
+                            <td title="招标采购信息定制推送(升级版)">招标采购信息定制推送(升级版)</td>
+                            <td title="供应商会员选择需要定制推送的物">供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td title="审批后生效">审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="triNoClick" src="img/pre_041.png">
+                            </td>
+                            <td>1</td>
+                            <td>2017-03-31</td>
+                            <td>50</td>
+                            <td>提醒服务</td>
+                            <td>招标采购信息定制推送（升级版）</td>
+                            <td>供应商会员选择需要定制推送的物</td>
+                            <td><a href="javascript:;">图</a></td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>RUL</td>
+                            <td><a href="javascript:;">链接</a></td>
+                            <td>审批后生效</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table_button">
+                    <div class="tableButton">
+                        <a class="goFirst">首页</a>
+                        <a class="prePage">上一页</a>
+                        <p class="currentPage">3</p>
+                        <a class="nextPage">下一页</a>
+                        <a class="goLast">尾页</a>
+                        <input type="text" value="" class="pages">
+                        <a class="goPage">跳转</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>中铁鲁班商务网 Copyright © 2014 Crecgec. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="add_con displayNone">
+            <div class="addContent">
+                <div class="addTitle">
+                    <p>请在列表中填写添加内容</p>
+                    <a class="addClose" onclick="addClose()">
+                        <img src="./img/pre_05.png">
+                    </a>
+                </div>
+                <div class="addCon">
+                    <div>
+                        <span>类型：</span>
+                        <select>
+                            <option>订阅服务</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>服务名称：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>描述：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>图标：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>订购URL：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>设置URL：</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>审核模式：</span>
+                        <select>
+                            <option>即时后生效</option>
+                        </select>
+                    </div>
+                    <div>
+                        <a class="addSave" href="javascript:;">保存</a>
+                        <a class="addCancel" href="javascript:;">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../common/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="../../left/left.js"></script>
+    <script type="text/javascript" src="packageRegistration.js"></script>
+</body>
+</html>

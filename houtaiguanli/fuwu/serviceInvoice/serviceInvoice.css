@@ -1,0 +1,228 @@
+.sin{
+    width:100%;
+    min-height:100%;
+    background-color: #dae6ef;
+    overflow: hidden;
+}
+.sinContent{
+    width: auto;
+    min-width: 720px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 100%;
+    margin-left: 280px;
+    position: relative;
+}
+.sinCon{
+    width: 100%;
+    min-width: 1060px;
+    height: 100%;
+    border: 1px solid #4ea0ea;
+    border-radius: 4px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.sinCon form{
+    overflow: hidden;
+}
+.sinCon form div{
+    width: auto;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.sinCon form p{
+    font-size: 14px;
+    color: #464646;
+}
+.sinCon form p,.sinCon form input,.sinCon form select,.sinCon i,.sinCon form a{
+    display: block;
+    float: left;
+}
+.sinCon form input{
+     width: 230px;
+     height: 32px;
+     border: 1px solid #bbbbbb;
+     color: #777777;
+ }
+.sinCon form select{
+    width: 230px;
+    height: 34px;
+    font-size: 14px;
+    color: #777777;
+    border: 1px solid #bbbbbb;
+}
+.sinCon input:hover,.sinCon input:focus,.sinCon select:hover,.sinCon select:focus{
+    border-color: #4ea0ea;
+}
+.sinCon_form div i{
+    width: 10px;
+    height: 1px;
+    background-color: #bbbbbb;
+    margin-left: 10px;
+    margin-top: 16px;
+    margin-right: 10px;
+}
+.smallInput{
+    width: 98px !important;
+}
+.samSearch{
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 4px;
+    background-color: #4ea0ea;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.samSearch:hover{
+    background-color: #4986c6;
+}
+table{
+    width: 100%;
+    min-width: 1070px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+thead{
+    width: auto;
+    min-width: 1070px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #4ea0ea;
+}
+thead tr,thead th{
+    border: 1px solid #dddddd;
+    border-left: none !important;
+    color: #ffffff;
+    height: 45px;
+    font-size: 14px;
+}
+thead tr img,tbody td img{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+tbody{
+    width: auto;
+    min-width: 1070px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    background-color: #fafafa;
+}
+tbody tr,tbody td{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    height: 40px;
+    color: #464646;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+tbody td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+tbody tr{
+    border-top: 1px dotted #dddddd !important;
+}
+tbody tr:hover{
+    background-color: #eaf3f8;
+}
+
+/*导出发票 start*/
+.exportInvoice{
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    overflow: hidden;
+}
+.exportSearch{
+    width: auto;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.exportSearch input,.exportSearch p,.exportSearch i,.exportSearch a{
+    display: block;
+    float: left;
+}
+.exportSearch input{
+    width: 230px;
+    height: 32px;
+    border: 1px solid #bbbbbb;
+    color: #777777;
+}
+.exportSearch input:hover,.exportSearch input:focus{
+    border-color: #4ea0ea;
+}
+.exportSearch i{
+    width: 10px;
+    height: 1px;
+    background-color: #bbbbbb;
+    margin-left: 10px;
+    margin-top: 16px;
+    margin-right: 10px;
+}
+.smallInput{
+    width: 98px !important;
+}
+.exportA{
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 4px;
+    background-color: #4ea0ea;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.exportA:hover{
+    background-color: #4986c6;
+}
+.exportCon{
+    width: 100%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+}
+.exportCon ul li{
+    width: 100%;
+    list-style: none;
+    color: #777777;
+    font-size: 14px;
+    float: left;
+    margin: 10px 0 10px 20px;
+}
+.exportCon ul li:first-child{
+    margin-top: 10px;
+}
+.exportCon ul li p,.exportCon ul li a{
+    float: left;
+    display: block;
+}
+.aExport{
+    color: #4ea0ea;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.aExport:hover{
+    color: #ff0000;
+}
+/*导出发票 end*/
