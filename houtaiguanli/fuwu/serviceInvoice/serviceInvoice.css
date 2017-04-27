@@ -22,10 +22,10 @@
     background-color: #ffffff;
     overflow: hidden;
 }
-.sinCon form{
+.sinCon_search{
     overflow: hidden;
 }
-.sinCon form div{
+.sinCon_search div{
     width: auto;
     height: 34px;
     line-height: 34px;
@@ -33,29 +33,29 @@
     margin-left: 20px;
     margin-top: 20px;
 }
-.sinCon form p{
+.sinCon_search p{
     font-size: 14px;
     color: #464646;
 }
-.sinCon form p,.sinCon form input,.sinCon form select,.sinCon i,.sinCon form a{
+.sinCon_search p,.sinCon_search input,.sinCon_search select,.sinCon_search i,.sinCon_search a{
     display: block;
     float: left;
 }
-.sinCon form input{
+.sinCon_search input{
      width: 230px;
      height: 32px;
      border: 1px solid #bbbbbb;
      color: #777777;
  }
-.sinCon form select{
+.sinCon_search select{
     width: 230px;
     height: 34px;
     font-size: 14px;
     color: #777777;
     border: 1px solid #bbbbbb;
 }
-.sinCon input:hover,.sinCon input:focus,.sinCon select:hover,.sinCon select:focus{
-    border-color: #4ea0ea;
+.sinCon_search input:hover,.sinCon_search input:focus,.sinCon_search select:hover,.sinCon select:focus{
+    border-color: #4ea0easinCon_search
 }
 .sinCon_form div i{
     width: 10px;

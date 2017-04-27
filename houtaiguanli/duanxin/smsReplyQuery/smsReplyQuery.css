@@ -1,10 +1,10 @@
-.sreg{
+.smsReplyQuery{
     width:100%;
     min-height:100%;
     background-color: #dae6ef;
     overflow: hidden;
 }
-.sregContent{
+.smsContent{
     width: auto;
     min-width: 720px;
     overflow: hidden;
@@ -13,7 +13,7 @@
     margin-left: 280px;
     position: relative;
 }
-.sregCon{
+.smsCon{
     width: 100%;
     min-width: 1060px;
     height: 100%;
@@ -22,26 +22,66 @@
     background-color: #ffffff;
     overflow: hidden;
 }
-.sregCon_operation{
+.smsCon_search{
     overflow: hidden;
 }
-.sregCon_operation label,.sregCon_operation label img,.sregCon_operation label p{
-    display: block;
+.smsCon_search div{
+    width: auto;
+    height: 34px;
+    line-height: 34px;
     float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.smsCon_search p{
     font-size: 14px;
     color: #464646;
-    height: 20px;
-    line-height: 20px;
 }
-.sregCon_operation label{
-    margin: 20px 0 0 20px;
-    cursor: pointer;
+.smsCon_search p,.smsCon_search input,.smsCon_search select,.smsCon_search i,.smsCon_search a{
+    display: block;
+    float: left;
 }
-.sregCon_operation label p{
-    margin-left: 5px;
+.smsCon_search input{
+    width: 230px;
+    height: 32px;
+    border: 1px solid #bbbbbb;
+    color: #777777;
 }
-.sregCon_operation label p:hover{
-    color: #ff0000;
+.smsCon_search select{
+    width: 230px;
+    height: 34px;
+    border: 1px solid #bbbbbb;
+    color: #777777;
+}
+.smsCon_search input:hover,.smsCon_search input:focus,.smsCon_search select:hover,.smsCon_search select:focus{
+    border-color: #4ea0ea;
+}
+.smsCon_search i{
+    width: 10px;
+    height: 1px;
+    background-color: #bbbbbb;
+    margin-left: 10px;
+    margin-top: 16px;
+    margin-right: 10px;
+}
+.smallInput{
+    width: 98px !important;
+}
+.smsSearch{
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 4px;
+    background-color: #4ea0ea;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.srqSearch:hover{
+    background-color: #4986c6;
 }
 table{
     width: 100%;
@@ -189,101 +229,3 @@ tbody tr a:hover{
     height: 20px;
     margin-top: 80px;
 }
-/*添加弹出框 start*/
-.add_con{
-    position:fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(153, 153, 153, 0.6);
-    z-index: 9999;
-}
-.addContent{
-    width: 440px;
-    height: 470px;
-    position: absolute;
-    top:50%;
-    margin-top: -235px;
-    left: 50%;
-    margin-left: -220px;
-    background-color: #ffffff;
-}
-.addTitle{
-    width: 440px;
-    height: 34px;
-    line-height: 34px;
-    background-color: #4596d4;
-    color: #ffffff;
-}
-.addTitle  p{
-    font-size: 16px;
-    margin-left: 10px;
-    float: left;
-}
-.addTitle a{
-    margin-right: 10px;
-    display: block;
-    float: right;
-    cursor: pointer;
-}
-.addCon{
-    width: 440px;
-}
-.addCon div{
-    width: 440px;
-    float: left;
-    height: 34px;
-    line-height: 34px;
-    margin-top: 15px;
-}
-.addCon div span{
-    width: 95px;
-    float: left;
-    text-align: right;
-    color: #464646;
-    font-size: 14px;
-}
-.addCon div input,.addCon div select{
-    width: 298px;
-    height: 32px;
-    border: 1px solid #bbbbbb;
-}
-.addCon div select{
-    width: 300px;
-    height: 34px;
-    border: 1px solid #bbbbbb;
-}
-.addCon div a{
-    width: 80px;
-    height: 34px;border-radius: 2px;
-    display: block;
-    float: left;
-    text-align: center;
-    text-decoration: none;
-}
-.addSave{
-    background-color: #4ea0ea;
-    color: #ffffff;
-    margin-left: 95px;
-}
-.addCancel{
-    background-color: #dddddd;
-    color: #464646;
-    margin-left: 20px;
-}
-/*添加弹出框 end*/
-
-
-
-/*公共类 start*/
-.trClick{
-    background-color: #eaf3f8;
-}
-.displayBlock{
-    display: block;
-}
-.displayNone{
-    display: none;
-}
-/*公共类 end*/

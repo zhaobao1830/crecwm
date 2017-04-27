@@ -22,10 +22,10 @@
     background-color: #ffffff;
     overflow: hidden;
 }
-.samCon form{
+.samCon_search{
     overflow: hidden;
 }
-.samCon form div{
+.samCon_search div{
     width: auto;
     height: 34px;
     line-height: 34px;
@@ -33,27 +33,27 @@
     margin-left: 20px;
     margin-top: 20px;
 }
-.samCon form p{
+.samCon_search p{
     font-size: 14px;
     color: #464646;
 }
-.samCon form p,.samCon form input,.samCon form select,.samCon i,.samCon form a{
+.samCon_search p,.samCon_search input,.samCon_search select,.samCon_search i,.samCon_search a{
     display: block;
     float: left;
 }
-.samCon form input{
+.samCon_search input{
     width: 230px;
     height: 32px;
     border: 1px solid #bbbbbb;
     color: #777777;
 }
-.samCon form select{
+.samCon_search select{
     width: 230px;
     height: 34px;
     border: 1px solid #bbbbbb;
     color: #777777;
 }
-.samCon input:hover,.samCon input:focus,.samCon select:hover,.samCon select:focus{
+.samCon_search input:hover,.samCon_search input:focus,.samCon_search select:hover,.samCon_search select:focus{
     border-color: #4ea0ea;
 }
 .samCon_form div i{
@@ -83,10 +83,7 @@
 .samSearch:hover{
     background-color: #4986c6;
 }
-.samCon_table{
-    width: 100%;
-    float: left;
-}
+
 table{
     width: 100%;
     min-width: 1070px;

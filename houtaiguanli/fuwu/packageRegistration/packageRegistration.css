@@ -22,7 +22,9 @@
     background-color: #ffffff;
     overflow: hidden;
 }
-
+.packRegCon_operation{
+    overflow: hidden;
+}
 .packRegCon_operation label,.packRegCon_operation label img,.packRegCon_operation label p{
     display: block;
     float: left;
@@ -41,10 +43,7 @@
 .packRegCon_operation label p:hover{
     color: #ff0000;
 }
-.packRegCon_table{
-    width: 100%;
-    float: left;
-}
+
 table{
     width: 100%;
     min-width: 1070px;

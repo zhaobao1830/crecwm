@@ -22,10 +22,10 @@
     background-color: #ffffff;
     overflow: hidden;
 }
-.srqCon form{
+.srqCon_search{
     overflow: hidden;
 }
-.srqCon form div{
+.srqCon_search div{
     width: auto;
     height: 34px;
     line-height: 34px;
@@ -33,30 +33,30 @@
     margin-left: 20px;
     margin-top: 20px;
 }
-.srqCon form p{
+.srqCon_search p{
     font-size: 14px;
     color: #464646;
 }
-.srqCon form p,.srqCon form input,.srqCon form select,.srqCon i,.srqCon form a{
+.srqCon_search p,.srqCon_search input,.srqCon_search select,.srqCon_search i,.srqCon_search a{
     display: block;
     float: left;
 }
-.srqCon form input{
+.srqCon_search input{
     width: 230px;
     height: 32px;
     border: 1px solid #bbbbbb;
     color: #777777;
 }
-.srqCon form select{
+.srqCon_search select{
     width: 230px;
     height: 34px;
     border: 1px solid #bbbbbb;
     color: #777777;
 }
-.srqCon input:hover,.srqCon input:focus,.srqCon select:hover,.srqCon select:focus{
+.srqCon_search input:hover,.srqCon_search input:focus,.srqCon_search select:hover,.srqCon_search select:focus{
     border-color: #4ea0ea;
 }
-.srqCon_form div i{
+.srqCon_search div i{
     width: 10px;
     height: 1px;
     background-color: #bbbbbb;
@@ -83,10 +83,7 @@
 .srqSearch:hover{
     background-color: #4986c6;
 }
-.srqCon_table{
-    width: 100%;
-    float: left;
-}
+
 table{
     width: 100%;
     min-width: 1070px;
