@@ -17,7 +17,7 @@ html,body{
 .left ul li{
     float: left;
 }
-.left ul li:first-child{
+.left > ul > li:first-child{
     border-top: 1px solid #0b2643;
 }
 .management{

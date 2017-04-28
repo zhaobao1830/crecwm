@@ -1,0 +1,115 @@
+.knowledgeMaintenance{
+    width:100%;
+    min-height:100%;
+    background-color: #dae6ef;
+    overflow: hidden;
+}
+.kdmContent{
+    width: auto;
+    min-width: 720px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 100%;
+    margin-left: 280px;
+    position: relative;
+}
+.kdmCon{
+    width: 100%;
+    min-width: 1060px;
+    height: 100%;
+    border: 1px solid #4ea0ea;
+    border-radius: 4px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+/*左侧 start*/
+.kdmCon_left{
+    width: 238px;
+    height: auto;
+    min-height: 800px;
+    border: 1px solid #77afea;
+    margin: 20px;
+    overflow: hidden;
+    float: left;
+    background-color: #eeeeee;
+}
+.kdmCon_left ul li{
+    float: left;
+    border-bottom: 1px solid #dddddd;
+    position: relative;
+    list-style: none;
+}
+.kdmCon_left ul li a,.kdmCon_left ul li span{
+    display: block;
+}
+.kdmCon_left ul li span{
+    float: left;
+}
+.kdmCon_left ul li a{
+    float: right;
+}
+.kdmManagement{
+    width: 218px;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 20px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #222222;
+}
+.kdmManagement p{
+    width: 190px;
+    height: 46px;
+    cursor: pointer;
+}
+.kdmManagement p:hover{
+    padding-left: 10px;
+}
+.kdmMaDele{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    cursor: pointer;
+    background-image: url("./img/km1.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.kdmCon_left ul > li > ul > li{
+    list-style: none;
+    width: 238px;
+    height: 42px;
+    line-height: 42px;
+}
+.kdmCon_left ul > li > ul > li span{
+    margin-left: 30px;
+}
+.kdm_span_update{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-image:url("./img/km2.png");
+    background-position: 0 0; /*25*/
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+.kdm_span_dele{
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    background-image: url("./img/km1.png");
+    background-position: 0 0;  /*48*/
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    margin-top: 14.5px;
+}
+/*左侧 end*/
+.kdmCon_right{
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    margin-top: 20px;
+}
