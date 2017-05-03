@@ -53,6 +53,9 @@ html,body{
 #userManagement i{
     background-image: url("./img/left5.png");
 }
+#informationDisplay i{
+    background-image: url("./img/left6.png");
+}
 .management_list{
     width: 260px;
     overflow: hidden;
