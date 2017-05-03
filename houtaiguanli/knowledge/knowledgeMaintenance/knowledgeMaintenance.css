@@ -1,5 +1,6 @@
 .knowledgeMaintenance{
     width:100%;
+    min-width: 1200px;
     min-height:100%;
     background-color: #dae6ef;
     overflow: hidden;
@@ -15,12 +16,12 @@
 }
 .kdmCon{
     width: 100%;
-    min-width: 1060px;
     height: 100%;
     border: 1px solid #4ea0ea;
     border-radius: 4px;
     background-color: #ffffff;
     overflow: hidden;
+    position: relative;
 }
 /*左侧 start*/
 .kdmCon_left{
@@ -29,8 +30,8 @@
     min-height: 800px;
     border: 1px solid #77afea;
     margin: 20px;
+    position: absolute;
     overflow: hidden;
-    float: left;
     background-color: #eeeeee;
 }
 .kdmCon_left ul li{
@@ -44,9 +45,7 @@
 }
 .kdmCon_left ul li span{
     float: left;
-}
-.kdmCon_left ul li a{
-    float: right;
+    font-size: 12px;
 }
 .kdmManagement{
     width: 218px;
@@ -61,6 +60,7 @@
     width: 190px;
     height: 46px;
     cursor: pointer;
+    font-size: 14px;
 }
 .kdmManagement p:hover{
     padding-left: 10px;
@@ -76,6 +76,9 @@
     background-position: 0 0;
     background-repeat: no-repeat;
 }
+.kdmMaDele:hover{
+    background-position: 0 -48px;  /*48*/
+}
 .kdmCon_left ul > li > ul > li{
     list-style: none;
     width: 238px;
@@ -86,16 +89,21 @@
     margin-left: 30px;
 }
 .kdm_span_update{
+    float: right;
     width: 16px;
     height: 16px;
     cursor: pointer;
     background-image:url("./img/km2.png");
-    background-position: 0 0; /*25*/
+    background-position: 0 0; /*24*/
     background-repeat: no-repeat;
     margin-right: 10px;
     margin-top: 13px;
 }
+.kdm_span_update:hover{
+    background-position: 0 -24px; /*24*/
+}
 .kdm_span_dele{
+    float: right;
     width: 13px;
     height: 13px;
     cursor: pointer;
@@ -105,11 +113,172 @@
     margin-right: 10px;
     margin-top: 14.5px;
 }
+.kdm_span_dele:hover{
+    background-position: 0 -48px;  /*48*/
+}
+.kdm_span_add{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-image: url("./img/km3.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: 13px 111px;
+}
+.kdmMaAdd{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-image: url("./img/km4.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: 15px 112px;
+}
 /*左侧 end*/
+/*右侧 start*/
 .kdmCon_right{
-    width: auto;
     height: 100%;
     overflow: hidden;
-    float: left;
+    margin-left: 280px;
+    margin-right: 20px;
+}
+.kdmCon_right a,.kdmCon_right span,.kdmCon_right i{
+    display: block;
+}
+.kdmCon_right > div{
+    position: relative;
     margin-top: 20px;
 }
+.kdmCon_right > div p{
+    color: #222222;
+    font-size: 14px;
+}
+.kdmCon_right > div input[type=text]{
+    width: 98%;
+    height: 54px;
+    border: 1px solid #bbbbbb;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.kdmCon_right > div >div{
+    width: 99%;
+    height: auto;
+    border: 1px solid #bbbbbb;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.kdmCon_right_ul > li{
+    list-style: none;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px 0 10px 10px;
+    background-color: #bbbbbb;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.kdmCon_right_ul > li:hover{
+    background-color: #4ea0ea;
+}
+.kdmCon_right_ul > li span,.kdmCon_right_ul > li i{
+    float: left;
+}
+.kdmCon_right_ul > li i{
+    width: 13px;
+    height: 13px;
+    background-image: url("img/km1.png");
+    background-repeat: no-repeat;
+    background-position: 0 -24px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.titleA{
+    position: absolute;
+    top: 42px;
+    right: 15px;
+}
+.labelA{
+    width: 34px;
+    height: 34px;
+    background-color: #bbbbbb;
+    float: left;
+    margin: 10px;
+    border-radius: 4px;
+}
+.labelA:hover{
+    background-color: #4ea0ea;
+}
+.labelA i{
+    width: 18px;
+    height: 18px;
+    background-image: url("img/km5.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 8px;
+}
+.keyword,.answer{
+    position: relative;
+    height: auto;
+    min-height: 120px;
+}
+.answer{
+    min-height: 300px !important;
+}
+.keyword > div,.answer > div{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.keyword > div > a,.keyword > div > a img,.keyword > div > a span,.answer > div > a,.answer > div > a img,.answer > div > a span{
+    display: block;
+    float: left;
+}
+.keyword > div > a,.answer > div > a{
+    margin-right: 20px;
+    margin-bottom: 5px;
+    color: #464646;
+    cursor: pointer;
+}
+.keyword > div > a:hover,.answer > div > a:hover{
+    color: #4ea0ea;
+}
+.keyword > div > a span,.answer > div > a span{
+    margin-left: 5px;
+}
+
+.answerUl > li{
+    color: #777777;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+/*右侧 end*/
+
+/*公共类 start*/
+.kdmClick{
+    background-color: #067ebc;
+}
+.kdmClick_p{
+    color: #ffffff;
+}
+.kdmClick_a{
+    background-position: 0 -24px;
+}
+.kdmClick_span{
+    color: #067ebc;
+}
+.kdmClick_li{
+     background-color: #dae6ef !important;
+ }
+.kdmClick_span_dele{
+    background-position: 0 -48px;
+}
+.kdmClick_span_update{
+    background-position: 0 -24px;
+}
+/*公共类 end*/
