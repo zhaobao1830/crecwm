@@ -25,7 +25,7 @@ $(function () {
             $(this).attr("src","img/toe_031.png")
             $("tbody tr td img").each(function () {
                 $(this).addClass("triNoClick")
-                $(this).attr("src","img/toe041.png")
+                $(this).attr("src","img/toe_041.png")
                 $(this).parent().parent().removeClass("trClick")
             })
         }
@@ -42,7 +42,7 @@ $(function () {
             $(this).parent().parent().removeClass("trClick")
 
             $("thead tr th img").addClass("thiNoClick")
-            $("thead tr th img").attr("src","img/srq_031.png")
+            $("thead tr th img").attr("src","img/toe_031.png")
         }
     })
 

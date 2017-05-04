@@ -1,12 +1,12 @@
 .sin{
     width:100%;
+    min-width: 1244px;
     min-height:100%;
     background-color: #dae6ef;
     overflow: hidden;
 }
 .sinContent{
     width: auto;
-    min-width: 720px;
     overflow: hidden;
     height: 100%;
     min-height: 100%;
@@ -14,13 +14,14 @@
     position: relative;
 }
 .sinCon{
-    width: 100%;
-    min-width: 1060px;
+    width: auto;
+    min-width: 964px;
     height: 100%;
     border: 1px solid #4ea0ea;
     border-radius: 4px;
     background-color: #ffffff;
     overflow: hidden;
+    margin-right: 20px;
 }
 .sinCon_search{
     overflow: hidden;
@@ -55,9 +56,9 @@
     border: 1px solid #bbbbbb;
 }
 .sinCon_search input:hover,.sinCon_search input:focus,.sinCon_search select:hover,.sinCon select:focus{
-    border-color: #4ea0easinCon_search
+    border-color: #4ea0ea
 }
-.sinCon_form div i{
+.sinCon_search i{
     width: 10px;
     height: 1px;
     background-color: #bbbbbb;
@@ -86,7 +87,6 @@
 }
 table{
     width: 100%;
-    min-width: 1070px;
     table-layout: fixed;
     border-collapse: collapse;
     margin-top: 20px;

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>个人用户管理</title>
+    <title>信息展示</title>
     <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../common/css/commons.css">
-    <link rel="stylesheet" type="text/css" href="toExamine.css">
+    <link rel="stylesheet" type="text/css" href="InformationDisplay.css">
     <link rel="stylesheet" type="text/css" href="../../left/left.css">
     <link rel="stylesheet" type="text/css" href="../../head/head.css">
 </head>
 <body>
-    <div class="toExamine">
+    <div class="inDis">
         <div class="head">
             <div class="head-logo">
                 <img src="../../head/img/head_01.png">
@@ -61,142 +61,159 @@
                     </ul>
                 </li>
                 <li>
-                    <div id="userManagement" class="management"><i class="iNoClick"></i><p class="pNoClick">用户管理</p></div>
+                    <div id="userManagement" class="management"><i class="iNoClick"></i><p class="pNoClick">用户管理</p>
+                    </div>
                     <ul class="userManagement management_list displayNone">
                         <li>服务审核管理</li>
                     </ul>
                 </li>
+                <li>
+                    <div id="informationDisplay" class="management"><i class="iNoClick"></i><p class="pNoClick">信息展示</p>
+                    </div>
+                    <ul class="informationDisplay management_list displayNone">
+                        <li>信息展示</li>
+                    </ul>
+                </li>
             </ul>
         </div>
-        <div class="toExamineContent">
+        <div class="inDisContent">
             <div class="conTitle">
                 <img src="../../common/img/common_01.png">
                 <p>当前位置：</p>
-                <span>用户管理</span>
+                <span>信息管理</span>
                 <i></i>
-                <span>个人用户管理</span>
+                <span>信息展示</span>
             </div>
-            <div class="toExamineCon">
-                <div class="toExamineCon_search">
+            <div class="inDisCon">
+                <div class="inDisCon_search">
                     <div>
-                        <p>注册日期：</p>
-                        <input class="smallInput" type="text"><i></i><input class="smallInput" type="text">
+                        <p>公司名称：</p>
+                        <input type="text">
                     </div>
-                    <a class="toExamineConSearch" href="javascript:;">查&nbsp;&nbsp;询</a>
+                    <div>
+                        <p>业务需求：</p>
+                        <select>
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>所在地区：</p>
+                        <select>
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                    <a class="samSearch" href="javascript:;">查&nbsp;&nbsp;询</a>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th width="25">
-                                <img class="thiNoClick" src="img/toe_031.png">
-                            </th>
-                            <th>序号</th>
-                            <th>名称</th>
-                            <th>类别</th>
-                            <th>注册时间</th>
+                            <th width="50">ID</th>
+                            <th>公司名称</th>
+                            <th>业务需求</th>
+                            <th>所在地区</th>
                             <th>操作</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
-                                <img class="triNoClick" src="img/toe_041.png">
-                            </td>
-                            <td>1</td>
+                            <td>27</td>
                             <td>名称</td>
-                            <td>类别</td>
-                            <td>注册时间</td>
-                            <td><a href="javascript:;">操作</a></td>
+                            <td>信息订阅-项目信息-客户关系</td>
+                            <td>北京</td>
+                            <td>
+                                <a href="javascript:;">查看</a>
+                                <a href="javascript:;">删除</a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -219,6 +236,6 @@
     </div>
     <script type="text/javascript" src="../../common/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="../../left/left.js"></script>
-    <script type="text/javascript" src="toExamine.js"></script>
+    <script type="text/javascript" src="InformationDisplay.js"></script>
 </body>
 </html>
