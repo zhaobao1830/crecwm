@@ -9,17 +9,16 @@ $(function () {
     $("#knowledgeBase").find("i").removeClass("iNoClick").addClass("iClick")
     $("#knowledgeBase").find("p").removeClass("pNoClick").addClass("pClick")
     $(".knowledgeBase").removeClass("displayNone").addClass("displayBlock")
-    $(".knowledgeSearch").removeClass("liNoClick").addClass("liClick")
+    $(".knowledgeMainInstruc").removeClass("liNoClick").addClass("liClick")
 
     var leftHeight=$(".left").height()
-    var kdsContentHeight=$(".kdsContent").height()
-    if(leftHeight>kdsContentHeight){
-        $(".kdsContent").height(leftHeight)
-        // 获取kdsCon高度
-        $(".kdsCon").height(leftHeight-158)
+    var kmisContentHeight=$(".kmisContent").height()
+    if(leftHeight>kmisContentHeight){
+        $(".kdmContent").height(leftHeight)
+        // 获取kmisCon高度
+        $(".kmisCon").height(leftHeight-158)
     }else{
-        $(".left").height(kdsContentHeight)
+        $(".left").height(kmisContentHeight)
     }
 })
-
 

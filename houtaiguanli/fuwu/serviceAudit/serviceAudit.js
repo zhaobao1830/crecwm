@@ -1,4 +1,16 @@
 $(function () {
+    //给Li添加liShow，是为了在left.js里面，用$("liShow")进行操作
+    $(".left ul > li").removeClass("liShow")
+    $(".management").find("i").removeClass("iClick").addClass("iNoClick")
+    $(".management").find("p").removeClass("pClick").addClass("pNoClick")
+    $(".management_list").removeClass("displayBlock").addClass("displayNone")
+
+    $("#service").parent().addClass("liShow")
+    $("#service").find("i").removeClass("iNoClick").addClass("iClick")
+    $("#service").find("p").removeClass("pNoClick").addClass("pClick")
+    $(".service").removeClass("displayNone").addClass("displayBlock")
+    $(".serviceAudit").removeClass("liNoClick").addClass("liClick")
+
     var leftHeight=$(".left").height()
     var samContentHeight=$(".samContent").height()
     if(leftHeight>samContentHeight){
@@ -42,7 +54,7 @@ $(function () {
             $(this).parent().parent().removeClass("trClick")
 
             $("thead tr th img").addClass("thiNoClick")
-            $("thead tr th img").attr("src","img/srq_031.png")
+            $("thead tr th img").attr("src","img/sau_031.png")
         }
     })
 

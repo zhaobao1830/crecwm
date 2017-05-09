@@ -6,6 +6,9 @@
 html,body{
     height: 100%;
 }
+a{
+    text-decoration: none;
+}
 .left{
     width: 260px;
     height: 100%;
@@ -66,7 +69,6 @@ html,body{
     height: 50px;
     line-height: 50px;
     margin-left: 60px;
-    color: #4ea0ea;
     border-bottom: 1px solid #0c5e8d;
     cursor: pointer;
 }
@@ -78,18 +80,19 @@ html,body{
 .displayNone{
     display: none;
 }
-.pClick{
+.pClick,.liClick >a{
     color: #ffffff;
 }
 .iClick{
     background-position: 0 -25px;
 }
-.pNoClick{
+.pNoClick,.liNoClick > a{
     color: #4ea0ea;
 }
 .iNoClick{
     background-position: 0 0;
 }
+
 /*.row{*/
     /*margin-bottom:-10000px;*/
     /*padding-bottom:10000px;!*内外补丁是关键*!*/
