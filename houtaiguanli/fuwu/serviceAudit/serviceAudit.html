@@ -120,40 +120,74 @@
                  <div class="samCon_search">
                          <div>
                              <p>申请时间：</p>
-                             <input class="smallInput" type="text"><i></i><input class="smallInput" type="text">
+                             <input class="smallInput sq_fromt" type="text" id="prev_date_sq" onFocus="WdatePicker({maxDate:'%y-%M-%d',alwaysUseStartDate:true});"><i></i><input class="smallInput sq_endt" id="behind_data_sq" type="text" onFocus="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date_sq\')}',alwaysUseStartDate:true});">
                          </div>
                          <div>
                              <p>付费时间：</p>
-                             <input class="smallInput" type="text"><i></i><input class="smallInput" type="text">
-                         </div>
-                         <div>
-                             <p>服务名称：</p>
-                             <input type="text">
-                         </div>
-
-                         <div>
-                             <p>套餐名称：</p>
-                             <input type="text">
+                             <input class="smallInput pay_fromt" type="text" id="prev_date_pay" onFocus="WdatePicker({maxDate:'%y-%M-%d',alwaysUseStartDate:true});"><i></i><input class="smallInput pay_endt" type="text" id="behind_data_pay" onFocus="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date_pay\')}',alwaysUseStartDate:true});">
                          </div>
                          <div>
                              <p>是否付费：</p>
-                             <select>
+                             <select class="se_fufei_ch">
                                  <option>全部</option>
+                                 <option value="已付费">
+                                     已付费
+                                 </option>
+                                 <option value="未支付">
+                                     未支付
+                                 </option>
                              </select>
                          </div>
                          <div>
                              <p>是否审批：</p>
-                             <select>
+                             <select class="se_sp_ch">
                                  <option>全部</option>
+                                 <option  value="审批通过">
+                                     审批通过
+                                 </option>
+                                 <option value="未审批">
+                                     未审批
+                                 </option>
+                                 <option value="驳回">
+                                     驳回
+                                 </option>
                              </select>
                          </div>
                          <div>
                              <p>客户名称：</p>
-                             <input type="text">
+                             <input type="text" class="kehu_name" name="kehu_name">
+                         </div>
+                         <div>
+                             <p>服务名称：</p>
+                             <select class="fw_opchoice">
+                             </select>
+                         </div>
+
+                         <div>
+                             <p>套餐名称：</p>
+                             <div class="tc_chioce">
+                                 <div>
+                                     <label class="tcClick">
+                                         <input type="checkbox">我是1
+                                     </label>
+                                 </div>
+                                 <div>
+                                     <label>
+                                         <input type="checkbox">我是2
+                                     </label>
+                                 </div>
+                             </div>
                          </div>
                          <a class="samSearch" href="javascript:;">查&nbsp;&nbsp;询</a>
                  </div>
-                 <table>
+                 <div class="samOperation">
+                     <a href="javascript:;" class="sh_setxianxia">确定</a>
+                     <input type="text">
+                     <p>设置金额：</p>
+                     <a href="javascript:;" class="sh_return">驳回</a>
+                     <a href="javascript:;" class="sh_pass">通过</a>
+                 </div>
+                 <table class="sam_table">
                          <thead>
                             <tr>
                              <th width="25">
@@ -416,7 +450,8 @@
          </div>
        </div>
       </div>
-     <script type="text/javascript" src="../../common/jquery-3.1.1.js"></script>
+     <script type="text/javascript" src="../../common/js/jquery-3.1.1.js"></script>
+     <script type="text/javascript" src="../../common/js/WdatePicker.js"></script>
      <script type="text/javascript" src="../../left/left.js"></script>
      <script type="text/javascript" src="serviceAudit.js"></script>
 </body>

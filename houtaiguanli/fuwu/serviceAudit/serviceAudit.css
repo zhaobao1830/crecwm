@@ -22,10 +22,18 @@
     overflow: hidden;
     margin-right: 20px;
 }
-.samCon_search{
+.samCon_search,.samOperation{
     overflow: hidden;
 }
-.samCon_search div{
+.samCon_search{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+.samOperation{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.samCon_search > div{
     width: auto;
     height: 34px;
     line-height: 34px;
@@ -37,11 +45,11 @@
     font-size: 14px;
     color: #464646;
 }
-.samCon_search p,.samCon_search input,.samCon_search select,.samCon_search i,.samCon_search a{
+.samCon_search p,.samCon_search input[type=text],.samCon_search select,.samCon_search i,.samCon_search a,.samCon_search label{
     display: block;
     float: left;
 }
-.samCon_search input{
+.samCon_search input[type=text]{
     width: 230px;
     height: 32px;
     border: 1px solid #bbbbbb;
@@ -64,6 +72,24 @@
     margin-top: 16px;
     margin-right: 10px;
 }
+.tc_chioce{
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    color: #777777
+}
+.tc_chioce > div{
+    float: left;
+}
+.tc_chioce > div > label{
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.tc_chioce > div > label > input{
+    display: none;
+}
 .smallInput{
     width: 98px !important;
 }
@@ -83,12 +109,51 @@
 .samSearch:hover{
     background-color: #4986c6;
 }
+/*操作div start*/
+.samOperation input,.samOperation p,.samOperation a{
+    display: block;
+    float: right;
+    font-size: 14px;
+    line-height: 30px;
+}
+.sh_setxianxia{
+    padding: 0 10px;
+    height: 30px;
+    color: #ffffff;
+    background-color: #4ea0ea;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-right: 10px;
+}
+.sh_setxianxia:hover{
+    background-color: #4986c6;
+}
+.samOperation input{
+    width: 98px;
+    height: 28px;
+    line-height: 30px;
+    border: 1px solid #bbbbbb;
+}
+.sh_return,.sh_pass{
+    width: 66px;
+    height: 28px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 20px;
+    border: 1px solid #bbbbbb;
+    color: #777777;
+}
 
+.sh_return:hover,.sh_pass:hover{
+    border: 1px solid #4ea0ea;
+    color: #4ea0ea;
+}
+/*操作div end*/
 table{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 thead{
     width: auto;
@@ -225,4 +290,15 @@ tbody tr:hover{
 .trClick{
     background-color: #eaf3f8;
 }
+.displayBlock{
+    display: block;
+}
+.displayNone{
+    display: none;
+}
+/*套餐 点击/取消 start*/
+.tcClick{
+    color: #4ea0ea;
+}
+/*套餐 点击/取消 end*/
 /*公共类 end*/
