@@ -134,6 +134,9 @@
     line-height: 30px;
     border: 1px solid #bbbbbb;
 }
+.sh_text{
+    text-align: center;
+}
 .sh_return,.sh_pass{
     width: 66px;
     height: 28px;

@@ -92,7 +92,6 @@ $(function () {
     //点击审批
     $(".sh_pass").off("click");
     $(".sh_pass").on("click",function(){
-
         var check_num="";
         var sp_jg="";
         for(var i=0 ;i<$(".check_ch:checked").length;i++){
@@ -114,15 +113,16 @@ $(function () {
             sp_jg=$(".se_rv_r_r tbody tr:nth-child("+check_num+") td").eq($(".se_rv_r_r tbody .tr_t td").length-1);
             sp_subid=sp_jg.attr("subid");
             sp_html=sp_jg.html();
-            var price=$(".text").val();
+            var price=$(".sh_text").val();
             sh_setxianxia(sp_subid,price,sp_jg,"setpriceok");
         }
     });
+
+    $(".tc_chioce >div>label>span").on("click",tc_choice)
 })
 
 //查询
 function serviceAuditSearch() {
-    alert("ttt")
     var sql_data="";
     //申请时间
     if($(".sq_fromt").val()!=""){
@@ -173,6 +173,7 @@ function serviceAuditSearch() {
     else{
         sql_data=sql_data+" and"+" 1=1";
     }
+
     //是否付费
     if($(".se_fufei_ch").val()!=""){
         sql_data=sql_data+" and"+" paystatus ='"+$(".se_fufei_ch").val()+"'";
@@ -311,12 +312,13 @@ function tc_nameget(id){
 
 //套餐点击
 function tc_choice() {
-    if($(this).hasClass("tcClick")){
-        $(this).removeClass("tcClick")
-        $(this).find("input").prop("checked",false)
+    console.log("tt")
+    if($(this).parent().hasClass("tcClick")){
+        $(this).parent().removeClass("tcClick")
+        $(this).parent().find("input").prop("checked",false)
     }else{
-        $(this).addClass("tcClick")
-        $(this).find("input").prop("checked",true)
+        $(this).parent().addClass("tcClick")
+        $(this).parent().find("input").prop("checked",true)
     }
 }
 
