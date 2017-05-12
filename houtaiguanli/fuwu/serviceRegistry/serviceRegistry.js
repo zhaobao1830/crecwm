@@ -9,7 +9,7 @@ $(function () {
     $("#service").find("i").removeClass("iNoClick").addClass("iClick")
     $("#service").find("p").removeClass("pNoClick").addClass("pClick")
     $(".service").removeClass("displayNone").addClass("displayBlock")
-    $(".serviceAudit").removeClass("liNoClick").addClass("liClick")
+    $(".serviceRegistry").removeClass("liNoClick").addClass("liClick")
 
 
     var leftHeight=$(".left").height()
