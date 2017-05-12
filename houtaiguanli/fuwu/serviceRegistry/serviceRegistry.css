@@ -103,6 +103,9 @@ tbody tr a{
 tbody tr a:hover{
     color: #ff0000;
 }
+.select_sd{
+    display: none;
+}
 /*跳转 start*/
 .table_button{
     width: 100%;
@@ -250,7 +253,7 @@ tbody tr a:hover{
     text-align: center;
     text-decoration: none;
 }
-.addSave{
+.addSave,.updateSave{
     background-color: #4ea0ea;
     color: #ffffff;
     margin-left: 95px;

@@ -62,16 +62,16 @@
                         <img src="img/sre_01.png">
                         <p>添加</p>
                     </label>
-                    <label>
+                    <label class="regist_del">
                         <img src="img/sre_02.png">
                         <p>删除</p>
                     </label>
-                    <label>
+                    <label class="regist_up">
                         <img src="img/sre_03.png">
                         <p>编辑</p>
                     </label>
                 </div>
-                <table>
+                <table class="se_regist_r_b">
                        <thead>
                           <tr>
                               <th width="25">
@@ -291,38 +291,42 @@
                 <div class="addCon">
                     <div>
                         <span>类型：</span>
-                        <select>
+                        <select class="xgfl_type">
                             <option>订阅服务</option>
                         </select>
                     </div>
                     <div>
                         <span>服务名称：</span>
-                        <input type="text">
+                        <input type="text" class="fwcname">
                     </div>
                     <div>
                         <span>描述：</span>
-                        <input type="text">
+                        <input type="text" class="xgfl_bewrite">
                     </div>
                     <div>
                         <span>图标：</span>
-                        <input type="text">
+                        <input type="text" class="xgfl_tb">
                     </div>
                     <div>
                         <span>订购URL：</span>
-                        <input type="text">
+                        <input type="text" class="xgfl_dgurl">
                     </div>
                     <div>
                         <span>设置URL：</span>
-                        <input type="text">
+                        <input type="text" class="xgfl_seturl" >
                     </div>
                     <div>
                         <span>审核模式：</span>
-                        <select>
-                            <option>即时后生效</option>
+                        <select class="xgfl_sh">
+                            <option value ="即时后生效">即时后生效</option>
+                            <option value ="审批后生效">审批后生效</option>
+                            <option value ="支付后生效">支付后生效</option>
+                            <option value ="支付后审批生效">支付后审批生效</option>
                         </select>
                     </div>
                     <div>
-                        <a class="addSave" href="javascript:;">保存</a>
+                        <a class="addSave regist_add" href="javascript:;">保存</a>
+                        <a class="updateSave xgfl_upd displayNone" href="javascript:;">保存</a>
                         <a class="addCancel" href="javascript:;">取消</a>
                     </div>
                 </div>
