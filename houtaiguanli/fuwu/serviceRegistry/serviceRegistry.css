@@ -220,6 +220,7 @@ tbody tr a:hover{
 }
 .addCon{
     width: 440px;
+    overflow: hidden;
 }
 .addCon div{
     width: 440px;
@@ -272,9 +273,9 @@ tbody tr a:hover{
     background-color: #eaf3f8;
 }
 .displayBlock{
-    display: block;
+    display: block !important;
 }
 .displayNone{
-    display: none;
+    display: none !important;
 }
 /*公共类 end*/

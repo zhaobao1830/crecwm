@@ -36,17 +36,15 @@ $(function () {
     //添加按钮绑定click事件
     $(".regist_add").off("click");
     $(".regist_add").on("click",registAdd)
+
+    //取消按钮绑定click事件
+    $(".addCancel").on("click",addClose)
 })
 
-//开启添加框
-function addShow() {
-    $(".add_con").removeClass("displayNone").addClass("displayBlock")
-}
-//关闭添加框
+//关闭添加页面
 function addClose() {
     $(".add_con").removeClass("displayBlock").addClass("displayNone")
 }
-
 //查询列表
 function serviceList() {
     $.ajax({
@@ -70,7 +68,7 @@ function serviceList() {
                     }
                     index=index+1
                     $(".se_regist_r_b tbody").append('<tr class="">'+
-                        '<td class="line0"><input type="checkbox" class="select_sd"/><img class="thiNoClick" src="img/sre_031.png"></td>'+
+                        '<td class="line0"><input type="checkbox" class="select_sd"/><img class="triNoClick" src="img/sre_041.png"></td>'+
                         '<td class="line">'+index+'</td>'+
                         '<td class="line1">'+data_json.detail[i].createtime.split(" ")[0]+'</td>'+
                         '<td class="line2">'+data_json.detail[i].serviceid+'</td>'+
@@ -156,15 +154,18 @@ function xgflTypeSearch() {
 
 //删除
 function registDel() {
-    var msg = "您真的确定要删除吗？";
-    if (confirm(msg)==true){
+    if($(".select_sd:checked").length==0){
+        alert("请最少选择一个项目删除！");
+    }else{
+        var msg = "您真的确定要删除吗？";
+        if (confirm(msg)==true){
             var rel=/(^\s*)|(\s*$)/g;
             var tr_num="";
             var server_ID="";
             var del_id="";
             for(var i=0 ;i<$(".select_sd:checked").length;i++){
-                tr_num=$(".select_sd:checked").eq(i).index(".select_sd")+2;
-                server_ID=$(".se_regist_r_b table tr:nth-child("+tr_num+") td").eq(2).html();
+                tr_num=$(".select_sd:checked").eq(i).parent().parent();
+                server_ID=tr_num.find("td:eq(3)").html().trim();
                 del_id=del_id+","+server_ID;
             }
             $.ajax({
@@ -173,16 +174,19 @@ function registDel() {
                 data:"interface=deleteservice&id="+encodeURIComponent(del_id.substring(1)),
                 dataType:"json",
                 success:function(d_str){
-
                     if(d_str.result){
                         for(var i=0 ;i<$(".select_sd:checked").length;i++){
                             check_num=$(".select_sd:checked").eq(i).index(".select_sd")+1;
                             $(".se_regist_r_b tbody tr").eq(check_num).remove();
                         }
+                        addClose()
                         alert("删除成功！");
+                        window.location.reload();
                     }
                     else{
+                        addClose()
                         alert("删除失败！");
+                        window.location.reload();
                     }
 
 
@@ -193,13 +197,12 @@ function registDel() {
             });
             return true;
         }else{
-       return false;
+            return false;
+        }
     }
 }
 //编辑
 function registUp() {
-    $(".xgfl_upd").removeClass("displayNone").addClass("displayBlock");
-    $(".regist_add").removeClass("displayBlock").addClass("displayNone");
     if($(".select_sd:checked").length==0){
         alert("请选择一个项目编辑！");
     }
@@ -208,26 +211,28 @@ function registUp() {
             alert("只能选择1个项目进行修改！");
         }
         else{
+            $(".add_con").removeClass("displayNone").addClass("displayBlock")
+            $(".xgfl_upd").removeClass("displayNone").addClass("displayBlock");
+            $(".xgfl_in").removeClass("displayBlock").addClass("displayNone");
             var val_count=[];
             var rel=/(^\s*)|(\s*$)/g;
             var tr_num=$(".select_sd:checked").index(".select_sd")+1; //第二版
-            for(var i=1; i<$(".tr_t td").length ;i++){
+            for(var i=1; i<$(".tr_t th").length ;i++){
                 val_count.push($(".se_regist_r_b tr:nth-child("+tr_num+") td").eq(i).html().replace(rel, ""));
             }
             for(var l_length=0;l_length<$(".addCon .xgfl_type option").length ; l_length++){
-                if($(".addCon .xgfl_type option").eq(l_length).html()==val_count[2]){
+                if($(".addCon .xgfl_type option").eq(l_length).html()==val_count[3]){
                     $(".addCon .xgfl_type option").eq(l_length).get(0).selected=true;
                 }
             }
 
-            $(".addCon .fwcname").attr("value",val_count[3]);
-            $(".addCon .xgfl_bewrite").attr("value",val_count[4]);
-            $(".addCon .xgfl_tb").attr("value",val_count[5]);
-            $(".addCon .xgfl_dgurl").attr("value",val_count[8]);
-            $(".addCon .xgfl_seturl").attr("value",val_count[9]);
-
-            if(val_count[10]!=""){
-                $(".addCon .xgfl_sh").attr("value",val_count[10]);
+            $(".addCon .fwcname").attr("value",val_count[4]);
+            $(".addCon .xgfl_bewrite").attr("value",val_count[5]);
+            $(".addCon .xgfl_tb").attr("value",val_count[6]);
+            $(".addCon .xgfl_dgurl").attr("value",val_count[9]);
+            $(".addCon .xgfl_seturl").attr("value",val_count[10]);
+            if(val_count[11]!=""){
+                $(".addCon .xgfl_sh option[value='"+val_count[11]+"']").attr("selected", true);
             }
             $(".xgfl_upd").off("click");
             $(".xgfl_upd").on("click",xgflUpd)
@@ -237,8 +242,10 @@ function registUp() {
 
 //编辑框保存
 function xgflUpd() {
-    var tr_num=$(".select_sd:checked").index(".select_sd")+2;
-    var upd_id=$(".se_regist_r_b table tr:nth-child("+tr_num+") td").eq(2).html();
+    var tr_num=$(".select_sd:checked").index(".select_sd")+1;
+    console.log(tr_num)
+    var upd_id=$(".se_regist_r_b tr:nth-child("+tr_num+") td").eq(3).html();
+    console.log(upd_id)
     var upd_xm=encodeURIComponent("parentid='"+$(".xg_form_list .xgfl_type").val()+
         "',servicename='"+$(".xg_form_list .fwcname").val()+
         "',description='"+$(".xg_form_list .xgfl_bewrite").val()+
@@ -258,12 +265,12 @@ function xgflUpd() {
         success:function(up_str){
             if(up_str.result=="TRUE"){
                 alert("更新成功！");
-                console.log(upd_xm);
-                //window.location.reload();
+                //window.location.reload();\
+                addClose()
             }
             else{
                 alert("更新失败！")
-
+                addClose()
             }
 
             $(".xg_form_list").css({"display":"none"});
@@ -278,10 +285,11 @@ function xgflUpd() {
 
 //添加方法
 function registAdd() {
-    $(".regist_add").removeClass("displayNone").addClass("displayBlock");
+    $(".add_con").removeClass("displayNone").addClass("displayBlock")
+    $(".xgfl_in").removeClass("displayNone").addClass("displayBlock");
     $(".xgfl_upd").removeClass("displayBlock").addClass("displayNone");
     $(".xg_form_list li input").val("");
-    $(".xgfl_in").bind("click",function(){
+    $(".xgfl_in").on("click",function(){
         var parentid=encodeURIComponent($(".xg_form_list .xgfl_type").val());
         var servicename=encodeURIComponent($(".xg_form_list .fwcname").val());
         var description=encodeURIComponent($(".xg_form_list .xgfl_bewrite").val());
@@ -291,15 +299,17 @@ function registAdd() {
         var checkmode=encodeURIComponent($(".xg_form_list .xgfl_sh").val());
         $.ajax({
             type:"POST",
-            url:"./subscribe/subscribe_api.php",
+            url:"../../../subscribe/subscribe_api.php",
             data:"interface=addService&parentid="+parentid+"&servicename="+servicename+"&des="+description+"&ico="+ico+"&subscribeurl="+subscribeurl+"&setupurl="+setupurl+"&checkmode="+checkmode,
             dataType:"json",
             success:function(up_str){
                 if(up_str.result=="TRUE"){
                     alert("插入成功！");
+                    addClose()
                     window.location.reload();
                 }
                 else{
+                    addClose()
                     alert("插入失败！");
                 }
             },
