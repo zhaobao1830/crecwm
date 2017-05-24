@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.dataCenter{
+  width: 100%;
+  height: auto;
+  min-height: 340px;
+  background-color: #eeeeee;
+  padding-top: 20px;
+  padding-bottom: 120px;
+}
+.dcContent{
+  width: 1200px;
+  height: auto;
+  min-height: 340px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.dccTop{
+  width: 100%;
+  height: 74px;
+  line-height: 74px;
+  background-color: #bbbbbb;
+}
+.dccTop > select{
+  width: 440px;
+  height: 34px;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  margin-left: 20px;
+}
+.dccSearch{
+  width: 100%;
+  height: 188px;
+}
+.dccSearch > div{
+  width: auto;
+  height: 34px;
+  line-height: 34px;
+  float: left;
+  margin-left: 60px;
+  margin-top: 40px;
+  /*width: 120px;*/
+  /*height: 34px;*/
+  /*border: 1px solid #bbbbbb;*/
+  /*border-radius: 2px;*/
+}
+.dccSearch > div > p{
+  float: left;
+
+}
