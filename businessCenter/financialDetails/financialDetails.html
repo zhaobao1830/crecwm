@@ -50,11 +50,93 @@
       </select>
     </div>
     <div class="fdcSearch">
-
+      <p>组合搜索</p>
+      <div>
+        <div>
+          <input type="text" class="createCode_date_start" id="prev_date" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'behind_data\')}',alwaysUseStartDate:true});" value=""/>
+          <i></i>
+          <input  type="text" class="createCode_date_end" id="behind_data" onFocus="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date\')}',alwaysUseStartDate:true});" value=""/>
+        </div>
+        <div>
+          <a class="aClick">今日</a>
+          <a>最近3天</a>
+          <a>最近7天</a>
+          <a>最近一个月</a>
+        </div>
+      </div>
+      <div class="marginTop">
+        <div>
+          <select>
+            <option>财务账单类型</option>
+          </select>
+        </div>
+        <div>
+          <input type="text" placeholder="￥">
+          <i></i>
+          <input type="text" placeholder="￥">
+        </div>
+        <div>
+          <input type="text" class="orderNumber" placeholder="请输入订单号">
+        </div>
+      </div>
+      <div class="marginTop">
+        <a class="search" href="javascript:;">查&nbsp;&nbsp;询</a>
+      </div>
+    </div>
+    <div class="fdcResult">
+      <div class="fdcResult-top1">
+        <a class="allA">全部</a>
+        <a>收入</a>
+        <a class="top_aClick">退款</a>
+      </div>
+      <div class="fdcResult-top2">
+        <ul>
+          <li class="top_liClick">
+            <p>收入：<span>+9,876.66元</span></p>
+            <p>7笔</p>
+          </li>
+          <li class="top_liNoClick">
+            <p>退款：<span>-22.78元</span></p>
+            <p>3笔</p>
+          </li>
+        </ul>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>入账时间</th>
+            <th>订单号</th>
+            <th>来源</th>
+            <th>收入金额（元）</th>
+            <th>账户余额（元</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2017-05-05 09:22:25</td>
+            <td>10000001...0400</td>
+            <td>商城</td>
+            <td>+1,939.46</td>
+            <td>214,585.09</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table_button">
+        <div class="tableButton">
+          <a class="goFirst">首页</a>
+          <a class="prePage">上一页</a>
+          <p class="currentPage">3</p>
+          <a class="nextPage">下一页</a>
+          <a class="goLast">尾页</a>
+          <input type="text" value="" class="pages">
+          <a class="goPage">跳转</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
    <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
    <script type="text/javascript" src="financialDetails.js"></script>
+   <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
 </body>
 </html>
