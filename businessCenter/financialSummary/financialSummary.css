@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.finaSumm{
+  width: 100%;
+  height: auto;
+  min-height: 340px;
+  background-color: #eeeeee;
+  padding-top: 20px;
+  padding-bottom: 120px;
+}
+.fsConent{
+  width: 1200px;
+  height: auto;
+  min-height: 340px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+.fscTop{
+  width: 100%;
+  height: 74px;
+  line-height: 74px;
+  background-color: #bbbbbb;
+}
+.fscTop > select{
+  width: 440px;
+  height: 34px;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  margin-left: 20px;
+}
+.fscSearch{
+  width: 1080px;
+  height: 34px;
+  line-height: 34px;
+  margin: 40px 60px 20px 60px;
+}
+.fscSearch > div{
+  width: auto;
+  float: left;
+  margin-right: 60px;
+}
+.fscSearch > div > a{
+  display: block;
+  float: left;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.fscSearch > div >input{
+  width: 112px;
+  height: 32px;
+  border: 1px solid #bbbbbb;
+  text-align: center;
+  color: #cb2a2d;
+}
+/*table样式*/
+table{
+  width: 1080px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+thead{
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  background-color: #777777;
+}
+thead tr,thead th{
+  border: 1px solid #dddddd;
+  border-left: none !important;
+  color: #ffffff;
+  height: 50px;
+  font-size: 14px;
+}
+thead tr img,tbody td img{
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+tbody{
+  width: auto;
+  min-width: 1070px;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+tbody tr,tbody td{
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  height: 67px;
+  color: #464646;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+tbody td{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+tbody tr{
+  border-top: 1px dotted #dddddd !important;
+}
+tbody tr:hover{
+  background-color: #f1f1f1;
+}
+tbody tr a{
+  color: #398fd1;
+  text-decoration: none;
+}
+tbody tr a:hover{
+  color: #ff0000;
+}
+
+
+/*公共类*/
+.searchAclick{
+  background-color: #cb2a2d;
+  color: #ffffff;
+}
+.searchANoclick{
+  background-color: #eeeeee;
+  color: #222222;
+}

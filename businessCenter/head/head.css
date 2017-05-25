@@ -72,13 +72,19 @@
   position: relative;
   cursor: pointer;
 }
+.nav-right > ul > li:hover > a{
+  color: #cb2a2d;
+}
+.nav-right > ul > li >a{
+  text-decoration: none;
+}
 /*头部 nav end*/
 
 /*公共类*/
-.liNoclick{
+.liNoclick > a{
   color: #777777;
 }
-.liClick{
+.liClick > a{
   color: #cb2a2d;
 }
 .liClick:before{

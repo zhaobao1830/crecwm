@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.dataCenter{
+.dataCen{
   width: 100%;
   height: auto;
   min-height: 340px;
@@ -40,10 +40,6 @@
   float: left;
   margin-left: 60px;
   margin-top: 40px;
-  /*width: 120px;*/
-  /*height: 34px;*/
-  /*border: 1px solid #bbbbbb;*/
-  /*border-radius: 2px;*/
 }
 .dccSearch > div > p{
   float: left;
@@ -119,7 +115,7 @@
   margin-top: 20px;
 }
 .dcResult-content > ul > li{
-  width: 284px;
+  width: 338px;
   height: 86px;
   float: left;
   list-style: none;
@@ -135,6 +131,11 @@
   float: left;
   font-size: 14px;
   margin-top: 20px;
+}
+.dcResult-show{
+  width: 1080px;
+  margin: 0 auto;
+  height: 470px;
 }
 /*公共类*/
 .aClick{

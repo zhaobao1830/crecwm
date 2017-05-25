@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="dataCenter.css">
 </head>
 <body>
-   <div class="head">
+    <div class="head">
   <div class="head-content-title">
     <!--头部顶端 start -->
     <div class="head-title">
@@ -27,17 +27,22 @@
       </div>
       <div class="nav-right">
         <ul>
-          <li class="liClick">数据中心</li>
-          <li class="liNoclick">财务汇总</li>
-          <li class="liNoclick">财务明细</li>
+          <li class="dataCenter liClick">
+            <a href="../dataCenter/dataCenter.html">数据中心</a>
+          </li>
+          <li class="financialSummary liNoclick">
+            <a href="../financialSummary/financialSummary.html">财务汇总</a>
+          </li>
+          <li class="financialDetails liNoclick">
+            <a href="../financialDetails/financialDetails.html">财务明细</a>
+          </li>
         </ul>
       </div>
     </div>
     <!--头部nav end -->
   </div>
-
 </div>
-   <div class="dataCenter">
+   <div class="dataCen">
      <div class="dcContent">
        <form>
          <div class="dccTop">
@@ -83,12 +88,17 @@
                 <p>对比<span>2017-04-21</span>至<span>2017-04-27</span>：</p><p>129.09%</p>
               </li>
             </ul>
+            <div id="dcResult-show" class="dcResult-show">
+            </div>
           </div>
        </div>
      </div>
    </div>
    <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
+   <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
+   <script type="text/javascript" src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+   <script type="text/javascript" src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+   <script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
    <script type="text/javascript" src="js/dataCenter.js"></script>
-   <script type="text/javascript" src="js/WdatePicker.js"></script>
 </body>
 </html>
