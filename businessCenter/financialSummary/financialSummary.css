@@ -127,3 +127,9 @@ tbody tr a:hover{
   background-color: #eeeeee;
   color: #222222;
 }
+.displayBlock{
+  display: block;
+}
+.displayNone{
+  display: none;
+}

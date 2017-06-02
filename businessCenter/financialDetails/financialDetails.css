@@ -118,8 +118,10 @@
   width: 1080px;
   height: 34px;
   border-bottom: 2px solid #cb2a2d;
+  font-size: 0;
+  line-height: 0;
 }
-.fdcResult-top1 a{
+.fdcResult-top1 a,.fdcResult-top1 p{
   display: block;
   float: left;
   height: 33px;
@@ -134,6 +136,9 @@
   border-style: solid;
   border-color: #ffffff;
   border-bottom: none;
+}
+.fdcResult-top1 p{
+  cursor: none !important;
 }
 .fdcResult-top2{
   width: 1080px;

@@ -51,11 +51,12 @@
       </div>
     <div class="fscSearch">
        <div>
-         <a class="searchAclick" href="javascript:;">日汇总</a>
-         <a class="searchANoclick" href="javascript:;">月汇总</a>
+         <a class="searchAclick" id="daily" href="javascript:;">日汇总</a>
+         <a class="searchANoclick" id="monthly" href="javascript:;">月汇总</a>
        </div>
        <div>
-         <input type="text" class="createCode_date_start" id="prev_date" onFocus="WdatePicker({alwaysUseStartDate:true});" value=""/>
+         <input type="text" class="createCode_date_start daily_date displayBlock" id="daily_date" onFocus="WdatePicker({alwaysUseStartDate:true,dateFmt: 'yyyy-MM',onpicked:dayChange($dp.$('daily_date').value)});" value=""/>
+         <input type="text" class="createCode_date_start monthly_date displayNone" id="monthly_date" onFocus="WdatePicker({alwaysUseStartDate:true,dateFmt: 'yyyy',onpicked:dayChange($dp.$('monthly_date').value)});" value=""/>
        </div>
     </div>
     <table>
