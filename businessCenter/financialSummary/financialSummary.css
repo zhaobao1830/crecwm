@@ -41,6 +41,7 @@
   width: auto;
   float: left;
   margin-right: 60px;
+  position: relative;
 }
 .fscSearch > div > a{
   display: block;
@@ -55,6 +56,11 @@
   border: 1px solid #bbbbbb;
   text-align: center;
   color: #cb2a2d;
+}
+.datePickerImg{
+  position: absolute;
+  top: 5px;
+  left: 95px
 }
 /*table样式*/
 table{
