@@ -7,9 +7,12 @@ $(function () {
   })
 
   getData()
+  
 })
-
-function getData() {
+function test() {
+  getData(strq,str2)
+}
+function getData(strq,str2) {
   /**
    2
    * Highcharts 在 4.2.0 开始已经不依赖 jQuery 了，直接用其构造函数既可创建图表
@@ -31,7 +34,7 @@ function getData() {
   },
   colors: ['#cb2a2d','#000'],
   xAxis: {
-    categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月','13']
+    categories: str
   },
   yAxis: {
     title: {
