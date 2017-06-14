@@ -129,10 +129,14 @@
 .dcResult-content > ul > li:hover{
   border-color: #cb2a2d !important;
 }
-.dcResult-content > ul > li > p{
+.dcResult-content > ul > li > div{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.dcResult-content > ul > li > div > p{
   float: left;
   font-size: 14px;
-  margin-top: 20px;
 }
 .dcResult-show{
   width: 1080px;
