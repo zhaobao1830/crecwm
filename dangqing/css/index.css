@@ -168,12 +168,12 @@ nav{
 .titleShow{
   overflow: hidden;
 }
-.title{
+.titleName{
   float: left;
   width: 100px;
-  height: 18px;
+  height: 22px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 2px solid #bf0000;
   font-size: 18px;
   color: #bf0000;
@@ -186,12 +186,11 @@ nav{
   margin-left: 5px;
 }
 .titleShowUl li{
-  height: 18px;
+  height: 22px;
   list-style: none;
   float: left;
-  padding:0 20px 20px;
+  padding:0 20px 16px;
   font-size: 18px;
-
 }
 .titleShowUl li a{
   text-decoration: none;
@@ -205,12 +204,16 @@ nav{
   height: auto;
   overflow: hidden;
 }
+.contentShow ul{
+  overflow: hidden;
+}
 .contentShow ul li{
   float: left;
   margin-top: 30px;
 }
-.con-img{
+.con-img,.con-img img{
   float: left;
+  width: 260px;
   height: 180px;
 }
 .con-content{
@@ -221,17 +224,22 @@ nav{
   margin-left: 20px;
 }
 .con-title{
-  font-size: 18px;
+  height: 20px;
+  line-height: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #dddddd;
 }
+.con-title span{
+  font-size: 0;
+}
 .con-title a{
+  font-size: 18px;
   color: #222222;
   text-decoration: none;
   cursor: pointer;
 }
-.con-title a:hover{
-  color: #f44848;
+.con-title span:hover a{
+  color: #bf0000;
 }
 .author-time{
   font-size: 14px;
@@ -242,7 +250,16 @@ nav{
   overflow: hidden;
 }
 .con-author,.con-time{
+  height: 19px;
+  line-height: 19px;
   float: left;
+}
+.con-author > a{
+  text-decoration: none;
+  color: #888888;
+}
+.con-author > a:hover{
+  color: #bf0000;
 }
 .con-time{
   margin-left: 30px;
@@ -268,7 +285,7 @@ nav{
   text-decoration: none;
 }
 .con-information a:hover{
-  background-color: #f44848;
+  background-color: #bf0000;
 }
 /*politics end*/
 /*thoughtTheory start*/
@@ -362,6 +379,9 @@ nav{
   text-decoration: none;
   margin-top: 23px;
 }
+.newPost:hover{
+  background-color: #bf0000;
+}
 /*personInfromation end*/
 /*postShow start*/
 .postShow,.newsShow{
@@ -425,13 +445,20 @@ nav{
   text-decoration: none;
 }
 .rcon-title a:hover{
-  color: #f44848;
+  color: #bf0000;
 }
 .rcon-author{
   float: left;
   margin-top: 7px;
   font-size: 12px;
   color: #888888;
+}
+.rcon-author a{
+  color: #888888;
+  text-decoration: none;
+}
+.rcon-author a:hover{
+  color: #bf0000;
 }
 /*postShow end*/
 /*conRight end*/
@@ -455,6 +482,10 @@ nav{
 .pcsNoclick{
   background-color: #333333;
 }
-
-
+.displayBlock{
+  display: block;
+}
+.displayNone{
+  display: none;
+}
 /*公共类 end*/
