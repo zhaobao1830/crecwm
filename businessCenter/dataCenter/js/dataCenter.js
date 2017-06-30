@@ -34,7 +34,7 @@ function getData(strq,str2) {
   },
   colors: ['#cb2a2d','#000'],
   xAxis: {
-    categories: str
+
   },
   yAxis: {
     title: {

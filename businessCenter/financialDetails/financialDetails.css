@@ -37,7 +37,7 @@
   margin: 40px 60px 20px 60px;
 }
 .fdcSearch > p{
-  font-size: 12px;
+  font-size: 14px;
   color: #000000;
   float: left;
   height: 140px;
@@ -45,7 +45,7 @@
 }
 .fdcSearch > div{
   float: left;
-  width: 1012px;
+  width: 1002px;
   height: 34px;
   margin-left: 20px;
 }
@@ -64,6 +64,7 @@
   line-height: 34px;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
+  font-size: 14px;
 }
 .fdcSearch > div > div > i{
   width: 10px;
@@ -89,6 +90,7 @@
   height: 34px;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
+  font-size: 14px;
 }
 .orderNumber{
   width: 272px !important;
@@ -121,7 +123,17 @@
   font-size: 0;
   line-height: 0;
 }
-.fdcResult-top1 a,.fdcResult-top1 p{
+.fdcResult-top1 p{
+  display: block;
+  float: left;
+  height: 33px;
+  line-height: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  padding-bottom: 1px;
+}
+.fdcResult-top1 a{
   display: block;
   float: left;
   height: 33px;
@@ -137,9 +149,7 @@
   border-color: #ffffff;
   border-bottom: none;
 }
-.fdcResult-top1 p{
-  cursor: none !important;
-}
+
 .fdcResult-top2{
   width: 1080px;
   height: 74px;

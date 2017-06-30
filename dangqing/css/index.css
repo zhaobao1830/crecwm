@@ -431,6 +431,10 @@ nav{
   height: 86px;
   float: left;
 }
+.right-img img{
+  width: 120px;
+  height: 86px;
+}
 .right-content{
   float: left;
   margin-left: 10px;

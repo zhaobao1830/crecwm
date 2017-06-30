@@ -132,11 +132,11 @@
 .dcResult-content > ul > li > div{
   width: 100%;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .dcResult-content > ul > li > div > p{
   float: left;
-  font-size: 14px;
+  font-size: 16px;
 }
 .dcResult-show{
   width: 1080px;
@@ -157,4 +157,8 @@
   border-color: #eeeeee;
   background-color: #eeeeee;
   color: #777777;
+}
+
+.highcharts-title{
+  float: left;
 }
