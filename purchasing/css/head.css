@@ -8,3 +8,23 @@
   width: 1200px;
   margin: 0 auto;
 }
+.headCon > .lt{
+  float: left;
+  font-size: 14px;
+  color: #555555;
+}
+.headCon > .rt{
+  font-size: 0;
+  float: right;
+}
+.headCon > .rt > a,.headCon > .rt > span{
+  text-decoration: none;
+  font-size: 14px;
+  color: #777777;
+}
+.headCon > .rt > span{
+  padding: 0 10px;
+}
+.headCon > .rt > a:hover{
+  color: #d01d00;
+}
