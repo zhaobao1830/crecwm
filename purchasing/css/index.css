@@ -1,3 +1,4 @@
+/*introduce-box start*/
 .introduce-box{
   width: 1200px;
   margin: 0 auto;
@@ -92,7 +93,157 @@
   font-size: 18px;
   text-decoration: none;
 }
-
+.intor-middle{
+  width: 1200px;
+  height: 200px;
+}
+.intor-bottom{
+  width: 1200px;
+  height: 96px;
+  margin-top: 66px;
+}
+.intor-bottom > ul > li{
+  height: 96px;
+  list-style: none;
+  float: left;
+  width: 208px;
+  margin-left: 40px;
+}
+.intor-bottom > ul > li:first-child{
+  margin-left: 0;
+}
+.inLeft{
+  float: left;
+  width: 70px;
+  text-align: center;
+}
+.inLeft span{
+  color: #555555;
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+}
+.inRight{
+  float: left;
+  margin-left: 10px;
+  width: 128px;
+}
+.rightCont,.rightConb{
+  width: 128px;
+  display: block;
+  color: #888888;
+  font-size: 14px;
+}
+.rightCont{
+  margin-top: 16px;
+}
+.rightConb{
+ margin-top: 10px;
+}
+.moneyCon{
+  color: #f44848;
+  font-size: 26px;
+}
+.singular{
+  color: #23c164;
+  font-size: 26px;
+}
+.rightCond{
+  font-size: 18px;
+  color: #f77676;
+}
+.rightConc{
+  color: #7cc54b;
+  font-size: 18px;
+}
+/*introduce-box end*/
+.content{
+  width: 1200px;
+  margin: 0 auto;
+}
+/*notice start*/
+.notice{
+  width: 853px;
+  height: 835px;
+  float: left;
+  margin-top: 50px;
+}
+.noticeTop{
+  width: 850px;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #2263a7;
+}
+.topTitle{
+  width: 100px;
+  height: 34px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2263a7;
+  text-align: center;
+  float: left;
+}
+.topCon{
+  width: 750px;
+  height: 34px;
+  margin-left: 100px;
+}
+.noticeShow{
+  color: #555555;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.noticeNum{
+  font-size: 14px;
+  color: #ff0000;
+}
+.more{
+  float: right;
+  font-size: 12px;
+  color: #555555;
+  text-decoration: none;
+}
+.noticeContent{
+  width: 850px;
+  height: auto;
+  float: left;
+}
+.contentTop{
+  color: #777777;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.contentTop > div{
+  float: left;
+}
+.purchasingInformation{
+  margin-left: 162px;
+}
+.publishingCompany{
+  margin-left: 235px;
+}
+.distributionRegion{
+  margin-left: 168px;
+}
+.operation{
+  margin-left: 30px;
+}
+.contentCon{
+  width: 850px;
+  height: auto;
+  float: left;
+}
+.contentCon > ul > li{
+  float: left;
+  width: 850px;
+  height: 75px;
+  list-style: none;
+}
+.contentConLi > div{
+  float: left;
+}
+/*notice end*/
 /*公共类 start*/
 .navAClick{
   color: #fff;
