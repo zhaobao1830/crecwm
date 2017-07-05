@@ -1,15 +1,9 @@
 $(function () {
-
+  $(".conTitle a").on("mousemove",function () {
+    $(this).parent().parent().find(".signm").css("background-color","#2263a7")
+  })
+  $(".conTitle a").on("mouseout",function () {
+    $(this).parent().parent().find(".signm").removeAttr("style")
+  })
 })
 
-
-function test() {
-  $.ajax({
-    url:'',
-    type:'post',
-    data:{data1:'数据'},
-    success:function (data) {
-      
-    }
-  })
-}

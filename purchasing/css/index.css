@@ -160,15 +160,18 @@
 .content{
   width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 80px;
 }
 /*notice start*/
 .notice{
-  width: 853px;
+  width: 850px;
   height: 835px;
   float: left;
   margin-top: 50px;
+  overflow: hidden;
 }
-.noticeTop{
+.noticeTop,.srTop{
   width: 850px;
   height: 34px;
   line-height: 34px;
@@ -184,9 +187,11 @@
   float: left;
 }
 .topCon{
-  width: 750px;
   height: 34px;
   margin-left: 100px;
+}
+.topCon a:hover{
+  color: #2263a7;
 }
 .noticeShow{
   color: #555555;
@@ -209,6 +214,7 @@
   float: left;
 }
 .contentTop{
+  height: 14px;
   color: #777777;
   font-size: 14px;
   margin-top: 30px;
@@ -237,13 +243,219 @@
 .contentCon > ul > li{
   float: left;
   width: 850px;
-  height: 75px;
+  height: 74px;
   list-style: none;
 }
 .contentConLi > div{
   float: left;
 }
+.pinShow{
+  width: 418px;
+  height: 74px;
+}
+.pinShow > div{
+  float: left;
+}
+.date{
+  width: 60px;
+  height: 74px;
+  float: left;
+  text-align: right;
+}
+.date > span{
+  display: block;
+}
+.dateMoth{
+  font-size: 16px;
+  color: #555555;
+  margin-top: 20px;
+}
+.dateYear{
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-top: 8px;
+}
+.sign{
+  width: 20px;
+  height: 74px;
+  margin: 0 20px;
+}
+.sign > span,.sign > i{
+  display: block;
+}
+.signt{
+  width: 2px;
+  height: 27px;
+  background-color: #dddddd;
+  margin-left: 9px;
+}
+.signm{
+  width: 16px;
+  height: 16px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #dddddd;
+  background-color: #fff;
+}
+.signm:hover{
+  background-color: #2263a7;
+}
+.icon{
+  height: 74px;
+}
+.icon img{
+  margin-top: 30px;
+}
+.conTitle{
+  width: 256px;
+  height: 74px;
+  line-height: 74px;
+  margin-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.conTitle > a{
+  color: #555555;
+  font-size: 14px;
+  text-decoration: none;
+}
+.conTitle > a:hover{
+  color: #2263a7;
+}
+.contentConLi > .conTitle >a:hover .contentConLi > .sign > .signm{
+  background-color: #2263a7;
+}
+.pconShow{
+  width: 196px;
+  height: 74px;
+  line-height: 74px;
+  margin-left: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #555555;
+  font-size: 14px;
+}
+.dbrShow{
+  width: 59px;
+  height: 74px;
+  line-height: 74px;
+  margin-left: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #555555;
+  font-size: 14px;
+}
+.viewDetails{
+  margin-left: 20px;
+}
+.viewDetails a{
+  display: block;
+  width: 74px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #2263a7;
+  text-decoration: none;
+  font-size: 14px;
+  color: #2263a7;
+  margin-top: 21px;
+}
+.viewDetails a:hover{
+  background-color: #2263a7;
+  color: #fff;
+}
 /*notice end*/
+
+/*translation start*/
+.translation{
+  width: 330px;
+  height: 480px;
+  float: left;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.translationTop{
+  width: 330px;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #2263a7;
+}
+.translationContent{
+  width: 330px;
+  height: auto;
+  float: left;
+}
+.translationContent > ul{
+  overflow: hidden;
+}
+.translationContent > ul > li{
+  margin-top: 25px;
+  height: 15px;
+  line-height: 15px;
+  list-style: none;
+}
+.translationContent > ul > li > i,.translationContent > ul > li > a{
+  display: block;
+  text-decoration: none;
+  float: left;
+}
+.translationIcon{
+  width: 27px;
+  height: 15px;
+  background: url("../img/iddingIcon.png") no-repeat 0 0;
+}
+.translationTitle{
+  width: 293px;
+  margin-left: 10px;
+  color: #555555;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.translationTitle:hover{
+  color: #2263a7;
+}
+/*translation end*/
+
+/*supplierRecruitment start*/
+.supplierRecruitment{
+  width: 850px;
+  height: 470px;
+  float: left;
+  margin-top: 80px;
+  overflow: hidden;
+}
+.srPubliCompany{
+  margin-left: 257px;
+}
+.closingDate{
+  margin-left: 224px;
+}
+.srconShow{
+  width: 198px;
+  height: 74px;
+  line-height: 74px;
+  margin-left: 56px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #555555;
+  font-size: 14px;
+}
+.dateShow{
+  margin-left: 85px;
+  color: #555555;
+  font-size: 14px;
+  height: 74px;
+  line-height: 74px;
+}
+/*supplierRecruitment end*/
+
 /*公共类 start*/
 .navAClick{
   color: #fff;
@@ -252,5 +464,11 @@
 .navANoClick{
   color: #777;
   background-color: #fff;
+}
+.liBackColor{
+  background-color: #fafafa;
+}
+.colorTran{
+  background-color: transparent;
 }
 /*公共类 end*/
