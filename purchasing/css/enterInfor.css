@@ -1,0 +1,62 @@
+.content{
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+/*公司信息 start*/
+.companyInfor{
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.conInTop,.comAlTop{
+  width: 1200px;
+  height: 34px;
+  border-bottom: 1px solid #2263a7;
+}
+.topTitle{
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  background-color: #2263a7;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.conInCon{
+  width: 1200px;
+  height: auto;
+}
+.conInConTitle{
+  width: 1200px;
+  color: #222222;
+  font-size: 18px;
+  margin: 30px 0;
+}
+.conInConContent{
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+}
+.conInConContent p{
+  color: #555555;
+  font-size: 14px;
+}
+/*公司信息 end*/
+/*公司相册 start*/
+.companyAlbum,.comAlCon{
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+}
+.companyAlbum{
+  margin-top: 80px;
+}
+.comAlCon{
+ margin-top: 20px;
+  border-bottom: 1px solid;
+}
+/*公司相册 end*/

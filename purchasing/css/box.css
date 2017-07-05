@@ -1,0 +1,174 @@
+/*introduce-box start*/
+.introduce-box{
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.intor-top{
+  height: 85px;
+  overflow: hidden;
+}
+.intor-top-site{
+  width: auto;
+  height: 85px;
+  float: left;
+  font-size: 0;
+}
+.intor-top-site > a,.intor-top-site > span{
+  display: block;
+  float: left;
+}
+.intor-top-site > .title{
+  height: 26px;
+  line-height: 26px;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 10px;
+  border-right: 2px solid #bbbbbb;
+}
+
+.intor-top-site > .telephone{
+  margin-top: 35px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555555;
+}
+.intor-top-site > .collection{
+  font-size: 12px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-top: 26px;
+  margin-left: 10px;
+  text-align: center;
+}
+.intor-top-site > .collection > i{
+  display: block;
+  width: 17px;
+  height: 17px;
+  float: left;
+  background: url("../img/collection.png") 0 0 no-repeat;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+.intor-top-site > .collection > span{
+  display: block;
+  float: left;
+  color: #bbbbbb;
+  margin-left: 5px;
+}
+.intor-top-site > .collection:hover{
+  border-color: #2263a7;
+}
+.intor-top-site > .collection:hover > i{
+  background-image: url("../img/cancel.png");
+}
+.intor-top-site > .collection:hover > span{
+  color: #2263a7;
+}
+.intor-top-nav{
+  float: right;
+  width: auto;
+  height: 46px;
+  margin-top: 39px;
+}
+.intor-top-nav ul li{
+  list-style: none;
+  float: left;
+  height: 46px;
+  line-height: 46px;
+
+}
+.intor-top-nav > ul > li > a{
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 46px;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+}
+.intor-middle{
+  width: 1200px;
+  height: 200px;
+}
+.intor-bottom{
+  width: 1200px;
+  height: 96px;
+  margin-top: 66px;
+}
+.intor-bottom > ul > li{
+  height: 96px;
+  list-style: none;
+  float: left;
+  width: 208px;
+  margin-left: 40px;
+}
+.intor-bottom > ul > li:first-child{
+  margin-left: 0;
+}
+.inLeft{
+  float: left;
+  width: 70px;
+  text-align: center;
+}
+.inLeft span{
+  color: #555555;
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+}
+.inRight{
+  float: left;
+  margin-left: 10px;
+  width: 128px;
+}
+.rightCont,.rightConb{
+  width: 128px;
+  display: block;
+  color: #888888;
+  font-size: 14px;
+}
+.rightCont{
+  margin-top: 16px;
+}
+.rightConb{
+  margin-top: 10px;
+}
+.moneyCon{
+  color: #f44848;
+  font-size: 26px;
+}
+.singular{
+  color: #23c164;
+  font-size: 26px;
+}
+.rightCond{
+  font-size: 18px;
+  color: #f77676;
+}
+.rightConc{
+  color: #7cc54b;
+  font-size: 18px;
+}
+/*introduce-box end*/
+/*公共类 start*/
+.navAClick{
+  color: #fff;
+  background-color: #2263a7;
+}
+.navANoClick{
+  color: #777;
+  background-color: #fff;
+}
+.liBackColor{
+  background-color: #fafafa;
+}
+.colorTran{
+  background-color: transparent;
+}
