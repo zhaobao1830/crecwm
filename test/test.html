@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .content{
+      width: 100%;
+      height: auto;
+      border: 1px solid #dddddd;
+      border-bottom: none;
+      overflow: hidden;
+    }
+    .content > div{
+      width: 100%;
+      height: 44px;
+      float: left;
+      display: flex;
+    }
+    .content > div > span{
+      display: block;
+      float: left;
+      height: 43px;
+      line-height: 43px;
+      font-size: 14px;
+    }
+    .conTitle{
+      flex: 0 0 108px;
+      width: 108px;
+      text-align: center;
+      background-color: #efefef;
+      border-bottom: 1px solid #dddddd;
+      border-right: 1px solid #dddddd;
+    }
+    .conCon{
+      flex: 1;
+      border-bottom: 1px solid #dddddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div>
+      <span class="conTitle">采购名称</span>
+      <span class="conCon">我是测试</span>
+    </div>
+    <div>
+      <span class="conTitle">采购编号</span>
+      <span class="conCon">我是测试</span>
+    </div>
+    <div>
+      <span class="conTitle">组织单位</span>
+      <span class="conCon">我是测试</span>
+    </div>
+    <div>
+      <span class="conTitle">发布时间</span>
+      <span class="conCon">我是测试</span>
+    </div>
+  </div>
+</body>
+</html>
