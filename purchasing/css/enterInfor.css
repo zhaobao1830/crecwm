@@ -56,7 +56,42 @@
   margin-top: 80px;
 }
 .comAlCon{
- margin-top: 20px;
-  border-bottom: 1px solid;
+  margin-top: 20px;
+  border-bottom: 1px solid #dddddd;
+  height: 450px;
+}
+.comAlCon > ul{
+  overflow: hidden;
+}
+.comAlCon > ul > li{
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+.comAlLiImg{
+  width: 230px;
+  height: 174px;
+  border: 1px solid #dddddd;
+}
+.comAlLiImg img{
+  margin: 4px;
+}
+.comAlLiTitle{
+  width: 232px;
+  height: 14px;
+  font-size: 14px;
+  color: #555555;
+  text-align: center;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  margin-top: 10px;
 }
 /*公司相册 end*/
+
+/*公共类 start*/
+.marL0{
+  margin-left: 0 !important;
+}
+/*公共类 end*/
