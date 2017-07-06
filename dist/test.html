@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+<a href="javaacript:;" onclick="myAppShow()">我是测试</a>
+   <div class="con"></div>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script>
+     $(document).ready(function () {
+       $(".con").load("index.html")
+     })
+     function myAppShow() {
+       $(".myApp").removeClass("displayNone").addClass("displayBlock")
+     }
+   </script>
+</body>
+</html>
