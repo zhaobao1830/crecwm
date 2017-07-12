@@ -213,45 +213,45 @@
 }
 /*notice end*/
 
-/*translation start*/
-.translation{
+/*bidPublicity start*/
+.bidPublicity{
   width: 330px;
   height: 480px;
   float: left;
   margin-top: 50px;
   margin-left: 20px;
 }
-.translationTop{
+.bidPublicityTop{
   width: 330px;
   height: 34px;
   line-height: 34px;
   border-bottom: 1px solid #2263a7;
 }
-.translationContent{
+.bidPublicityContent{
   width: 330px;
   height: auto;
   float: left;
 }
-.translationContent > ul{
+.bidPublicityContent > ul{
   overflow: hidden;
 }
-.translationContent > ul > li{
+.bidPublicityContent > ul > li{
   margin-top: 25px;
   height: 15px;
   line-height: 15px;
   list-style: none;
 }
-.translationContent > ul > li > i,.translationContent > ul > li > a{
+.bidPublicityContent > ul > li > i,.bidPublicityContent > ul > li > a{
   display: block;
   text-decoration: none;
   float: left;
 }
-.translationIcon{
+.bidPublicityIcon{
   width: 27px;
   height: 15px;
   background: url("../img/iddingIcon.png") no-repeat 0 0;
 }
-.translationTitle{
+.bidPublicityTitle{
   width: 293px;
   margin-left: 10px;
   color: #555555;
@@ -260,10 +260,10 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.translationTitle:hover{
+.bidPublicityTitle:hover{
   color: #2263a7;
 }
-/*translation end*/
+/*bidPublicity end*/
 
 /*supplierRecruitment start*/
 .supplierRecruitment{

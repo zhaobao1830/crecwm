@@ -5,5 +5,7 @@ $(function () {
   $(".conTitle a").on("mouseout",function () {
     $(this).parent().parent().find(".signm").removeAttr("style")
   })
+  bidPublicity(0)
 })
+}
 
