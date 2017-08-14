@@ -1,0 +1,282 @@
+@charset "UTF-8";
+body, html {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+  font-family: '方正兰亭','中黑简','微软雅黑'; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+em, strong {
+  font-weight: normal;
+  font-style: normal; }
+
+a {
+  color: #555;
+  text-decoration: none; }
+
+.NBcont {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto; }
+
+.NBcaigou_list {
+  overflow: hidden; }
+  .NBcaigou_list li {
+    width: 240px;
+    float: left; }
+    .NBcaigou_list li .item {
+      overflow: hidden; }
+    .NBcaigou_list li .iLeft {
+      float: left; }
+      .NBcaigou_list li .iLeft img {
+        width: 72px;
+        height: 72px; }
+    .NBcaigou_list li .iRight {
+      float: left; }
+  .NBcaigou_list .total_once {
+    line-height: 20px; }
+    .NBcaigou_list .total_once span {
+      font-size: 26px; }
+    .NBcaigou_list .total_once em {
+      font-size: 14px; }
+    .NBcaigou_list .total_once .iRight {
+      padding-top: 10px; }
+    .NBcaigou_list .total_once .red span {
+      color: #f44848; }
+    .NBcaigou_list .total_once .green span {
+      color: #23c164; }
+  .NBcaigou_list .total_se {
+    line-height: 20px; }
+    .NBcaigou_list .total_se span {
+      font-size: 18px; }
+    .NBcaigou_list .total_se em {
+      font-size: 14px; }
+    .NBcaigou_list .total_se .red span {
+      color: #f77676; }
+    .NBcaigou_list .total_se .iRight {
+      padding-top: 15px; }
+    .NBcaigou_list .total_se .green span {
+      color: #7cc54b; }
+  .NBcaigou_list .heading {
+    padding-left: 5px; }
+
+.NBcontent .left {
+  width: 228px;
+  float: left; }
+
+.NBcontent .content {
+  width: 715px;
+  float: left; }
+  .NBcontent .content .NBSearchList .title {
+    overflow: hidden;
+    border-bottom: 1px #005ab5 solid; }
+    .NBcontent .content .NBSearchList .title ul {
+      float: left; }
+    .NBcontent .content .NBSearchList .title li {
+      float: left; }
+    .NBcontent .content .NBSearchList .title a {
+      padding: 0px 10px;
+      height: 34px;
+      line-height: 34px;
+      font-size: 16px;
+      border-radius: 4px 4px 0px 0px;
+      display: block; }
+    .NBcontent .content .NBSearchList .title .select a {
+      background-color: #005ab5;
+      color: white; }
+  .NBcontent .content .NBSearchList .msgList a {
+    line-height: 26px; }
+  .NBcontent .content .NBSearchList .msgList a:hover {
+    color: #005ab5; }
+  .NBcontent .content .NBSearchList .msgList span {
+    float: left;
+    width: 330px;
+    padding-left: 25px;
+    padding: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative; }
+  .NBcontent .content .NBSearchList .msgList .adress {
+    width: 95px;
+    float: left;
+    text-align: center; }
+  .NBcontent .content .NBSearchList .msgList .comp {
+    width: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left; }
+  .NBcontent .content .NBSearchList .msgList em {
+    height: 26px;
+    line-height: 26px;
+    width: 90px;
+    float: right;
+    overflow: hidden; }
+
+.NBcontent .right {
+  width: 226px;
+  float: right; }
+
+.NBcontent .tablist {
+  border: 1px #eee solid;
+  border-bottom: none; }
+  .NBcontent .tablist a {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 50px;
+    display: block;
+    border-bottom: 1px #eee solid;
+    position: relative; }
+  .NBcontent .tablist a:hover {
+    color: #005ab5; }
+  .NBcontent .tablist .zhaobiao a:hover i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/zhaobiaoB.png) center no-repeat; }
+  .NBcontent .tablist .jingzheng a:hover i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/jingzhengB.png) center no-repeat; }
+  .NBcontent .tablist .xunjia a:hover i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/caigouB.png) center no-repeat; }
+  .NBcontent .tablist .chengqing a:hover i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/chengqingB.png) center no-repeat; }
+  .NBcontent .tablist .zhongbiao a:hover i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/zhongbiaoB.png) center no-repeat; }
+  .NBcontent .tablist i {
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 20px;
+    margin-top: -8px;
+    position: absolute; }
+  .NBcontent .tablist .zhaobiao i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/zhaobiaoG.png) center no-repeat; }
+  .NBcontent .tablist .jingzheng i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/jingzhengG.png) center no-repeat; }
+  .NBcontent .tablist .xunjia i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/caigouG.png) center no-repeat; }
+  .NBcontent .tablist .chengqing i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/chengqingG.png) center no-repeat; }
+  .NBcontent .tablist .zhongbiao i {
+    background: url(http://static.crecgec.com/crecgec/image/NeiBu/zhongbiaoG.png) center no-repeat; }
+
+.NBcontent .NBBuyerMsg {
+  border: 1px #ddd solid; }
+  .NBcontent .NBBuyerMsg .title {
+    padding-left: 10px;
+    font-size: 16px;
+    color: #222222;
+    line-height: 34px;
+    border-bottom: 1px #ddd solid; }
+  .NBcontent .NBBuyerMsg .top {
+    padding: 20px 10px 0px 10px; }
+    .NBcontent .NBBuyerMsg .top .line1 {
+      font-size: 14px;
+      color: #222222;
+      line-height: 16px; }
+    .NBcontent .NBBuyerMsg .top .line2 {
+      margin-top: 15px;
+      overflow: hidden; }
+      .NBcontent .NBBuyerMsg .top .line2 em {
+        width: 14px;
+        height: 16px;
+        line-height: 16px;
+        background-color: #398fd1;
+        float: left; }
+      .NBcontent .NBBuyerMsg .top .line2 span {
+        color: #777777;
+        line-height: 16px;
+        margin-left: 5px;
+        float: left; }
+      .NBcontent .NBBuyerMsg .top .line2 strong {
+        line-height: 16px;
+        float: left; }
+    .NBcontent .NBBuyerMsg .top .lineA {
+      padding: 15px 0;
+      border-bottom: #ddd 1px dashed; }
+  .NBcontent .NBBuyerMsg .bottom {
+    padding: 0px 10px 20px 10px;
+    overflow: hidden; }
+    .NBcontent .NBBuyerMsg .bottom .lineA {
+      padding-top: 20px; }
+      .NBcontent .NBBuyerMsg .bottom .lineA em {
+        font-weight: bold; }
+    .NBcontent .NBBuyerMsg .bottom .collect {
+      width: 80px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 4px;
+      padding-left: 30px;
+      color: white;
+      float: left;
+      background: #23c164 url(../image/colect.png) 10px 50% no-repeat;
+      cursor: pointer; }
+    .NBcontent .NBBuyerMsg .bottom .dingyue {
+      width: 55px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 4px;
+      padding-left: 30px;
+      color: white;
+      float: right;
+      background: #ffb305 url(../image/wifi.png) 5px 50% no-repeat;
+      cursor: pointer; }
+
+.NBcontent .hotArticle {
+  width: 228px;
+  height: 278px;
+  border: 1px #eee solid;
+  overflow: hidden; }
+  .NBcontent .hotArticle .title {
+    height: 33px;
+    line-height: 33px;
+    padding: 0px 10px;
+    font-size: 16px;
+    overflow: hidden;
+    border-bottom: 1px #eee solid; }
+    .NBcontent .hotArticle .title span {
+      float: left; }
+    .NBcontent .hotArticle .title a {
+      font-size: 12px;
+      color: #777;
+      float: right; }
+  .NBcontent .hotArticle .articleList {
+    padding: 0px 14px; }
+    .NBcontent .hotArticle .articleList ul {
+      height: 230px; }
+    .NBcontent .hotArticle .articleList a {
+      padding-left: 15px;
+      color: #777;
+      font-size: 14px;
+      height: 29px;
+      line-height: 29px;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative; }
+    .NBcontent .hotArticle .articleList i {
+      position: absolute;
+      left: 0px;
+      top: 12px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #777; }
+
+.marginT40 {
+  margin-top: 40px; }
+
+.marginL15 {
+  margin-left: 15px; }
+
+.marginT25 {
+  margin-top: 25px; }
+
+.marginT40 {
+  margin-top: 40px; }

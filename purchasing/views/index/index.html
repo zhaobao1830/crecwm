@@ -485,6 +485,10 @@
             <a href="javascript:;" class="getMore">更多<img src="../../img/getMore.png"></a>
           </div>
         </div>
+        <li v-for="(bp,index) in bpLists">
+          <i class="bidPublicityIcon"></i>
+          <a class="bidPublicityTitle" href="http://creclb.cms/forum.php?mod=viewthread&tid="+bp.tid title="'+[[bp.subject]]+'">[[bp.subject]]</a>
+        </li>
         <div class="srContent">
           <div class="contentTop">
             <div class="purchasingInformation">采购信息</div>

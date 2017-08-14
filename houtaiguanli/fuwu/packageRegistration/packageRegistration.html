@@ -26,25 +26,85 @@
         <div class="left">
             <ul>
                 <li>
-                    <div id="service" class="management"><i class="triNoClick"></i><p class="pNoClick">服务管理</p></div>
+                    <div id="service" class="management"><i class="iNoClick"></i><p class="pNoClick">服务管理</p></div>
                     <ul class="service management_list displayNone">
-                        <li>服务审核管理</li>
-                        <li>服务注册管理</li>
-                        <li>套餐注册管理</li>
-                        <li>服务发票管理</li>
+                        <li class="serviceAudit liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/serviceRegistry/serviceAudit.php" target="_self">服务审核管理</a>
+                        </li>
+                        <li class="serviceRegistry liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/serviceRegistry/serviceRegistry.php" target="_self">服务注册管理</a></li>
+                        <li class="packageRegistration liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/packageRegistration/packageRegistration.php" target="_self">套餐注册管理</a>
+                        </li>
+                        <li class="serviceInvoice liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/serviceInvoice/serviceInvoice.php" target="_self">服务发票管理</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
-                    <div id="shortMessage" class="management"><i class="triNoClick"></i><p class="pNoClick">短信管理</p></div>
+                    <div id="shortMessage" class="management"><i class="iNoClick"></i><p class="pNoClick">短信管理</p></div>
+                    <ul class="shortMessage management_list displayNone">
+                        <li class="massSMS liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/massSMS/massSMS.php" target="_self">群发短信</a>
+                        </li>
+                        <li class="bulkSMS liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/bulkSMS/bulkSMS.php" target="_self">批量发送短信</a>
+                        </li>
+                        <li class="sendRecordQuery liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/sendRecordQuery/sendRecordQuery.php" target="_self">发送记录查询</a>
+                        </li>
+                        <li class="smsSendDetails liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/smsSendDetails/smsSendDetails.php" target="_self">短信发送详情</a>
+                        </li>
+                        <li class="smsReplyQuery liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/smsReplyQuery/smsReplyQuery.php" target="_self">短信回复查询</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <div id="mailServe" class="management"><i class="triNoClick"></i><p class="pNoClick">邮件服务</p></div>
+                    <div id="mailServe" class="management"><i class="iNoClick"></i><p class="pNoClick">邮件服务</p></div>
+                    <ul class="mailServe management_list displayNone">
+                        <li class="massMailing liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/massMailing/massMailing.php" target="_self">群发邮件</a>
+                        </li>
+                        <li class="bulkMail liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/bulkMail/bulkMail.php" target="_self">批量发送邮件</a>
+                        </li>
+                        <li class="sendRecordQuery liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/sendRecordQuery/sendRecordQuery.php" target="_self">发送记录查询</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <div id="knowledgeBase" class="management"><i class="triNoClick"></i><p class="pNoClick">知识库</p></div>
+                    <div id="knowledgeBase" class="management"><i class="iNoClick"></i><p class="pNoClick">知识库</p></div>
+                    <ul class="knowledgeBase management_list displayNone">
+                        <li class="knowledgeMaintenance liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/knowledgeMaintenance/knowledgeMaintenance.php" target="_self">知识库维护</a>
+                        </li>
+                        <li class="knowledgeSearch liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/knowledgeSearch/knowledgeSearch.php" target="_self">知识库查询</a>
+                        </li>
+                        <li class="liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/packageRegistration/packageRegistration.php" target="_self">知识库维护说明</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <div id="userManagement" class="management"><i class="triNoClick"></i><p class="pNoClick">用户管理</p></div>
+                    <div id="userManagement" class="management"><i class="iNoClick"></i><p class="pNoClick">用户管理</p>
+                    </div>
+                    <ul class="userManagement management_list displayNone">
+                        <li class="toExamine liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/toExamine/toExamine.php" target="_self">个人用户管理</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div id="informationDisplay" class="management"><i class="iNoClick"></i><p class="pNoClick">信息展示</p>
+                    </div>
+                    <ul class="informationDisplay management_list displayNone">
+                        <li class="InformationDisplay liNoClick">
+                            <a href="http://mmp.crecgwm.com/secondEdition/InformationDisplay/InformationDisplay.php" target="_self">信息展示</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -329,7 +389,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="../../common/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="../../left/left.js"></script>
     <script type="text/javascript" src="packageRegistration.js"></script>
 </body>

@@ -45,23 +45,48 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <div>
-      <span class="conTitle">采购名称</span>
-      <span class="conCon">我是测试</span>
-    </div>
-    <div>
-      <span class="conTitle">采购编号</span>
-      <span class="conCon">我是测试</span>
-    </div>
-    <div>
-      <span class="conTitle">组织单位</span>
-      <span class="conCon">我是测试</span>
-    </div>
-    <div>
-      <span class="conTitle">发布时间</span>
-      <span class="conCon">我是测试</span>
-    </div>
+  <!--<div class="content">-->
+    <!--<div>-->
+      <!--<span class="conTitle">采购名称</span>-->
+      <!--<span class="conCon">我是测试</span>-->
+    <!--</div>-->
+    <!--<div>-->
+      <!--<span class="conTitle">采购编号</span>-->
+      <!--<span class="conCon">我是测试</span>-->
+    <!--</div>-->
+    <!--<div>-->
+      <!--<span class="conTitle">组织单位</span>-->
+      <!--<span class="conCon">我是测试</span>-->
+    <!--</div>-->
+    <!--<div>-->
+      <!--<span class="conTitle">发布时间</span>-->
+      <!--<span class="conCon">我是测试</span>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <div id="test1" class="test">
+    {{mess}}
+    <my-conponent :message="mess"></my-conponent>
   </div>
+  <script type="text/javascript" src="./js/vue.js"></script>
+  <script type="text/javascript">
+
+    Vue.component('my-conponent', {
+      name: "test",
+      props:['message'],
+      data: function(){
+        return {
+          mecc: 3
+        }
+      },
+      template: '<div><p>我是{{message}}</p><a>{{mecc}}</a></div>'
+    })
+    new Vue({
+      el: ".test",
+      data: {
+        mess: 2
+      }
+    })
+  </script>
 </body>
 </html>

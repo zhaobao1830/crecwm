@@ -30,7 +30,6 @@ a{
     border-bottom: 1px solid #0b2643;
     font-size: 18px;
     cursor: pointer;
-    overflow: hidden;
 }
 .management i{
     width: 18px;
@@ -41,23 +40,26 @@ a{
     margin-top: 32px;
     float: left;
 }
+.management p{
+    text-align: left;
+}
 #service i{
-    background-image: url("./img/left1.png");
+    background-image: url("http://static.crecgec.com/mmp/left1.png");
 }
 #shortMessage i{
-    background-image: url("./img/left2.png");
+    background-image: url("http://static.crecgec.com/mmp/left2.png");
 }
 #mailServe i{
-    background-image: url("./img/left3.png");
+    background-image: url("http://static.crecgec.com/mmp/left3.png");
 }
 #knowledgeBase i{
-    background-image: url("./img/left4.png");
+    background-image: url("http://static.crecgec.com/mmp/left4.png");
 }
 #userManagement i{
-    background-image: url("./img/left5.png");
+    background-image: url("http://static.crecgec.com/mmp/left5.png");
 }
 #informationDisplay i{
-    background-image: url("./img/left6.png");
+    background-image: url("http://static.crecgec.com/mmp/left6.png");
 }
 .management_list{
     width: 260px;
@@ -80,7 +82,7 @@ a{
 .displayNone{
     display: none;
 }
-.pClick,.liClick >a{
+.pClick,.liClick > a{
     color: #ffffff;
 }
 .iClick{
@@ -92,10 +94,5 @@ a{
 .iNoClick{
     background-position: 0 0;
 }
-
-/*.row{*/
-    /*margin-bottom:-10000px;*/
-    /*padding-bottom:10000px;!*内外补丁是关键*!*/
-/*}*/
 /*公共类 end*/
 

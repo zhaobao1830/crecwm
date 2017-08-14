@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+    <div class="test">
+      <a href="javascript:;" :title="message">{{message}}</a>
+    </div>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+      var vm = new Vue({
+        el:".test",
+        data: {
+          message: "ttttt",
+          lists:[
+            {
+              title: "我是title1",
+              id: "我是id1"
+            },
+            {
+              title: "我是title2",
+              id: "我是id2"
+            },
+            {
+              title: "我是title3",
+              id: "我是id3"
+            }
+          ]
+        }
+      })
+    </script>
+</body>
+</html>

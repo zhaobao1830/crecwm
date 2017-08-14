@@ -71,7 +71,7 @@
     top: 16px;
     right: 10px;
     cursor: pointer;
-    background-image: url("./img/km1.png");
+    background-image: url("http://static.crecgec.com/mmp/km1.png");
     background-position: 0 0;
     background-repeat: no-repeat;
 }
@@ -92,7 +92,7 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
-    background-image:url("./img/km2.png");
+    background-image:url("http://static.crecgec.com/mmp/km2.png");
     background-position: 0 0; /*24*/
     background-repeat: no-repeat;
     margin-right: 10px;
@@ -106,7 +106,7 @@
     width: 13px;
     height: 13px;
     cursor: pointer;
-    background-image: url("./img/km1.png");
+    background-image: url("http://static.crecgec.com/mmp/km1.png");
     background-position: 0 0;  /*48*/
     background-repeat: no-repeat;
     margin-right: 10px;
@@ -119,7 +119,7 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
-    background-image: url("./img/km3.png");
+    background-image: url("http://static.crecgec.com/mmp/km3.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     margin: 13px 111px;
@@ -128,7 +128,7 @@
     width: 18px;
     height: 18px;
     cursor: pointer;
-    background-image: url("./img/km4.png");
+    background-image: url("http://static.crecgec.com/mmp/km4.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     margin: 15px 112px;
@@ -189,7 +189,7 @@
 .kdmCon_right_ul > li i{
     width: 13px;
     height: 13px;
-    background-image: url("img/km1.png");
+    background-image: url("http://static.crecgec.com/mmp/km1.png");
     background-repeat: no-repeat;
     background-position: 0 -24px;
     margin-top: 10px;
@@ -214,7 +214,7 @@
 .labelA i{
     width: 18px;
     height: 18px;
-    background-image: url("img/km5.png");
+    background-image: url("http://static.crecgec.com/mmp/km5.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     margin: 8px;
