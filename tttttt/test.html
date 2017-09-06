@@ -7,31 +7,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
 </head>
 <body>
-    <div class="test">
-      <a href="javascript:;" :title="message">{{message}}</a>
-    </div>
+    <!--<div class="test">-->
+      <!--<a href="javascript:;" :title="message">{{message}}</a>-->
+    <!--</div>-->
+    <!--<div class="test">-->
+      <!--<ul>-->
+        <!--<li v-for="(item, index) in lists" @click="ttt(index)">-->
+          <!--<p :class="{idS: tList.indexOf(index) >= 0 }">{{item.title.split(" ")[0]}}</p>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
     <script type="text/javascript" src="vue.js"></script>
-    <script type="text/javascript">
-      var vm = new Vue({
-        el:".test",
+    <div id="app">
+
+      <div class="collection">
+        <a href="#!" class="collection-item"
+           v-for="gameName in gameNames"
+           :class="{active: activeName == gameName}"
+           @click="selected(gameName)">{{gameName}}</a>
+      </div>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
         data: {
-          message: "ttttt",
-          lists:[
-            {
-              title: "我是title1",
-              id: "我是id1"
-            },
-            {
-              title: "我是title2",
-              id: "我是id2"
-            },
-            {
-              title: "我是title3",
-              id: "我是id3"
-            }
-          ]
+          gameNames: ['魔兽世界', '暗黑破坏神Ⅲ', '星际争霸Ⅱ', '炉石传说', '风暴英雄',
+            '守望先锋'
+          ],
+          activeName: ''
+        },
+        methods: {
+          selected: function(gameName) {
+            this.activeName = gameName
+          }
         }
       })
     </script>
+
+    <!--<script type="text/javascript">-->
+      <!--var vm = new Vue({-->
+        <!--el:".test",-->
+        <!--data: {-->
+          <!--message: "ttttt",-->
+          <!--lists:[-->
+            <!--{-->
+              <!--title: "2017-05-11 10:06:02",-->
+              <!--id: 1-->
+            <!--},-->
+            <!--{-->
+              <!--title: "2017-05-11 10:06:02",-->
+              <!--id: 2-->
+            <!--},-->
+            <!--{-->
+              <!--title: "2017-05-11 10:06:02",-->
+              <!--id: 3-->
+            <!--}-->
+          <!--],-->
+          <!--tList: []-->
+        <!--},-->
+        <!--methods: {-->
+          <!--ttt (index) {-->
+            <!--this.tList.push(index)-->
+          <!--}-->
+        <!--}-->
+      <!--})-->
+    <!--</script>-->
 </body>
 </html>

@@ -26,7 +26,7 @@
 .kdsCon_left{
     width: 238px;
     height: auto;
-    min-height: 800px;
+    /*min-height: 800px;*/
     border: 1px solid #77afea;
     margin: 20px;
     position: absolute;
@@ -60,6 +60,7 @@
     height: 46px;
     cursor: pointer;
     font-size: 14px;
+    text-align: left;
 }
 .kdsManagement p:hover{
     padding-left: 10px;
@@ -69,6 +70,8 @@
     width: 238px;
     height: 42px;
     line-height: 42px;
+    text-align: left;
+    overflow: hidden;
 }
 .kdsCon_left ul > li > ul > li span{
     margin-left: 30px;

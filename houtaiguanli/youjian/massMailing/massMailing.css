@@ -22,7 +22,7 @@
     overflow: hidden;
     margin-right: 20px;
 }
-.mmlCon>div{
+.mmlCon > div{
     width: auto;
     margin: 20px 20px 0 20px;
     overflow: hidden;
@@ -45,6 +45,33 @@
     margin-top: 10px;
     font-size: 14px;
     color: #777777;
+    display: none;
+}
+.mailEnclosureLabel {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.mailEnclosureLabel input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.mailEnclosureLabel:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
 }
 .mmlCon div input[type=text]{
     width: 298px;

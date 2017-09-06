@@ -1,0 +1,125 @@
+{
+  "leftJson": [
+    {
+      "name": "服务管理",
+      "ifChoose": true,
+      "clist": [
+        {
+          "cname": "服务审核管理",
+          "ifChoose": true,
+          "route": "serviceAudit"
+        },
+        {
+          "cname": "服务注册管理",
+          "ifChoose": false,
+          "route": "serviceRegistry"
+        },
+        {
+          "cname": "套餐注册管理",
+          "ifChoose": false,
+          "route": "packageRegistration"
+        },
+        {
+          "cname": "服务发票管理",
+          "ifChoose": false,
+          "route": "serviceInvoice"
+        }
+      ]
+    },
+    {
+      "name": "短信管理",
+      "ifChoose": false,
+      "clist":[
+        {
+          "cname": "群发短信",
+          "ifChoose": false,
+          "route": "massSMS"
+        },
+        {
+          "cname": "批量发送短信",
+          "ifChoose": false,
+          "route": "bulkSMS"
+        },
+        {
+          "cname": "发送记录查询",
+          "ifChoose": false,
+          "route": "sendRecordQuery"
+        },
+        {
+          "cname": "短信发送详情",
+          "ifChoose": false,
+          "route": "smsSendDetails"
+        },
+        {
+          "cname": "短信回复查询",
+          "ifChoose": false,
+          "route": "smsReplyQuery"
+        }
+      ]
+    },
+    {
+      "name": "邮件服务",
+      "ifChoose": false,
+      "clist": [
+        {
+          "cname": "群发邮件",
+          "ifChoose": false,
+          "route": "massMailing"
+        },
+        {
+          "cname": "批量发送邮件",
+          "ifChoose": false,
+          "route": "bulkMail"
+        },
+        {
+          "cname": "发送记录查询",
+          "ifChoose": false,
+          "route": "sendRecordQuery"
+        }
+      ]
+    },
+    {
+      "name": "知识库",
+      "ifChoose": false,
+      "clist": [
+        {
+          "cname": "知识库维护",
+          "ifChoose": false,
+          "route": "knowledgeMaintenance"
+        },
+        {
+          "cname": "知识库查询",
+          "ifChoose": false,
+          "route": "knowledgeSearch"
+        },
+        {
+          "cname": "知识库维护说明",
+          "ifChoose": false,
+          "route": "packageRegistration"
+        }
+      ]
+    },
+    {
+      "name": "用户管理",
+      "ifChoose": false,
+      "clist":[
+        {
+          "cname": "个人用户管理",
+          "ifChoose": false,
+          "route": "toExamine"
+        }
+      ]
+    },
+    {
+      "name": "信息展示",
+      "ifChoose": false,
+      "clist":[
+        {
+          "cname": "信息展示",
+          "ifChoose": false,
+          "route": "InformationDisplay"
+        }
+      ]
+    }
+  ]
+}

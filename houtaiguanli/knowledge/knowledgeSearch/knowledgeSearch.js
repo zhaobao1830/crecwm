@@ -17,6 +17,7 @@ $(function () {
         $(".kdsContent").height(leftHeight)
         // 获取kdsCon高度
         $(".kdsCon").height(leftHeight-158)
+        $(".kdsCon_left").height(leftHeight-198)
     }else{
         $(".left").height(kdsContentHeight)
     }
