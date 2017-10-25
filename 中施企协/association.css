@@ -1,0 +1,110 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+.associationContainer{
+  width: 1200px;
+  margin: 0 auto;
+}
+.conferenceInformation{
+  width: 1100px;
+}
+.content2{
+  position: relative;
+}
+.content2 i{
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+.content3{
+  text-align: center;
+}
+/*公共样式start*/
+.assFont36{
+  font-size: 36px;
+}
+.assFont30{
+  font-size: 30px;
+}
+.assFont24{
+  font-size: 24px;
+}
+.assFont18{
+  font-size: 18px;
+}
+.assFont16{
+  font-size: 16px;
+}
+.assColorRed{
+  color: #ff0000;
+}
+.assFontWeightB{
+  font-weight: bold;
+}
+.assTextIndext50{
+  text-indent: 50px;
+}
+.assMainT45{
+  margin-top: 45px;
+}
+.assMainT36{
+  margin-top: 36px;
+}
+.assMainT30{
+  margin-top: 30px;
+}
+.assMainT20{
+  margin-top: 20px;
+}
+.assMainT16{
+  margin-top: 16px;
+}
+.assMainT10{
+  margin-top: 10px;
+}
+.assMarginL110{
+  margin-left: 110px;
+}
+.assMarginL70{
+  margin-left: 70px;
+}
+.assMarginL50{
+  margin-left: 50px;
+}
+.assLineH50 p{
+  line-height: 50px;
+}
+.assLineH47{
+  line-height: 47px;
+}
+.assLineH40 p{
+  line-height: 40px;
+}
+.assLineHei4{
+  line-height: 40px;
+}
+.assFl{
+  float: left;
+}
+.overFlowH{
+  overflow: hidden;
+}
+.diamond{
+  width: 10px;
+  height: 10px;
+  margin: 5px 0 0 5px;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  background: #e34f4b;
+}
+/*公共样式end*/

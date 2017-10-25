@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+<body>
+
+<script>
+
+var arr1=[111,"aaa","bbb"];
+var arr2=[222,"ccc",333,"bbb"];
+var a=[],b=[],c=[],ar=[];
+ar=arr1.concat(arr2);
+
+
+for(var i=0;i<ar.length; i++){
+    if(typeof ar[i] === "number"){
+        a.push(ar[i]);
+
+    }else {
+        b.push(ar[i]);
+
+    }
+}
+b.sort();
+var res=[];
+    for(var j=0;j<b.length;j++){
+        if(b[j] !== res[res.length-1]){
+            res.push(b[j]);
+
+        }
+        else{};
+    }
+c=res.concat(a);
+console.log(a);
+console.log(res);
+console.log(c);
+
+</script>
+
+</body>
+
+
+</html>

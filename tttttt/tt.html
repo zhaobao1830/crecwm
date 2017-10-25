@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+   <script type="text/javascript" src="testajax.js"></script>
+   <script type="text/javascript">
+     ajax({
+       url: "./TestXHR.aspx",              //请求地址
+       type: "POST",                       //请求方式
+       data: { name: "super", age: 20 },        //请求参数
+       dataType: "json",
+       success: function (response, xml) {
+         // 此处放成功后执行的代码
+       },
+       fail: function (status) {
+         // 此处放失败后执行的代码
+       }
+     });
+   </script>
+</body>
+</html>

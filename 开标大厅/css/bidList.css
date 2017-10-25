@@ -1,0 +1,261 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+body,html{
+  height: 100%;
+}
+
+.bidContainer{
+  width: 1920px;
+  height: 980px;
+  position: relative;
+  background-image: url("../image/background.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.bidTitle{
+  width: 1720px;
+  margin: 10px auto;
+  height: 32px;
+}
+.bidTitle img,.bidTitle p{
+  display: block;
+  float: left;
+}
+.bidTitle p{
+  margin-left: 10px;
+  line-height: 32px;
+  font-size: 14px;
+  color: #0870a8;
+}
+.bidContent{
+  position: absolute;
+  left: 100px;
+}
+
+/*packetList start*/
+.packetList{
+  width: 318px;
+  float: left;
+  border: 1px solid #77afea;
+  box-shadow: 0 0 4px #77afea;
+}
+.packetListTitle{
+  width: 320px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #77afea;
+  background-color: #0870a8;
+}
+.bidList{
+  width: 320px;
+  height: 810px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.list1{
+  position: relative;
+  list-style: none;
+  float: left;
+  margin: 10px 0 0 10px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.list1, .list1 img{
+  width: 136px;
+  height: 105px;
+}
+.listTitlePacket{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+.listTpLeft,.listTpRight{
+  width: 50px;
+  margin-top: 10px;
+  line-height: 30px;
+}
+.listTpLeft{
+  float: left;
+  text-align: right;
+}
+.listTpRight{
+  float: right;
+  text-align: left;
+}
+.listTpCenter{
+  float: left;
+  width: 1px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+/*没有数据 start*/
+.ptNoData{
+  color: #222222;
+  background-color: #fff;
+}
+.ptNoData > .listTpLeft{
+  color: #777777;
+}
+.ptNoData > .listTitlePacket{
+  border-color: #bbbbbb;
+}
+.ptNoData > .listTpCenter{
+  background-color: #bbbbbb;
+}
+/*没有数据 end*/
+
+/*有数据单没有满 start*/
+.ptNoFull{
+  color: #fff;
+  background-color: #4ea0ea;
+}
+.ptNoFull:hover{
+  background-color: #0062b2;
+}
+.ptNoFull > .listTpLeft{
+  color: #fff;
+}
+.ptNoFull > .listTitlePacket{
+  border-color: #fff;
+}
+.ptNoFull > .listTpCenter{
+  background-color: #fff;
+}
+/*有数据单没有满 end*/
+
+/*已经满 start*/
+.ptHasFull{
+  color: #fff;
+  background-color: #f44848;
+}
+.ptHasFull:hover{
+  background-color: #f01f1f;
+}
+.ptHasFull > .listTpLeft{
+  color: #fff;
+}
+.ptHasFull > .listTitlePacket{
+  border-color: #fff;
+}
+.ptHasFull > .listTpCenter{
+  background-color: #fff;
+}
+/*已经满 end*/
+
+/*已唱标 start*/
+.ptHasBid{
+  color: #fff;
+  background-color: #f44848;
+}
+.ptHasBid > .listTpLeft{
+  color: #fff;
+}
+.ptHasBid > .listTitlePacket{
+  border-color: #fff;
+}
+.ptHasBid > .listTpCenter{
+  background-color: #fff;
+}
+.ptHasBidShow{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #bbbbbb;
+  text-align: center;
+  line-height: 105px;
+  font-size: 18px;
+  background: rgba(0,0,0,0.8);
+}
+/*已唱标 end*/
+/*packetList end*/
+
+/*bidOpening start*/
+.bidOpening{
+  width: 1378px;
+  float: left;
+  margin-left: 20px;
+  border: 1px solid #4ea0ea;
+  overflow: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 4px #77afea;
+}
+.bidOpeningTitle{
+  width: 1380px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background-color: #0870a8;
+}
+.bidOpeningContent{
+  width: 1380px;
+  height: 810px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+table{
+  width: 1380px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+thead{
+  width: 1380px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #052066;
+}
+thead tr, thead td {
+  border: 1px solid #4ea0ea;
+  color: #fff;
+  height: 50px;
+}
+tbody{
+  width: 1380px;
+  font-size: 14px;
+  text-align: center;
+}
+tbody tr,tbody td {
+  border-width: 1px;
+  border-color: #4ea0ea;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-top: none;
+  color: #4ea0ea;
+}
+tbody tr:last-child{
+  border-bottom-style: solid;
+}
+tbody tr:hover{
+  background-color: rgba(21, 74, 162, 0.8);
+}
+tbody td {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 15px 30px;
+}
+/*bidOpening end*/
+.bidFooter{
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  text-align: center;
+  width: 1720px;
+  font-size: 14px;
+  color: #4ea0ea;
+  padding: 20px 0 10px 0;
+}

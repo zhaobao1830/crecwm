@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+body,html{
+  height: 100%;
+}
+.countDownContainer{
+  width: 1920px;
+  height: 980px;
+  position: relative;
+  background-image: url("../image/background.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.countDown{
+  width: 1070px;
+  height: 170px;
+  margin: 100px auto;
+}
+.cds{
+  width: 150px;
+  height: 170px;
+  line-height: 170px;
+  text-align: center;
+  font-size: 80px;
+  color: #fff;
+  background: url('../image/countDown.png') 0 0 no-repeat;
+  float: left;
+  margin-left: 15px;
+}
+.cds:first-child{
+  margin-left: 0px;
+}
+.cdm{
+  width: 10px;
+  height: 50px;
+  float: left;
+  background: url('../image/countDown1.png') 0 0 no-repeat;
+  margin-top: 60px;
+  margin-left: 15px;
+}

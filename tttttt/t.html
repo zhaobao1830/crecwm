@@ -18,11 +18,18 @@
   </style>
 </head>
 <body>
-
+  <div class="ss"></div>
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
   <script>
-    $(function () {
-
-    })
+    (function ($) {
+      $.extend({
+        become: function () {
+          console.log('wwwww')
+          return this
+        }
+      })
+    })(jQuery)
+    $.become()
   </script>
 </body>
 </html>

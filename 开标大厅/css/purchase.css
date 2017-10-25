@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+body,html{
+  height: 100%;
+}
+.purchaseContainter{
+  width: 1920px;
+  height: 980px;
+  position: relative;
+  background-image: url("../image/background.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.purchaseContent{
+  width: 1718px;
+  height: 858px;
+  margin: 50px auto 0;
+  border: 1px solid #77afea;
+  overflow: hidden;
+  box-shadow: 0 0 4px #77afea;
+}
+.purchaseTitle{
+  width: 1720px;
+  height: 58px;
+  line-height: 58px;
+  background-color: #0870a8;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.purchaseTable{
+  width: 1720px;
+  height: 800px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+table{
+  width: 1720px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+thead{
+  width: 1720px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #052066;
+}
+thead tr, thead td {
+  border: 1px solid #4ea0ea;
+  color: #fff;
+  height: 50px;
+}
+tbody{
+  width: 1720px;
+  font-size: 14px;
+  text-align: center;
+}
+tbody tr,tbody td {
+  border-width: 1px;
+  border-color: #4ea0ea;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-top: none;
+  color: #4ea0ea;
+}
+tbody tr:last-child{
+  border-bottom-style: solid;
+}
+tbody tr:hover{
+  background-color: rgba(21, 74, 162, 0.8);
+}
+tbody td {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 15px 30px;
+}
+.noBidOpening{
+  color: #f44848;
+}

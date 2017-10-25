@@ -1,0 +1,397 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+body,html{
+  height: 100%;
+}
+.plHeader{
+  position: relative;
+  width: auto;
+  min-width: 1920px;
+  height: 100px;
+  background: url("../image/plHeadBac.png") 0 0 no-repeat;
+}
+.plLogo{
+  position: absolute;
+  width: 366px;
+  height: 80px;
+  background: url("../image/logoBackground.png") 0 0 no-repeat;
+  left: 0;
+  top: 0;
+}
+.plLogo img{
+  margin-left: 40px;
+  margin-top: 15px;
+}
+.plJump{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 25px;
+  top: 25px;
+}
+.plWords{
+  padding-left: 366px;
+  padding-right: 75px;
+  text-align: center;
+  color: white;
+}
+.words1{
+  font-size: 36px;
+  line-height: 70px;
+}
+.words2{
+  font-size: 14px;
+}
+.purchaseUnit{
+  margin-left: 20px;
+}
+
+.packetContainer{
+  width: 1920px;
+  height: 980px;
+  position: relative;
+  background-image: url("../image/background.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.packetTitle{
+  width: 1720px;
+  margin: 0 auto;
+}
+.titlePackge{
+  width: 52px;
+  height: 34px;
+  margin: 10px 0;
+  background: url("../image/titleBac.png") 0 0 no-repeat;
+  overflow: hidden;
+}
+.packetTitle p{
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+}
+.packetList{
+  position: absolute;
+  left: 100px;
+  padding-left: 5px;
+  width: 1713px;
+  height: 878px;
+  margin: 0 auto;
+  border: 1px solid #77afea;
+  overflow: hidden;
+  transition: width 10s;
+  -moz-transition: width 10s; /* Firefox 4 */
+  -webkit-transition: width 10s; /* Safari 和 Chrome */
+  -o-transition: width 10s;
+  box-shadow: 0 0 4px #77afea;
+}
+.list1{
+  position: relative;
+  list-style: none;
+  float: left;
+  margin: 30px 0 0 30px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.list1, .list1 img{
+  width: 180px;
+  height: 140px;
+}
+.listTitlePacket{
+  height: 74px;
+  line-height: 74px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+.listTpLeft,.listTpRight{
+  width: 70px;
+  margin-top: 15px;
+  line-height: 30px;
+}
+.listTpLeft{
+  float: left;
+  text-align: right;
+}
+.listTpRight{
+  float: right;
+  text-align: left;
+}
+.listTpCenter{
+  float: left;
+  width: 1px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.listButtonRight{
+  position: absolute;
+  right: 45px;
+  top: 416px;
+}
+.listButtonGoLeftA, .listButtonGoRightA{
+  width: 45px;
+  height: 45px;
+  display: block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.listButtonGoLeftA{
+  background-image: url("../image/goLeft.png");
+}
+.listButtonGoLeftA:hover{
+  background-image: url("../image/goLeftClick.png");
+}
+.listButtonGoRightA{
+  background-image: url("../image/goRight.png");
+}
+.listButtonGoRightA:hover{
+  background-image: url("../image/goRightClick.png");
+}
+
+.packetFooter{
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  text-align: center;
+  width: 1720px;
+  font-size: 14px;
+  color: #4ea0ea;
+  padding: 20px 0 10px 0;
+}
+
+/*没有数据 start*/
+.ptNoData{
+  color: #222222;
+  background-color: #fff;
+}
+.ptNoData > .listTpLeft{
+  color: #777777;
+}
+.ptNoData > .listTitlePacket{
+  border-color: #bbbbbb;
+}
+.ptNoData > .listTpCenter{
+  background-color: #bbbbbb;
+}
+.ptNoData:hover{
+  opacity: 0.9;
+  filter:Alpha(opacity=90)
+}
+/*没有数据 end*/
+
+/*有数据单没有满 start*/
+.ptNoFull{
+  color: #fff;
+  background-color: #4ea0ea;
+}
+.ptNoFull:hover{
+  background-color: #0062b2;
+}
+.ptNoFull > .listTpLeft{
+  color: #fff;
+}
+.ptNoFull > .listTitlePacket{
+  border-color: #fff;
+}
+.ptNoFull > .listTpCenter{
+  background-color: #fff;
+}
+/*有数据单没有满 end*/
+
+/*已经满 start*/
+.ptHasFull{
+  color: #fff;
+  background-color: #f44848;
+}
+.ptHasFull:hover{
+  background-color: #f01f1f;
+}
+.ptHasFull > .listTpLeft{
+  color: #fff;
+}
+.ptHasFull > .listTitlePacket{
+  border-color: #fff;
+}
+.ptHasFull > .listTpCenter{
+  background-color: #fff;
+}
+/*已经满 end*/
+
+/*已唱标 start*/
+.ptHasBid{
+  color: #fff;
+  background-color: #f44848;
+}
+.ptHasBid > .listTpLeft{
+  color: #fff;
+}
+.ptHasBid > .listTitlePacket{
+  border-color: #fff;
+}
+.ptHasBid > .listTpCenter{
+  background-color: #fff;
+}
+.ptHasBidShow{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #bbbbbb;
+  text-align: center;
+  line-height: 140px;
+  font-size: 18px;
+  background: rgba(0,0,0,0.8);
+}
+/*已唱标 end*/
+
+/*包内容展示 start*/
+.ptShowDetail{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.detailShow{
+  width: 620px;
+  height: 680px;
+  margin: 10px auto 0;
+}
+.dsTitle{
+  width: 620px;
+  height: 50px;
+  float: left;
+  background-color: #000d50;
+}
+.dsTitle p{
+  float: left;
+  font-size: 18px;
+  line-height: 50px;
+  margin-left: 10px;
+  color: #fff;
+}
+.dsTitle a{
+  display: block;
+  float: right;
+  margin: 17px 10px;
+  cursor: pointer;
+}
+.dsContent{
+  width: 620px;
+  height: 630px;
+  float: left;
+  background-color: #000520;
+}
+.dsCon{
+  width: 560px;
+  height: 530px;
+  margin-top: 30px;
+  margin-left: 30px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+table{
+  width: 560px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+thead{
+  width: 560px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #0870a8;
+}
+thead tr, thead td {
+  border: 1px solid #4ea0ea;
+  color: #fff;
+  height: 45px;
+}
+tbody{
+  width: 560px;
+  font-size: 14px;
+  text-align: center;
+}
+tbody tr,tbody td {
+  border-width: 1px;
+  border-color: #4ea0ea;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-top: none;
+  color: #4ea0ea;
+}
+tbody tr:last-child{
+  border-bottom-style: solid;
+}
+tbody td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 5px;
+}
+.dsButton{
+  margin-top: 20px;
+  height: 30px;
+}
+.dsSave,.dsCancel{
+  display: block;
+  float: left;
+  border-radius: 4px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+.dsSave{
+   background-color: #0870a8;
+   color: #fff;
+   margin-left: 220px;
+}
+.dsSave:hover{
+   background-color: #0062b2;
+}
+.dsCancel{
+  background-color: #f44848;
+  color: #fff;
+  margin-left: 20px;
+}
+.dsCancel:hover{
+  background-color: #f01f1f;
+}
+/*包内容展示 end*/
+
+/*公共类 start*/
+.displayBlock{
+  display: block;
+}
+.displayNone{
+  display: none;
+}
+.noDecrypt{
+  background-color: #33374d;
+}
+.noDecrypt td{
+  color: #bbbbbb;
+  border-bottom-color: #929292;
+}
+.noDecrypt td:first-child{
+  border-right-color: #929292;
+}
+.noDecrypt td:nth-child(2){
+  border-left-color: #929292;
+}
+/*公共类 end*/

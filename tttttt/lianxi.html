@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-resource</title>
+    <script src="jquery-3.1.1.js"></script>
+
+</head>
+<body>
+	<script>
+	$(document).ready(function(){
+       var data={
+	      "小明":{grade:3,scorc:92},
+          "小王":{grade:2,scorc:91},
+          "小李":{grade:4,scorc:93},
+          "小五":{grade:1,scorc:90},
+          "小张":{grade:8,scorc:98},
+          "小钱":{grade:7,scorc:96}
+                };
+
+
+     var arr=[];
+	var gradeList=[];
+	for(var obj in data){
+		arr.push({name:obj, grade:data[obj].grade, scorc:data[obj].scorc});
+		gradeList["grade"+data[obj].grade] ?"":gradeList["grad"+data[obj].grade];
+		gradeList["grade"+data[obj].grade].push({name:obj,scorc:data[obj].scorc});
+
+	};
+	var scorcList=arr.sort(function(a,b){
+		return a.scorc-b.scorc;
+	})
+	
+	// 转换为按分数排序的数组
+	console.log(scorcList);
+	console.log(JSON.stringify(scorcList));
+
+	// 转换为按grade区分的各年级名单
+	console.log(gradeList);
+	console.log(JSON.stringify(gradeList));
+
+	});
+
+
+	</script>
+
+</body>
+</html>
