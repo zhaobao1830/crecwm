@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+  <div class="timespan"></div>
+  <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+  <script>
+    var starttime = new Date('2017/11/4 01:01:01');
+    setInterval(function () {
+      var nowtime = new Date();
+      var time = starttime - nowtime;
+      var day = parseInt(time / 1000 / 60 / 60 / 24);
+      var hour = parseInt(time / 1000 / 60 / 60 % 24);
+      var minute = parseInt(time / 1000 / 60 % 60);
+      var seconds = parseInt(time / 1000 % 60);
+      $('.timespan').html(day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒");
+    }, 1000);
+  </script>
+</body>
+</html>
