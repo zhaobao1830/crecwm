@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>封装拖拽</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 0;
+      background-color: orange;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      margin: 5px;
+    }
+    button{
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+   <div class="elem1">elem1</div>
+   <div class="elem2">elem2</div>
+   <button class="moveLeft1">点击修改left移动</button>
+   <button class="moveTranslate">修改translate移动</button>
+   <script>
+     var elem1 = document.querySelector('.elem1');
+     var elem2 = document.querySelector('.elem2');
+
+     var btn1 = document.querySelector('.moveLeft1');
+     var btn2 = document.querySelector('.moveTranslate');
+
+     var left = 0;
+     var translateX = 0;
+     
+     btn1.onclick = function () {
+       left = left + 5;
+       elem1.style.left = left + 'px';
+     }
+     btn2.onclick = function () {
+       translateX += 5;
+       elem2.style.transform = 'translateX('+ translateX +'px)';
+     }
+   </script>
+</body>
+</html>

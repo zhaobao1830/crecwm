@@ -54,6 +54,7 @@ body,html{
 }
 
 .packetContainer{
+  min-width: 1720px;
   height: 980px;
   position: relative;
   background-image: url("http://static.crecgec.com/Kaipiao/background.png");
