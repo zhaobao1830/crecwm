@@ -1,0 +1,12 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.gysContainer{
+  width: 1200px;
+  margin: 0 auto;
+}

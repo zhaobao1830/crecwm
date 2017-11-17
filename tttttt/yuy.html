@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+   <script>
+     (function (excited) {
+       return function (f) {
+         return f(f);
+       }(function (f) {
+         return excited(function (x) { return (f(f))(x); });
+       });
+     })(function (excited) {
+       return function(i) {
+         return (i < 0) ? [] : excited(i - 1).concat(i);
+       }
+     })(99);
+   </script>
+</body>
+</html>
