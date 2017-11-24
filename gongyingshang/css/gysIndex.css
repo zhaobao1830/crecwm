@@ -1,0 +1,190 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.gysIndex{
+  width: 1200px;
+  margin: 0 auto 70px;
+  overflow: hidden;
+}
+
+/*公司简介 start*/
+.gysCompanyProfile{
+  width: 850px;
+  height: 325px;
+  float: left;
+}
+.gyscpConent{
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+}
+.gyscpConTitle{
+  width: 100%;
+  font-size: 18px;
+  color: #222222;
+  margin: 30px 0;
+}
+.gyscpCon{
+  width: 100%;
+  font-size: 14px;
+  color: #555555;
+}
+/*公司简介 end*/
+
+/*联系方式 start*/
+.gyscontactInformation{
+  width: 330px;
+  height: 325px;
+  float: left;
+  margin-left: 20px;
+}
+.gyscfContent > div{
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+.gyscfContent p,.gyscfContent a,.gyscfContent span{
+  display: block;
+  float: left;
+}
+.gyscfContent a{
+  color: #2263a7;
+}
+/*联系方式 end*/
+/*企业风采 start*/
+.gsycorporateStyle,.gyscsContent{
+  width: 100%;
+  float: left;
+}
+.gyscsContent ul li{
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+}
+.gyscsContent ul li:first-child{
+  margin-left: 0;
+}
+.gyscsContent .gyscsConImg{
+  width: 230px;
+  height: 156px;
+  border: 1px solid #dddddd;
+  margin-top: 20px;
+}
+.gyscsContent .gyscsConImg img{
+  margin: 5px;
+}
+.gyscsContent ul li p{
+  width: 232px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*企业风采 end*/
+/*产品展示 start*/
+.gysproductDisplay,.gysspContent{
+  width: 100%;
+  float: left;
+}
+.gysspContent ul li{
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+}
+.gysspContent ul li:first-child{
+  margin-left: 0;
+}
+.gysspContent .gysspConImg{
+  width: 230px;
+  height: 156px;
+  border: 1px solid #dddddd;
+  margin-top: 20px;
+}
+.gysspContent .gysspConImg img{
+  margin: 5px;
+}
+.gysspContent ul li p{
+  width: 232px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*产品展示 end*/
+/*相关资质 start*/
+.gysRelevantQualificat,.gysrqContent{
+  width: 100%;
+  float: left;
+}
+.gysrqContent ul li{
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+}
+.gysrqContent ul li:first-child{
+  margin-left: 0;
+}
+.gysrqContent .gysrqConImg{
+  width: 230px;
+  height: 156px;
+  border: 1px solid #dddddd;
+  margin-top: 20px;
+}
+.gysrqContent .gysrqConImg img{
+  margin: 5px;
+}
+.gysrqContent ul li p{
+  width: 232px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gysrqContent ul li span{
+  color: #ff0000;
+  margin:0 5px;
+}
+/*相关资质 end*/
+/*公共类*/
+.gysMtop50{
+  margin-top: 50px;
+}
+.gysMtop70{
+  margin-top: 70px;
+}
+.gysChildTitle{
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #2263a7;
+}
+.gysChildTitle p{
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  background-color: #2263a7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 18px;
+}
+.gysChildTitle a{
+  display: block;
+  float: right;
+  color: #555555;
+  margin-right: 10px;
+  font-size: 12px;
+}

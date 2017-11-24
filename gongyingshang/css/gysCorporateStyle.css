@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.gysCorporateStyle{
+  width: 1200px;
+  margin: 0 auto 70px;
+  overflow: hidden;
+}
+.gyscsContent{
+  width: 1200px;
+  overflow: hidden;
+}
+.gyscsContent .gyscsContentTop{
+  width: 100%;
+  margin: 30px 0 20px;
+  float: left;
+}
+.gyscsContent .gyscsContentTop p,.gyscsContent .gyscsContentTop a{
+  display: block;
+}
+.gyscsContent .gyscsContentTop .gyscsctB{
+  font-size: 16px;
+  color: #555555;
+  float: left;
+  margin-left: 20px;
+}
+.gyscsContent .gyscsContentTop .gyscsctS{
+  font-size: 14px;
+  color: #555555;
+  float: left;
+  margin-left: 10px;
+}
+.gyscsContent .gyscsContentTop .gyscsctImgNum{
+  font-size: 14px;
+  color: #ff0000;
+  float: left;
+}
+.gyscsContent .gyscsContentTop .goEnterprisePofile{
+  float: right;
+  font-size: 12px;
+  color: #555555;
+}
+.gyscsContentCon{
+  width: 1198px;
+  height: 675px;
+  border: 1px solid #dddddd;
+  float: left;
+}
+.gyscsContentCon .gyscsccTop{
+  width: 810px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 0;
+}
+.gyscsContentCon .gyscsccTop img{
+  width: 810px;
+  height: 460px;
+  margin-top: 20px;
+}
+.gyscsContentCon .gyscsccTop p{
+  width: 810px;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+  margin-top: 20px;
+}
+.gyscsccBottom{
+  width: 800px;
+  height: 100px;
+  margin: 40px auto 0;
+}
+/*公共类*/
+.gysMtop50{
+  margin-top: 50px;
+}
+.gysMtop70{
+  margin-top: 70px;
+}
+.gyscsTitle{
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #2263a7;
+}
+.gyscsTitle p{
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  background-color: #2263a7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 18px;
+}
