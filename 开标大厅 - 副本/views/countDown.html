@@ -7,30 +7,14 @@
   <link rel="stylesheet" type="text/css" href="../css/base.css">
 </head>
 <body>
-   <div class="countDownContainer">
-     <div class="countDown">
-       <div class="cds">2</div>
-       <div class="cds">4</div>
-       <div class="cdm"></div>
-       <div class="cds">5</div>
-       <div class="cds">9</div>
-       <div class="cdm"></div>
-       <div class="cds">5</div>
-       <div class="cds">9</div>
-     </div>
-   </div>
+  <div class="bkCountDown">
+    <div class="kbCountDownTitle">
+      <img src="http://static.crecgec.com/Kaipiao/countDownTitle.png">
+    </div>
+    <div id="kbCountDownContent"></div>
+  </div>
    <script src="../js/jquery-3.1.1.js"></script>
-   <script>
-     var starttime = new Date("2017/10/27 08:30:30");
-     setInterval(function () {
-       var nowtime = new Date();
-       var time = starttime - nowtime;
-       var day = parseInt(time / 1000 / 60 / 60 / 24);
-       var hour = parseInt(time / 1000 / 60 / 60 % 24);
-       var minute = parseInt(time / 1000 / 60 % 60);
-       var seconds = parseInt(time / 1000 % 60);
-       $('.timespan').html(day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒");
-     }, 1000);
-   </script>
+  <script src="../js/jquery.countdown.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

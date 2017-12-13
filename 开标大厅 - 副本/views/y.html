@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <title>进度条</title>
+  <style type="text/css">
+    .processcontainer{
+      width:450px;
+      border:1px solid #6C9C2C;
+      height:25px;
+    }
+    #processbar{
+      background:#95CA0D;
+      float:left;
+      height:100%;
+      text-align:center;
+      line-height:150%;
+    }
+  </style>
+  <script type="text/javascript">
+    function setProcess(){
+      var processbar = document.getElementById("processbar");
+      processbar.style.width = parseInt(processbar.style.width) + 1 + "%";
+      processbar.innerHTML = processbar.style.width;
+      if(processbar.style.width == "100%"){
+        window.clearInterval(bartimer);
+      }
+    }
+    var bartimer = window.setInterval(function(){setProcess();},100);
+    window.onload = function(){
+      bartimer;
+    }
+  </script>
 </head>
 <body>
-<span class="timespan"></span>
+<div class="processcontainer">
+  <div id="processbar" style="width:0%;"></div>
+</div>
 </body>
-<script src="../js/jquery-3.1.1.js"></script>
-<script>
-  var starttime = new Date("2017/10/27 08:30:30");
-  setInterval(function () {
-    var nowtime = new Date();
-    var time = starttime - nowtime;
-    var day = parseInt(time / 1000 / 60 / 60 / 24);
-    var hour = parseInt(time / 1000 / 60 / 60 % 24);
-    var minute = parseInt(time / 1000 / 60 % 60);
-    var seconds = parseInt(time / 1000 % 60);
-    $('.timespan').html(day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒");
-  }, 1000);
-</script>
 </html>

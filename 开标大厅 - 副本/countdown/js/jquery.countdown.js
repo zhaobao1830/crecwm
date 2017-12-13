@@ -22,17 +22,16 @@
 		},prop);
 		
 		var left, h, m, s, positions;
-
 		// Initialize the plugin
 		init(this, options);
 		
 		positions = this.find('.countPos');
 		
 		(function tick(){
-			
+
 			// Time left
 			left = Math.floor((options.timestamp - (new Date())) / 1000);
-			
+
 			if(left < 0){
 				left = 0;
 			}
@@ -41,12 +40,11 @@
 			// d = Math.floor(left / days);
 			// updateDuo(0, 1, d);
 			// left -= d*days;
-			
+
 			// Number of hours left
 			h = Math.floor(left / hours);
 			updateDuo(0, 1, h);
 			left -= h*hours;
-			
 			// Number of minutes left
 			m = Math.floor(left / minutes);
 			updateDuo(2, 3, m);
@@ -60,7 +58,7 @@
 			options.callback(h, m, s);
 			
 			// Scheduling another call of this function in 1s
-			setTimeout(tick, 1000);
+			 setTimeout(tick, 1000);
 		})();
 		
 		// This function updates two digit positions at once
@@ -96,7 +94,6 @@
 
 	// Creates an animated transition between the two numbers
 	function switchDigit(position,number){
-		
 		var digit = position.find('.digit')
 		
 		if(digit.is(':animated')){
@@ -121,7 +118,7 @@
 		
 		// The .static class is added when the animation
 		// completes. This makes it run smoother.
-		
+
 		digit
 			.before(replacement)
 			.removeClass('static')

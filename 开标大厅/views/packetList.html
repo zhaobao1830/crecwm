@@ -9,10 +9,10 @@
 <body>
    <div class="plHeader">
      <div class="plLogo">
-       <img src="../image/logo.png">
+       <img class="testImg" src="../image/logo.png">
      </div>
      <div class="plWords">
-       <div class="words1">
+       <div class="words1" title="中铁港航局集团有限公司南沙港铁路NSGZQ-1标防水材料招标采购中铁港航局集团有限公司南沙港铁路NSGZQ-1标防水材料招标采购中铁港航局集团有限公司南沙港铁路NSGZQ-1标防水材料招标采购">
          中铁港航局集团有限公司南沙港铁路NSGZQ-1标防水材料招标采购
        </div>
        <div class="words2">
@@ -21,49 +21,51 @@
        </div>
      </div>
      <div class="plJump">
-       <img src="../image/jump.png">
+       <img class="testImg" src="../image/jump.png">
      </div>
    </div>
    <div class="packetContainer">
-     <div class="packetTitle">
-       <div class="titlePackge">
-         <p>包件名</p>
+     <div class="packetCon">
+       <div class="packetTitle">
+         <div class="titlePackge">
+           <p>包件名</p>
+         </div>
        </div>
-     </div>
-     <div class="packetList">
-       <ul>
-         <li class="list1 ptHasBid">
-           <div class="listTitlePacket">安全帽</div>
-           <div class="listTpLeft">20</div>
-           <div class="listTpCenter"></div>
-           <div class="listTpRight">20</div>
-           <div class="ptHasBidShow">已唱标</div>
-         </li>
-         <li class="list1 ptHasFull">
-           <div class="listTitlePacket">安全帽</div>
-           <div class="listTpLeft">20</div>
-           <div class="listTpCenter"></div>
-           <div class="listTpRight">20</div>
-         </li>
-         <li class="list1 ptNoFull">
-           <div class="listTitlePacket">安全帽</div>
-           <div class="listTpLeft">10</div>
-           <div class="listTpCenter"></div>
-           <div class="listTpRight">20</div>
-         </li>
-         <li class="list1 ptNoData">
-           <div class="listTitlePacket">安全帽</div>
-           <div class="listTpLeft">0</div>
-           <div class="listTpCenter"></div>
-           <div class="listTpRight">20</div>
-         </li>
-       </ul>
-     </div>
-     <div class="listButtonRight">
-       <a href="javascript:;" class="listButtonA listButtonGoLeftA"></a>
-     </div>
-     <div class="packetFooter">
-       开标大厅
+       <div class="packetList">
+         <ul>
+           <li class="list1 ptHasBid">
+             <div class="listTitlePacket">安全帽</div>
+             <div class="listTpLeft">20</div>
+             <div class="listTpCenter"></div>
+             <div class="listTpRight">20</div>
+             <div class="ptHasBidShow">已唱标</div>
+           </li>
+           <li class="list1 ptHasFull">
+             <div class="listTitlePacket">安全帽</div>
+             <div class="listTpLeft">20</div>
+             <div class="listTpCenter"></div>
+             <div class="listTpRight">20</div>
+           </li>
+           <li class="list1 ptNoFull">
+             <div class="listTitlePacket">安全帽</div>
+             <div class="listTpLeft">10</div>
+             <div class="listTpCenter"></div>
+             <div class="listTpRight">20</div>
+           </li>
+           <li class="list1 ptNoData">
+             <div class="listTitlePacket">安全帽</div>
+             <div class="listTpLeft">0</div>
+             <div class="listTpCenter"></div>
+             <div class="listTpRight">20</div>
+           </li>
+         </ul>
+       </div>
+       <div class="listButtonRight">
+         <a href="javascript:;" class="listButtonA listButtonGoLeftA"></a>
+       </div>
+       <div class="packetFooter">
+         开标大厅
+       </div>
      </div>
    </div>
    <div class="ptShowDetail displayNone">
@@ -160,5 +162,41 @@
    </div>
    <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
    <script type="text/javascript" src="../js/packetList.js"></script>
+   <script>
+     $(function () {
+       var t_img; // 定时器
+       var isLoad = true; // 控制变量
+
+// 判断图片加载状况，加载完成后回调
+       isImgLoad(function(){
+         // 加载完成
+       });
+
+// 判断图片加载的函数
+       function isImgLoad(callback){
+         // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+         // 查找所有封面图，迭代处理
+         $('.testImg').each(function(){
+           // 找到为0就将isLoad设为false，并退出each
+           if(this.height === 0){
+             isLoad = false;
+             return false;
+           }
+         });
+         // 为true，没有发现为0的。加载完毕
+         if(isLoad){
+           clearTimeout(t_img); // 清除定时器
+           // 回调函数
+           callback();
+           // 为false，因为找到了没有加载完成的图，将调用定时器递归
+         }else{
+           isLoad = true;
+           t_img = setTimeout(function(){
+             isImgLoad(callback); // 递归扫描
+           },500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+         }
+       }
+     })
+   </script>
 </body>
 </html>

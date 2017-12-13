@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+<style type="text/css">
+  .cdiv{
+    background-color: white;
+    height: 100px;
+    width: 380px;
+    padding-left: 0;
+    overflow-y: scroll;
+    position: relative;
+    word-wrap: break-word;
+    overflow-x: auto;
+    text-align:left;
+  }
+</style>
+<div id="divmsg" class="cdiv"></div>
+<input id="test" type="button" value="测试" />
+<script type="text/javascript">
+  var test = document.getElementById("test");
+  var div = document.getElementById("divmsg");
+  test.onclick = function () {
+    div.innerHTML = div.innerHTML+"js实现将div等滚动条(scrollbar)保持在最底部<br/><br/>";
+
+    boxScroll(div);
+  }
+
+  function boxScroll(o){
+    o.scrollTop = o.scrollHeight;
+  }
+</script>
+</body>
+</html>

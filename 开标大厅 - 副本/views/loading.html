@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="loading">
+		
+	</div>
+    <img class="bImg" src="http://static.crecgec.com/Kaipiao/background.png">
+<script type="text/javascript">
+var oImg = document.querySelectorAll('img')[0]
+var oloading = document.querySelectorAll('.loading')[0]
+oImg.onload = function(){
+	oloading.innerHTML = '加载完成'
+}
+</script>
+</body>
+</html>

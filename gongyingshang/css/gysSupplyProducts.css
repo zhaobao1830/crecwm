@@ -1,0 +1,310 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.gysSupplyProducts{
+  width: 1200px;
+  margin: 0 auto 70px;
+  overflow: hidden;
+}
+.gysspContent{
+  width: 100%;
+  overflow: hidden;
+}
+.gysspContentSelect{
+  width: 1198px;
+  height: auto;
+  border: 1px solid #dddddd;
+}
+.gysspContentSelect .classification{
+  overflow: hidden;
+  border-bottom: 1px solid #dddddd;
+}
+.gysspContentSelect .classification p,.gysspContentSelect .area p{
+  font-size: 14px;
+  color: #777777;
+  line-height: 60px;
+  float: left;
+}
+.gysspContentSelect .classificationUl,.gysspContentSelect .areaUl{
+  margin-left: 10px;
+  float: left;
+  overflow: hidden;
+}
+.gysspContentSelect .classificationUl ul li,.gysspContentSelect .areaUl ul li{
+  float: left;
+  margin:15px 0 0 10px;
+  width: 86px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+  list-style: none;
+  cursor: pointer;
+}
+.gysspContentSelect .classificationUl ul li:first-child,.gysspContentSelect .areaUl ul li:first-child{
+  margin-left: 5px;
+}
+.area{
+  overflow: hidden;
+}
+.gyssspContentList{
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+.gyssspContentListSelect{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  float: left;
+}
+.gyslistSelectLeft{
+  width: 210px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #dddddd;
+  float: left;
+}
+.gyslistSelectLeft div{
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 14px;
+  border-left: 1px solid #dddddd;
+  float: left;
+  cursor: pointer;
+}
+.gyslistSelectLeft div:first-child{
+  border-left: none;
+  padding-right: 10px;
+}
+.gyslistSelectLeft div > span,.gyslistSelectLeft div > i{
+  display: block;
+  float: left;
+  font-size: 14px;
+}
+.gyslistSelectLeft div > i{
+  margin-top: 7px;
+  margin-left: 5px;
+}
+.gyslistSelectLeft .gysGoUp{
+  width: 11px;
+  height: 13px;
+  background: url("../images/gysGoUP.png") 0 0 no-repeat;
+}
+.gyslistSelectLeft .gysGoDown{
+  width: 11px;
+  height: 13px;
+  background: url("../images/gysGoDown.png") 0 0 no-repeat;
+}
+.gyslistSelectRight{
+  float: right;
+  height: 30px;
+}
+.gyslistSelectRight a{
+  text-align: center;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  font-size: 14px;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  color: #fff;
+}
+.gyssspContentListShow{
+  width: 100%;
+  float: left;
+  border-top: 1px solid #dddddd;
+}
+.gyssspConListShowP,.gyssspConListShowP ul,.gyssspConListShowL,.gyssspConListShowL ul{
+  overflow: hidden;
+}
+.gyssspConListShowP ul li{
+  width: 232px;
+  float: left;
+  list-style: none;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 0;
+}
+.gyssspConListShowP .gyssspImgP{
+  width: 230px;
+  height: 156px;
+  border: 1px solid #dddddd;
+}
+.gyssspConListShowP .gyssspImgP:hover{
+  border-color: #ff0000;
+}
+.gyssspConListShowP .gyssspImgP img{
+  width: 220px;
+  height: 146px;
+  margin: 5px;
+}
+.gyssspConListShowP .gysspTitleP{
+  font-size: 16px;
+  color: #222222;
+  margin-top: 15px;
+}
+.gyssspConListShowP .gysspComponeyTitleP{
+  float: left;
+  width: 232px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 15px;
+}
+.gyssspConListShowP .gysspPriceP{
+  float: left;
+  width: 232px;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+}
+.gyssspConListShowP .gysspPriceP p,.gyssspConListShowP .gysspPriceP span{
+  display: block;
+  float: left;
+}
+.gyssspConListShowP .gysspPriceP .gysspPriceValP{
+  color: #f44848;
+}
+.gyssspConListShowP .gysspDateP{
+  float: left;
+  width: 232px;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+}
+.gyssspConListShowL ul li{
+  list-style: none;
+  float: left;
+  width: 398px;
+  height: 126px;
+  border: 1px solid #fff;
+  font-size: 0;
+}
+.gyssspConListShowL ul li:hover{
+  border-color: #f44848;
+}
+.gyssspConListShowL .gyssspImgL{
+  width: 160px;
+  height: 107px;
+  float: left;
+  margin: 10px;
+}
+.gyssspConListShowL .gyssspImgL img{
+  width: 160px;
+  height: 107px;
+}
+.gyssspConListShowL .gysspTitleL{
+  width: 210px;
+  height: 16px;
+  line-height: 16px;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  color: #222222;
+  margin-top: 30px;
+}
+.gyssspConListShowL .gysspComponeyTitleL{
+  font-size: 14px;
+  color: #777777;
+  width: 210px;
+  height: 14px;
+  line-height: 14px;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+.gyssspConListShowL .gysspPriceL{
+  width: 210px;
+  height: 14px;
+  line-height: 14px;
+  float: left;
+  overflow: hidden;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+}
+.gyssspConListShowL .gysspPriceL p,.gyssspConListShowL .gysspPriceL span{
+  display: block;
+  float: left;
+}
+.gysspPriceL .gysspPriceValL{
+  color: #ff0000;
+}
+.gyssspConListShowL .gysspDateL{
+  float: left;
+  width: 210px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+}
+/*公共类*/
+.gysMtop50{
+  margin-top: 50px;
+}
+.gysMtop70{
+  margin-top: 70px;
+}
+.gysMright0{
+  margin-right: 0 !important;
+}
+.gysChildTitle{
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #2263a7;
+}
+.gysChildTitle p{
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  background-color: #2263a7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 18px;
+}
+.cfliClick{
+  color: #fff;
+  background-color: #4ea0ea;
+  border: 1px solid #4ea0ea;
+}
+.cfliNoClick{
+  color: #777777;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+}
+.listSelectLeftClick{
+  color: #fd7b01;
+}
+.listSelectLeftNoClick{
+  color: #555555;
+}
+.electRightAClick{
+  background-color: #4ea0ea;
+}
+.electRightANoClick{
+  background-color: #bbbbbb;
+}
+.displayBlock{
+  display: block;
+}
+.displayNone{
+  display: none;
+}

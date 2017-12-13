@@ -21,46 +21,44 @@
 			timestamp	: 0
 		},prop);
 		
-		var left, d, h, m, s, positions;
-
+		var left, h, m, s, positions;
 		// Initialize the plugin
 		init(this, options);
 		
-		positions = this.find('.position');
+		positions = this.find('.countPos');
 		
 		(function tick(){
-			
+
 			// Time left
 			left = Math.floor((options.timestamp - (new Date())) / 1000);
-			
+
 			if(left < 0){
 				left = 0;
 			}
 			
 			// Number of days left
-			d = Math.floor(left / days);
-			updateDuo(0, 1, d);
-			left -= d*days;
-			
+			// d = Math.floor(left / days);
+			// updateDuo(0, 1, d);
+			// left -= d*days;
+
 			// Number of hours left
 			h = Math.floor(left / hours);
-			updateDuo(2, 3, h);
+			updateDuo(0, 1, h);
 			left -= h*hours;
-			
 			// Number of minutes left
 			m = Math.floor(left / minutes);
-			updateDuo(4, 5, m);
+			updateDuo(2, 3, m);
 			left -= m*minutes;
 			
 			// Number of seconds left
 			s = left;
-			updateDuo(6, 7, s);
+			updateDuo(4, 5, s);
 			
 			// Calling an optional user supplied callback
-			options.callback(d, h, m, s);
+			options.callback(h, m, s);
 			
 			// Scheduling another call of this function in 1s
-			setTimeout(tick, 1000);
+			 setTimeout(tick, 1000);
 		})();
 		
 		// This function updates two digit positions at once
@@ -74,21 +72,21 @@
 
 
 	function init(elem, options){
-		elem.addClass('countdownHolder');
+		elem.addClass('kbCcountdownHolder');
 
 		// Creating the markup inside the container
-		$.each(['Days','Hours','Minutes','Seconds'],function(i){
-			$('<span class="count'+this+'">').html(
-				'<span class="position">\
+		$.each(['Hours','Minutes','Seconds'],function(i){
+			$('<div class="count'+this+'">').html(
+				'<div class="countPos">\
 					<span class="digit static">0</span>\
-				</span>\
-				<span class="position">\
+				</div>\
+				<div class="countPos">\
 					<span class="digit static">0</span>\
-				</span>'
+				</div>'
 			).appendTo(elem);
 			
 			if(this!="Seconds"){
-				elem.append('<span class="countDiv countDiv'+i+'"></span>');
+				elem.append('<div class="countDiv countDiv'+i+'"></div>');
 			}
 		});
 
@@ -96,7 +94,6 @@
 
 	// Creates an animated transition between the two numbers
 	function switchDigit(position,number){
-		
 		var digit = position.find('.digit')
 		
 		if(digit.is(':animated')){
@@ -113,7 +110,7 @@
 		var replacement = $('<span>',{
 			'class':'digit',
 			css:{
-				top:'-2.1em',
+				top:'-170px',
 				opacity:0
 			},
 			html:number
@@ -121,11 +118,11 @@
 		
 		// The .static class is added when the animation
 		// completes. This makes it run smoother.
-		
+
 		digit
 			.before(replacement)
 			.removeClass('static')
-			.animate({top:'2.5em',opacity:0},'slow',function(){
+			.animate({top:'170px',opacity:0},'slow',function(){
 				digit.remove();
 			})
 

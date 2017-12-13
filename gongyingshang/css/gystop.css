@@ -1,0 +1,42 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.gystop{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f2f2f2;
+}
+.gystopcon{
+  width: 1200px;
+  margin: 0 auto;
+}
+.gystopconLeft{
+  float: left;
+  font-size: 14px;
+  color: #555555;
+}
+.gystopconRight{
+  float: right;
+}
+.gystopconRight a,.gystopconRight span{
+  display: block;
+  float: left;
+}
+.gystopconRight a{
+  color: #777777;
+  font-size: 14px;
+}
+.gystopconRight span{
+  width: 1px;
+  height: 15px;
+  background-color: #bbbbbb;
+  margin-top: 13px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

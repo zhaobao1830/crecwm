@@ -1,0 +1,81 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.gysnav{
+  width: 1200px;
+  height: 350px;
+  margin: 0 auto;
+}
+.gysnavTop{
+  height: 85px;
+}
+.gysnavTopLeft{
+  line-height: 85px;
+  float: left;
+}
+.gysnavTopLeft p,.gysnavTopLeft span{
+  display: block;
+  float: left;
+}
+.gysnavTopLeft > .gysCompany{
+  font-size: 24px;
+  color: #000000;
+}
+.gysnavTopLeft span{
+  width: 2px;
+  height: 24px;
+  background-color: #bbbbbb;
+  margin: 30px 10px 0 10px;
+}
+.gysnavTopLeft > .gysTele,.gysnavTopLeft > .gysTelephone{
+  font-size: 14px;
+  color: #555555;
+}
+.gysnavTopRight{
+  float: right;
+  height:46px;
+  margin-top: 40px;
+}
+.gysnavTopRight a{
+  display: block;
+  float: left;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 30px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 18px;
+}
+.activeA{
+  background-color: #2263a7;
+  color: #fff;
+}
+.noActiveA{
+  color: #777777;
+}
+.gysnavBottom{
+  width: 1200px;
+  height: 64px;
+  background-color: #f9fafa;
+}
+.gysnavBottom div{
+  float: right;
+  color: #555555;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.gysnavBottom .gysBidNum{
+  color: #f44848;
+  font-size: 30px;
+}
+.gysnavBottom .gysTtenderNum{
+  color: #777777;
+  font-size: 30px;
+}

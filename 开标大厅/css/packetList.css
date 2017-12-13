@@ -9,7 +9,7 @@ body,html{
 .plHeader{
   position: relative;
   width: auto;
-  min-width: 1920px;
+  min-width: 1720px;
   height: 100px;
   background: url("../image/plHeadBac.png") 0 0 no-repeat;
 }
@@ -41,6 +41,10 @@ body,html{
 .words1{
   font-size: 36px;
   line-height: 70px;
+  height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .words2{
   font-size: 14px;
@@ -50,12 +54,16 @@ body,html{
 }
 
 .packetContainer{
-  width: 1920px;
   height: 980px;
   position: relative;
-  background-image: url("../image/background.png");
-  background-size: cover;
+  background-image: url("http://static.crecgec.com/Kaipiao/background.png");
+  background-size: 1720px 100%;
   overflow: hidden;
+}
+.packetCon{
+  width: 1720px;
+  height: 980px;
+  margin: 0 auto;
 }
 .packetTitle{
   width: 1720px;
