@@ -109,7 +109,10 @@ a{
   margin: 40px 60px 20px;
   width: 1080px;
 }
-
+.reResertA,.toExamine{
+  background-color: #bf0000;
+  color: #FFFFFF;
+}
 /*table样式*/
 table{
   width: 1080px;
