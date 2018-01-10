@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>订单列表</title>
+  <link rel="stylesheet" href="../common/css/normalize.css">
+  <link rel="stylesheet" href="orderList.css">
+</head>
+<body>
+   <div class="orderList">
+     <div class="olContent">
+       <div class="olTop">
+         <select>
+           <option>鲁班（北京）电子商务科技有限公司lubanec@qq.com</option>
+         </select>
+       </div>
+       <div class="oltopCon">
+         <div class="con1 divwidth330">
+           <div class="con2">
+             <span class="spanWidth80">交易时间：</span>
+             <p class="pWidth250">{{tradingTime}}</p>
+           </div>
+           <div class="con2">
+             <span class="spanWidth80">对方户名：</span>
+             <p class="pWidth250">{{nameOther}}</p>
+           </div>
+         </div>
+         <div class="con1 divwidth330">
+           <div class="con2">
+             <span class="spanWidth80">期初金额：</span>
+             <p class="pWidth250">{{initialAmount}}</p>
+           </div>
+           <div class="con2">
+             <span class="spanWidth80">剩余金额：</span>
+             <p class="pWidth250">{{surplusAmount}}</p>
+           </div>
+         </div>
+         <div class="con1 divwidth330">
+           <div class="con2">
+             <span class="spanWidth80">汇款备注：</span>
+             <p class="pWidth250">{{remittanceRemark}}</p>
+           </div>
+         </div>
+       </div>
+       <div class="olSearch">
+         <div class="con1 divwidth346">
+            <div class="con2 mTop20">
+              <span class="spanWidth90">付款码：</span>
+              <input class="inputWidth234" type="text" v-model="paymentCode">
+            </div>
+            <div class="con2 mTop20">
+              <span class="spanWidth90">发票抬头：</span>
+              <input class="inputWidth234" type="text" v-model="invoicesRaised">
+            </div>
+            <div class="con2 mTop20">
+              <span class="spanWidth90">用户账号：</span>
+              <input class="inputWidth234" type="text" v-model="userAccount">
+            </div>
+            <div class="con2 mTop20">
+              <span class="spanWidth90">收货人电话：</span>
+              <input class="inputWidth234" type="text" v-model="consigneePhone">
+            </div>
+          </div>
+         <div class="con1 divwidth336 mLeft28">
+           <div class="con2 mTop20">
+             <span class="spanWidth80">订单编号：</span>
+             <input class="inputWidth234" type="text" v-model="orderNumber">
+           </div>
+           <div class="con2 mTop20">
+             <span class="spanWidth80">订单状态：</span>
+             <select class="selectWidth256" v-model="orderStatuVal">
+               <option v-for="(orderSta, index) in orderStatus" :value="orderSta.value">
+                {{orderSta.text}}
+               </option>
+             </select>
+           </div>
+           <div class="con2 mTop20">
+             <span class="spanWidth80">收货人：</span>
+             <input class="inputWidth234" type="text" v-model="consignee">
+           </div>
+           <div class="con2 mTop20">
+             <span class="spanWidth80">收票人：</span>
+             <input class="inputWidth234" type="text" v-model="ticketCollector">
+           </div>
+         </div>
+         <div class="con1 divwidth340 mLeft28">
+           <div class="con2 mTop20">
+             <span class="spanWidth90">订单金额：</span>
+             <input class="inputWidth88" type="text" v-model="orderAmountS">
+             <i></i>
+             <input class="inputWidth88" type="text" v-model="orderAmountE">
+           </div>
+           <div class="con2 mTop20">
+             <span class="spanWidth90">下单时间：</span>
+             <input class="inputWidth88" type="text" id="prev_date" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'behind_data\')}',alwaysUseStartDate:true});" v-model="orderTimeS" @focus="changeOrderTimeS">
+             <i></i>
+             <input class="inputWidth88" type="text" id="behind_data" onclick="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date\')}',alwaysUseStartDate:true});" v-model="orderTimeE" @focus="changeOrderTimeE">
+           </div>
+           <div class="con2 mTop20">
+             <span class="spanWidth90">付款码金额：</span>
+             <input class="inputWidth88" type="text" v-model="payCodeAmountS">
+             <i></i>
+             <input class="inputWidth88" type="text" v-model="payCodeAmountE">
+           </div>
+           <div class="con2 mTop20">
+             <span class="spanWidth90">收票人电话：</span>
+             <input class="inputWidth228" type="text" v-model="ticketCollectorPhone">
+           </div>
+         </div>
+         <div class="con1 conA divWidth500 mLeft90 mTop20">
+           <a class="reSearchA" href="javascript:;" @click="olSearch">查&nbsp;&nbsp;询</a>
+           <a class="reResertA mLeft28" href="javascript:;" @click="olResert">重&nbsp;&nbsp;置</a>
+         </div>
+       </div>
+       <div class="olSearchResult">
+         <div class="resultOperation con1 conA divWidth500 mBottom20">
+           <a href="javascript:;" class="sureReceivables">确认收款</a>
+           <a href="javascript:;" class="toExamine mLeft28">审核</a>
+         </div>
+         <table>
+           <thead>
+             <tr>
+               <th width="50"></th>
+               <th>付款码</th>
+               <th>付款码金额</th>
+               <th>用户账号</th>
+               <th width="50"></th>
+               <th>订单编号</th>
+               <th>订单状态</th>
+               <th>订单金额</th>
+               <th>下单时间</th>
+               <th>发票抬头</th>
+               <th>收货人</th>
+               <th>收货人电话</th>
+               <th>收票人</th>
+               <th>收票人电话</th>
+               <th>业务备注</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>
+                 <a href="javascript:;" class="clickA clickId" @click="aIdChange"></a>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+         <div class="table_button">
+           <div class="tableButton">
+             <a class="goFirst">首页</a>
+             <a class="prePage">上一页</a>
+             <p class="currentPage">3</p>
+             <a class="nextPage">下一页</a>
+             <a class="goLast">尾页</a>
+             <input type="text" value="" class="pages">
+             <a class="goPage">跳转</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
+   <script type="text/javascript" src="vue.js"></script>
+   <script type="text/javascript">
+     var orderStatus = [
+       {text: '全部',value: '全部'},
+       {text: '待收款',value: '待收款'},
+       {text: '交易取消',value: '交易取消'},
+       {text: '待审核',value: '待审核'},
+       {text: '审核不通过',value: '审核不通过'},
+       {text: '已收款',value: '已收款'}
+     ]
+     var data = {
+       tradingTime: '2017-12-07 14:20:11', // 交易时间
+       nameOther: '中铁物贸武汉有限公司', // 对方户名
+       initialAmount: '5000', // 期初金额
+       surplusAmount: '5000', // 剩余金额
+       remittanceRemark: '办公用品', // 汇款备注
+       paymentCode: '', //付款码
+       invoicesRaised: '', // 发票抬头
+       userAccount: '', // 用户账号
+       consigneePhone: '', // 收货人电话
+       orderNumber: '', // 订单编号
+       orderStatuVal: '全部', // 订单状态
+       orderStatus: orderStatus, // 订单状态列表
+       consignee: '', // 收货人
+       ticketCollector: '', // 收票人
+       orderAmountS: '', // 订单金额(开始)
+       orderAmountE: '', // 订单金额（结束）
+       orderTimeS:'', // 下单时间（开始）
+       orderTimeE: '', // 下单时间（结束）
+       payCodeAmountS: '', // 付款码金额（开始）
+       payCodeAmountE: '', // 付款码金额（结束）
+       ticketCollectorPhone: '' // 收票人电话
+     }
+     var vm = new Vue({
+       el: '.orderList',
+       data: data,
+       methods: {
+         olSearch () {
+         },
+         olResert () {
+           this.tradingTime = ''
+           this.nameOther = ''
+           this.initialAmount = ''
+           this.surplusAmount = ''
+           this.remittanceRemark = ''
+           this.paymentCode = ''
+           this.invoicesRaised = ''
+           this.userAccount = ''
+           this.consigneePhone = ''
+           this.orderNumber = ''
+           this.orderStatuVal = '全部'
+           this.consignee = ''
+           this.ticketCollector = ''
+           this.orderAmountS = ''
+           this.orderAmountE = ''
+           this.orderTimeS = ''
+           this.orderTimeE = ''
+           this.payCodeAmountS = ''
+           this.payCodeAmountE = ''
+           this.ticketCollectorPhone = ''
+         },
+         changeOrderTimeS () {
+           this.orderTimeS = document.getElementById('prev_date').value
+         },
+         changeOrderTimeE () {
+           this.orderTimeE = document.getElementById('behind_data').value
+         },
+         // 点击最左边的选择框
+         aIdChange () {}
+       }
+     })
+   </script>
+</body>
+</html>

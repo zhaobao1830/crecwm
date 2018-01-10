@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+</head>
+<body>
+  <div>
+    <input type="file" name="t1" class="t1">
+  </div>
+  <div>
+    <input type="file" name="t2" class="t2">
+  </div>
+  <div>
+    <input type="file" name="t3" class="t3">
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      $("input[type=file]").unbind('change').change(function () {
+        console.log($(this))
+      })
+    })
+  </script>
+</body>
+</html>

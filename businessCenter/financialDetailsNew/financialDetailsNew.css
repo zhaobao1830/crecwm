@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.finaDeatil{
+  width: 100%;
+  height: auto;
+  min-height: 340px;
+  background-color: #eeeeee;
+  padding-top: 20px;
+  padding-bottom: 120px;
+}
+.fdConent{
+  width: 1200px;
+  height: auto;
+  min-height: 340px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+.fdcTop{
+  width: 100%;
+  height: 74px;
+  line-height: 74px;
+  background-color: #bbbbbb;
+}
+.fdcTop > select{
+  width: 440px;
+  height: 34px;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  margin-left: 20px;
+}
+
+.fdcSearch{
+  width: 1080px;
+  height: 150px;
+  margin: 40px 60px 20px 60px;
+}
+.fdcResult{
+  width: 1080px;
+  height: auto;
+  margin: 0 60px;
+  padding-bottom: 40px;
+}
+.fdcResult-top1{
+  width: 1080px;
+  height: 34px;
+  border-bottom: 2px solid #cb2a2d;
+  font-size: 0;
+  line-height: 0;
+}
+.fdcResult-top1 p{
+  display: block;
+  float: left;
+  height: 33px;
+  line-height: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  padding-bottom: 1px;
+}
+.fdcResult-top1 a{
+  display: block;
+  float: left;
+  height: 33px;
+  line-height: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-bottom: none;
+}
+
+.fdcResult-top2{
+  width: 1080px;
+  height: 74px;
+  margin: 20px 0;
+}
+.fdcResult-top2 li{
+  width: 540px;
+  height: 74px;
+  line-height: 74px;
+  list-style: none;
+  float: left;
+  cursor: pointer;
+}
+.fdcResult-top2 li p{
+  width: 170px;
+  margin-left: 20px;
+  float: left;
+}
+
+/*table样式*/
+table{
+  width: 1080px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+thead{
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  background-color: #777777;
+}
+thead tr,thead th{
+  border: 1px solid #dddddd;
+  border-left: none !important;
+  color: #ffffff;
+  height: 50px;
+  font-size: 14px;
+}
+thead tr img,tbody td img{
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+tbody{
+  width: auto;
+  min-width: 1070px;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+tbody tr,tbody td{
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  height: 67px;
+  color: #464646;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+tbody td{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+tbody tr{
+  border-top: 1px dotted #dddddd !important;
+}
+tbody tr:hover{
+  background-color: #f1f1f1;
+}
+tbody tr a{
+  color: #398fd1;
+  text-decoration: none;
+}
+tbody tr a:hover{
+  color: #ff0000;
+}
+
+/*跳转 start*/
+.table_button{
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+.table_button a{
+  display: block;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+.tableButton{
+  width: 364px;
+  float: right;
+  margin-top: 20px;
+}
+.goFirst,.goLast,.prePage,.nextPage{
+  border: 1px solid #bbbbbb;
+  background-color: #fafafa;
+  color: #777777;
+  border-radius: 2px;
+  float: left;
+}
+.goFirst,.goLast{
+  width: 44px;
+}
+.prePage,.nextPage{
+  width: 56px;
+}
+.prePage{
+  margin-left: 5px;
+}
+.nextPage{
+  margin-right: 5px;
+}
+.currentPage{
+  width: 45px;
+  float: left;
+  color: #5da5dd;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.pages{
+  width: 44px;
+  height: 28px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #5da5dd;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  float: left;
+  color: #5da5dd;
+}
+.goPage{
+  width: 44px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  border-radius: 2px;
+  font-size: 14px;
+  background-color: #5da5dd;
+  float: left;
+}
+.goPage:hover{
+  background-color: #4986c6;
+}
+/*跳转 end*/
+/*公共类*/
+.aClick{
+  border-color: #cb2a2d !important;
+  color: #cb2a2d !important;
+}
+.marginTop{
+  margin-top: 20px;
+}
+.allA{
+  background-color: #cb2a2d;
+  color: #ffffff;
+}
+.top_aClick{
+  border-color:#cb2a2d !important;
+}
+.top_liClick{
+  background-color: #cb2a2d;
+  color: #ffffff;
+}
+.top_liNoClick{
+  background-color: #eeeeee;
+  color: #777777;
+}
