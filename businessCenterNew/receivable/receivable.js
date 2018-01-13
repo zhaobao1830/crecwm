@@ -27,7 +27,7 @@ function reSearch(goPage) {
   var page=1 //第几页
   var pageSize = 10 // 每页显示的条数
   var count= 0 //总数
-  var countPage = 0 // 总页数
+  var countPage = Number($(".receivablesCountPage").val(countPage)) // 总页数
   var goPageVal = 0 // 跳转到第几页
   if (goPage === 'first') {
     page = 1
@@ -105,6 +105,7 @@ function reSearch(goPage) {
       dataJsonList = data.pubTransferList
       count = Number(data.totalPage)
       countPage = count / pageSize
+      $(".receivablesCountPage").val(countPage)
       if (dataJsonList.length > 0) {
         for (var i = 0;i < dataJsonList.length; i++) {
           bzNum= Number((page-1)*10+1+i)
