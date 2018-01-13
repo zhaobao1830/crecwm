@@ -58,9 +58,9 @@
                 <div class="con1 divwidth330 mLeft30">
                   <div class="con2 mTop20">
                     <span>订单金额：</span>
-                    <input class="inputWidth88" type="text">
+                    <input class="orderAmountStart inputWidth88" type="text">
                     <i></i>
-                    <input class="inputWidth88" type="text">
+                    <input class="orderAmountEnd inputWidth88" type="text">
                   </div>
                   <div class="con2 mTop20">
                     <span>剩余金额：</span>
@@ -78,7 +78,7 @@
             <table class="mTop20">
               <thead>
                  <tr>
-                   <th>序号</th>
+                   <th width="80">序号</th>
                    <th>交易时间</th>
                    <th>开户账号</th>
                    <th>对方户名</th>
@@ -86,43 +86,44 @@
                    <th>汇款备注</th>
                    <th>期初金额</th>
                    <th>剩余金额</th>
-                   <th>操作</th>
+                   <th width="80">操作</th>
                  </tr>
               </thead>
-              <tbody>
-                 <tr>
-                   <td>1</td>
-                   <td>20171207 14:20:11</td>
-                   <td>中铁物贸武汉有限公司</td>
-                   <td>416010100101167974</td>
-                   <td>兴业银行股份有限公司武汉分行（作业中心）</td>
-                   <td>办公用品</td>
-                   <td>50001</td>
-                   <td><a href="javascript:;">1000</a></td>
-                   <td><a href="javascript:;" onclick="showDpc()">查看详情</a></td>
-                 </tr>
-                 <tr>
-                   <td>1</td>
-                   <td>20171207 14:20:11</td>
-                   <td>中铁物贸武汉有限公司</td>
-                   <td>416010100101167974</td>
-                   <td>兴业银行股份有限公司武汉分行（作业中心）</td>
-                   <td>办公用品</td>
-                   <td>50001</td>
-                   <td><a href="javascript:;">1000</a></td>
-                   <td><a href="javascript:;">查看详情</a></td>
-                 </tr>
+              <tbody class="receivablesTable">
+                 <!--<tr>-->
+                   <!--<td>1</td>-->
+                   <!--<td>20171207 14:20:11</td>-->
+                   <!--<td>中铁物贸武汉有限公司</td>-->
+                   <!--<td>416010100101167974</td>-->
+                   <!--<td>兴业银行股份有限公司武汉分行（作业中心）</td>-->
+                   <!--<td>办公用品</td>-->
+                   <!--<td>50001</td>-->
+                   <!--<td><a href="javascript:;">1000</a></td>-->
+                   <!--<td><a href="javascript:;" onclick="showDpc()">查看详情</a></td>-->
+                 <!--</tr>-->
+                 <!--<tr>-->
+                   <!--<td>1</td>-->
+                   <!--<td>20171207 14:20:11</td>-->
+                   <!--<td>中铁物贸武汉有限公司</td>-->
+                   <!--<td>416010100101167974</td>-->
+                   <!--<td>兴业银行股份有限公司武汉分行（作业中心）</td>-->
+                   <!--<td>办公用品</td>-->
+                   <!--<td>50001</td>-->
+                   <!--<td><a href="javascript:;">1000</a></td>-->
+                   <!--<td><a href="javascript:;">查看详情</a></td>-->
+                 <!--</tr>-->
               </tbody>
             </table>
-            <div class="table_button">
+            <div class="table_button displayNone">
               <div class="tableButton">
-                <a class="goFirst">首页</a>
-                <a class="prePage">上一页</a>
+                <a class="goFirst" onclick="reSearch('first')">首页</a>
+                <a class="prePage" onclick="reSearch('pre')">上一页</a>
                 <p class="currentPage">3</p>
-                <a class="nextPage">下一页</a>
-                <a class="goLast">尾页</a>
+                <a class="nextPage" onclick="reSearch('next')">下一页</a>
+                <a class="goLast" onclick="reSearch('end')">尾页</a>
                 <input type="text" value="" class="pages">
-                <a class="goPage">跳转</a>
+                <input type="hidden" value="1" class="receivablesPage">
+                <a class="goPage" onclick="reSearch('goPage')">跳转</a>
               </div>
             </div>
           </div>
@@ -201,6 +202,7 @@
    </div>
    <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
    <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
+   <script type="text/javascript" src="./jquery.pagination.js"></script>
    <script type="text/javascript" src="receivable.js"></script>
 </body>
 </html>
