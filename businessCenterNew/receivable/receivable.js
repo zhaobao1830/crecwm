@@ -27,7 +27,7 @@ function reSearch(goPage) {
   var page=1 //第几页
   var pageSize = 10 // 每页显示的条数
   var count= 0 //总数
-  var countPage = Number($(".receivablesCountPage").val(countPage)) // 总页数
+  var countPage = Number($(".receivablesCountPage").val()) // 总页数
   var goPageVal = 0 // 跳转到第几页
   if (goPage === 'first') {
     page = 1
