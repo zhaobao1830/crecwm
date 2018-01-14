@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/gouwuche.css">
+		<script src="js/swipe.js"></script>
+	    <script src="js/fastclick.js"></script>
+		<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
+	</head>
+	<body>
+		<div class="box">
+<!--			优选商品标题-->
+			<div class="tops">
+				<p>优选商品</p>
+			</div>
+<!--			产品列表-->
+<div class="centers">
+	<ul>
+		<li class="lis1">
+			<div class="div1">
+				<input type="checkbox" name="shangpin" class="input1">
+				
+			</div>
+			<div class="div2">
+				<img src="img/2.png">
+				
+			</div>
+			
+			<div class="div3">
+				<p>法国进口粉底法国进口粉底</p>
+				<p class="p1">￥<span>1</span></p>
+			</div>
+			
+			<div class="div4">
+				<span class="span1">-</span>
+				<span class="span2">0</span>
+				<span class="span3">+</span>
+			</div>
+		</li>
+		<li class="lis1">
+			<div class="div1">
+				<input type="checkbox" name="shangpin" class="input1">
+				
+			</div>
+			<div class="div2">
+				<img src="img/2.png">
+				
+			</div>
+			
+			<div class="div3">
+				<p>法国进口粉底法国进口粉底</p>
+				<p class="p1">￥<span>2</span></p>
+			</div>
+			
+			<div class="div4">
+				<span class="span1">-</span>
+				<span class="span2">0</span>
+				<span class="span3">+</span>
+			</div>
+		</li>
+		<li class="lis1">
+			<div class="div1">
+				<input type="checkbox" name="shangpin" class="input1">
+				
+			</div>
+			<div class="div2">
+				<img src="img/2.png">
+				
+			</div>
+			
+			<div class="div3">
+				<p>法国进口粉底法国进口粉底</p>
+				<input type="hidden">
+				<p class="p1">￥<span price3="2">2</span></p>
+			</div>
+			
+			<div class="div4">
+				<span class="span1">-</span>
+				<span class="span2">0</span>
+				<span class="span3" onclick="hehe(this)">+</span>
+			</div>
+		</li>
+		
+	</ul>
+	
+</div>
+
+
+			
+		</div>
+		<!--底部去结算-->
+<div class="footers">
+	<div class="quanxuan">
+		<label><input type="checkbox" class="inputs">全选</label>
+	</div>
+	
+	<div class="jiesuan">
+		<p>去结算（<span>0</span>）</p>
+	</div>
+	<div class="heji">
+		<p class="heji-p1">合计：</p>
+		<p class="heji-p2">￥<span>0</span></p>
+	</div>
+	
+</div>
+<!--		底部导航栏-->
+		<div class="daohang">
+			<ul id="uls">
+				<li class="lis">
+					<a href="index.html">
+					<div>
+						<i class="iconfont daohangi iS">&#xe646;</i>
+						<i class="iconfont daohangi iS1">&#xe6f3;</i>
+					</div>
+					<p>首页</p>
+					</a>
+				</li>
+				<li class="lis">
+					<a href="">
+						<div>
+						<i class="iconfont daohangi iS">&#xe612;</i>
+						<i class="iconfont daohangi iS1">&#xe645;</i>
+					</div>
+					<p>列表</p>
+					</a>
+					
+				</li>
+				<li class="lis">
+					<a href="gouwuche.html">
+						<div>
+						<i class="iconfont daohangi iS" style="display:none;">&#xe6a8;</i>
+						<i class="iconfont daohangi iS1" style="display:block;">&#xe6b5;</i>
+					</div>
+					<p style="color:red;">购物车</p>
+						
+					</a>
+					
+				</li>
+				<li class="lis">
+					<a href="">
+						<div>
+						<i class="iconfont daohangi iS">&#xe611;</i>
+						<i class="iconfont daohangi iS1">&#xe617;</i>
+					</div>
+					<p>我的</p>
+						
+						
+					</a>
+					
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+	</body>
+	<script>
+		$(function(){
+			//导航点击
+  window.addEventListener('load', function () {  
+            FastClick.attach(document.body);  
+        }, false);  
+$(".lis").on("click",function(){
+	$(this).siblings().find(".iS1").css("display","none");
+	$(this).siblings().find(".iS").css("display","block");
+	$(this).siblings().find("p").css("color","black");
+	$(this).find(".iS1").css("display","block");
+	$(this).find(".iS").css("display","none");
+	$(this).find("p").css("color","rgb(255,92,83)");
+})
+
+			var numbers=0;;
+/*			var num;
+			var inde=0;*/
+		$(".inputs").on("click",function(){
+			if($(this).attr("checked")=="checked"){
+					$("[name='shangpin']:checkbox").attr("checked", true);
+					numbers=0;
+					
+					 for(var i = 0;i<$("input[name='shangpin']:checked").length;i++){
+                    numbers = Number(numbers) + Number($("input[name='shangpin']:checked").eq(i).parent().siblings(".div3").find("span").html());
+                    
+                    }
+                   $(".heji-p2").find("span").html(numbers);
+					
+					num=$("input[name='shangpin']:checked").length;
+					$(".jiesuan").find("span").html(num);
+			}
+			else if($(this).attr("checked")==undefined){
+				    $("[name='shangpin']:checkbox").attr("checked", false);
+				    $(".jiesuan").find("span").html("0");
+				    $(".heji-p2").find("span").html("0");
+				    numbers=0;
+			}
+		
+		});
+		$("[name='shangpin']:checkbox").on("click",function(){		
+			if($("input[name='shangpin']:checked").length==$(".lis1").length){
+				$(".inputs").attr("checked", true);
+				
+				 for(var i = 0;i<$("input[name='shangpin']:checked").length;i++){
+                    numbers = Number(numbers) + Number($("input[name='shangpin']:checked").eq(i).parent().siblings(".div3").find("span").html());
+                    
+                    }
+                   $(".heji-p2").find("span").html(numbers);
+                     
+				num=$("input[name='shangpin']:checked").length;
+			    $(".jiesuan").find("span").html(num);
+				
+			}else{
+				 numbers=0;
+				$(".inputs").attr("checked", false);
+				num=$("input[name='shangpin']:checked").length;
+				
+				$(".jiesuan").find("span").html(num);
+				 for(var i = 0;i<$("input[name='shangpin']:checked").length;i++){
+                    numbers = Number(numbers) + Number($("input[name='shangpin']:checked").eq(i).parent().siblings(".div3").find("span").html());
+                    
+                    }
+                   $(".heji-p2").find("span").html(numbers);
+				
+			}
+			
+		});
+		function jian(aa){
+			i--;
+			var _this=aa;
+			_this.next(".span2").html(i);
+			if(i==0){
+				_this.next(".span2").html("0");
+				i=0;
+			}
+		}
+		
+	
+		
+		})
+    //		加减方法
+    var i=0;
+    function hehe(aa){
+      i++;
+      var _this=aa;
+      console.log(_this);
+      console.log($(_this));
+      $(_this).prev(".span2").html(i);
+    };
+    function tt() {
+     var numbers=0;
+      for(var i = 0;i<$("input[name='shangpin']:checked").length;i++){
+        numbers = Number(numbers) + Number($("input[name='shangpin']:checked").eq(i).parent().siblings(".div3").find("span").html());
+      }
+    }
+	</script>
+</html>

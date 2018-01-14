@@ -1,0 +1,147 @@
+html,a{
+	font-family:"微软雅黑";
+	font-size:16px;
+	text-decoration:none;
+}
+.box{
+	width:100%;
+	margin-bottom:90px;
+}
+
+
+/*轮播图下的序列*/
+.xulie{
+	width:100%;
+    height: 100px;
+	border-top:1px solid rgb(245,245,245);
+	border-bottom:1rem solid rgb(245,245,245);
+	overflow:hidden;
+}
+.xulie>div{
+	float:left;
+    width: 9.375%;
+    height: 50%;
+	margin-top:1rem;
+	text-align:center;
+	margin-left: 12%;
+}
+.xulie>div div{
+    width: 93.334%;
+    height: 56%;
+    color: red;
+    border: 1px solid red;
+    border-radius:60%;
+    margin: 0 auto;
+}
+.ps{
+	margin-top:1.4rem;
+	font-size:0.6rem;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 508345 */
+  src: url('//at.alicdn.com/t/font_508345_2asnbyqvj8o7p66r.eot');
+  src: url('//at.alicdn.com/t/font_508345_2asnbyqvj8o7p66r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_508345_2asnbyqvj8o7p66r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_508345_2asnbyqvj8o7p66r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_508345_2asnbyqvj8o7p66r.svg#iconfont') format('svg');
+}
+.iconfont{
+	display: block;
+    margin-top: 0.3rem;
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    }
+/*    今日特惠*/
+    .tehui{
+    	width:100%;
+    }
+    .tehui>p{
+    	font-size:1rem;
+    	line-height:2rem;
+    	padding-left:1rem;
+    	border-bottom:1px solid rgb(245,245,245);
+    }
+    .zhanshi{
+    	width:100%;
+    }
+    .centers{
+    	width:100%;
+    	height:90px;
+    	overflow:hidden;
+    	border-bottom:1px solid rgb(245,245,245);
+    }
+    .centers>div{
+    	float:left;
+    	margin-top:1rem;
+    	margin-left:1rem;
+    }
+    .centers img{
+        width: 6rem;
+        height: 4rem;
+    	
+    }
+    .p1{
+    	margin-top:0.1rem;
+    	color:rgb(193,193,193);
+    	font-size:0.7rem;
+    }
+    .p2{
+    	font-size:0.5rem;
+    	color:rgb(152,152,152);
+        margin-top: 0.2rem;
+    }
+    .p3{
+    	color:rgb(254,0,2);
+    	margin-top:0.8rem;
+    	font-size:0.7rem;
+    }
+
+/*底部导航栏*/
+.daohang{
+	width:100%;
+	height:50px;
+	border-top:1px solid #999;
+	position:fixed;
+	bottom:0;
+	left:0;
+	background-color:rgb(250,250,250);
+}
+.daohang ul{
+	overflow:hidden;
+	margin-left:10px;
+}
+.daohang li{
+	float:left;
+	width:25%;
+	margin-top:0.1rem;
+}
+.daohang li a{
+	width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color:black;
+    font-size: 0.5rem;
+}
+li>div{
+    width: 24px;
+    margin: 0 auto;
+}
+.daohangi{
+	font-size:1.5rem;
+}
+li>p{
+	margin-top:0.1rem;
+	text-align:center;
+	font-size:0.5rem;
+}
+.iS{
+	display:block;
+}
+.iS1{
+	display:none;
+	color:rgb(255,92,83);
+}

@@ -3,9 +3,9 @@
     margin: 0;
     font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体';
 }
-html,body{
-    height: 100%;
-}
+/*html,body{*/
+    /*height: 100%;*/
+/*}*/
 a{
     text-decoration: none;
 }
@@ -30,6 +30,7 @@ a{
     border-bottom: 1px solid #0b2643;
     font-size: 18px;
     cursor: pointer;
+    overflow: hidden;
 }
 .management i{
     width: 18px;
@@ -38,56 +39,16 @@ a{
     margin-right: 10px;
     background-repeat: no-repeat;
     margin-top: 32px;
-    float: left;
+    display: inline-block;
 }
 .management p{
     text-align: left;
+    display: inline-block;
 }
 #service i{
     background-image: url("http://static.crecgec.com/mmp/left1.png");
 }
-#shortMessage i{
-    background-image: url("http://static.crecgec.com/mmp/left2.png");
-}
-#mailServe i{
-    background-image: url("http://static.crecgec.com/mmp/left3.png");
-}
-#knowledgeBase i{
-    background-image: url("http://static.crecgec.com/mmp/left4.png");
-}
-#userManagement i{
-    background-image: url("http://static.crecgec.com/mmp/left5.png");
-}
-#informationDisplay i{
-    background-image: url("http://static.crecgec.com/mmp/left6.png");
-}
-.management_list{
-    width: 260px;
-    overflow: hidden;
-}
-.management_list li{
-    list-style: none;
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    margin-left: 60px;
-    border-bottom: 1px solid #0c5e8d;
-    cursor: pointer;
-}
 
-/*公共类 start*/
-.displayBlock{
-    display: block;
-}
-.displayNone{
-    display: none;
-}
-.pClick,.liClick > a{
-    color: #ffffff;
-}
-.iClick{
-    background-position: 0 -25px;
-}
 .pNoClick,.liNoClick > a{
     color: #4ea0ea;
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>第五题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+<script>
+  var data = {'小明':{grade:3, scroe:92},'小王':{grade:2, scroe:90},'小2':{grade:1, scroe:91},'小3':{grade:2, scroe:93},'小4':{grade:3, scroe:98},'小5':{grade:1, scroe:95}}
+  var myArr = [],arrJ = {name:'',grade:'',scroe:''},myArr1=[]
+  // 把对象转换为数组
+  for (let i in data){
+    arrJ = data[i]
+    arrJ.name= i
+    myArr.push(arrJ)
+  }
+
+  console.log(myArr)
+  // 排序的方式
+  function sortNumber(a,b){
+    return a.scroe - b.scroe
+  }
+  // 按分数排序
+  myArr1 = myArr.sort(sortNumber)
+  console.log(myArr1)
+
+  //转换为按grade区分的年级名单(这个后面的有问题)
+  var grade1='',gradelArr=[]
+  Array.prototype.remove = function(val) {
+    var index = this.indexOf(val);
+    if (index > -1) {
+      this.splice(index, 1);
+    }
+  };
+  myArr1.remove(myArr1[0])
+  console.log(myArr1)
+  for(var i = myArr1.length-1;i>=0;i--){
+    grade1 = myArr1[myArr1.length-1].grade
+    if(myArr1[i].grade === grade1){
+      gradelArr.push(myArr1[i])
+//      myArr1.remove(myArr1[i])
+    }
+  }
+  console.log(gradelArr)
+
+</script>
+</body>
+</html>
