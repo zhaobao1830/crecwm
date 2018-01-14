@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>收款台账</title>
+  <link rel="stylesheet" href="../common/css/normalize.css">
+  <link rel="stylesheet" href="receivable.css">
+</head>
+<body>
+   <div class="receivable">
+      <div class="raContent">
+        <div class="raTop">
+          <select>
+            <option>鲁班（北京）电子商务科技有限公司lubanec@qq.com</option>
+          </select>
+        </div>
+        <div class="raSearch">
+          <div class="ChoiceIsReceivables">
+            <a id="receivables" class="aClick" href="javascript:;">待收款</a>
+            <a id="alreadyPaid" class="aNoClick" href="javascript:;">已收款</a>
+          </div>
+          <div class="receivables displayBlock">
+            <form class="reForm">
+              <div class="reSearch">
+                <div class="con1 divwidth336">
+                  <div class="con2 mTop20">
+                    <span class="spanWidth80">付款码：</span>
+                    <input class="paymentCode inputWidth234" type="text">
+                  </div>
+                  <div class="con2 mTop20">
+                    <span class="spanWidth80">订单编号：</span>
+                    <input class="orderNumber inputWidth234" type="text">
+                  </div>
+                  <div class="con2 mTop20">
+                    <span class="spanWidth80">对方姓名：</span>
+                    <input class="nameOther inputWidth234" type="text">
+                  </div>
+                </div>
+                <div class="con1 divwidth330 mLeft30">
+                  <div class="con2 mTop20">
+                    <span class="spanWidth80">期初金额：</span>
+                    <input class="InitialAmountStart inputWidth88" type="text">
+                    <i></i>
+                    <input class="InitialAmountEnd inputWidth88" type="text">
+                  </div>
+                  <div class="con2 mTop20">
+                    <span class="spanWidth80">交易时间：</span>
+                    <input class="reDataStart inputWidth88" type="text" id="prev_date" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'behind_data\')}',alwaysUseStartDate:true});" value="">
+                    <i></i>
+                    <input class="reDataEnd inputWidth88" type="text" id="behind_data" onFocus="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date\')}',alwaysUseStartDate:true});" value="">
+                  </div>
+                  <div class="con2 mTop20">
+                    <span class="spanWidth80">收款人：</span>
+                    <input class="nameOther inputWidth228" type="text">
+                  </div>
+                </div>
+                <div class="con1 divwidth330 mLeft30">
+                  <div class="con2 mTop20">
+                    <span>订单金额：</span>
+                    <input class="orderAmountStart inputWidth88" type="text">
+                    <i></i>
+                    <input class="orderAmountEnd inputWidth88" type="text">
+                  </div>
+                  <div class="con2 mTop20">
+                    <span>剩余金额：</span>
+                    <input class="reMoneyS inputWidth88" type="text">
+                    <i></i>
+                    <input class="reMoneyE inputWidth88" type="text">
+                  </div>
+                </div>
+                <div class="con1 conA divWidth500 mLeft80 mTop20">
+                  <a class="reSearchA" href="javascript:;" onclick="reSearch()">查&nbsp;&nbsp;询</a>
+                  <a class="reResertA mLeft30" href="javascript:;" onclick="reResert()">重&nbsp;&nbsp;置</a>
+                </div>
+              </div>
+            </form>
+            <table class="mTop20">
+              <thead>
+                 <tr>
+                   <th width="80">序号</th>
+                   <th>交易时间</th>
+                   <th>开户账号</th>
+                   <th>对方户名</th>
+                   <th>对方开户机构</th>
+                   <th>汇款备注</th>
+                   <th>期初金额</th>
+                   <th>剩余金额</th>
+                   <th width="80">操作</th>
+                 </tr>
+              </thead>
+              <tbody class="receivablesTable">
+                 <!--<tr>-->
+                   <!--<td>1</td>-->
+                   <!--<td>20171207 14:20:11</td>-->
+                   <!--<td>中铁物贸武汉有限公司</td>-->
+                   <!--<td>416010100101167974</td>-->
+                   <!--<td>兴业银行股份有限公司武汉分行（作业中心）</td>-->
+                   <!--<td>办公用品</td>-->
+                   <!--<td>50001</td>-->
+                   <!--<td><a href="javascript:;">1000</a></td>-->
+                   <!--<td><a href="javascript:;" onclick="showDpc()">查看详情</a></td>-->
+                 <!--</tr>-->
+                 <!--<tr>-->
+                   <!--<td>1</td>-->
+                   <!--<td>20171207 14:20:11</td>-->
+                   <!--<td>中铁物贸武汉有限公司</td>-->
+                   <!--<td>416010100101167974</td>-->
+                   <!--<td>兴业银行股份有限公司武汉分行（作业中心）</td>-->
+                   <!--<td>办公用品</td>-->
+                   <!--<td>50001</td>-->
+                   <!--<td><a href="javascript:;">1000</a></td>-->
+                   <!--<td><a href="javascript:;">查看详情</a></td>-->
+                 <!--</tr>-->
+              </tbody>
+            </table>
+            <div class="table_button displayNone">
+              <div class="tableButton">
+                <a class="goFirst" onclick="reSearch('first')">首页</a>
+                <a class="prePage" onclick="reSearch('pre')">上一页</a>
+                <p class="currentPage">3</p>
+                <a class="nextPage" onclick="reSearch('next')">下一页</a>
+                <a class="goLast" onclick="reSearch('end')">尾页</a>
+                <input type="text" value="" class="pages">
+                <input type="hidden" value="1" class="receivablesPage">
+                <input type="hidden" value="0" class="receivablesCountPage">
+                <a class="goPage" onclick="reSearch('goPage')">跳转</a>
+              </div>
+            </div>
+          </div>
+          <div class="alreadyPaid displayNone">
+            <table class="mTop20">
+              <thead>
+              <tr>
+                <th>序号</th>
+                <th>订单编号</th>
+                <th>订单金额</th>
+                <th>付款码</th>
+                <th>付款码金额</th>
+                <th>下单时间</th>
+                <th>收款时间</th>
+                <th>下单时间</th>
+                <th>收款时间</th>
+                <th>收款人</th>
+                <th>发票抬头</th>
+                <th>用户账号</th>
+                <th>收货人</th>
+                <th>收货人电话</th>
+                <th>收票人</th>
+                <th>收票人电话</th>
+                <th>业务备注</th>
+                <th>对方户名</th>
+                <th>对方账户</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                   <td>fds</td>
+                   <td>fds</td>
+                   <td>fds</td>
+                   <td>fds</td>
+                 </tr>
+              </tbody>
+            </table>
+            <div class="table_button">
+              <div class="tableButton">
+                <a class="goFirst">首页</a>
+                <a class="prePage">上一页</a>
+                <p class="currentPage">3</p>
+                <a class="nextPage">下一页</a>
+                <a class="goLast">尾页</a>
+                <input type="text" value="" class="pages">
+                <a class="goPage">跳转</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+   <div class="detailsPage displayNone">
+     <div class="detailsPageCon">
+        <div class="dpcTitle">
+          <p>详情</p>
+          <a href="javascript:;" onclick="closeDpc()"><img src="img/close.png"></a>
+        </div>
+        <table class="dpcTable">
+          <thead>
+            <tr>
+              <th>付款码</th>
+              <th>订单编号</th>
+              <th>订单金额</th>
+              <th>收款备注</th>
+              <th>收款时间</th>
+              <th>收款人</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="closeDpc">
+          <a href="javascript:;" onclick="closeDpc()">关&nbsp;&nbsp;闭</a>
+        </div>
+     </div>
+   </div>
+   <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
+   <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
+   <script type="text/javascript" src="./jquery.pagination.js"></script>
+   <script type="text/javascript" src="receivable.js"></script>
+</body>
+</html>

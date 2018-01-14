@@ -5,7 +5,229 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>采购询价书</title>
   <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
-  <link rel="stylesheet" href="letterInquiry1.css">
+  <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: 'Microsoft Yahei',Tahoma,'Simsun','宋体',sans-serif;
+    }
+    a{
+      text-decoration: none;
+    }
+    .letterInquiryContainer{
+      width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .letterInquiryDiv{
+      width: 935px;
+      height: auto;
+      overflow: hidden;
+      float: left;
+    }
+    .letterInquiryDivTitle{
+      width: 935px;
+      height: 30px;
+      line-height: 30px;
+      float: left;
+    }
+    .letterInquiryDivTitle span,.letterInquiryDivTitle p{
+      display: block;
+      float: left;
+    }
+    .letterInquiryDivTitle span{
+      width: 4px;
+      height: 30px;
+      background-color: #005ab5;
+    }
+    .letterInquiryDivTitle p{
+      margin-left: 16PX;
+    }
+    .letterInquiryDivContent{
+      width: 935px;
+      overflow: hidden;
+      float: left;
+    }
+    table.letterInquiryTable{
+      width: 915px;
+      table-layout: fixed;
+      border-collapse: collapse;
+      margin-left: 20px;
+    }
+    tbody.letterInquiryTbody{
+      width: 915px;
+      border-bottom: 1px solid #dddddd;
+      background-color: #ffffff;
+    }
+    tbody.letterInquiryTbody tr,tbody.letterInquiryTbody td{
+      border: 1px solid #dddddd;
+      height: 48px;
+      font-size: 14px;
+    }
+    tbody.letterInquiryTbody td{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    /*询价书 start*/
+    .letterInquiryInforTitle p{
+      font-size: 24px;
+      color: #005ab5;
+    }
+    /*询价书 end*/
+
+    /*相关分类 start*/
+    .correlationClassification{
+      width: 228px;
+      height: auto;
+      float: left;
+      overflow: hidden;
+      margin-left: 30px;
+      border: 1px solid #eeeeee;
+    }
+    .cClssifTitle{
+      height: 34px;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .cClssifTitle p{
+      height: 34px;
+      line-height: 34px;
+      font-size: 16px;
+      color: #005ab5;
+      margin-left: 10px;
+    }
+    .cClssifContent{
+      width: 228px;
+    }
+    .cClssifContent ul{
+      overflow: hidden;
+    }
+    .cClssifContent ul li{
+      width: 160px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      margin-left: 30px;
+    }
+    .cClssifContent ul li a{
+      color: #777777;
+    }
+    /*相关分类 end*/
+    /*公告内文 start*/
+    .announcementTitle p{
+      font-size: 20px;
+      color: #222222;
+    }
+    .announcementContent{
+      width: 935px;
+      overflow: hidden;
+      float: left;
+    }
+    thead.announcementThead tr,thead.announcementThead td{
+      border: 1px solid #dddddd;
+      height: 48px;
+      background-color: #efefef;
+      color: #222222;
+      font-size: 14px;
+      text-align: center;
+    }
+    tbody.announcementTbody td{
+      color: #777777;
+      text-align: center;
+    }
+    /*公告内文 end*/
+    /*采购要求 start*/
+    .procurementRequirementsTitle p{
+      font-size: 20px;
+      color: #222222;
+    }
+    /*采购要求 end*/
+    /*对供应商要求 statrt*/
+    .supplierRequirementsTitle p{
+      font-size: 20px;
+      color: #222222;
+    }
+    /*对供应商要求 end*/
+    /*友情提示 start*/
+    .friendshipHints{
+      width: 1200px;
+      overflow: hidden;
+      margin: 0 auto;
+      float: left;
+      margin-bottom: 60px;
+    }
+    .friendshipHintsTitle{
+      width: 1200px;
+      height: 30px;
+      line-height: 30px;
+      float: left;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #777777;
+    }
+    .friendshipHintsTitle span,.friendshipHintsTitle p{
+      display: block;
+      float: left;
+    }
+    .friendshipHintsTitle span{
+      width: 4px;
+      height: 30px;
+      background-color: #777777;
+    }
+    .friendshipHintsTitle p{
+      font-size: 20px;
+      color: #222222;
+      margin-left: 16PX;
+    }
+    .friendshipHintsContent{
+      width: 1200px;
+      overflow: hidden;
+      float: left;
+      margin-top: 20px;
+    }
+    .friendshipHintsContent div{
+      width: 1200px;
+    }
+    .friendshipHintsContent div,.friendshipHintsContent p,.friendshipHintsContent span{
+      display: block;
+      float: left;
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+    }
+    .friendshipHintsContent span{
+      color: #005abb;
+    }
+    /*友情提示 end*/
+    /*公共类 start*/
+    .liMarTop20{
+      margin-top: 20px;
+    }
+    .liMarTop25{
+      margin-top: 25px;
+    }
+    .liMarTop30{
+      margin-top: 30px;
+    }
+    .liMarTop60{
+      margin-top: 60px;
+    }
+    .liPaddingBottom20{
+      padding-bottom: 20px;
+    }
+    .tableKey{
+      width: 110px;
+      color: #222222;
+      font-size: 14px;
+      text-align: center;
+      background-color: #efefef;
+    }
+    .tableValue{
+      color: #777777;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    /*公共类 end*/
+  </style>
 </head>
 <body>
    <div class="letterInquiryContainer">
