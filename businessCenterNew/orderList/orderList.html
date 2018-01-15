@@ -19,27 +19,27 @@
          <div class="con1 divwidth330">
            <div class="con2">
              <span class="spanWidth80">交易时间：</span>
-             <p class="tradingTime pWidth250"></p>
+             <p class="orderdate pWidth250"></p>
            </div>
            <div class="con2">
              <span class="spanWidth80">对方户名：</span>
-             <p class="nameOther pWidth250"></p>
+             <p class="opAccountName pWidth250"></p>
            </div>
          </div>
          <div class="con1 divwidth330">
            <div class="con2">
              <span class="spanWidth80">期初金额：</span>
-             <p class="initialAmount pWidth250"></p>
+             <p class="amount pWidth250"></p>
            </div>
            <div class="con2">
              <span class="spanWidth80">剩余金额：</span>
-             <p class="surplusAmount pWidth250"></p>
+             <p class="restamount pWidth250"></p>
            </div>
          </div>
          <div class="con1 divwidth330">
            <div class="con2">
              <span class="spanWidth80">汇款备注：</span>
-             <p class="remittanceRemark pWidth250"></p>
+             <p class="remark pWidth250"></p>
            </div>
          </div>
        </div>
@@ -149,15 +149,15 @@
          </table>
          <div class="orderList_table_button table_button displayNone">
            <div class="tableButton">
-             <a class="goFirst" onclick="reSearch('first')">首页</a>
-             <a class="prePage" onclick="reSearch('pre')">上一页</a>
+             <a class="goFirst" onclick="olSearch('first')">首页</a>
+             <a class="prePage" onclick="olSearch('pre')">上一页</a>
              <p class="orderListCurrentPage currentPage"></p>
-             <a class="nextPage" onclick="reSearch('next')">下一页</a>
-             <a class="goLast" onclick="reSearch('end')">尾页</a>
+             <a class="nextPage" onclick="olSearch('next')">下一页</a>
+             <a class="goLast" onclick="olSearch('end')">尾页</a>
              <input type="text" value="" class="pages orderListPages">
              <input type="hidden" value="1" class="orderListPage">
              <input type="hidden" value="0" class="orderListCountPage">
-             <a class="goPage" onclick="reSearch('goPage')">跳转</a>
+             <a class="goPage" onclick="olSearch('goPage')">跳转</a>
            </div>
          </div>
        </div>

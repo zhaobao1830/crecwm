@@ -1,5 +1,6 @@
 {
-  "confirmMoneyList": [{
+  "confirmMoneyList": [
+    {
     "id": 1646,
     "runOrderList": [{
       "detail": null,
@@ -48,7 +49,8 @@
     "codeAmount": "0.10",
     "paycode": "F000198",
     "creator": "zhu"
-  }, {
+  },
+    {
     "id": 1648,
     "runOrderList": [{
       "detail": null,
@@ -97,7 +99,8 @@
     "codeAmount": "1231.00",
     "paycode": "F000305",
     "creator": "zhu"
-  }, {
+  },
+    {
     "id": 1650,
     "runOrderList": [{
       "detail": null,

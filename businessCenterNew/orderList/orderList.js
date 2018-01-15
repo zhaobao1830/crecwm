@@ -1,7 +1,7 @@
 $(function () {
   searchReceivable()
 })
-function olSearch() {
+function olSearch(goPage) {
   var bzNum = 0
   var nowPage = Number($('.orderListPage').val()) // 当前页数
   var page=1 //第几页
@@ -35,8 +35,8 @@ function olSearch() {
   }
   $('.orderListPage').val(page)
 
-  // 剩余金额 (有问题)
-  var restAmount = getUrlParam('restAmount')
+  // 剩余金额
+  var restAmount = $(".restamount").val()
   // 付款码
   var paycode = $('.paycode').val()
   // 订单编号
@@ -123,14 +123,20 @@ function olResert() {
 
 function searchReceivable() {
   var id = getUrlParam('id')
+  var dataJson = ''
   $.ajax({
-    url: '',
+    url: '../json/33.json',
     type: 'post',
     dataType: 'json',
     contentType:"application/json",
     data: {id: id},
     success: function (data) {
-      console.log(data)
+      dataJson = data.pubTransfer
+      $(".orderdate").html(dataJson.orderdate) // 交易时间
+      $(".opAccountName").html(dataJson.opAccountName) // 对方户名
+      $(".restamount").html(dataJson.restamount) // 剩余金额
+      $(".amount").html(dataJson.amount) // 期初金额
+      $(".remark").html(dataJson.remark) // 汇款备注
     }
   })
 }
