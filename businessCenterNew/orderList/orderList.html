@@ -48,29 +48,29 @@
            <div class="con1 divwidth346">
              <div class="con2 mTop20">
                <span class="spanWidth90">付款码：</span>
-               <input class="paymentCode inputWidth234" type="text">
+               <input class="paycode inputWidth234" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth90">发票抬头：</span>
-               <input class="invoicesRaised inputWidth234" type="text">
+               <input class="invoiceTitle inputWidth234" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth90">用户账号：</span>
-               <input class="userAccount inputWidth234" type="text">
+               <input class="creator inputWidth234" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth90">收货人电话：</span>
-               <input class="consigneePhone inputWidth234" type="text">
+               <input class="recvMobile inputWidth234" type="text">
              </div>
            </div>
            <div class="con1 divwidth336 mLeft28">
              <div class="con2 mTop20">
                <span class="spanWidth80">订单编号：</span>
-               <input class="orderNumber inputWidth234" type="text">
+               <input class="orderNO inputWidth234" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth80">订单状态：</span>
-               <select class="orderStatuVal selectWidth256">
+               <select class="pubstate selectWidth256">
                  <option value="全部" selected>全部</option>
                  <option value="待收款">待收款</option>
                  <option value="交易取消">交易取消</option>
@@ -81,35 +81,35 @@
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth80">收货人：</span>
-               <input class="consignee inputWidth234" type="text">
+               <input class="recvGoName inputWidth234" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth80">收票人：</span>
-               <input class="ticketCollector inputWidth234" type="text">
+               <input class="invoiceRecvName inputWidth234" type="text">
              </div>
            </div>
            <div class="con1 divwidth340 mLeft28">
              <div class="con2 mTop20">
                <span class="spanWidth90">订单金额：</span>
-               <input class="orderAmountS inputWidth88" type="text">
+               <input class="orderAmountStart inputWidth88" type="text">
                <i></i>
-               <input class="orderAmountE inputWidth88" type="text">
+               <input class="orderAmountEnd inputWidth88" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth90">下单时间：</span>
-               <input class="orderTimeS inputWidth88" type="text" id="prev_date" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'behind_data\')}',alwaysUseStartDate:true});">
+               <input class="orderDateStart inputWidth88" type="text" id="prev_date" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'behind_data\')}',alwaysUseStartDate:true});">
                <i></i>
-               <input class="orderTimeE inputWidth88" type="text" id="behind_data" onfocus="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date\')}',alwaysUseStartDate:true});" >
+               <input class="orderDateEnd inputWidth88" type="text" id="behind_data" onfocus="WdatePicker({maxDate:'%y-%M-%d',minDate:'#F{$dp.$D(\'prev_date\')}',alwaysUseStartDate:true});" >
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth90">付款码金额：</span>
-               <input class="payCodeAmountS inputWidth88" type="text">
+               <input class="codeAmountStart inputWidth88" type="text">
                <i></i>
-               <input class="payCodeAmountE inputWidth88" type="text">
+               <input class="codeAmountEnd inputWidth88" type="text">
              </div>
              <div class="con2 mTop20">
                <span class="spanWidth90">收票人电话：</span>
-               <input class="ticketCollectorPhone inputWidth228" type="text">
+               <input class="invoiceRecvMobile inputWidth228" type="text">
              </div>
            </div>
            <div class="con1 conA divWidth500 mLeft90 mTop20">
@@ -144,26 +144,20 @@
                <th>业务备注</th>
              </tr>
            </thead>
-           <tbody>
-             <tr>
-               <td>
-                 <a href="javascript:;" class="clickA clickId" @click="aIdChange"></a>
-               </td>
-               <td>F111111</td>
-               <td>5000</td>
-               <td>muyi</td>
-             </tr>
+           <tbody class="orderListTbody">
            </tbody>
          </table>
-         <div class="table_button">
+         <div class="orderList_table_button table_button displayNone">
            <div class="tableButton">
-             <a class="goFirst">首页</a>
-             <a class="prePage">上一页</a>
-             <p class="currentPage">3</p>
-             <a class="nextPage">下一页</a>
-             <a class="goLast">尾页</a>
-             <input type="text" value="" class="pages">
-             <a class="goPage">跳转</a>
+             <a class="goFirst" onclick="reSearch('first')">首页</a>
+             <a class="prePage" onclick="reSearch('pre')">上一页</a>
+             <p class="orderListCurrentPage currentPage"></p>
+             <a class="nextPage" onclick="reSearch('next')">下一页</a>
+             <a class="goLast" onclick="reSearch('end')">尾页</a>
+             <input type="text" value="" class="pages orderListPages">
+             <input type="hidden" value="1" class="orderListPage">
+             <input type="hidden" value="0" class="orderListCountPage">
+             <a class="goPage" onclick="reSearch('goPage')">跳转</a>
            </div>
          </div>
        </div>

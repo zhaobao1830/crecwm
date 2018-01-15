@@ -39,7 +39,7 @@ a{
   border-bottom: 2px solid #bf0000;
   overflow: hidden;
 }
-.ChoiceIsReceivables a{
+.ChoiceIsReceivables .crLeft a{
   display: block;
   width: 72px;
   height: 34px;
@@ -51,6 +51,22 @@ a{
   border-color: transparent;
   border-width: 1px;
   border-bottom: none;
+}
+.crRight{
+  float: right;
+  margin-right: 5px;
+}
+.crRight a{
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  padding: 0 5px;
+  color: #4ea0ea;
+  display: block;
+  cursor: pointer;
+}
+.crRight a:hover{
+  color: #bf0000;
 }
 .raSearch{
   width: 1080px;
@@ -104,7 +120,7 @@ a{
   font-size: 16px;
   cursor: pointer;
 }
-.reSearch{
+.reSearch,.apSearch{
   overflow: hidden;
 }
 .reSearchA{
@@ -157,7 +173,17 @@ a{
 }
 table.dpcTable{
   width: 700px;
+}
+.tableDpc{
   margin: 20px;
+  width: 700px;
+  height: 528px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.dpcTbody{
+  height: 476px;
+  overflow: scroll;
 }
 .closeDpc{
   width: 100%;
@@ -231,7 +257,7 @@ tbody tr{
 tbody tr:hover{
   background-color: #f1f1f1;
 }
-tbody tr a{
+tbody tr a,tbody tr p{
   color: #398fd1;
   text-decoration: none;
 }
@@ -254,7 +280,6 @@ tbody tr a:hover{
   cursor: pointer;
 }
 .tableButton{
-  width: 364px;
   float: right;
   margin-top: 20px;
 }
@@ -278,12 +303,12 @@ tbody tr a:hover{
   margin-right: 5px;
 }
 .currentPage{
-  width: 45px;
   float: left;
   color: #5da5dd;
   text-align: center;
   height: 30px;
   line-height: 30px;
+  padding: 0 5px;
 }
 .pages{
   width: 44px;
@@ -330,6 +355,9 @@ tbody tr a:hover{
 .divWidth500{
   width: 500px;
 }
+.divwidth340{
+  width: 340px;
+}
 .divwidth336{
   width: 336px;
 }
@@ -338,6 +366,12 @@ tbody tr a:hover{
 }
 .spanWidth80{
   width: 80px;
+}
+.spanWidth86{
+  width: 86px;
+}
+.spanWidth90{
+  width: 90px;
 }
 .inputWidth234{
   width: 234px;
