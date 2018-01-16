@@ -2,7 +2,6 @@ $(function () {
   searchReceivable()
 })
 function olSearch(goPage) {
-  var bzNum = 0
   var nowPage = Number($('.orderListPage').val()) // 当前页数
   var page=1 //第几页
   var pageSize = 10 // 每页显示的条数
@@ -96,14 +95,32 @@ function olSearch(goPage) {
       countPage = Math.ceil(count / pageSize)
       $(".orderListCountPage").val(countPage)
       if (dataJsonList.length > 0){
-        for (var i =0;i<dataJsonList.length;i++){
-          bzNum= Number((page-1)*10+1+i)
-          tbodyList += "<tr>"
-          tbodyList += "<td>"+bzNum+"</td>"
-          tbodyList += "<td>"+dataJsonList[i].paycode+"</td>"
-          tbodyList += "<td>"+dataJsonList[i].codeamount+"</td>"
-          tbodyList += "<td>"+dataJsonList[i].creator+"</td>"
-          tbodyList += "</tr>"
+        for (var i = 0;i < dataJsonList.length;i++){
+            for (var j = 0;j <  dataJsonList[i].runOrderList.length; j++) {
+              tbodyList += "<tr>"
+                if (j === 0) {
+                  tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"'><input type='checkbox' name='orderLists' class='"+dataJsonList[i].id+"' onclick='checkOrderLists("+dataJsonList[i].id+")'></td>"
+                  tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].paycode+"'>"+dataJsonList[i].paycode+"</td>"
+                  tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].codeamount+"'>"+dataJsonList[i].codeamount+"</td>"
+                  tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].creator+"'>"+dataJsonList[i].creator+"</td>"
+                }
+                if (ifJudgeState(dataJsonList[i].runOrderList[j].pubstate)) {
+                  tbodyList += "<td><input type='checkbox' name='runOrderLists' class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+                } else {
+                  tbodyList += "<td><input type='checkbox' disabled='disabled' name='runOrderLists' class='"+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+                }
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderNO+"'>"+dataJsonList[i].runOrderList[j].orderNO+"</td>"
+                tbodyList += "<td title='"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"'>"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderNO+"'>"+dataJsonList[i].runOrderList[j].amount+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderDate+"'>"+dataJsonList[i].runOrderList[j].orderDate+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceTitle+"'>"+dataJsonList[i].runOrderList[j].invoiceTitle+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvGoName+"'>"+dataJsonList[i].runOrderList[j].recvGoName+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvMobile+"'>"+dataJsonList[i].runOrderList[j].recvMobile+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvName+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvName+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].businessNotes+"' onclick=editNotes('"+dataJsonList[i].runOrderList[j].orderNO+"')>"+dataJsonList[i].runOrderList[j].businessNotes+"</td>"
+              tbodyList += "</tr>"
+            }
         }
         $('.orderListTbody').html('')
         $('.orderListTbody').append(tbodyList)
@@ -145,4 +162,76 @@ function getUrlParam(name) {
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
   var r = window.location.search.substr(1).match(reg); //匹配目标参数
   if (r != null) return unescape(r[2]); return null; //返回参数值
+}
+
+// 通过传入的值，判断状态
+function judgeState(id) {
+  if (id === 1) {
+    return '代付款'
+  } else if (id === 2){
+    return '交易取消'
+  } else if (id === 3) {
+    return '待审核'
+  } else if (id === 4) {
+    return '审核不通过'
+  } else if (id === 5) {
+    return '已收款'
+  }
+}
+
+// 判断订单状态是否为待收款及审核不通过
+function ifJudgeState(id) {
+  // 如果鼎泰状态为待收款以及审核不通过，返回true，否则返回false
+  if (id === 3 || id === 4) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// 点击父input，选中自己以及子类的input
+function checkOrderLists(id) {
+  var fInputCheck = $("."+id).prop("checked")
+  if (fInputCheck) {
+    $("."+id+"_true").prop("checked", true)
+  } else {
+    $("."+id+"_true").prop("checked", false)
+  }
+}
+// 打开业务备注
+function editNotes(id) {
+  $(".editBusinessNotes").removeClass("displayNone").addClass("displayBlock")
+  $(".businessNotesId").val(id)
+}
+// 关闭业务备注
+function closeEbnc() {
+  $(".editBusinessNotes").removeClass("displayBlock").addClass("displayNone")
+}
+// 保存业务备注
+function ebncSave() {
+  closeEbnc()
+  var id = $(".businessNotesId").val()
+  var businessNotesVal = $(".addOrUpdateBusinessNotes").val() // 添加或修改的业务备注新内容
+  var data = {
+    id: id,
+    businessNotesVal: businessNotesVal
+  }
+  $.ajax({
+    url: '',
+    type: 'post',
+    dataType: 'json',
+    contentType:"application/json",
+    data: data,
+    success: function (data) {
+      //不知道该如何写
+      console.log('保存成功')
+      closeEbnc()
+      olSearch()
+    }
+  })
+}
+// 取消添加/修改业务备注
+function ebncCancel() {
+  $(".addOrUpdateBusinessNotes").html()
+  closeEbnc()
 }

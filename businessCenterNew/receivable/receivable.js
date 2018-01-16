@@ -348,7 +348,6 @@ function apResert() {
 
 // 跳转到订单列表
 function goOrderList(id) {
-  var recordDate = unescape(recordDate)
   window.location.href='http://localhost:63342/crecwm/businessCenterNew/orderList/orderList.html?id='+id
 }
 

@@ -163,6 +163,24 @@
        </div>
      </div>
    </div>
+   <div class="editBusinessNotes displayNone">
+     <input type="hidden" class="businessNotesId">
+     <div class="editBusinessNotesContent">
+       <div class="ebncTitle">
+         <p>添加/修改业务备注</p>
+         <a href="javascript:;" onclick="closeEbnc()">
+           <img src="./images/close.png">
+         </a>
+       </div>
+       <div class="ebncCon">
+         <textarea class="addOrUpdateBusinessNotes"></textarea>
+       </div>
+       <div class="ebncButton">
+         <a href="javascript:;" class="ebncSave" onclick="ebncSave()">保存</a>
+         <a href="javascript:;" class="ebncCancel" onclick="ebncCancel()">取消</a>
+       </div>
+     </div>
+   </div>
    <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
    <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
    <script type="text/javascript" src="orderList.js"></script>
