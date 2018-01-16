@@ -122,7 +122,7 @@
        <div class="olSearchResult">
          <div class="resultOperation con1 conA divWidth500 mBottom20">
            <a href="javascript:;" class="sureReceivables">确认收款</a>
-           <a href="javascript:;" class="toExamine mLeft28">审核</a>
+           <a href="javascript:;" class="toExamine mLeft28" onclick="toExamine()">审核</a>
          </div>
          <table>
            <thead>
@@ -163,6 +163,7 @@
        </div>
      </div>
    </div>
+   <!--添加/修改业务备注 start-->
    <div class="editBusinessNotes displayNone">
      <input type="hidden" class="businessNotesId">
      <div class="editBusinessNotesContent">
@@ -181,6 +182,28 @@
        </div>
      </div>
    </div>
+   <!--添加/修改业务备注 end-->
+   <!--审核 start-->
+   <div class="toExamineShow displayBlock">
+     <div class="toExamineContent">
+       <div class="toExamineTitle">
+         <p>审核</p>
+         <a href="javascript:;" onclick="closeToExamine()">
+           <img src="./images/close.png">
+         </a>
+       </div>
+       <div class="toExamineCon">
+         <p>审核意见（不通过必填）：</p>
+         <textarea class="addToExamine"></textarea>
+         <p>是否通过审核？</p>
+       </div>
+       <div class="toExamineButton">
+         <a href="javascript:;" class="toExamineSave" onclick="ebncSave()">通过</a>
+         <a href="javascript:;" class="toExamineCancel" onclick="ebncCancel()">不通过</a>
+       </div>
+     </div>
+   </div>
+   <!--审核 end-->
    <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
    <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
    <script type="text/javascript" src="orderList.js"></script>

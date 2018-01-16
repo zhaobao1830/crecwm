@@ -105,7 +105,7 @@ function olSearch(goPage) {
                   tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].creator+"'>"+dataJsonList[i].creator+"</td>"
                 }
                 if (ifJudgeState(dataJsonList[i].runOrderList[j].pubstate)) {
-                  tbodyList += "<td><input type='checkbox' name='runOrderLists' class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+                  tbodyList += "<td><input type='checkbox' name='runOrderLists' pubstate='"+dataJsonList[i].runOrderList[j].pubstate+"' orderNO='"+dataJsonList[i].runOrderList[j].orderNO+"'  class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
                 } else {
                   tbodyList += "<td><input type='checkbox' disabled='disabled' name='runOrderLists' class='"+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
                 }
@@ -234,4 +234,51 @@ function ebncSave() {
 function ebncCancel() {
   $(".addOrUpdateBusinessNotes").html()
   closeEbnc()
+}
+
+// 审核
+function toExamine() {
+  var pubstate = $("input[name=runOrderLists]:checked").attr("pubstate")
+  if (pubstate ===3) {
+    $(".toExamineShow").removeClass("displayNone").addClass("displayBlock")
+  }else {
+
+  }
+}
+
+// 关闭审核弹出框
+function closeToExamine() {
+  $(".toExamineShow").removeClass("displayBlock").addClass("displayNone")
+}
+//通过审核
+function adoptToExamine() {
+  var orderNO = $("input[name=runOrderLists]:checked").attr("orderNO")
+  $.ajax({
+    url: '',
+    type:'post',
+    dataType: 'json',
+    contentType:"application/json",
+    data: {orderNO: orderNO},
+    success: function (data) {
+      olSearch()
+      closeToExamine()
+    }
+  })
+}
+// 不通过审核
+function noAdoptToExamine() {
+  var orderNO = $("input[name=runOrderLists]:checked").attr("orderNO") // 订单编号
+  var addToExamine = $(".addToExamine").val() // 审核意见
+  $.ajax({
+    url: '',
+    type:'post',
+    dataType: 'json',
+    contentType:"application/json",
+    data: {orderNO: orderNO,addToExamine: addToExamine},
+    success: function (data) {
+      $(".addToExamine").html('')
+      olSearch()
+      closeToExamine()
+    }
+  })
 }

@@ -122,7 +122,8 @@ a{
   margin: 40px 60px 20px;
   width: 1080px;
 }
-.editBusinessNotes{
+/*添加/修改业务备注 start*/
+.editBusinessNotes,.toExamineShow{
   width: 100%;
   height: 100%;
   position: fixed;
@@ -131,7 +132,7 @@ a{
   left: 0;
   top: 0;
 }
-.editBusinessNotesContent{
+.editBusinessNotesContent,.toExamineContent{
   width: 500px;
   height: 300px;
   background-color: #fff;
@@ -140,48 +141,55 @@ a{
   top: 50%;
   transform: translate(-50%,-50%);
 }
-.ebncTitle{
+.ebncTitle,.toExamineTitle{
   width: 100%;
   height: 35px;
   line-height: 35px;
   background-color: #eeeeee;
 }
-.ebncTitle p{
+.ebncTitle p,.toExamineTitle p{
   float: left;
   margin-left: 20px;
   font-size: 14px;
   color: #222222;
 }
-.ebncTitle a{
+.ebncTitle a,.toExamineTitle a{
   float: right;
   margin-right: 10px;
   height: 35px;
   cursor: pointer;
 }
-.ebncCon{
+.ebncCon,.toExamineCon{
   width: 460px;
   height: 190px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.toExamineCon p{
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 5px;
 }
 .addOrUpdateBusinessNotes{
   width: 448px;
   height: 178px;
 }
-.ebncCon{
-  margin-left: 20px;
-  margin-top: 20px;
+.addToExamine{
+  width: 448px;
+  height: 138px;
 }
-.addOrUpdateBusinessNotes{
+.addOrUpdateBusinessNotes,.addToExamine{
   resize: none;
   padding: 5px;
 }
-.ebncButton{
+.ebncButton,.toExamineButton{
   width: 100%;
   float: left;
   height: 30px;
   line-height: 30px;
   margin-top: 10px;
 }
-.ebncButton a{
+.ebncButton a,.toExamineButton a{
   display: block;
   padding-left: 5px;
   padding-right: 5px;
@@ -199,10 +207,20 @@ a{
   margin-left: 193px;
   margin-right: 20px;
 }
-.ebncCancel{
+.toExamineSave{
+  color: white;
+  background-color: #77afea;
+  margin-left: 185px;
+  margin-right: 20px;
+}
+.ebncCancel,.toExamineCancel{
   background-color: #bf0000;
   color: #FFFFFF
 }
+/*添加/修改业务备注 end*/
+/*审核 start*/
+
+/*审核 end*/
 /*table样式*/
 table{
   width: 1080px;
