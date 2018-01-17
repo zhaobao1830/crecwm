@@ -105,20 +105,25 @@ function olSearch(goPage) {
                   tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].creator+"'>"+dataJsonList[i].creator+"</td>"
                 }
                 if (ifJudgeState(dataJsonList[i].runOrderList[j].pubstate)) {
-                  tbodyList += "<td><input type='checkbox' name='runOrderLists' pubstate='"+dataJsonList[i].runOrderList[j].pubstate+"' orderNO='"+dataJsonList[i].runOrderList[j].orderNO+"'  class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+                  // businessNotes 1为有业务备注，0为没有业务备注
+                  tbodyList += "<td><input type='checkbox' name='runOrderLists' pubstate='"+dataJsonList[i].runOrderList[j].pubstate+"' businessNotes='"+(dataJsonList[i].runOrderList[j].businessNotes ? 1 : 0)+"' orderNO='"+dataJsonList[i].runOrderList[j].orderNO+"' amount='"+dataJsonList[i].runOrderList[j].amount+"'  class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
                 } else {
                   tbodyList += "<td><input type='checkbox' disabled='disabled' name='runOrderLists' class='"+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
                 }
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderNO+"'>"+dataJsonList[i].runOrderList[j].orderNO+"</td>"
-                tbodyList += "<td title='"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"'>"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"</td>"
-                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderNO+"'>"+dataJsonList[i].runOrderList[j].amount+"</td>"
+                if(dataJsonList[i].runOrderList[j].pubstate === 4) {
+                  tbodyList += "<td title='"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"' onclick=toExamineNoAdoptDesc('"+dataJsonList[i].runOrderList[j].orderNO+"')>"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"</td>"
+                } else {
+                  tbodyList += "<td title='"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"'>"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"</td>"
+                }
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].amount+"'>"+dataJsonList[i].runOrderList[j].amount+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderDate+"'>"+dataJsonList[i].runOrderList[j].orderDate+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceTitle+"'>"+dataJsonList[i].runOrderList[j].invoiceTitle+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvGoName+"'>"+dataJsonList[i].runOrderList[j].recvGoName+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvMobile+"'>"+dataJsonList[i].runOrderList[j].recvMobile+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvName+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvName+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"</td>"
-                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].businessNotes+"' onclick=editNotes('"+dataJsonList[i].runOrderList[j].orderNO+"')>"+dataJsonList[i].runOrderList[j].businessNotes+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].businessNotes+"' onclick=editBusinessNotes('"+dataJsonList[i].runOrderList[j].orderNO+"')>"+dataJsonList[i].runOrderList[j].businessNotes+"</td>"
               tbodyList += "</tr>"
             }
         }
@@ -167,7 +172,7 @@ function getUrlParam(name) {
 // 通过传入的值，判断状态
 function judgeState(id) {
   if (id === 1) {
-    return '代付款'
+    return '待付款'
   } else if (id === 2){
     return '交易取消'
   } else if (id === 3) {
@@ -181,8 +186,8 @@ function judgeState(id) {
 
 // 判断订单状态是否为待收款及审核不通过
 function ifJudgeState(id) {
-  // 如果鼎泰状态为待收款以及审核不通过，返回true，否则返回false
-  if (id === 3 || id === 4) {
+  // 如果订单状态为待收款、待审核以及审核不通过，返回true，否则返回false
+  if (id === 1 || id === 3 || id === 4) {
     return true
   } else {
     return false
@@ -199,7 +204,7 @@ function checkOrderLists(id) {
   }
 }
 // 打开业务备注
-function editNotes(id) {
+function editBusinessNotes(id) {
   $(".editBusinessNotes").removeClass("displayNone").addClass("displayBlock")
   $(".businessNotesId").val(id)
 }
@@ -238,11 +243,19 @@ function ebncCancel() {
 
 // 审核
 function toExamine() {
-  var pubstate = $("input[name=runOrderLists]:checked").attr("pubstate")
-  if (pubstate ===3) {
-    $(".toExamineShow").removeClass("displayNone").addClass("displayBlock")
-  }else {
-
+  if ($("input[name=runOrderLists]:checked").length > 0) {
+    if ($("input[name=runOrderLists]:checked").length > 1) {
+      alert('每次只能审核一条，请重新选择！')
+    } else {
+      var pubstate = $("input[name=runOrderLists]:checked").attr("pubstate")
+      if (pubstate === '3') {
+        $(".toExamineShow").removeClass("displayNone").addClass("displayBlock")
+      }else {
+        alert('订单状态必须为待审核状态，请重新选择！')
+      }
+    }
+  } else {
+    alert("请至少选择一条")
   }
 }
 
@@ -262,6 +275,8 @@ function adoptToExamine() {
     success: function (data) {
       olSearch()
       closeToExamine()
+      $("input[name=orderLists]").prop("checked",false)
+      $("input[name=runOrderLists]").prop("checked",false)
     }
   })
 }
@@ -269,16 +284,96 @@ function adoptToExamine() {
 function noAdoptToExamine() {
   var orderNO = $("input[name=runOrderLists]:checked").attr("orderNO") // 订单编号
   var addToExamine = $(".addToExamine").val() // 审核意见
+  if (addToExamine) {
+    $.ajax({
+      url: '',
+      type:'post',
+      dataType: 'json',
+      contentType:"application/json",
+      data: {orderNO: orderNO,addToExamine: addToExamine},
+      success: function (data) {
+        $(".addToExamine").html('')
+        olSearch()
+        closeToExamine()
+        $("input[name=orderLists]").prop("checked",false)
+        $("input[name=runOrderLists]").prop("checked",false)
+      }
+    })
+  } else {
+    alert('审核不通过时，审核意见必须填写！')
+  }
+}
+
+// 确认收款
+function sureReceivables() {
+  var runOrderListsInput = $("input[name=runOrderLists]:checked") // 选中的input列表
+  if (runOrderListsInput.length > 0) {
+    var flag = false
+    var codeamount = 0 // 选中的Input的订单金额总和（付款码金额）
+    var restamount = Number($(".restamount").html().trim()) // 剩余金额
+    var orderNO = [] // 订单编号列表
+    for (var i = 0; i < runOrderListsInput.length; i++) {
+      // 通过input的pubstate判断，如果状态为3（待审核状态）就弹出提示
+      if(runOrderListsInput.eq(i).attr("pubstate") === '3') {
+        alert("订单状态不能为待审核状态，请重新选择！")
+        $("input[name=orderLists]").prop("checked",false)
+        $("input[name=runOrderLists]").prop("checked",false)
+        return
+      } else {
+        codeamount += Number(runOrderListsInput.eq(i).attr("amount"))
+        orderNO.push(runOrderListsInput.eq(i).attr("orderNO"))
+        if (codeamount > restamount) {
+          if (runOrderListsInput.eq(i).attr("businessNotes") === '0') {
+            alert("业务备注必须填写！")
+            $("input[name=orderLists]").prop("checked",false)
+            $("input[name=runOrderLists]").prop("checked",false)
+            return
+          } else {
+            flag = true
+          }
+        }
+      }
+    }
+    if (flag) {
+      $.ajax({
+        url: '',
+        type:'post',
+        dataType: 'json',
+        contentType:"application/json",
+        data: {orderNO: orderNO},
+        success: function (data) {
+          olSearch()
+          closeToExamine()
+          $("input[name=orderLists]").prop("checked",false)
+          $("input[name=runOrderLists]").prop("checked",false)
+        }
+      })
+    }
+  } else {
+    alert("请至少选择一条")
+  }
+}
+
+// 审核不通过理由显示
+function toExamineNoAdoptDesc(orderNO) {
+  var toExamineNoAdoptDesc = '' //审核不通过理由
+  $(".toExamineNoAdoptDesc").removeClass("displayNone").addClass("displayBlock")
   $.ajax({
     url: '',
     type:'post',
     dataType: 'json',
     contentType:"application/json",
-    data: {orderNO: orderNO,addToExamine: addToExamine},
+    data: {orderNO: orderNO},
     success: function (data) {
-      $(".addToExamine").html('')
-      olSearch()
-      closeToExamine()
+      toExamineNoAdoptDesc = data
+      $(".tenadCon p").html('')
+      $(".tenadCon p").html(toExamineNoAdoptDesc)
+      $(".toExamineNoAdoptDesc").removeClass("displayNone").addClass("displayBlock")
     }
   })
+}
+
+// 关闭审核不通过理由页面
+function closeTenad() {
+  $(".toExamineNoAdoptDesc").removeClass("displayBlock").addClass("displayNone")
 }

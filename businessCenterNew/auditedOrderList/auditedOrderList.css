@@ -246,6 +246,115 @@ tbody tr a:hover{
   background-color: #4986c6;
 }
 /*跳转 end*/
+
+/*审核 start*/
+.toExamineShow,.toExamineNoAdoptDesc{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(34,34,34,0.8);
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+.toExamineCon,.tenadCon{
+  width: 460px;
+  height: 190px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.toExamineCon p{
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 5px;
+}
+.tenadCon p{
+  font-size: 14px;
+  color: #222;
+  line-height: 20px;
+}
+.toExamineContent,.tenadContent{
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.toExamineTitle,.tenadTitle{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #eeeeee;
+}
+.toExamineTitle p,.tenadTitle p{
+  float: left;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #222222;
+}
+.toExamineTitle a,.tenadTitle a{
+  float: right;
+  margin-right: 10px;
+  height: 35px;
+  cursor: pointer;
+}
+.toExamineCon p{
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 5px;
+}
+.tenadCon p{
+  font-size: 14px;
+  color: #222;
+  line-height: 20px;
+}
+.addToExamine{
+  width: 448px;
+  height: 138px;
+}
+.addToExamine{
+  resize: none;
+  padding: 5px;
+}
+.toExamineButton,.tenadButton{
+  width: 100%;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.toExamineButton a,.tenadButton a{
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  float: left;
+}
+.toExamineSave{
+  color: white;
+  background-color: #77afea;
+  margin-left: 185px;
+  margin-right: 20px;
+}
+.toExamineCancel{
+  background-color: #bf0000;
+  color: #FFFFFF
+}
+.tenadClose {
+  color: white;
+  background-color: #77afea;
+  margin-left: 229px;
+}
+/*审核 end*/
+
+
 /*公共类 start*/
 .aClick{
   color: #ffffff;

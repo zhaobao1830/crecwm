@@ -1,4 +1,4 @@
-function aoSearch() {
+function aoSearch(goPage) {
   var bzNum = 0
   var nowPage = Number($('.auditedOrderListPage').val()) // 当前页数
   var page=1 //第几页
@@ -77,7 +77,7 @@ function aoSearch() {
   var dataJsonList = ''
   var tbodyList=""
   $.ajax({
-    url: '',
+    url: '../json/11.json',
     type: 'post',
     dataType: 'json',
     contentType:"application/json",
@@ -88,6 +88,41 @@ function aoSearch() {
       countPage = Math.ceil(count / pageSize)
       $(".auditedOrderListCountPage").val(countPage)
       if (dataJsonList.length > 0) {
+        for (var i = 0;i < dataJsonList.length; i++) {
+          for (var j = 0;j < dataJsonList[i].runOrderList.length; j++) {
+            tbodyList += "<tr>"
+            if (j === 0) {
+              tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"'><input type='checkbox' name='auditedOrderLists' class='"+dataJsonList[i].id+"' onclick='checkAuditedOrderLists("+dataJsonList[i].id+")'></td>"
+              tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].paycode+"'>"+dataJsonList[i].paycode+"</td>"
+              tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].codeamount+"'>"+dataJsonList[i].codeamount+"</td>"
+              tbodyList += "<td rowspan='"+dataJsonList[i].runOrderList.length+"' title='"+dataJsonList[i].creator+"'>"+dataJsonList[i].creator+"</td>"
+            }
+            if (ifJudgeState(dataJsonList[i].runOrderList[j].pubstate)) {
+              tbodyList += "<td><input type='checkbox' name='runOrderLists' pubstate='"+dataJsonList[i].runOrderList[j].pubstate+"' class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+            } else {
+              tbodyList += "<td><input type='checkbox' disabled='disabled' name='runOrderLists' class='"+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+            }
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderNO+"'>"+dataJsonList[i].runOrderList[j].orderNO+"</td>"
+            if(dataJsonList[i].runOrderList[j].pubstate === 4) {
+              tbodyList += "<td title='"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"' onclick=toExamineNoAdoptDesc('"+dataJsonList[i].runOrderList[j].orderNO+"')>"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"</td>"
+            } else {
+              tbodyList += "<td title='"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"'>"+judgeState(dataJsonList[i].runOrderList[j].pubstate)+"</td>"
+            }
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].amount+"'>"+dataJsonList[i].runOrderList[j].amount+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].orderDate+"'>"+dataJsonList[i].runOrderList[j].orderDate+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceTitle+"'>"+dataJsonList[i].runOrderList[j].invoiceTitle+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvGoName+"'>"+dataJsonList[i].runOrderList[j].recvGoName+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvMobile+"'>"+dataJsonList[i].runOrderList[j].recvMobile+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvName+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvName+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"</td>"
+            tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].businessNotes+"'>"+dataJsonList[i].runOrderList[j].businessNotes+"</td>"
+            tbodyList += "</tr>"
+          }
+        }
+        $('.auditedOrderListTbody').html('')
+        $('.auditedOrderListTbody').append(tbodyList)
+        $('.auditedOrderListCurrentPage').html(page+"/"+countPage)
+        $('.auditedOrderList_table_button').removeClass('displayNone').addClass('displayBlock')
       }else {
         $(".auditedOrderListTbody").html("")
         $(".auditedOrderListTbody").append("<p class='bodyP'>没有相应数据</p>")
@@ -98,4 +133,129 @@ function aoSearch() {
 }
 function aoResert() {
   $('.aolSearchForm')[0].reset()
+}
+
+// 判断订单状态是否为待审核
+function ifJudgeState(id) {
+  // 如果订单状态为待审核，返回true，否则返回false
+  if (id === 3) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// 审核不通过理由显示
+function toExamineNoAdoptDesc(orderNO) {
+  var toExamineNoAdoptDesc = '' //审核不通过理由
+  $(".toExamineNoAdoptDesc").removeClass("displayNone").addClass("displayBlock")
+  $.ajax({
+    url: '',
+    type:'post',
+    dataType: 'json',
+    contentType:"application/json",
+    data: {orderNO: orderNO},
+    success: function (data) {
+      toExamineNoAdoptDesc = data
+      $(".tenadCon p").html('')
+      $(".tenadCon p").html(toExamineNoAdoptDesc)
+      $(".toExamineNoAdoptDesc").removeClass("displayNone").addClass("displayBlock")
+    }
+  })
+}
+
+// 通过传入的值，判断状态
+function judgeState(id) {
+  if (id === 1) {
+    return '待付款'
+  } else if (id === 2){
+    return '交易取消'
+  } else if (id === 3) {
+    return '待审核'
+  } else if (id === 4) {
+    return '审核不通过'
+  } else if (id === 5) {
+    return '已收款'
+  }
+}
+
+// 审核
+function toExamine() {
+  if ($("input[name=runOrderLists]:checked").length > 0) {
+    if ($("input[name=runOrderLists]:checked").length > 1) {
+      alert('每次只能审核一条，请重新选择！')
+      $("input[name=auditedOrderLists]").prop("checked",false)
+      $("input[name=runOrderLists]").prop("checked",false)
+    } else {
+      var pubstate = $("input[name=runOrderLists]:checked").attr("pubstate")
+      if (pubstate === '3') {
+        $(".toExamineShow").removeClass("displayNone").addClass("displayBlock")
+      }else {
+        alert('订单状态必须为待审核状态，请重新选择！')
+        $("input[name=auditedOrderLists]").prop("checked",false)
+        $("input[name=runOrderLists]").prop("checked",false)
+      }
+    }
+  } else {
+    alert("请至少选择一条")
+  }
+}
+
+// 点击父input，选中自己以及子类的input
+function checkAuditedOrderLists(id) {
+  var fInputCheck = $("."+id).prop("checked")
+  if (fInputCheck) {
+    $("."+id+"_true").prop("checked", true)
+  } else {
+    $("."+id+"_true").prop("checked", false)
+  }
+}
+
+//通过审核
+function adoptToExamine() {
+  var orderNO = $("input[name=runOrderLists]:checked").attr("orderNO")
+  $.ajax({
+    url: '',
+    type:'post',
+    dataType: 'json',
+    contentType:"application/json",
+    data: {orderNO: orderNO},
+    success: function (data) {
+      aoSearch()
+      closeToExamine()
+      $("input[name=auditedOrderLists]").prop("checked",false)
+      $("input[name=runOrderLists]").prop("checked",false)
+    }
+  })
+}
+// 不通过审核
+function noAdoptToExamine() {
+  var orderNO = $("input[name=runOrderLists]:checked").attr("orderNO") // 订单编号
+  var addToExamine = $(".addToExamine").val() // 审核意见
+  if (addToExamine) {
+    $.ajax({
+      url: '',
+      type:'post',
+      dataType: 'json',
+      contentType:"application/json",
+      data: {orderNO: orderNO,addToExamine: addToExamine},
+      success: function (data) {
+        $(".addToExamine").html('')
+        olSearch()
+        closeToExamine()
+        $("input[name=auditedOrderLists]").prop("checked",false)
+        $("input[name=runOrderLists]").prop("checked",false)
+      }
+    })
+  } else {
+    alert('审核不通过时，审核意见必须填写！')
+  }
+}
+// 关闭审核弹出框
+function closeToExamine() {
+  $(".toExamineShow").removeClass("displayBlock").addClass("displayNone")
+}
+// 关闭审核不通过理由页面
+function closeTenad() {
+  $(".toExamineNoAdoptDesc").removeClass("displayBlock").addClass("displayNone")
 }

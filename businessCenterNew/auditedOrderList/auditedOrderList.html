@@ -92,7 +92,7 @@
       </div>
       <div class="aolSearchResult">
         <div class="resultOperation con1 conA divWidth500 mBottom20">
-          <a href="javascript:;" class="toExamine mLeft28">审核</a>
+          <a href="javascript:;" class="toExamine mLeft28" onclick="toExamine()">审核</a>
         </div>
         <table>
           <thead>
@@ -115,14 +115,7 @@
           </tr>
           </thead>
           <tbody class="auditedOrderListTbody">
-            <tr>
-              <td>
-                <a href="javascript:;" class="clickA clickId" @click="aIdChange"></a>
-              </td>
-              <td>F111111</td>
-              <td>5000</td>
-              <td>muyi</td>
-            </tr>
+
           </tbody>
         </table>
         <div class="auditedOrderList_table_button table_button displayNone">
@@ -141,7 +134,47 @@
       </div>
     </div>
   </div>
+  <!--审核 start-->
+  <div class="toExamineShow displayNone">
+    <div class="toExamineContent">
+      <div class="toExamineTitle">
+        <p>审核</p>
+        <a href="javascript:;" onclick="closeToExamine()">
+          <img src="./images/close.png">
+        </a>
+      </div>
+      <div class="toExamineCon">
+        <p>审核意见（不通过必填）：</p>
+        <textarea class="addToExamine"></textarea>
+        <p>是否通过审核？</p>
+      </div>
+      <div class="toExamineButton">
+        <a href="javascript:;" class="toExamineSave" onclick="adoptToExamine()">通过</a>
+        <a href="javascript:;" class="toExamineCancel" onclick="noAdoptToExamine()">不通过</a>
+      </div>
+    </div>
+  </div>
+  <!--审核 end-->
+  <!--审核不通过理由 start-->
+  <div class="toExamineNoAdoptDesc displayNone">
+    <div class="tenadContent">
+      <div class="tenadTitle">
+        <p>审核不通过理由详情</p>
+        <a href="javascript:;" onclick="closeTenad()">
+          <img src="./images/close.png">
+        </a>
+      </div>
+      <div class="tenadCon">
+        <p>不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因不通过原因</p>
+      </div>
+      <div class="tenadButton">
+        <a href="javascript:;" class="tenadClose" onclick="closeTenad()">关闭</a>
+      </div>
+    </div>
+  </div>
+  <!--审核不通过理由 end-->
   <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
   <script type="text/javascript" src="../common/js/WdatePicker.js"></script>
+  <script type="text/javascript" src="auditedOrderList.js"></script>
 </body>
 </html>
