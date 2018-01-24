@@ -21,6 +21,7 @@ $(function () {
 
 // 代收款查询
 function reSearch(goPage) {
+  console.log('pppp')
   var bzNum = 0
   var nowPage = Number($('.receivablesPage').val()) // 当前页数
   var page=1 //第几页
@@ -89,13 +90,18 @@ function reSearch(goPage) {
     restAmountStart: restAmountStart,
     restAmountEnd: restAmountEnd,
   }
+  console.log(typeof data)
+  var data1 = JSON.stringify(data)
+  console.log(data1)
+  console.log(typeof data1)
   var dataJsonList = ''
   var tbodyList=""
   $.ajax({
     url: '../json/receivable1.json',
     type: 'post',
     dataType: 'json',
-    contentType:"application/json",
+    // contentType: 'application/x-www-form-urlencoded',
+    contentType: 'application/json',
     data: data,
     success: function (data) {
       dataJsonList = data.pubTransferList
@@ -116,7 +122,7 @@ function reSearch(goPage) {
           if (dataJsonList[i].amount === dataJsonList[i].restamount) {
             tbodyList += "<td><a href='javascript:;' onclick=goOrderList("+dataJsonList[i].id+")>"+dataJsonList[i].restamount+"</a></td>"
           } else {
-            tbodyList += "<td><p>"+dataJsonList[i].restamount+"</p></td>"
+            tbodyList += "<td><p>"+dataJsonList[i].restamount||''+"</p></td>"
           }
           if (dataJsonList[i].amount !== dataJsonList[i].restamount) {
             tbodyList += "<td><a href='javascript:;' onclick='showDpc("+dataJsonList[i].id+")'>查看详情</a></td>"
@@ -354,4 +360,8 @@ function goOrderList(id) {
 // 查看待审核订单
 function goAuditedOrderList() {
   window.location.href='www.baidu.com'
+}
+//导出
+function exportA() {
+  
 }

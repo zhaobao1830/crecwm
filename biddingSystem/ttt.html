@@ -6,16 +6,28 @@
   <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
   <style>
-    #triangle-up {
-      width: 0;
-      height: 0;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-bottom: 15px solid red;
+    .tt{
+      width: 500px;
+      height: 30px;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    .t1{
+      width: 100px;
+      height: 30px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <div id="triangle-up"></div>
+   <div class="tt">
+     <div class="t1">我是1</div>
+     <div class="t1">我是2</div>
+     <div class="t1">我是3</div>
+     <div class="t1">我是4</div>
+     <div class="t1">我是5</div>
+     <div class="t1">我是6</div>
+   </div>
 </body>
 </html>

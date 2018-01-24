@@ -1,4 +1,8 @@
 $(function () {
+  var a='ww'
+  console.log(a.split(','))
+  var b=[1,2]
+  console.log('b:'+b.join(','))
   searchReceivable()
 })
 function olSearch(goPage) {
@@ -289,7 +293,6 @@ function noAdoptToExamine() {
       url: '',
       type:'post',
       dataType: 'json',
-      contentType:"application/json",
       data: {orderNO: orderNO,addToExamine: addToExamine},
       success: function (data) {
         $(".addToExamine").html('')
@@ -306,7 +309,9 @@ function noAdoptToExamine() {
 
 // 确认收款
 function sureReceivables() {
+  console.log('ooo')
   var runOrderListsInput = $("input[name=runOrderLists]:checked") // 选中的input列表
+  console.log(runOrderListsInput.length)
   if (runOrderListsInput.length > 0) {
     var flag = false
     var codeamount = 0 // 选中的Input的订单金额总和（付款码金额）
@@ -321,8 +326,9 @@ function sureReceivables() {
         return
       } else {
         codeamount += Number(runOrderListsInput.eq(i).attr("amount"))
+        console.log(codeamount)
         orderNO.push(runOrderListsInput.eq(i).attr("orderNO"))
-        if (codeamount > restamount) {
+        if (codeamount !== restamount) {
           if (runOrderListsInput.eq(i).attr("businessNotes") === '0') {
             alert("业务备注必须填写！")
             $("input[name=orderLists]").prop("checked",false)
@@ -331,16 +337,20 @@ function sureReceivables() {
           } else {
             flag = true
           }
+        }else{
+          flag = true
         }
       }
     }
+    console.log(flag)
+    console.log(orderNO)
     if (flag) {
       $.ajax({
-        url: '',
+        url: 'www.baidu.com',
         type:'post',
         dataType: 'json',
-        contentType:"application/json",
         data: {orderNO: orderNO},
+        traditional:true,
         success: function (data) {
           olSearch()
           closeToExamine()

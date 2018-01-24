@@ -56,7 +56,7 @@ a{
   float: right;
   margin-right: 5px;
 }
-.crRight a{
+.goAuditedOrderList{
   height: 34px;
   line-height: 34px;
   font-size: 16px;
@@ -64,9 +64,26 @@ a{
   color: #4ea0ea;
   display: block;
   cursor: pointer;
+  float: right;
+  margin-right: 10px;
 }
-.crRight a:hover{
+.goAuditedOrderList:hover{
   color: #bf0000;
+}
+.exportA{
+  display: block;
+  width: 80px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 2px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4ea0ea;
+  color: #FFFFFF;
+  float: right;
+  border-bottom: 1px solid #4ea0ea;
 }
 .raSearch{
   width: 1080px;
