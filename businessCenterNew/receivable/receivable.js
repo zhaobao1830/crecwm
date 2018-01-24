@@ -27,7 +27,6 @@ $(function () {
 
 // 代收款查询
 function reSearch(goPage) {
-  console.log('pppp')
   var bzNum = 0
   var nowPage = Number($('.receivablesPage').val()) // 当前页数
   var page=1 //第几页
@@ -96,10 +95,7 @@ function reSearch(goPage) {
     restAmountStart: restAmountStart,
     restAmountEnd: restAmountEnd,
   }
-  console.log(typeof data)
   var data1 = JSON.stringify(data)
-  console.log(data1)
-  console.log(typeof data1)
   var dataJsonList = ''
   var tbodyList=""
   $.ajax({
@@ -110,6 +106,11 @@ function reSearch(goPage) {
     contentType: 'application/json',
     data: data,
     success: function (data) {
+      console.log(data)
+      localStorage.setItem('ss', JSON.stringify(data))
+      console.log('.....................')
+      var ss = JSON.parse(localStorage.getItem('ss'))
+      console.log(ss)
       dataJsonList = data.pubTransferList
       count = Number(data.totalPage)
       countPage = Math.ceil(count / pageSize)
