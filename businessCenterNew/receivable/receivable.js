@@ -11,9 +11,15 @@ $(function () {
        if (aClickId === 'receivables') {
          $('.receivables').removeClass('displayNone').addClass('displayBlock')
          $('.alreadyPaid').removeClass('displayBlock').addClass('displayNone')
+         $(".exportAd").removeClass('displayNone').addClass('displayBlock')
+         $(".goAuditedOrderList").removeClass('displayNone').addClass('displayBlock')
+         $(".exportAy").removeClass('displayBlock').addClass('displayNone')
        } else {
          $('.receivables').removeClass('displayBlock').addClass('displayNone')
          $('.alreadyPaid').removeClass('displayNone').addClass('displayBlock')
+         $(".exportAd").removeClass('displayBlock').addClass('displayNone')
+         $(".goAuditedOrderList").removeClass('displayBlock').addClass('displayNone')
+         $(".exportAy").removeClass('displayNone').addClass('displayBlock')
        }
      }
   })
