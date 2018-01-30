@@ -1,8 +1,4 @@
 $(function () {
-  var a='ww'
-  console.log(a.split(','))
-  var b=[1,2]
-  console.log('b:'+b.join(','))
   searchReceivable()
 })
 function olSearch(goPage) {
@@ -110,7 +106,7 @@ function olSearch(goPage) {
                 }
                 if (ifJudgeState(dataJsonList[i].runOrderList[j].pubstate)) {
                   // businessNotes 1为有业务备注，0为没有业务备注
-                  tbodyList += "<td><input type='checkbox' name='runOrderLists' pubstate='"+dataJsonList[i].runOrderList[j].pubstate+"' businessNotes='"+(dataJsonList[i].runOrderList[j].businessNotes ? 1 : 0)+"' orderNO='"+dataJsonList[i].runOrderList[j].orderNO+"' amount='"+dataJsonList[i].runOrderList[j].amount+"'  class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
+                  tbodyList += "<td><input type='checkbox' name='runOrderLists' pubstate='"+dataJsonList[i].runOrderList[j].pubstate+"' businessNotes='"+(dataJsonList[i].runOrderList[j].businessNotes ? 1 : 0)+"' orderNO='"+dataJsonList[i].runOrderList[j].orderNO+"' amount='"+dataJsonList[i].runOrderList[j].amount+"'  class='"+dataJsonList[i].id+"_true "+dataJsonList[i].runOrderList[j].orderNO+"' onclick=checkFartherInput('"+dataJsonList[i].id+"_true')></td>"
                 } else {
                   tbodyList += "<td><input type='checkbox' disabled='disabled' name='runOrderLists' class='"+dataJsonList[i].runOrderList[j].orderNO+"'></td>"
                 }
@@ -386,4 +382,22 @@ function toExamineNoAdoptDesc(orderNO) {
 // 关闭审核不通过理由页面
 function closeTenad() {
   $(".toExamineNoAdoptDesc").removeClass("displayBlock").addClass("displayNone")
+}
+
+// 点击子Input,进行判断，如果所有的子input都是选中状态，就让父input是选中状态
+function checkFartherInput(str) {
+  var strInput = $("."+str)
+  console.log(strInput)
+  console.log(strInput.eq(0).prop("checked"))
+  var inputCheck = 0
+  for(var i = 0; i < strInput.length; i++) {
+    if(strInput.eq(i).prop("checked")){
+      inputCheck += 1
+    }
+  }
+  if(inputCheck === strInput.length){
+    $("."+str.split("_")[0]).prop("checked", true)
+  }else{
+    $("."+str.split("_")[0]).prop("checked", false)
+  }
 }
