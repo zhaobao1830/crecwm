@@ -123,7 +123,7 @@ function olSearch(goPage) {
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].recvMobile+"'>"+dataJsonList[i].runOrderList[j].recvMobile+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvName+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvName+"</td>"
                 tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"'>"+dataJsonList[i].runOrderList[j].invoiceRecvMobile+"</td>"
-                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].businessNotes+"' onclick=editBusinessNotes('"+dataJsonList[i].runOrderList[j].orderNO+"')>"+dataJsonList[i].runOrderList[j].businessNotes+"</td>"
+                tbodyList += "<td title='"+dataJsonList[i].runOrderList[j].businessNotes+"' class='"+dataJsonList[i].runOrderList[j].orderNO.split("*")[1]+"' onclick=editBusinessNotes('"+dataJsonList[i].runOrderList[j].orderNO+"','"+dataJsonList[i].runOrderList[j].businessNotes+"')>"+dataJsonList[i].runOrderList[j].businessNotes+"</td>"
               tbodyList += "</tr>"
             }
         }
@@ -204,9 +204,11 @@ function checkOrderLists(id) {
   }
 }
 // 打开业务备注
-function editBusinessNotes(id) {
+function editBusinessNotes(id,businessNotes) {
   $(".editBusinessNotes").removeClass("displayNone").addClass("displayBlock")
   $(".businessNotesId").val(id)
+  $(".addOrUpdateBusinessNotes").val('')
+  $(".addOrUpdateBusinessNotes").val($("."+id.split("*")[1]).html())
 }
 // 关闭业务备注
 function closeEbnc() {
@@ -214,13 +216,17 @@ function closeEbnc() {
 }
 // 保存业务备注
 function ebncSave() {
-  closeEbnc()
   var id = $(".businessNotesId").val()
   var businessNotesVal = $(".addOrUpdateBusinessNotes").val() // 添加或修改的业务备注新内容
   var data = {
     id: id,
     businessNotesVal: businessNotesVal
   }
+  console.log("."+id.split("*")[1])
+  console.log(businessNotesVal)
+  $("."+id.split("*")[1]).attr("title", businessNotesVal)
+  $("."+id.split("*")[1]).html(businessNotesVal)
+  // closeEbnc()
   $.ajax({
     url: '',
     type: 'post',
@@ -231,7 +237,6 @@ function ebncSave() {
       //不知道该如何写
       console.log('保存成功')
       closeEbnc()
-      olSearch()
     }
   })
 }
@@ -327,8 +332,6 @@ function sureReceivables() {
         if (codeamount !== restamount) {
           if (runOrderListsInput.eq(i).attr("businessNotes") === '0') {
             alert("业务备注必须填写！")
-            $("input[name=orderLists]").prop("checked",false)
-            $("input[name=runOrderLists]").prop("checked",false)
             return
           } else {
             flag = true

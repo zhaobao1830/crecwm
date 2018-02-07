@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+  <a href="javascript:;" onclick="tt()">提交</a>
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+    var flag_post = false
+    function tt() {
+      if(flag_post){
+        return
+      }
+      flag_post = true
+      setTimeout(function () {
+        flag_post = false
+      }, 1000)
+      $.ajax({
+        url: '11.json',
+        type: 'post',
+        success: function (data) {
+          console.log('data:'+data)
+        },
+        error: function () {
+          console.log('error')
+        }
+      })
+    }
+  </script>
+</body>
+</html>

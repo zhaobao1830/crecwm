@@ -5,16 +5,15 @@
 a{
   text-decoration: none;
 }
-.orderList{
+.receivable{
   width: 100%;
   height: auto;
   min-height: 340px;
   background-color: #eeeeee;
   padding-top: 20px;
   padding-bottom: 120px;
-  position: relative;
 }
-.olContent{
+.raContent{
   width: 1200px;
   height: auto;
   min-height: 340px;
@@ -22,32 +21,72 @@ a{
   background-color: #ffffff;
   padding-bottom: 60px;
 }
-.olTop{
+.raTop{
   width: 100%;
   height: 74px;
   line-height: 74px;
   background-color: #bbbbbb;
 }
-.olTop > select{
+.raTop > select{
   width: 440px;
   height: 34px;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
   margin-left: 20px;
 }
-.oltopCon{
-  width: 1080px;
-  margin: 20px 60px 0 60px;
+.ChoiceIsReceivables{
+  width: 100%;
+  border-bottom: 2px solid #bf0000;
   overflow: hidden;
-  padding-bottom: 40px;
-  border-bottom: 1px dashed #dddddd;
 }
-.olSearch{
+.ChoiceIsReceivables .crLeft a{
+  display: block;
+  width: 72px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  float: left;
+  font-size: 16px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom: none;
+}
+.crRight{
+  float: right;
+}
+.goAuditedOrderList{
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  padding: 0 5px;
+  color: #4ea0ea;
+  display: block;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
+.goAuditedOrderList:hover{
+  color: #bf0000;
+}
+.exportA{
+  display: block;
+  width: 80px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 2px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4ea0ea;
+  color: #FFFFFF;
+  float: right;
+  border-bottom: 1px solid #4ea0ea;
+}
+.raSearch{
   width: 1080px;
-  margin: 20px 60px 0 60px;
-  overflow: hidden;
-  padding-bottom: 40px;
-  border-bottom: 1px dashed #ddd;
+  margin: 30px 60px 20px 60px;
 }
 .con1{
   overflow: hidden;
@@ -67,18 +106,13 @@ a{
   height: 34px;
   line-height: 34px;
 }
-.con2 > input,.con2 > select{
+.con2 > input{
   float: left;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
   height: 32px;
   line-height: 34px;
-}
-.con2 > input{
   padding: 0 10px;
-}
-.con2 > select{
-  padding-left: 10px;
 }
 .con2 > i{
   width: 10px;
@@ -89,13 +123,6 @@ a{
   margin-right: 10px;
   display: block;
   float: left;
-}
-.con2 > p{
-  float: left;
-  font-size: 14px;
-  color: #222222;
-  height: 34px;
-  line-height: 34px;
 }
 .conA a{
   display: block;
@@ -109,25 +136,27 @@ a{
   font-size: 16px;
   cursor: pointer;
 }
-.reSearchA,.sureReceivables{
+.reSearch,.apSearch{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.reSearchA{
   background-color: #4ea0ea;
   color: #FFFFFF;
 }
-.reResertA,.toExamine{
+.reResertA{
   background-color: #bf0000;
   color: #FFFFFF;
 }
-.olSearchResult{
+.reSearchResult{
   overflow: hidden;
-  margin: 40px 60px 20px;
-  width: 1080px;
 }
-.olSearchTB{
-  width: 1080px;
-  overflow: auto;
+.alreadyPaidTB{
+    width: 1080px;
+    overflow: auto;
 }
-/*添加/修改业务备注 start*/
-.editBusinessNotes,.toExamineShow,.toExamineNoAdoptDesc{
+/*查看详情 start*/
+.detailsPage{
   width: 100%;
   height: 100%;
   position: fixed;
@@ -136,108 +165,75 @@ a{
   left: 0;
   top: 0;
 }
-.editBusinessNotesContent,.toExamineContent,.tenadContent{
-  width: 500px;
-  height: 300px;
+.detailsPageCon{
+  width: 740px;
+  height: auto;
   background-color: #fff;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%)
 }
-.ebncTitle,.toExamineTitle,.tenadTitle{
+.dpcTitle{
   width: 100%;
   height: 35px;
   line-height: 35px;
   background-color: #eeeeee;
 }
-.ebncTitle p,.toExamineTitle p,.tenadTitle p{
+.dpcTitle p{
   float: left;
   margin-left: 20px;
   font-size: 14px;
   color: #222222;
 }
-.ebncTitle a,.toExamineTitle a,.tenadTitle a{
+.dpcTitle a{
   float: right;
   margin-right: 10px;
   height: 35px;
   cursor: pointer;
 }
-.ebncCon,.toExamineCon,.tenadCon{
-  width: 460px;
-  height: 190px;
-  margin-left: 20px;
-  margin-top: 20px;
+table.dpcTable{
+  width: 700px;
 }
-.toExamineCon p{
-  font-size: 14px;
-  color: #222;
-  margin-bottom: 5px;
+.tableDpc{
+  margin: 20px;
+  width: 700px;
+  height: 528px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.tenadCon p{
-  font-size: 14px;
-  color: #222;
-  line-height: 20px;
+.dpcTbody{
+  height: 476px;
+  overflow: scroll;
 }
-.addOrUpdateBusinessNotes{
-  width: 448px;
-  height: 178px;
-}
-.addToExamine{
-  width: 448px;
-  height: 138px;
-}
-.addOrUpdateBusinessNotes,.addToExamine{
-  resize: none;
-  padding: 5px;
-}
-.ebncButton,.toExamineButton,.tenadButton{
+.closeDpc{
   width: 100%;
   float: left;
   height: 30px;
   line-height: 30px;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
-.ebncButton a,.toExamineButton a,.tenadButton a{
+.closeDpc a{
+  width: 70px;
   display: block;
-  padding-left: 5px;
-  padding-right: 5px;
-  height: 30px;
-  line-height: 30px;
+  color: white;
+  background-color: #77afea;
   font-size: 16px;
   border: none;
   text-align: center;
   border-radius: 4px;
-  float: left;
+  margin-left: 315px;
 }
-.ebncSave{
-  color: white;
-  background-color: #77afea;
-  margin-left: 193px;
-  margin-right: 20px;
-}
-.toExamineSave{
-  color: white;
-  background-color: #77afea;
-  margin-left: 185px;
-  margin-right: 20px;
-}
-.ebncCancel,.toExamineCancel{
-  background-color: #bf0000;
-  color: #FFFFFF
-}
-.tenadClose{
-  color: white;
-  background-color: #77afea;
-  margin-left: 229px;
-}
-/*添加/修改业务备注 end*/
-/*审核 start*/
-
-/*审核 end*/
+/*查看详情 end*/
 /*table样式*/
+table.alreadyPaidTBable{
+    width: 1620px;
+}
+table.receivablesTb{
+    width: 1080px;
+}
 table{
-  width: 1620px;
+  width: auto;
   table-layout: fixed;
   border-collapse: collapse;
   margin: 0 auto;
@@ -272,7 +268,7 @@ tbody{
 tbody tr,tbody td{
   border-left: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
-  height: 67px;
+  height: 47px;
   color: #464646;
   padding-left: 3px;
   padding-right: 3px;
@@ -288,33 +284,23 @@ tbody tr{
 tbody tr:hover{
   background-color: #f1f1f1;
 }
-tbody tr a{
+tbody tr a,tbody tr p{
   color: #398fd1;
   text-decoration: none;
 }
 tbody tr a:hover{
   color: #ff0000;
 }
-.clickA{
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  margin-left: 6px;
-}
-.clickId{
-  background: url('./images/click_1.png') 5px 5px no-repeat;
-  background-size: 20px 20px;
-}
-.clickNoId{
-  background: url('./images/click_2.png') 5px 5px no-repeat;
-  background-size: 20px 20px;
-}
+
 /*跳转 start*/
 .table_button{
-  width: 100%;
+  width: 1080px;
   float: left;
   margin-bottom: 20px;
+  position: relative;
+}
+.alreadyPaidTB_button{
+    position: relative;
 }
 .table_button a{
   display: block;
@@ -325,9 +311,10 @@ tbody tr a:hover{
   cursor: pointer;
 }
 .tableButton{
-  width: 364px;
-  float: right;
-  margin-top: 20px;
+    top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
 }
 .goFirst,.goLast,.prePage,.nextPage{
   border: 1px solid #bbbbbb;
@@ -349,12 +336,12 @@ tbody tr a:hover{
   margin-right: 5px;
 }
 .currentPage{
-  width: 45px;
   float: left;
   color: #5da5dd;
   text-align: center;
   height: 30px;
   line-height: 30px;
+  padding: 0 5px;
 }
 .pages{
   width: 44px;
@@ -382,7 +369,7 @@ tbody tr a:hover{
   background-color: #4986c6;
 }
 /*跳转 end*/
-  /*公共类 start*/
+/*公共类 start*/
 .aClick{
   color: #ffffff;
   background-color: #bf0000;
@@ -401,20 +388,20 @@ tbody tr a:hover{
 .divWidth500{
   width: 500px;
 }
-.divwidth346{
-  width: 346px;
+.divwidth340{
+  width: 340px;
 }
 .divwidth336{
   width: 336px;
-}
-.divwidth340{
-  width: 340px;
 }
 .divwidth330{
   width: 330px;
 }
 .spanWidth80{
   width: 80px;
+}
+.spanWidth86{
+  width: 86px;
 }
 .spanWidth90{
   width: 90px;
@@ -428,25 +415,14 @@ tbody tr a:hover{
 .inputWidth88{
   width: 88px;
 }
-.selectWidth256{
-  width: 256px;
-}
-.pWidth250{
-  width: 250px;
-}
 .mTop20{
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.mLeft28{
-  margin-left: 28px;
-}
-.mLeft90{
-  margin-left: 90px;
+.mLeft30{
+  margin-left: 30px;
 }
 .mLeft80{
   margin-left: 80px;
 }
-.mBottom20{
-  margin-bottom: 20px;
-}
+
 /*公共类 end*/

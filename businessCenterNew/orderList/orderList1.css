@@ -37,16 +37,16 @@ a{
 }
 .oltopCon{
   width: 1080px;
-  margin: 20px 60px 0 60px;
+  margin: 10px 60px 0 60px;
   overflow: hidden;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   border-bottom: 1px dashed #dddddd;
 }
 .olSearch{
   width: 1080px;
-  margin: 20px 60px 0 60px;
+  margin: 10px 60px 0 60px;
   overflow: hidden;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   border-bottom: 1px dashed #ddd;
 }
 .con1{
@@ -59,6 +59,15 @@ a{
   font-size: 0;
 }
 .con2 > span{
+  text-align: right;
+  font-size: 14px;
+  color: #222222;
+  display: inline-block;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+}
+.con3 > span{
   text-align: right;
   font-size: 14px;
   color: #222222;
@@ -94,8 +103,8 @@ a{
   float: left;
   font-size: 14px;
   color: #222222;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
 }
 .conA a{
   display: block;
@@ -119,12 +128,12 @@ a{
 }
 .olSearchResult{
   overflow: hidden;
-  margin: 40px 60px 20px;
+  margin: 20px 60px 20px;
   width: 1080px;
 }
 .olSearchTB{
-  width: 1080px;
-  overflow: auto;
+    width: 1080px;
+    overflow: auto;
 }
 /*添加/修改业务备注 start*/
 .editBusinessNotes,.toExamineShow,.toExamineNoAdoptDesc{
@@ -272,7 +281,7 @@ tbody{
 tbody tr,tbody td{
   border-left: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
-  height: 67px;
+  height: 47px;
   color: #464646;
   padding-left: 3px;
   padding-right: 3px;
@@ -312,8 +321,9 @@ tbody tr a:hover{
 }
 /*跳转 start*/
 .table_button{
-  width: 100%;
-  float: left;
+  margin: 0 auto;
+  width: 1080px;
+  position: relative;
   margin-bottom: 20px;
 }
 .table_button a{
@@ -325,9 +335,10 @@ tbody tr a:hover{
   cursor: pointer;
 }
 .tableButton{
-  width: 364px;
-  float: right;
-  margin-top: 20px;
+    top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
 }
 .goFirst,.goLast,.prePage,.nextPage{
   border: 1px solid #bbbbbb;
@@ -435,7 +446,7 @@ tbody tr a:hover{
   width: 250px;
 }
 .mTop20{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .mLeft28{
   margin-left: 28px;
@@ -450,3 +461,6 @@ tbody tr a:hover{
   margin-bottom: 20px;
 }
 /*公共类 end*/
+.cursorp{
+    cursor: pointer;
+}
