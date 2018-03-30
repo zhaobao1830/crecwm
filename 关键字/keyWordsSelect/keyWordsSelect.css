@@ -1,0 +1,43 @@
+.keyWords{
+  width: 1200px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+.kw_select{
+  width: 1200px;
+  height: 30px;
+}
+.kw_select_value,.kw_select_button{
+  float: left;
+  line-height: 30px;
+}
+.kw_keyWords_value,.kw_phone_value{
+  width: 200px;
+  float: left;
+  margin-right: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  border: 1px solid #bbb;
+}
+.kw_select_button a{
+  display: block;
+  float: left;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+.kwse_search{
+  background-color: #4986c6;
+  color: #fff;
+}
+.kwse_del{
+  margin-left: 20px;
+  background-color: #f44848;
+  color: #fff;
+}
