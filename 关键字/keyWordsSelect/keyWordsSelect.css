@@ -41,3 +41,15 @@
   background-color: #f44848;
   color: #fff;
 }
+.kwr_kewWords,.kwr_kewWords div{
+  width: 500px;
+  overflow: hidden;
+}
+
+.kwr_kewWords_res{
+  float: left;
+}
+.kwr_kewWords_delete{
+  float: right;
+  display: block;
+  margin:10px 0}

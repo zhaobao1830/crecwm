@@ -11,7 +11,13 @@
    <div class="keyWords">
      <div class="kw_select">
        <div class="kw_select_value">
-         <input type="text" class="kw_keyWords_value" placeholder="请输入关键字">
+         <select class="kw_keyWords_value">
+           <option></option>
+           <option value="关键字1">关键字1</option>
+           <option value="关键字2">关键字2</option>
+           <option value="关键字3">关键字3</option>
+           <option value="关键字4">关键字4</option>
+         </select>
          <input type="text" class="kw_phone_value" placeholder="请输入手机号">
        </div>
        <div class="kw_select_button">
@@ -21,21 +27,24 @@
      </div>
      <div class="kw_result">
        <div class="kwr_kewWords">
-         <p>关键字</p>
+         <div>
+           <p class="kwr_kewWords_res">关键字1</p>
+           <a href="javascript:;" class="kwr_kewWords_delete">X</a>
+         </div>
          <div>
            <label>
-             <input type="radio" name="keWords_teles">手机号1
+             <input type="checkbox" name="keWords_teles">手机号1
            </label>
            <label>
-             <input type="radio" name="keWords_teles">手机号1
+             <input type="checkbox" name="keWords_teles">手机号1
            </label>
            <label>
-             <input type="radio" name="keWords_teles">手机号1
+             <input type="checkbox" name="keWords_teles">手机号1
            </label>
          </div>
        </div>
        <div class="kwr_tel">
-         <p>手机号</p>
+         <p>手机号1</p>
          <label>
            <input type="radio" name="tel_keWordses">关键字
          </label>
