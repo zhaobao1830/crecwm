@@ -1,0 +1,44 @@
+.container{
+  width: 100%;
+  height: auto;
+}
+.banner{
+  width: 100%;
+  height: 531px;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+/*在线展示 start*/
+.onlineDisplay{
+  width: 1200px;
+  margin: 0 auto;
+}
+.onlineList{
+  width: 176px;
+  height: 176px;
+  margin-left: 64px;
+  margin-right: 64px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+.online_img{
+  width: 176px;
+  height: 176px;
+  position: relative;
+}
+.online_img_back{
+  width: 176px;
+  height: 176px;
+  background: url("./img/frame_2_0.png") center no-repeat;
+}
+.online_img_back:hover{
+  transform: rotate(180deg)
+}
+.totalMajors img{
+  position: absolute;
+  margin: 47px;
+}
+/*在线展示 end*/

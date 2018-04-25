@@ -1,0 +1,151 @@
+.head{
+  width: 100%;
+}
+/*head start*/
+.head_top_content{
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.head_top_logo{
+  margin-top: 30px;
+  float: left;
+}
+.head_top_search{
+  float: right;
+}
+.consultingPhone{
+  margin-top: 25px;
+}
+.consultingPhone p,.consultingPhone span{
+  display: inline-block;
+}
+.consultingPhone p{
+  font-size: 16px;
+  color: #222222;
+}
+.consultingPhone span{
+  font-size: 24px;
+  color: #ff0000;
+}
+
+.search_div{
+  width: 260px;
+  margin-top: 13px;
+  position: relative;
+}
+.search_value_input{
+  width: 198px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  padding-left: 5px;
+  padding-right: 55px;
+}
+.search_a{
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 40px;
+  background-color: #398fd1;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.search_a img{
+  width: 19px;
+  height: 19px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+/*head end*/
+
+/*nav start*/
+.nav{
+  width: 100%;
+  height: 60px;
+  background-color: #398fd1;
+}
+.nav_content{
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+}
+.allCourses{
+  width: 230px;
+  float: left;
+}
+.allCoursesTitle{
+  width: 230px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 0;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+}
+.allCoursesTitle img {
+  margin-left: 65px;
+}
+.allCoursesTitle span{
+  font-size: 18px;
+  color: #fff;
+  margin-left: 10px;
+}
+.allCoursesList{
+  width: 230px;
+  top: 60px;
+  background-color: rgba(0,0,0,0.5);
+}
+.allCoursesList li{
+  margin: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition:opacity .5s;
+}
+.allCoursesList li:first-child{
+  border-top: none;
+}
+.allCoursesList li:hover{
+  opacity: 0.8;
+}
+.allCoursesList li > img{
+  width: 7px;
+  height: 13px;
+  float: right;
+  margin-right: 5px;
+  margin-top: 20px;
+}
+
+.nav_list{
+  float: left;
+}
+.nav_list li{
+  cursor: pointer;
+  float: left;
+  margin: 10px 20px 0 20px;
+  padding: 20px;
+  font-size: 18px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #fff;
+}
+.nav_list_li_click{
+  background-color: #fff;
+  color: #398fd1 !important;
+}
+/*nav end*/
+
+/*公共类 start*/
+.displayBlock{
+  display: block;
+}
+.displayNone{
+  display: none;
+}
+/*公共类 end*/
