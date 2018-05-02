@@ -1,0 +1,137 @@
+.curriculum{
+  width: 1200px;
+  margin: 0 auto;
+}
+.address{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.address_img,.address_img img{
+  float: left;
+  width: 14px;
+  height: 13px;
+}
+.address_con{
+  float: left;
+  color: #777777;
+  font-size: 12px;
+  height: 13px;
+  line-height: 13px;
+  margin-left: 10px;
+}
+.addressNow{
+  float: left;
+}
+.address1,.address2{
+  display: block;
+  float: left;
+  color: #777777;
+  text-decoration: none;
+}
+.address_jiantou{
+  display: block;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.choiceList{
+  float: left;
+  width: 1200px;
+  height: auto;
+  background-color: #f8f8f8;
+}
+.choice1{
+  width: 1200px;
+  float: left;
+}
+.choice1 li{
+  width: 70px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #777777;
+  cursor: pointer;
+}
+.choice1 li:hover{
+  color: #fff;
+  background-color: #398fd1;
+  border-color: #398fd1;
+}
+.choice2{
+  width: 1200px;
+  float: left;
+  padding-bottom: 20px;
+}
+.choice2 li{
+  font-size: 16px;
+  color: #777777;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  float: left;
+  cursor: pointer;
+}
+.choice2 li:hover{
+  color: #398fd1;
+}
+.curriculumList{
+  width: 1200px;
+  float: left;
+}
+.curriculumList li {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.curriculumList_img,.curriculumList_img img{
+  width: 285px;
+  height: 160px;
+}
+.curriculumList_title{
+  width: 285px;
+  height: 16px;
+  font-size: 16px;
+  color: #222222;
+  margin-top: 14px;
+}
+.curriculumList_show{
+  width: 285px;
+  height: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.show_student,.show_visitors{
+  float: left;
+  color: #777777;
+}
+.show_visitors {
+  margin-left: 20px;
+}
+.show_price {
+  height: 20px;
+  line-height: 20px;
+  float: right;
+  color: #fff;
+  background-color: #f44848;
+  padding: 0px 5px;
+}
+/*公共类*/
+.choice1_li_click{
+  color: #fff !important;
+  background-color: #398fd1 !important;
+  border-color: #398fd1 !important;
+}
+.choice2_li_click{
+  color: #398fd1 !important;
+}
+
+.marLeft0{
+  margin-left: 0!important;
+}

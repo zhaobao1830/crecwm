@@ -51,21 +51,115 @@
   text-align: center;
 }
 .online_value{
- color: #777777;
+  height: 20px;
+  color: #777777;
   font-size: 18px;
 }
 .online_key{
+  height: 16px;
   color: #222222;
   font-size: 14px;
   margin-top: 10px;
 }
 /*在线展示 end*/
 
+/*网校名师 start*/
+.onlineTeacher_content{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.content_list_goLeft{
+  position: absolute;
+  left: -90px;
+  top: 146px;
+  cursor: pointer;
+}
+.content_list_goRight{
+  position: absolute;
+  right: -90px;
+  top: 146px;
+  cursor: pointer;
+}
+.content_list_goLeft img {
+  width: 60px;
+  height: 60px;
+}
+.onlineTeacher_content_list{
+  width: 1200px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.onlineTeacher_content_list ul li{
+  width: 283px;
+  height: 387px;
+  background-color: #fff;
+  float: left;
+  margin-left: 20px;
+  border: 1px solid #dddddd;
+  border-bottom: 5px solid #dddddd
+}
+.onlineTeacher_content_list ul li:hover{
+  border-bottom-color: #398fd1;
+}
+.onlineTeacher_content_list ul li:hover .teacher_img{
+  border-color: #398fd1;
+}
+.onlineTeacher_content_list ul li:first-child{
+  margin-left: 0;
+}
+.onlineTeacher_content_list ul li .teacher_img{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.onlineTeacher_content_list ul li .teacher_img img {
+  width: 160px;
+  height: 160px;
+}
+.onlineTeacher_content_list ul li .teacher_name{
+  text-align: center;
+  font-size: 18px;
+  color: #222222;
+  margin-top: 20px;
+}
+.onlineTeacher_content_list ul li .teacher_professional{
+  text-align: center;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.onlineTeacher_content_list ul li .transverseLine{
+  width: 283px;
+  height: 1px;
+  background-color: #dddddd;
+  margin-top: 30px;
+}
+.onlineTeacher_content_list ul li .teacher_information{
+  font-size: 14px;
+  color: #777777;
+  text-align: center;
+  margin-top: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*网校名师 end*/
+
 /*精品课程 start*/
 .excellentCourse,.liveCourse,.onlineTeacher,.informationList{
   margin-top: 60px;
   width: 100%;
   overflow: hidden;
+}
+.onlineTeacher{
+  background-color: #f5f5f5;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 .course_title{
   width: 100%;
@@ -74,6 +168,7 @@
   text-align: center;
   color: #222222;
   font-size: 30px;
+  height: 34px;
 }
 .title_line{
   margin-top: 20px;
@@ -106,7 +201,7 @@
 .moreCourses{
   position: absolute;
   right: 0;
-  top: -10px;
+  top: -20px;
 }
 .moreCourses a{
   padding: 10px;
@@ -114,15 +209,27 @@
   border: 1px solid #bbbbbb;
   border-radius: 4px;
   color: #777777;
+  font-size: 14px;
 }
 .moreCourses a:hover{
   color: #398fd1;
   border-color: #398fd1;
 }
-.moreCourses p,.moreCourses img{
+.moreCourses span{
   display: inline-block;
+  font-size: 14px;
+}
+.moreCourses img{
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 14px;
 }
 .course_content{
+  width: 1200px;
+  margin: 0 auto;
+}
+.informationList_content{
   width: 1200px;
   margin: 0 auto;
 }
@@ -132,8 +239,12 @@
   margin-left: 20px;
   width: 285px;
   height: 230px;
+  cursor: pointer;
 }
-.course_con_img{
+.course_content ul li:hover .course_con_title{
+  color: #398fd1;
+}
+.course_con_img,.course_con_img img{
   width: 285px;
   height: 160px;
 }
@@ -142,11 +253,12 @@
   height: 16px;
   font-size: 16px;
   color: #222222;
-  margin-top: 13px;
+  margin-top: 14px;
 }
 .course_con_show{
   width: 285px;
-  height: 24px;
+  height: 20px;
+  line-height: 20px;
   margin-top: 20px;
   font-size: 14px;
 }
@@ -158,12 +270,12 @@
   margin-left: 20px;
 }
 .con_price{
-  height: 24px;
-  line-height: 24px;
+  height: 20px;
+  line-height: 20px;
   float: right;
   color: #fff;
   background-color: #f44848;
-  padding: 0px 10px;
+  padding: 0px 5px;
 }
 /*精品课程 end*/
 /*资讯列表 start*/
@@ -188,23 +300,36 @@
   display: inline-block;
   float: left;
 }
-.list_title span{
+.list_title a{
   float: left;
-  display: inline-block;
   width: 80px;
   text-align: center;
   color: #777777;
-  font-size: 12px;
+  text-decoration: none;
+  vertical-align:top;
 }
-.informationList_title:hover{
+.list_title a > span{
+  margin-left: 8px;
+  font-size: 12px;
+  vertical-align:top;
+}
+.list_title a > img{
+  width: 15px;
+  height: 12px;
+  vertical-align:top;
+  margin-top: 10px;
+}
+.informationList_left_title:hover,.informationList_right_title:hover{
   background-image: url("./img/moreInforYes.png");
 }
-.informationList_title:hover span{
+.informationList_left_title:hover span,.informationList_right_title:hover span{
   color: #fff;
 }
+
 .informationList_left_content,.informationList_right_content{
   width: 600px;
   float: left;
+  margin-top: 20px;
 }
 .informationList_left_content ul li{
   float: left;
@@ -260,12 +385,34 @@
 }
 
 .informationList_right_content ul li{
-  width: 600px;
+  width: 550px;
   height: 70px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 .right_content_img,.right_content_img{
   width: 70px;
   height: 70px;
+  float: left;
+}
+.informationList_right_content .right_content_title{
+  width: 460px;
+  height: 16px;
+  overflow: hidden;
+  float: left;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #222222;
+}
+.informationList_right_content .right_content_content{
+  width: 460px;
+  height: 40px;
+  overflow: hidden;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777777;
 }
 /*资讯列表 end*/
 .ml0{
