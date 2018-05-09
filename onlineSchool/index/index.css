@@ -117,6 +117,8 @@
   margin-left: 60px;
 }
 .onlineTeacher_content_list ul li .teacher_img img {
+  border-radius: 50%;
+  max-width: 100%;
   width: 160px;
   height: 160px;
 }
@@ -375,10 +377,12 @@
 .friends img,.comments img,.history img{
   width: 20px;
   height: 18px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .friends span,.comments span,.history span{
   height: 18px;
-  line-height: 18px;
+  vertical-align: middle;
 }
 .comments,.history{
   margin-left: 20px;
@@ -390,10 +394,29 @@
   margin-left: 50px;
   margin-top: 20px;
 }
-.right_content_img,.right_content_img{
+.right_content_img{
   width: 70px;
   height: 70px;
   float: left;
+}
+.data_ym{
+  width: 68px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #398fd1;
+  background-color: #398fd1;
+  font-size: 14px;
+}
+.data_d{
+  width: 68px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 30px;
+  color: #222222;
+  text-align: center;
+  border: 1px solid #bbbbbb;
 }
 .informationList_right_content .right_content_title{
   width: 460px;

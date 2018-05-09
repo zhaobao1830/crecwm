@@ -51,45 +51,7 @@
           <div class="logo_img">
             <img src="img/logo.png">
           </div>
-          <div class="lianjie_list line1">
-            <div class="lj_title">我是学生</div>
-            <ul>
-              <li>如何注册</li>
-              <li>购买课程</li>
-              <li>如何学习</li>
-            </ul>
-          </div>
-          <div class="lianjie_list">
-            <div class="lj_title">我是教师</div>
-            <ul>
-              <li>成为教师</li>
-              <li>发布课程</li>
-              <li>收益提成</li>
-            </ul>
-          </div>
-          <div class="lianjie_list">
-            <div class="lj_title">账户管理</div>
-            <ul>
-              <li>系统设置</li>
-              <li>课程设置</li>
-              <li>用户管理</li>
-            </ul>
-          </div>
-          <div class="lianjie_list">
-            <div class="lj_title">加盟网上学院</div>
-            <ul>
-              <li>招商加盟</li>
-              <li>学习卡代理</li>
-              <li>入驻专家团队</li>
-            </ul>
-          </div>
-          <div class="lianjie_list">
-            <div class="lj_title">关于我们</div>
-            <ul>
-              <li>关于我们</li>
-              <li>官方微博</li>
-              <li>加入我们</li>
-            </ul>
+          <div class="lianjie_list_content">
           </div>
         </div>
       </div>
@@ -99,5 +61,42 @@
         <p class="bottom_b">课程内容版权均归YxtCMF网络课堂文化传播有限公司所有</p>
       </div>
    </footer>
+   <script type="text/javascript" src="../common/js/jquery-3.1.1.js"></script>
+   <script type="text/javascript">
+     $(function () {
+       getFooterNavigation()
+     })
+     function getFooterNavigation() {
+       var footerNavigation = ''
+       var lianjie_list_content = ''
+       var lianjie_list_li = ''
+       $.ajax({
+         url: 'footer.json',
+         type: 'post',
+         success: function (data) {
+           footerNavigation = data
+           if(footerNavigation.length > 0){
+             for(var i = 0;i < footerNavigation.length; i++) {
+               lianjie_list_li = footerNavigationLi(footerNavigation[i].childs)
+               lianjie_list_content += "<div class='lianjie_list'><div class='lj_title'>"+footerNavigation[i].label+"</div><ul>"+lianjie_list_li+"</ul></div>"
+             }
+             $(".lianjie_list_content").append(lianjie_list_content)
+           }
+         },
+         error: function (err) {
+           console.log(err)
+         }
+       })
+     }
+     function footerNavigationLi(data) {
+       var footerNavigationLi = ''
+       if (data.length > 0) {
+         for(var j = 0; j < data.length; j++) {
+           footerNavigationLi += "<li><a href='"+data[j].href+"'>"+data[j].label+"</a></li>"
+         }
+       }
+       return footerNavigationLi
+     }
+   </script>
 </body>
 </html>

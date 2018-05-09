@@ -7,5 +7,5 @@ $(function () {
   })
   bidPublicity(0)
 })
-}
+
 
