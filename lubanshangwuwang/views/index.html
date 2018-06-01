@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <style>
+    html,body{
+      width: 7.5rem;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+    }
+    .index_container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .index_content{
+      width: 100%;
+      min-height: 100%;
+    }
+    .index_con{
+      position: relative;
+      padding-bottom: 80px;
+    }
+    .advertisement{
+      height: 4.21rem;
+      border-bottom: 1px solid #d4cdc4;
+    }
+    .advertisement img{
+      width: 100%;
+      height: 4.21rem;
+    }
+    .search{
+      position: absolute;
+      top: 0.2rem;
+      width: 6.9rem;
+      height: 0.56rem;
+      margin: 0 0.3rem;
+    }
+    .search_input{
+      width: 5.94rem;
+      padding: 0 0.76rem 0 0.2rem;
+      height: 0.56rem;
+      border-radius: 8px;
+      border: none;
+      float: left;
+      font-size: 0.26rem;
+      color: #878787;
+      z-index: 5;
+    }
+    input::-webkit-input-placeholder{
+      /* WebKit browsers */
+      color: #878787;
+    }
+    input:-moz-placeholder{
+      /* Mozilla Firefox 4 to 18 */
+      color: #878787;
+    }
+    input::-moz-placeholder{
+      /* Mozilla Firefox 19+ */
+      color: #878787;
+    }
+    input:-ms-input-placeholder{
+      /* Internet Explorer 10+ */
+      color: #878787;
+    }
+    .search_i{
+      display: block;
+      width: 0.28rem;
+      height: 0.28rem;
+      background: url("../images/search.png") 50% 50%  no-repeat;
+      background-size: 0.28rem 0.28rem;
+      position: absolute;
+      z-index: 10;
+      left: 6.14rem;
+      padding: 0.14rem;
+    }
+
+    .notice{
+      height: 0.26rem;
+      margin: 0.2rem 0.3rem;
+    }
+    .notice i,.notice p{
+      display: inline-block;
+      font-size: 0.26rem;
+      color: #000000;
+      float: left;
+    }
+    .notice_img{
+      width: 0.31rem;
+      height: 0.26rem;
+      background: url('../images/notice.png') no-repeat;
+      background-size: 0.31rem 0.26rem;
+    }
+
+    .footer{
+      display: flex;
+      width: 100%;
+      background-color: #e5e5e5;
+      position: relative;
+      clear: both;
+      margin-top: -80px;
+    }
+    .line{
+      flex: 1;
+      position: relative;
+      border-bottom: 1px solid #c6c6c6;
+      top: -38px;
+    }
+    .text{
+      padding: 0 0.17rem;
+      font-size: 20px;
+      height: 20px;
+      line-height: 20px;
+      color: #a9a7a7;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+   <div class="index_container">
+     <div class="index_content">
+       <div class="index_con">
+         <!--广告位 start-->
+         <div class="advertisement">
+           <img src="../images/banner.png">
+         </div>
+         <!--广告位 end-->
+         <!--search start-->
+         <div class="search">
+           <input type="text" placeholder="请输入搜索内容" class="search_input">
+           <i class="search_i"></i>
+         </div>
+         <!--search end-->
+         <!--通知 start-->
+         <div class="notice">
+           <i class="notice_img"></i>
+           <p class="notice_con">关于2018端午节放假通知</p>
+           <p class="notice_day">08/06/01</p>
+         </div>
+         <!--通知 end-->
+       </div>
+     </div>
+     <div class="footer">
+       <div class="line"></div>
+       <div class="text">中铁鲁班商务网</div>
+       <div class="line"></div>
+     </div>
+   </div>
+   <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+   <script>
+     $(function () {
+       var deviceWidth = document.documentElement.clientWidth;
+       if(deviceWidth > 750) {
+         deviceWidth = 750;
+       }
+       document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+     })
+   </script>
+</body>
+</html>

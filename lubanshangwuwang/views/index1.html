@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <link type="text/css" rel="stylesheet" href="swiper.css">
+</head>
+<body>
+<div class="maple-tab clearFix">
+  <ul>
+    <li class="active"><p class="m-border-right">订单状态</p></li>
+    <li><p>订单详情</p></li>
+  </ul>
+</div>
+<!--列表内容-->
+<div class="swiper-container" style="">
+  <div class="swiper-wrapper" style="">
+    <div class="swiper-slide tab-content-1">
+      <div class="content_div">
+        <p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p>
+        <p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p>
+        <p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p>
+      </div>
+    </div>
+    <div class="swiper-slide tab-content-2">
+      <div class="content_div">
+        <p>列表2内容</p>
+        <p>dfjkh 好的仓库供货电饭锅尽快发货的金凤凰开关灵活的风格和人工等方面，vhnjyhrgu</p>
+        <img src="dist/images/timg.jpg" class="images" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+   <script type="text/javascript" src="jquery-3.1.1.js"></script>
+   <script type="text/javascript" src="swiper.js"></script>
+   <script type="text/javascript">
+     $(function () {
+       var mySwiper = new Swiper('.swiper-container', {
+//         onSlideChangeEnd: function (swiper) {
+//           var j = mySwiper.activeIndex;
+//           $('.maple-tab li').removeClass('active').eq(j).addClass('active');
+//           var content_height = $(".content_div").eq(j).height();
+//           var slide_height = $(".swiper-slide").eq(j).height(content_height);
+//           $(".swiper-wrapper").css("height", content_height);
+//           $(".swiper-container").css("height", content_height);
+//         }
+       })
+       /*列表切换*/
+       $('.maple-tab li').on('click', function (e) {
+         e.preventDefault();
+         //得到当前索引
+         var i = $(this).index();
+         $('.maple-tab li').removeClass('active').eq(i).addClass('active');
+
+         var content_height = $(".content_div").eq(i).height();
+         var slide_height = $(".swiper-slide").eq(i).height(content_height);
+         $(".swiper-wrapper").css("height", content_height);
+         $(".swiper-container").css("height", content_height);
+         mySwiper.slideTo(i, 1000, false);
+       });
+     });
+   </script>
+</body>
+</html>
