@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>首页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
-  <link type="text/css" rel="stylesheet" href="swiper.css">
+  <link type="text/css" rel="stylesheet" href="../css/swiper.css">
 </head>
 <body>
 <div class="maple-tab clearFix">
@@ -17,14 +17,14 @@
 <!--列表内容-->
 <div class="swiper-container" style="">
   <div class="swiper-wrapper" style="">
-    <div class="swiper-slide tab-content-1">
+    <div class="swiper-slide">
       <div class="content_div">
         <p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p>
         <p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p>
         <p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p><p>erwrew</p>
       </div>
     </div>
-    <div class="swiper-slide tab-content-2">
+    <div class="swiper-slide">
       <div class="content_div">
         <p>列表2内容</p>
         <p>dfjkh 好的仓库供货电饭锅尽快发货的金凤凰开关灵活的风格和人工等方面，vhnjyhrgu</p>
@@ -33,8 +33,8 @@
     </div>
   </div>
 </div>
-   <script type="text/javascript" src="jquery-3.1.1.js"></script>
-   <script type="text/javascript" src="swiper.js"></script>
+   <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+   <script type="text/javascript" src="../js/swiper.js"></script>
    <script type="text/javascript">
      $(function () {
        var mySwiper = new Swiper('.swiper-container', {
@@ -53,11 +53,11 @@
          //得到当前索引
          var i = $(this).index();
          $('.maple-tab li').removeClass('active').eq(i).addClass('active');
-
-         var content_height = $(".content_div").eq(i).height();
-         var slide_height = $(".swiper-slide").eq(i).height(content_height);
-         $(".swiper-wrapper").css("height", content_height);
-         $(".swiper-container").css("height", content_height);
+//
+//         var content_height = $(".content_div").eq(i).height();
+//         var slide_height = $(".swiper-slide").eq(i).height(content_height);
+//         $(".swiper-wrapper").css("height", content_height);
+//         $(".swiper-container").css("height", content_height);
          mySwiper.slideTo(i, 1000, false);
        });
      });
