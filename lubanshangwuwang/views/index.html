@@ -40,6 +40,7 @@
       border-bottom: 1px solid #d4cdc4;
     }
     #crec_index_jd,#crec_jd,#crec_jd li{
+      width: auto !important;
       height: 4.21rem !important;
     }
     .advertisement img{
@@ -193,6 +194,8 @@
       height: 0.6rem;
       font-size: 0.22rem;
       float: left;
+
+
     }
     .swiper-slide ul li:first-child,.content ul li:first-child{
       margin-top: 0.2rem;
@@ -200,6 +203,12 @@
     .swiper-slide ul li span,.content ul li span{
       height: 0.6rem;
       font-size: 0.22rem;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     .swiper-slide ul li em,.content ul li em{
       font-size: 0.18rem;

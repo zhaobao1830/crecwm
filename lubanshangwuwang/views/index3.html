@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <link type="text/css" rel="stylesheet" href="../css/swiper.css">
+  <style>
+    html,body{
+      width: 7.5rem;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    ul,p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    .index_container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .index_content{
+      width: 100%;
+      min-height: 100%;
+    }
+    .index_con{
+      position: relative;
+      padding-bottom: 80px;
+    }
+    .advertisement{
+      height: 4.21rem;
+      border-bottom: 1px solid #d4cdc4;
+    }
+    #crec_index_jd,#crec_jd,#crec_jd li{
+      width: auto !important;
+      height: 4.21rem !important;
+    }
+    .advertisement img{
+      width: auto;
+      height: 4.21rem;
+    }
+    .search{
+      position: absolute;
+      top: 0.2rem;
+      width: 6.9rem;
+      height: 0.56rem;
+      margin: 0 0.3rem;
+      z-index: 100;
+    }
+    .search_input{
+      width: 5.94rem;
+      padding: 0 0.76rem 0 0.2rem;
+      height: 0.56rem;
+      border-radius: 8px;
+      border: none;
+      float: left;
+      font-size: 0.26rem;
+      color: #878787;
+      z-index: 5;
+    }
+    input::-webkit-input-placeholder{
+      /* WebKit browsers */
+      color: #878787;
+    }
+    input:-moz-placeholder{
+      /* Mozilla Firefox 4 to 18 */
+      color: #878787;
+    }
+    input::-moz-placeholder{
+      /* Mozilla Firefox 19+ */
+      color: #878787;
+    }
+    input:-ms-input-placeholder{
+      /* Internet Explorer 10+ */
+      color: #878787;
+    }
+    .search_i{
+      display: block;
+      width: 0.28rem;
+      height: 0.28rem;
+      background: url("../images/search.png") 50% 50%  no-repeat;
+      background-size: 0.28rem 0.28rem;
+      position: absolute;
+      z-index: 10;
+      left: 6.14rem;
+      padding: 0.14rem;
+    }
+
+    .notice{
+      height: 0.26rem;
+      line-height: 0.26rem;
+      margin: 0.2rem 0.3rem;
+      overflow: hidden;
+    }
+    .notice_img{
+      width: 0.31rem;
+      height: 0.26rem;
+      background: url('../images/notice.png') no-repeat;
+      background-size: 0.31rem 0.26rem;
+      float: left;
+    }
+    .notice li {
+      font-size: 0.22rem;
+      position: relative;
+    }
+    .notice li a{
+      height: 0.26rem;
+      color: #2d2d2d;
+    }
+    .notice li a span{
+      width: 3.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-left: 0.2rem;
+    }
+    .notice li a em{
+      /*position: absolute;*/
+      /*right: 0;*/
+      font-style: normal;
+    }
+
+
+
+
+    .tendering,.winTheBid,.qualifiedSupply{
+      margin: 0.3rem;
+    }
+    .tendering-table,.title{
+      height: 0.43rem;
+      line-height: 0.43rem;
+      border-bottom: 1px solid #d01e00;
+    }
+    .tendering-table ul{
+      height: 0.43rem;
+      float: left;
+    }
+    .tendering-table ul li{
+      height: 0.43rem;
+      list-style: none;
+      float: left;
+      font-size: 0.26rem;
+      padding:0 0.1rem;
+      margin-right: 0.1rem;
+      color: #000000;
+      background-color: #fff;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .title_show{
+      height: 0.43rem;
+      list-style: none;
+      float: left;
+      font-size: 0.26rem;
+      padding:0 0.1rem;
+      color: #fff !important;
+      background-color: #d01e00 !important;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .more{
+      font-size: 0.2rem;
+      color: #000000;
+      float: right;
+    }
+    .active{
+      color: #fff !important;
+      background-color: #d01e00 !important;
+    }
+
+    .swiper-slide ul li,.content ul li,.content_gys ul li{
+      overflow: hidden;
+      list-style: none;
+      color: #2d2d2d;
+      margin-top: 0.3rem;
+      position: relative;
+      list-style-image: none;
+      background-image: url( "../images/yuandian.png" );
+      background-repeat: no-repeat;
+      background-position: 2px 0.1rem;
+      padding-left: 15px;
+    }
+    .swiper-slide ul li a,.content ul li a,.content_gys ul li a{
+      color: #2d2d2d;
+      font-size: 0.22rem;
+      float: left;
+    }
+    .swiper-slide ul li:first-child,.content ul li:first-child,.content_gys ul li:first-child{
+      margin-top: 0.2rem;
+    }
+    .swiper-slide ul li span,.content ul li span{
+      display: block;
+      height: auto;
+      max-height: 0.6rem;
+      font-size: 0.22rem;
+      overflow: hidden;
+    }
+    .content_gys ul li span{
+       width: 4.8rem;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       float: left;
+    }
+    .content_gys ul li em{
+       position: absolute;
+       right: 0;
+       font-style: normal;
+    }
+    .swiper-slide ul li em,.content ul li em{
+      font-size: 0.18rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-style: normal;
+    }
+
+
+
+    .footer{
+      display: flex;
+      width: 100%;
+      background-color: #e5e5e5;
+      position: relative;
+      clear: both;
+      margin-top: -80px;
+    }
+    .line{
+      flex: 1;
+      position: relative;
+      border-bottom: 1px solid #c6c6c6;
+      top: -38px;
+    }
+    .text{
+      padding: 0 0.17rem;
+      font-size: 20px;
+      height: 20px;
+      line-height: 20px;
+      color: #a9a7a7;
+      margin: 30px 0;
+    }
+
+    .publicDiv{
+      width: 100%;
+      height: 20px;
+      background-color: #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+<div class="index_container">
+  <div class="index_content">
+    <div class="index_con">
+      <!--广告位 start-->
+      <div class="advertisement">
+        <!--<img src="../images/banner.png">-->
+        <!-- 61578069：门户首页焦点图 类型：固定 尺寸：714x400-->
+        <script type="text/javascript">//<![CDATA[
+        ac_as_id = "mm_115406913_16568627_61578069";
+        ac_format = 1;
+        ac_mode = 1;
+        ac_group_id = 1;
+        ac_server_base_url = "afpeng.alimama.com/";
+        //]]></script>
+        <script type="text/javascript" src="http://afpmm.alicdn.com/g/mm/afp-cdn/JS/k.js"></script>
+
+      </div>
+      <!--广告位 end-->
+      <!--search start-->
+      <div class="search">
+        <input type="text" placeholder="请输入搜索内容" class="search_input">
+        <i class="search_i"></i>
+      </div>
+      <!--search end-->
+      <!--通知 start-->
+      <div class="notice">
+        <i class="notice_img"></i>
+        <!--<p class="notice_con">关于2018端午节放假通知</p>-->
+        <!--<p class="notice_day">08/06/01</p>-->
+        <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=41"></script>
+      </div>
+      <!--通知 end-->
+      <div class="publicDiv"></div>
+      <!--招标公告、竞争性谈判、竞价采购、询价书 start-->
+      <div class="tendering" >
+        <div class="tendering-table">
+          <ul>
+            <li class="active">招标公告</li>
+            <li>竞争性谈判</li>
+            <li>竞价采购</li>
+            <li>询价书</li>
+          </ul>
+          <a class="more">更多></a>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=8"></script>
+              </ul>
+            </div>
+            <div class="swiper-slide content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=9"></script>
+              </ul>
+            </div>
+            <div class="swiper-slide content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=56"></script>
+              </ul>
+            </div>
+            <div class="swiper-slide content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=55"></script>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--招标公告、竞争性谈判、竞价采购、询价书 end-->
+      <div class="publicDiv"></div>
+      <!--中标公告 start-->
+      <div class="winTheBid">
+        <div class="winTheBid_title title">
+          <p class="title_show">中标公告</p>
+          <a href="javascript:;" class="more">更多></a>
+        </div>
+        <div class="winTheBid_content content content_sub">
+          <ul>
+            <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=13"></script>
+          </ul>
+        </div>
+      </div>
+      <!--中标公告 end-->
+      <div class="publicDiv"></div>
+      <!--合格供应商招募 start-->
+      <div class="qualifiedSupply">
+        <div class="qualifiedSupply_title title">
+          <p class="title_show">合格供应商招募</p>
+          <a href="javascript:;" class="more">更多></a>
+        </div>
+        <div class="qualifiedSupply_content content_gys">
+          <ul>
+            <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=14"></script>
+          </ul>
+        </div>
+      </div>
+      <!--合格供应商招募 end-->
+    </div>
+  </div>
+  <div class="footer">
+    <div class="line"></div>
+    <div class="text">中铁鲁班商务网</div>
+    <div class="line"></div>
+  </div>
+</div>
+<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../js/swiper.js"></script>
+<script>
+  $(function () {
+//       设置字体
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) {
+      deviceWidth = 750;
+    }
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+
+//       table切换
+    var mySwiper = new Swiper('.swiper-container')
+    $('.tendering-table ul li').on('click', function (e) {
+      e.preventDefault();
+      //得到当前索引
+      var i = $(this).index();
+      $('.tendering-table ul li').removeClass('active').eq(i).addClass('active');
+      mySwiper.slideTo(i, 1000, false);
+    });
+
+    var maxWidth = 45
+    $(".content_sub ul li").each(function () {
+
+      if($(this).find('span').text().trim().length > maxWidth) {
+        $(this).find('span').text($(this).find('span').text().trim().substring(0, maxWidth))
+        $(this).find('span').text( $(this).find('span').text() + '...')
+      }
+      if($(this).find('span').text().trim().length > 21) {
+        console.log('pppppppppppppppp')
+        $(this).find('span').css({'height':'0.6rem'})
+      }
+    })
+  })
+</script>
+</body>
+</html>
