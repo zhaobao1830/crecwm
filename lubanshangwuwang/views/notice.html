@@ -35,11 +35,11 @@
       padding-bottom: 0.8rem;
       margin: 0.3rem 0.3rem 0;
     }
-    .title{
+    .notice_title{
       border-bottom: 1px solid #d01e00;
       overflow: hidden;
     }
-    .title p{
+    .notice_title p{
       padding: 0.1rem;
       text-align: center;
       font-size: 0.26rem;
@@ -77,7 +77,7 @@
 <div class="notice_container">
   <div class="notice_content">
     <div class="notice_con">
-      <div class="title">
+      <div class="notice_title">
         <p>文章内容</p>
       </div>
     </div>
@@ -90,14 +90,18 @@
 </div>
   <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
   <script>
-    $(function () {
-      //设置字体
+    window.addEventListener('resize', () => {
+      setSize()
+    }, false);
+
+    function setSize() {
+      //       设置字体
       var deviceWidth = document.documentElement.clientWidth;
       if(deviceWidth > 750) {
         deviceWidth = 750;
       }
       document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
-    })
+    }
   </script>
 </body>
 </html>

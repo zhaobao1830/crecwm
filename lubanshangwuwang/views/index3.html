@@ -365,14 +365,8 @@
 <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="../js/swiper.js"></script>
 <script>
-  $(function () {
-//       设置字体
-    var deviceWidth = document.documentElement.clientWidth;
-    if(deviceWidth > 750) {
-      deviceWidth = 750;
-    }
-    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
 
+  $(function () {
 //       table切换
     var mySwiper = new Swiper('.swiper-container')
     $('.tendering-table ul li').on('click', function (e) {
@@ -395,6 +389,18 @@
       }
     })
   })
+  window.addEventListener('resize', () => {
+    setSize()
+  }, false);
+
+  function setSize() {
+    //       设置字体
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) {
+      deviceWidth = 750;
+    }
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  }
 </script>
 </body>
 </html>

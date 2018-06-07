@@ -39,11 +39,11 @@
     .tenderingNotice,.bulletin{
       margin-top: 0.3rem;
     }
-    .title{
+    .dp_title{
       border-bottom: 1px solid #d01e00;
       overflow: hidden;
     }
-    .title p{
+    .dp_title p{
       padding: 0.1rem;
       text-align: center;
       font-size: 0.26rem;
@@ -73,6 +73,7 @@
 
     .rn_con_con{
       padding: 0 0.35rem;
+      margin-top: 0.2rem;
     }
     .rn_con_con ul{
       overflow: hidden;
@@ -217,14 +218,18 @@
    </div>
    <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
    <script>
-     $(function () {
-       //设置字体
+     window.addEventListener('resize', () => {
+       setSize()
+     }, false);
+
+     function setSize() {
+       //       设置字体
        var deviceWidth = document.documentElement.clientWidth;
        if(deviceWidth > 750) {
          deviceWidth = 750;
        }
        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
-     })
+     }
    </script>
 </body>
 </html>
