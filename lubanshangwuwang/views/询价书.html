@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>询价书</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <style>
+    html,body{
+      width: 7.5rem;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    ul,p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    .letterInquiry_container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .letterInquiry_content{
+      width: 100%;
+      min-height: 100%;
+    }
+    .letterInquiry_con{
+      margin: 0 0.3rem;
+      position: relative;
+      padding-bottom: 2.8rem;
+    }
+
+    /*询价书 start*/
+    .letterInquiry{
+      margin-top: 0.3rem;
+    }
+    .li_title{
+      border-bottom: 1px solid #d01e00;
+      overflow: hidden;
+    }
+    .li_title p{
+      padding: 0.1rem;
+      text-align: center;
+      font-size: 0.26rem;
+      color: #fff;
+      background-color: #d01e00;
+      float: left;
+    }
+    .letterInquiry_show{
+      overflow: hidden;
+    }
+    .letterInquiry_show_title{
+      padding: 0.3rem 1rem 0;
+      color: #2d2d2d;
+      font-size: 0.26rem;
+      text-align: center;
+    }
+    .letterInquiry_show_con{
+      margin-top: 0.2rem;
+    }
+    .letterInquiry_show_con ul{
+      overflow: hidden;
+      border: 1px solid #c0c0c0;
+    }
+    .letterInquiry_show_con ul li{
+      font-size: 0.22rem;
+      color: #2d2d2d;
+      border-top: 1px solid #c0c0c0;
+    }
+    .letterInquiry_show_con ul li:first-child{
+      border-top: none;
+    }
+    .letterInquiry_show_con ul li p,.letterInquiry_show_con ul li span{
+      display: table-cell;
+      vertical-align: middle
+    }
+    .letterInquiry_show_con ul li p{
+      text-align: center;
+      width: 1.5rem;
+      background-color: #eeeeee;
+    }
+    .letterInquiry_show_con ul li span{
+      width: 4.58rem;
+      padding: 0.2rem;
+    }
+    /*询价书 end*/
+    /*采购要求 start*/
+    .requirements{
+      overflow: hidden;
+      margin-top: 0.2rem;
+    }
+    .requirements_show{
+      margin-top: 0.3rem;
+      overflow: hidden;
+    }
+    .rs_table{
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .rs_tbody tr,.rs_tbody td{
+      border: 1px solid #c0c0c0;
+    }
+    .tableKey{
+      width: 1.6rem;
+      font-size: 0.22rem;
+      background-color: #eeeeee;
+      text-align: center;
+    }
+    .tableValue{
+      text-align: center;
+      font-size: 0.2rem;
+      padding: 0.2rem;
+    }
+      /*采购要求 end*/
+    /*对供应商要求 start*/
+    .supplier{
+      overflow: hidden;
+      margin-top: 0.2rem;
+    }
+    .supplier_show{
+      margin-top: 0.3rem;
+      overflow: hidden;
+    }
+    .supplier_table{
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .supplier_tbody tr,.supplier_tbody td{
+      border: 1px solid #c0c0c0;
+    }
+    .supplier_table thead td{
+      border: 1px solid #dddddd;
+      font-size: 0.22rem;
+      padding: 0.2rem 0;
+      text-align: center;
+      background-color: #efefef;
+    }
+    .supplier_thead_td{
+      width: 1.6rem;
+    }
+    /*对供应商要求 end*/
+
+
+
+    .footer{
+      width: 100%;
+      background-color: #e5e5e5;
+      margin-top: -2.80rem;
+      position: relative;
+      clear: both;
+    }
+    .friendshipHints{
+      height: 2rem;
+      margin: 0 0.3rem;
+      overflow: hidden;
+    }
+    .fh_title{
+      font-size: 0.22rem;
+      height: 0.22rem;
+      line-height: 0.22rem;
+      color: #d01e00;
+      margin-top: 0.3rem;
+    }
+    .fh_con1,.fh_con2,.fh_con3{
+      font-size: 0.2rem;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      margin-top: 0.1rem;
+    }
+    .fh_con1{
+      color: #2d2d2d;
+    }
+    .fh_con2 p,.fh_con3 p{
+      display: inline-block;
+      color: #2d2d2d;
+    }
+    .fh_con2 span,.fh_con3 span{
+      color: #0061b1;
+    }
+    .footer_con{
+      position: relative;
+      clear: both;
+      display: flex;
+    }
+    .footer_con_line{
+      flex: 1;position:
+      relative;
+      border-bottom: 1px solid #c6c6c6;
+      top: -0.38rem;
+    }
+    .footer_con_text{
+      padding: 0 0.17rem;
+      font-size: 0.2rem;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      color: #a9a7a7;
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+   <div class="letterInquiry_container">
+     <div class="letterInquiry_content">
+       <div class="letterInquiry_con">
+         <!--询价书 start-->
+         <div class="letterInquiry">
+           <div class="li_title">
+             <p>询价书</p>
+           </div>
+           <div class="letterInquiry_show">
+             <div class="letterInquiry_show_title">中铁港航局综合管廊项目钢材采购询价书</div>
+             <div class="letterInquiry_show_con">
+               <ul>
+                 <li>
+                   <p>询价书编号</p>
+                   <span>中铁港航西安(询价)ZHGL2018-001号</span>
+                 </li>
+                 <li>
+                   <p>询价书名称</p>
+                   <span>中铁港航局综合管廊项目钢材采购询价书</span>
+                 </li>
+                 <li>
+                   <p>联系人</p>
+                   <span>李万军</span>
+                 </li>
+                 <li>
+                   <p>联系电话</p>
+                   <span>15873089012</span>
+                 </li>
+                 <li>
+                   <p>电子信箱</p>
+                   <span>450111203@qq.com</span>
+                 </li>
+                 <li>
+                   <p>采购单位</p>
+                   <span>中铁五局五公司葫芦岛市东双线公路工程钢热热污染</span>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+         <!--询价书 end-->
+         <!--采购要求 start-->
+         <div class="requirements">
+           <div class="li_title">
+             <p>采购要求</p>
+           </div>
+           <div class="requirements_show">
+             <table class="rs_table">
+               <tbody class="rs_tbody">
+                 <tr>
+                   <td class="tableKey">报名截止日期</td>
+                   <td class="tableValue">2018.06.11 11:04:27</td>
+                   <td class="tableKey">标的类型</td>
+                   <td class="tableValue">物资</td>
+                 </tr>
+                 <tr>
+                   <td class="tableKey">收货人</td>
+                   <td class="tableValue">李晨旭</td>
+                   <td class="tableKey">收货电话</td>
+                   <td class="tableValue">18790290128</td>
+                 </tr>
+                 <tr>
+                   <td class="tableKey">交货方式</td>
+                   <td class="tableValue" colspan="3">板车交货，质量及包装完好。符合各项质量、技术指标</td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+         </div>
+         <!--采购要求 edn-->
+         <!--对供应商要求 start-->
+         <div class="supplier">
+           <div class="li_title">
+             <p>对供应商要求</p>
+           </div>
+           <div class="supplier_show">
+             <table class="supplier_table">
+               <tbody class="supplier_tbody">
+                  <tr>
+                    <td class="tableKey">保证金金额</td>
+                    <td class="tableValue">0</td>
+                    <td class="tableKey">缴费账号</td>
+                    <td class="tableValue">1101456107100</td>
+                  </tr>
+                  <tr>
+                    <td class="tableKey">开户行</td>
+                    <td class="tableValue">平安银行天津分行</td>
+                    <td class="tableKey">收款人</td>
+                    <td class="tableValue">鲁班（北京）电子商务科技有限公司</td>
+                  </tr>
+                  <tr>
+                    <td class="tableKey">结算方式</td>
+                    <td class="tableValue">往来结算</td>
+                    <td class="tableKey">发票种类</td>
+                    <td class="tableValue">增值税专用发票</td>
+                  </tr>
+                  <tr>
+                    <td class="tableKey">支付条件</td>
+                    <td class="tableValue" colspan="3">银行对公转账</td>
+                  </tr>
+               </tbody>
+             </table>
+             <table class="supplier_table">
+               <thead>
+                 <tr>
+                   <td class="supplier_thead_td"></td>
+                   <td>要求资质名称</td>
+                   <td>要求资质说明</td>
+                 </tr>
+               </thead>
+               <tbody class="supplier_tbody">
+                 <tr>
+                   <td class="tableKey" rowspan="2">资质要求</td>
+                   <td class="tableValue">要求资质名称</td>
+                   <td class="tableValue">要求资质名称</td>
+                 </tr>
+                 <tr>
+                    <td class="tableValue">要求资质名称</td>
+                    <td class="tableValue">要求资质名称</td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+         </div>
+         <!--对供应商要求 end-->
+       </div>
+     </div>
+     <div class="footer">
+       <div class="friendshipHints">
+         <div class="fh_title">友情提示：</div>
+         <div class="fh_con1">您在使用本网站中如需帮助，请拨打以下电话：</div>
+         <div class="fh_con2">
+           <p>客服电话：</p>
+           <span>4006-010100</span>
+         </div>
+         <div class="fh_con3">
+           <p>广告服务热线：</p>
+           <span>010-61829562</span>
+         </div>
+       </div>
+       <div class="footer_con">
+         <div class="footer_con_line"></div>
+         <div class="footer_con_text">中铁鲁班商务网</div>
+         <div class="footer_con_line"></div>
+       </div>
+     </div>
+   </div>
+   <script>
+     window.onload = function () {
+       setSize()
+     }
+     window.addEventListener('resize', () => {
+       setSize()
+     }, false);
+
+     function setSize() {
+       //       设置字体
+       var deviceWidth = document.documentElement.clientWidth;
+       if(deviceWidth > 750) {
+         deviceWidth = 750;
+       }
+       document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+     }
+   </script>
+</body>
+</html>

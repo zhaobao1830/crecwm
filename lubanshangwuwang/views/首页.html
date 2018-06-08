@@ -233,13 +233,13 @@
       clear: both;
       margin-top: -0.8rem;
     }
-    .line{
+    .footer_con_line{
       flex: 1;
       position: relative;
       border-bottom: 1px solid #c6c6c6;
       top: -0.38rem;
     }
-    .text{
+    .footer_con_text{
       padding: 0 0.17rem;
       font-size: 0.2rem;
       height: 0.2rem;
@@ -357,15 +357,17 @@
     </div>
   </div>
   <div class="footer">
-    <div class="line"></div>
-    <div class="text">中铁鲁班商务网</div>
-    <div class="line"></div>
+    <div class="footer_con_line"></div>
+    <div class="footer_con_text">中铁鲁班商务网</div>
+    <div class="footer_con_line"></div>
   </div>
 </div>
 <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="../js/swiper.js"></script>
 <script>
-
+  window.onload = function () {
+    setSize()
+  }
   $(function () {
 //       table切换
     var mySwiper = new Swiper('.swiper-container')
@@ -389,6 +391,7 @@
       }
     })
   })
+
   window.addEventListener('resize', () => {
     setSize()
   }, false);

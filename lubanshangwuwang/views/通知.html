@@ -90,6 +90,9 @@
 </div>
   <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
   <script>
+    window.onload = function () {
+      setSize()
+    }
     window.addEventListener('resize', () => {
       setSize()
     }, false);
