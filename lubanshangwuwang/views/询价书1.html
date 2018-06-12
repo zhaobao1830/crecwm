@@ -5,9 +5,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>询价书</title>
   <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <link rel="stylesheet" href="T/dist/tablesaw.css">
+  <link rel="stylesheet" href="//filamentgroup.github.io/demo-head/demohead.css">
   <style>
     html,body{
-      width: 7.5rem;
+      /*width: 7.5rem;*/
       padding: 0;
       margin: 0;
       height: 100%;
@@ -97,6 +99,27 @@
     .inquiryMark_show{
       margin-top: 0.3rem;
       overflow: hidden;
+    }
+    .tablesaw-swipe th,.tablesaw-swipe td{
+      /*white-space: nowrap !important;*/
+      text-align: center !important;
+      /*padding: 0.2rem 0.3rem !important;*/
+      font-size: 0.22rem;
+      border: 1px solid #c0c0c0;
+      vertical-align: middle
+
+    }
+    .tablesaw-swipe th{
+      font-weight: normal;
+      white-space: nowrap !important;
+    }
+    .tablesaw-swipe .title{
+      white-space: nowrap !important;
+    }
+    .tablesaw-swipe .tablesaw-swipe-cellpersist{
+      width: 1.6rem !important;
+      border-right: none !important;
+      background-color: #e4e1de;
     }
     /*询价标的 end*/
     /*采购要求 start*/
@@ -216,6 +239,9 @@
       margin: 0.3rem 0;
     }
   </style>
+  <script src="T/dist/tablesaw.js"></script>
+  <script src="T/dist/tablesaw-init.js"></script>
+  <script src="//filamentgroup.github.io/demo-head/loadfont.js"></script>
 </head>
 <body>
    <div class="letterInquiry_container">
@@ -265,12 +291,73 @@
              <p>询价标的</p>
            </div>
            <div class="inquiryMark_show">
-             <table class="letterInquiry_table_left">
-                <tbody class="letterInquiry_tbody_left">
-                   <tr>
-                     <td>物资名称</td>
-                   </tr>
-                </tbody>
+             <table class="tablesaw tablesaw-swipe" data-tablesaw-mode="swipe">
+               <thead>
+               <tr>
+                 <th class="title tableKey" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">物资名称</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">我是2</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" >我是3</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1" >我是4</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4" >我是5</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="5" >我是6</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="6" >我是7</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="7" >我是9</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="7" >我是10</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="7" >我是11</th>
+                 <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="7" >我是12</th>
+               </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td class="title tableKey">规格型号</td>
+                   <td>任务而威尔而</td>
+                   <td>2009</td>
+                   <td>83%</td>
+                   <td>$2.7B</td>
+                 </tr>
+                 <tr>
+                   <td class="title tableKey">订货要求</td>
+                   <td>2</td>
+                   <td>1997</td>
+                   <td>88%</td>
+                   <td>$2.1B</td>
+                 </tr>
+                 <tr>
+                   <td class="title tableKey">采购数量</td>
+                   <td>3</td>
+                   <td>2012</td>
+                   <td>92%</td>
+                   <td>$1.5B</td>
+                 </tr>
+                 <tr>
+                   <td class="title tableKey">计量单位</td>
+                   <td>4</td>
+                   <td>2011</td>
+                   <td>96%</td>
+                   <td>$1.3B</td>
+                 </tr>
+                 <tr>
+                   <td class="title tableKey">交货地址</td>
+                   <td>5</td>
+                   <td>2013</td>
+                   <td>89%</td>
+                   <td>$1.2B</td>
+                 </tr>
+                 <tr>
+                   <td class="title tableKey">交货日期</td>
+                   <td>6</td>
+                   <td>2013</td>
+                   <td>78%</td>
+                   <td>$1.2B</td>
+                 </tr>
+                 <tr>
+                   <td class="title tableKey">备注</td>
+                   <td>7</td>
+                   <td>2011</td>
+                   <td>36%</td>
+                   <td>$1.1B</td>
+                 </tr>
+               </tbody>
              </table>
            </div>
          </div>
