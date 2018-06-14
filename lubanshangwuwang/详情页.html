@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>详情页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <style>
+    html,body{
+      /*width: 7.5rem;*/
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    ul,p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    .details_container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .details_content{
+      width: 100%;
+      min-height: 100%;
+    }
+    .details_con{
+      margin: 0 0.3rem;
+      position: relative;
+      padding-bottom: 2.8rem;
+    }
+
+    .tenderingNotice,.bulletin{
+      padding-top: 0.3rem;
+    }
+    .dp_title{
+      border-bottom: 1px solid #d01e00;
+      overflow: hidden;
+    }
+    .dp_title p{
+      padding: 0.1rem;
+      text-align: center;
+      font-size: 0.26rem;
+      color: #fff;
+      background-color: #d01e00;
+      float: left;
+    }
+    .rn_con{
+      overflow: hidden;
+    }
+    .rn_con_title{
+      padding: 0.6rem 1.4rem 0;
+      color: #2d2d2d;
+      font-size: 0.26rem;
+      text-align: center;
+    }
+    .rn_con_data{
+      text-align: center;
+      color: #878787;
+      font-size: 0;
+      margin-top: 0.2rem;
+    }
+    .rn_con_data p,.rn_con_data span{
+      display: inline-block;
+      font-size: 0.18rem;
+    }
+
+    .rn_con_con{
+      padding: 0 0.35rem;
+      margin-top: 0.2rem;
+    }
+    .rn_con_con ul{
+      overflow: hidden;
+      border: 1px solid #c0c0c0;
+    }
+    .rn_con_con ul li{
+      font-size: 0.22rem;
+      color: #2d2d2d;
+      border-top: 1px solid #c0c0c0;
+    }
+    .rn_con_con ul li:first-child{
+      border-top: none;
+    }
+    .rn_con_con ul li p,.rn_con_con ul li span{
+      display: table-cell;
+    }
+    .rn_con_con ul li p{
+      text-align: center;
+      width: 1.5rem;
+      background-color: #eeeeee;
+    }
+    .rn_con_con ul li span{
+      width: 4.58rem;
+      padding: 0.2rem;
+    }
+    .footer{
+      width: 100%;
+      background-color: #e5e5e5;
+      margin-top: -2.80rem;
+      position: relative;
+      clear: both;
+    }
+    .friendshipHints{
+      height: 2rem;
+      margin: 0 0.3rem;
+      overflow: hidden;
+    }
+    .fh_title{
+      font-size: 0.22rem;
+      height: 0.22rem;
+      line-height: 0.22rem;
+      color: #d01e00;
+      margin-top: 0.3rem;
+    }
+    .fh_con1,.fh_con2,.fh_con3{
+      font-size: 0.2rem;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      margin-top: 0.1rem;
+    }
+    .fh_con1{
+      color: #2d2d2d;
+    }
+    .fh_con2 p,.fh_con3 p{
+      display: inline-block;
+      color: #2d2d2d;
+    }
+    .fh_con2 span,.fh_con3 span{
+       color: #0061b1;
+    }
+    .footer_con{
+      position: relative;
+      clear: both;
+      display: flex;
+    }
+    .footer_con_line{
+      flex: 1;position:
+       relative;
+      border-bottom: 1px solid #c6c6c6;
+      top: -0.38rem;
+    }
+    .footer_con_text{
+      padding: 0 0.17rem;
+      font-size: 0.2rem;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      color: #a9a7a7;
+      margin: 0.3rem 0;
+    }
+
+    .crecgecweb_loading{
+      position:fixed;
+      width: 100%;
+      height: 100%;
+      z-index:999;
+      background-color: rgba(229,229,229,1);
+    }
+    .crecgecweb_loading img{
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+    <div class="crecgecweb_loading">
+      <img src="http://static.crecgec.com/crecgecweb/loding.gif" class="img-responsive">
+    </div>
+   <div class="details_container">
+     <div class="details_content">
+       <div class="details_con">
+         <div class="tenderingNotice">
+           <div class="dp_title">
+             <p>招标公告</p>
+           </div>
+           <div class="rn_con">
+             <div class="rn_con_title">
+               中铁九局五公司葫芦岛市东双线公路工程钢模板采购招标二次公告
+             </div>
+             <div class="rn_con_data">
+               <p>发布时间：</p>
+               <span>2018-05-29</span>
+             </div>
+             <div class="rn_con_con">
+               <ul>
+                 <li>
+                   <p>采购名称</p>
+                   <span>中铁五局五公司葫芦岛市东双线公路工程钢热热污染</span>
+                 </li>
+                 <li>
+                   <p>组合单位</p>
+                   <span>中铁九局物资管理部</span>
+                 </li>
+                 <li>
+                   <p>采购编号</p>
+                   <span>JW-LC-2018-19</span>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+         <div class="bulletin">
+           <div class="dp_title">
+             <p>公告内文</p>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="footer">
+       <div class="friendshipHints">
+         <div class="fh_title">友情提示：</div>
+         <div class="fh_con1">您在使用本网站中如需帮助，请拨打以下电话：</div>
+         <div class="fh_con2">
+           <p>客服电话：</p>
+           <span>4006-010100</span>
+         </div>
+         <div class="fh_con3">
+           <p>广告服务热线：</p>
+           <span>010-61829562</span>
+         </div>
+       </div>
+       <div class="footer_con">
+         <div class="footer_con_line"></div>
+         <div class="footer_con_text">中铁鲁班商务网</div>
+         <div class="footer_con_line"></div>
+       </div>
+     </div>
+   </div>
+   <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+   <script>
+     window.onload = function () {
+       setSize()
+
+       //阻止触摸事件
+       document.addEventListener("touchmove", myFunction);
+
+       setTimeout(function () {
+         $(".crecgecweb_loading").hide()
+         //解除触摸锁定
+         document.removeEventListener("touchmove", myFunction);
+       }, 100)
+     }
+     window.addEventListener('resize', () => {
+       setSize()
+     }, false);
+
+     function setSize() {
+       //       设置字体
+       var deviceWidth = document.documentElement.clientWidth;
+       if(deviceWidth > 750) {
+         deviceWidth = 750;
+       }
+       document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+     }
+
+     //  触摸事件
+     function myFunction(e) {
+       e.preventDefault();
+     }
+   </script>
+</body>
+</html>

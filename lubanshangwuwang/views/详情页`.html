@@ -37,7 +37,7 @@
     }
 
     .tenderingNotice,.bulletin{
-      margin-top: 0.3rem;
+      padding-top: 0.3rem;
     }
     .dp_title{
       border-bottom: 1px solid #d01e00;
@@ -153,9 +153,24 @@
       color: #a9a7a7;
       margin: 0.3rem 0;
     }
+
+    .crecgecweb_loading{
+      position:fixed;
+      width: 100%;
+      height: 100%;
+      z-index:999;
+      background-color: rgba(229,229,229,1);
+    }
+    .crecgecweb_loading img{
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+    }
   </style>
 </head>
 <body>
+    <div class="crecgecweb_loading">
+      <img src="http://static.crecgec.com/crecgecweb/loding.gif" class="img-responsive">
+    </div>
    <div class="details_container">
      <div class="details_content">
        <div class="details_con">
@@ -218,27 +233,17 @@
    </div>
    <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
    <script>
-
-     new function() {
-       this.width = 750; //默认宽度
-       this.fontSize = 75; //默认字体大小
-       this.widthProportion = () => {
-         var p = (document.getElementsByTagName("html")[0].offsetWidth) / this.width;
-         return p;
-       };
-       this.changePage = () => {
-         var a = this.widthProportion() * this.fontSize;
-         document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + a + "px")
-       }
-       this.changePage();
-       window.addEventListener('resize', () => {
-         this.changePage();
-       }, false);
-     };
-
-
      window.onload = function () {
        setSize()
+
+       //阻止触摸事件
+       document.addEventListener("touchmove", myFunction);
+
+       setTimeout(function () {
+         $(".crecgecweb_loading").hide()
+         //解除触摸锁定
+         document.removeEventListener("touchmove", myFunction);
+       }, 100)
      }
      window.addEventListener('resize', () => {
        setSize()
@@ -253,19 +258,10 @@
        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
      }
 
-
-//     function setSize() {
-//       //得到手机屏幕的宽度
-//       let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
-//       //得到html的Dom元素
-//       let htmlDom = document.getElementsByTagName('html')[0];
-//       // deviceWidth大于750时，则物理分辨率大于1500了，这就是PC端了
-//       if(htmlWidth > 750){
-//         htmlWidth = 750
-//       }
-//       //设置根元素字体大小 为什么除以20，因为我们是以iphone5为标准，它的width为320，font-size为16
-//       htmlDom.style.fontSize= htmlWidth/20 + 'px';
-//     }
+     //  触摸事件
+     function myFunction(e) {
+       e.preventDefault();
+     }
    </script>
 </body>
 </html>
