@@ -269,6 +269,23 @@
   </style>
 </head>
 <body>
+<script>
+  setSize()
+
+  window.addEventListener('resize', () => {
+    setSize()
+  }, false)
+
+
+  function setSize() {
+    //       设置字体
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) {
+      deviceWidth = 750;
+    }
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  }
+</script>
 <div class="crecgecweb_loading">
   <img src="http://static.crecgec.com/crecgecweb/loding.gif" class="img-responsive">
 </div>
@@ -382,8 +399,6 @@
 <script type="text/javascript" src="./js/swiper.js"></script>
 <script>
   window.onload = function () {
-    setSize()
-
     //       table切换
     var mySwiper = new Swiper('.swiper-container')
     $('.tendering-table ul li').on('click', function (e) {
@@ -415,20 +430,6 @@
       //解除触摸锁定
       document.removeEventListener("touchmove", myFunction);
     }, 100)
-  }
-
-
-  window.addEventListener('resize', () => {
-    setSize()
-  }, false);
-
-  function setSize() {
-    //       设置字体
-    var deviceWidth = document.documentElement.clientWidth;
-    if(deviceWidth > 750) {
-      deviceWidth = 750;
-    }
-    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
   }
 
 //  触摸事件

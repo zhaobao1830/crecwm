@@ -154,23 +154,26 @@
       margin: 0.3rem 0;
     }
 
-    .crecgecweb_loading{
-      position:fixed;
-      width: 100%;
-      height: 100%;
-      z-index:999;
-      background-color: rgba(229,229,229,1);
-    }
-    .crecgecweb_loading img{
-      position: absolute; left: 50%; top: 50%;
-      transform: translate(-50%, -50%);
-    }
   </style>
 </head>
 <body>
-    <div class="crecgecweb_loading">
-      <img src="http://static.crecgec.com/crecgecweb/loding.gif" class="img-responsive">
-    </div>
+   <script>
+      setSize()
+
+      window.addEventListener('resize', () => {
+        setSize()
+      }, false)
+
+
+      function setSize() {
+        //       设置字体
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) {
+          deviceWidth = 750;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+      }
+   </script>
    <div class="details_container">
      <div class="details_content">
        <div class="details_con">
@@ -232,36 +235,5 @@
      </div>
    </div>
    <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
-   <script>
-     window.onload = function () {
-       setSize()
-
-       //阻止触摸事件
-       document.addEventListener("touchmove", myFunction);
-
-       setTimeout(function () {
-         $(".crecgecweb_loading").hide()
-         //解除触摸锁定
-         document.removeEventListener("touchmove", myFunction);
-       }, 100)
-     }
-     window.addEventListener('resize', () => {
-       setSize()
-     }, false);
-
-     function setSize() {
-       //       设置字体
-       var deviceWidth = document.documentElement.clientWidth;
-       if(deviceWidth > 750) {
-         deviceWidth = 750;
-       }
-       document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
-     }
-
-     //  触摸事件
-     function myFunction(e) {
-       e.preventDefault();
-     }
-   </script>
 </body>
 </html>
