@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <link type="text/css" rel="stylesheet" href="./css/swiper.css">
+  <style>
+    html,body{
+      width: 7.5rem;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    ul,p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    .index_container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .index_content{
+      width: 100%;
+      min-height: 100%;
+    }
+    .index_con{
+      position: relative;
+      padding-bottom: 0.8rem;
+    }
+    .advertisement{
+      height: 4.21rem;
+      border-bottom: 1px solid #d4cdc4;
+    }
+    #crec_index_jd,#crec_jd,#crec_jd li{
+      width: auto !important;
+      height: 4.21rem !important;
+    }
+    .crecweb_advertisement img{
+      width: auto;
+      height: 4.21rem;
+    }
+    .search{
+      position: absolute;
+      top: 0.2rem;
+      width: 6.9rem;
+      height: 0.56rem;
+      margin: 0 0.3rem;
+      z-index: 100;
+    }
+    .search_input{
+      width: 5.94rem;
+      padding: 0 0.76rem 0 0.2rem;
+      height: 0.56rem;
+      border-radius: 8px;
+      border: none;
+      float: left;
+      font-size: 0.26rem;
+      color: #878787;
+      z-index: 5;
+    }
+    input::-webkit-input-placeholder{
+      /* WebKit browsers */
+      color: #878787;
+    }
+    input:-moz-placeholder{
+      /* Mozilla Firefox 4 to 18 */
+      color: #878787;
+    }
+    input::-moz-placeholder{
+      /* Mozilla Firefox 19+ */
+      color: #878787;
+    }
+    input:-ms-input-placeholder{
+      /* Internet Explorer 10+ */
+      color: #878787;
+    }
+    .crecweb_search_i{
+      display: block;
+      width: 0.28rem;
+      height: 0.28rem;
+      background: url("http://static.crecgec.com/crecgecweb/search.png") 50% 50%  no-repeat;
+      background-size: 0.28rem 0.28rem;
+      position: absolute;
+      z-index: 10;
+      left: 6.14rem;
+      padding: 0.14rem;
+    }
+
+    .crecweb_notice{
+      height: 0.26rem;
+      line-height: 0.26rem;
+      margin: 0.2rem 0.3rem;
+      overflow: hidden;
+    }
+    .crecweb_notice_img{
+      width: 0.31rem;
+      height: 0.26rem;
+      background: url('http://static.crecgec.com/crecgecweb/notice.png') no-repeat;
+      background-size: 0.31rem 0.26rem;
+      float: left;
+    }
+    .crecweb_notice li {
+      font-size: 0.22rem;
+      position: relative;
+      list-style: none;
+    }
+    .crecweb_notice li a{
+      height: 0.26rem;
+      color: #2d2d2d;
+    }
+    .crecweb_notice li a span{
+      width: 3.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-left: 0.2rem;
+    }
+    .crecweb_notice li a em{
+      /*position: absolute;*/
+      /*right: 0;*/
+      font-style: normal;
+    }
+
+
+
+
+    .crecweb_tendering,.crecweb_winTheBid,.crecweb_qualifiedSupply{
+      margin: 0.3rem;
+    }
+    .tendering-table,.title{
+      height: 0.43rem;
+      line-height: 0.43rem;
+      border-bottom: 1px solid #d01e00;
+    }
+    .tendering-table ul{
+      height: 0.43rem;
+      float: left;
+    }
+    .tendering-table ul li{
+      height: 0.43rem;
+      list-style: none;
+      float: left;
+      font-size: 0.26rem;
+      padding:0 0.1rem;
+      margin-right: 0.1rem;
+      color: #000000;
+      background-color: #fff;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .title_show{
+      height: 0.43rem;
+      list-style: none;
+      float: left;
+      font-size: 0.26rem;
+      padding:0 0.1rem;
+      color: #fff !important;
+      background-color: #d01e00 !important;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .crecweb_more{
+      font-size: 0.2rem;
+      color: #000000;
+      float: right;
+    }
+    .crecweb_active{
+      color: #fff !important;
+      background-color: #d01e00 !important;
+    }
+
+    .swiper-slide ul li,.crecweb_content ul li,.crecweb_content_gys ul li{
+      overflow: hidden;
+      list-style: none;
+      color: #2d2d2d;
+      margin-top: 0.3rem;
+      position: relative;
+      list-style-image: none;
+      background-image: url( "http://static.crecgec.com/crecgecweb/yuandian.png" );
+      background-repeat: no-repeat;
+      background-position: 2px 0.1rem;
+      padding-left: 15px;
+    }
+    .swiper-slide ul li a,.crecweb_content ul li a,.crecweb_content_gys ul li a{
+      color: #2d2d2d;
+      font-size: 0.22rem;
+      float: left;
+    }
+    .swiper-slide ul li:first-child,.crecweb_content ul li:first-child,.crecweb_content_gys ul li:first-child{
+      margin-top: 0.2rem;
+    }
+    .swiper-slide ul li span,.crecweb_content ul li span{
+      display: block;
+      height: auto;
+      /*max-height: 0.6rem;*/
+      font-size: 0.22rem;
+      overflow: hidden;
+    }
+    .crecweb_content_gys ul li span{
+       width: 4.8rem;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       float: left;
+    }
+    .crecweb_content_gys ul li em{
+       position: absolute;
+       right: 0;
+       font-style: normal;
+    }
+    .swiper-slide ul li em,.crecweb_content ul li em{
+      font-size: 0.18rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-style: normal;
+    }
+
+
+
+    .crecweb_footer{
+      display: flex;
+      width: 100%;
+      background-color: #e5e5e5;
+      position: relative;
+      clear: both;
+      margin-top: -0.8rem;
+    }
+    .footer_con_line{
+      flex: 1;
+      position: relative;
+      border-bottom: 1px solid #c6c6c6;
+      top: -0.38rem;
+    }
+    .footer_con_text{
+      padding: 0 0.17rem;
+      font-size: 0.2rem;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      color: #a9a7a7;
+      margin: 0.3rem 0;
+    }
+
+    .crecweb_publicDiv{
+      width: 100%;
+      height: 0.2rem;
+      background-color: #e5e5e5;
+    }
+
+    .crecgecweb_loading{
+      position:fixed;
+      width: 100%;
+      height: 100%;
+      z-index:999;
+      background-color: rgba(229,229,229,1);
+    }
+    .crecgecweb_loading img{
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+<script>
+  setSize()
+
+  window.addEventListener('resize', () => {
+    setSize()
+  }, false)
+
+
+  function setSize() {
+    //       设置字体
+    var deviceWidth = document.documentElement.clientWidth;
+    if (deviceWidth < 320) {
+      deviceWidth = 320
+    }
+    if(deviceWidth > 750) {
+      deviceWidth = 750
+    }
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  }
+</script>
+<div class="crecgecweb_loading">
+  <img src="http://static.crecgec.com/crecgecweb/loding.gif" class="img-responsive">
+</div>
+<div class="index_container">
+  <div class="index_content">
+    <div class="index_con">
+      <!--广告位 start-->
+      <div class="crecweb_advertisement">
+        <!--<img src="../images/banner.png">-->
+        <!-- 61578069：门户首页焦点图 类型：固定 尺寸：714x400-->
+        <script type="text/javascript">//<![CDATA[
+        ac_as_id = "mm_115406913_16568627_61578069";
+        ac_format = 1;
+        ac_mode = 1;
+        ac_group_id = 1;
+        ac_server_base_url = "afpeng.alimama.com/";
+        //]]></script>
+        <script type="text/javascript" src="http://afpmm.alicdn.com/g/mm/afp-cdn/JS/k.js"></script>
+
+      </div>
+      <!--广告位 end-->
+      <!--search start-->
+      <!--<div class="crecweb_search">-->
+        <!--<input type="text" placeholder="请输入搜索内容" class="crecweb_search_input">-->
+        <!--<i class="crecweb_search_i"></i>-->
+      <!--</div>-->
+      <!--search end-->
+      <!--通知 start-->
+      <div class="crecweb_notice">
+        <i class="crecweb_notice_img"></i>
+        <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=41"></script>
+      </div>
+      <!--通知 end-->
+      <div class="crecweb_publicDiv"></div>
+      <!--招标公告、竞争性谈判、竞价采购、询价书 start-->
+      <div class="crecweb_tendering" >
+        <div class="tendering-table">
+          <ul>
+            <li class="crecweb_active">招标公告</li>
+            <li>竞争性谈判</li>
+            <li>竞价采购</li>
+            <li>询价书</li>
+          </ul>
+          <!--<a class="crecweb_more">更多></a>-->
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide crecweb_content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=8"></script>
+              </ul>
+            </div>
+            <div class="swiper-slide crecweb_content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=9"></script>
+              </ul>
+            </div>
+            <div class="swiper-slide crecweb_content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=56"></script>
+              </ul>
+            </div>
+            <div class="swiper-slide crecweb_content_sub">
+              <ul>
+                <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=55"></script>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--招标公告、竞争性谈判、竞价采购、询价书 end-->
+      <div class="crecweb_publicDiv"></div>
+      <!--中标公告 start-->
+      <div class="crecweb_winTheBid">
+        <div class="crecweb_winTheBid_title title">
+          <p class="title_show">中标公告</p>
+          <!--<a href="javascript:;" class="crecweb_more">更多></a>-->
+        </div>
+        <div class="winTheBid_content crecweb_content crecweb_content_sub">
+          <ul>
+            <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=13"></script>
+          </ul>
+        </div>
+      </div>
+      <!--中标公告 end-->
+      <div class="crecweb_publicDiv"></div>
+      <!--合格供应商招募 start-->
+      <div class="crecweb_qualifiedSupply">
+        <div class="qualifiedSupply_title title">
+          <p class="title_show">合格供应商招募</p>
+          <!--<a href="javascript:;" class="crecweb_more">更多></a>-->
+        </div>
+        <div class="crecweb_qualifiedSupply_content crecweb_content_gys">
+          <ul>
+            <script type="text/javascript" src="http://www.crecgec.com/api.php?mod=js&bid=14"></script>
+          </ul>
+        </div>
+      </div>
+      <!--合格供应商招募 end-->
+    </div>
+  </div>
+  <div class="crecweb_footer">
+    <div class="footer_con_line"></div>
+    <div class="footer_con_text">中铁鲁班商务网</div>
+    <div class="footer_con_line"></div>
+  </div>
+</div>
+<script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script>
+  window.onload = function () {
+    //       table切换
+    var mySwiper = new Swiper('.swiper-container')
+    $('.tendering-table ul li').on('click', function (e) {
+      e.preventDefault();
+      //得到当前索引
+      var i = $(this).index();
+      $('.tendering-table ul li').removeClass('active').eq(i).addClass('active');
+      mySwiper.slideTo(i, 1000, false);
+    });
+
+
+    var maxWidth = 36
+    $(".crecweb_content_sub ul li").each(function () {
+
+      if($(this).find('span').text().trim().length > maxWidth) {
+        $(this).find('span').text($(this).find('span').text().trim().substring(0, maxWidth))
+        $(this).find('span').text( $(this).find('span').text() + '...')
+      }
+      if($(this).find('span').text().trim().length > 21) {
+        $(this).find('span').css({'height':'0.72rem'})
+      }
+    })
+
+    //阻止触摸事件
+    document.addEventListener("touchmove", myFunction);
+
+    setTimeout(function () {
+      $(".crecgecweb_loading").hide()
+      //解除触摸锁定
+      document.removeEventListener("touchmove", myFunction);
+    }, 100)
+  }
+
+//  触摸事件
+  function myFunction(e) {
+    e.preventDefault();
+  }
+</script>
+</body>
+</html>

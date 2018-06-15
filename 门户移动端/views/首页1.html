@@ -200,7 +200,7 @@
     .swiper-slide ul li span,.content ul li span{
       display: block;
       height: auto;
-      max-height: 0.6rem;
+      /*max-height: 0.6rem;*/
       font-size: 0.22rem;
       overflow: hidden;
     }
@@ -280,8 +280,11 @@
   function setSize() {
     //       设置字体
     var deviceWidth = document.documentElement.clientWidth;
+    if (deviceWidth < 320) {
+      deviceWidth = 320
+    }
     if(deviceWidth > 750) {
-      deviceWidth = 750;
+      deviceWidth = 750
     }
     document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
   }
@@ -410,7 +413,7 @@
     });
 
 
-    var maxWidth = 45
+    var maxWidth = 36
     $(".content_sub ul li").each(function () {
 
       if($(this).find('span').text().trim().length > maxWidth) {
@@ -418,7 +421,7 @@
         $(this).find('span').text( $(this).find('span').text() + '...')
       }
       if($(this).find('span').text().trim().length > 21) {
-        $(this).find('span').css({'height':'0.6rem'})
+        $(this).find('span').css({'height':'0.72rem'})
       }
     })
 
