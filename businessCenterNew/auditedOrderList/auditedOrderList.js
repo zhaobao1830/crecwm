@@ -84,7 +84,6 @@ function aoSearch(goPage) {
     data: data,
     success: function (data) {
       dataJsonList = data.confirmMoneyList
-      count = Number(data.totalPage)
       countPage = Math.ceil(count / pageSize)
       $(".auditedOrderListCountPage").val(countPage)
       if (dataJsonList.length > 0) {

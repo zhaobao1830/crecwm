@@ -406,10 +406,12 @@
       e.preventDefault();
       //得到当前索引
       var i = $(this).index();
-      $('.tendering-table ul li').removeClass('active').eq(i).addClass('active');
+      $('.tendering-table ul li').removeClass('crecweb_active').eq(i).addClass('crecweb_active');
       mySwiper.slideTo(i, 1000, false);
     });
-
+    mySwiper.on('slideChange', function () {
+      $('.tendering-table ul li').removeClass('crecweb_active').eq(this.activeIndex).addClass('crecweb_active');
+    })
 
     var maxWidth = 36
     $(".crecweb_content_sub ul li").each(function () {
