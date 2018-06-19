@@ -86,6 +86,7 @@
     .letterInquiry_show_con ul li p{
       text-align: center;
       width: 1.5rem;
+      min-width: 1.5rem;
       background-color: #eeeeee;
     }
     .letterInquiry_show_con ul li span{
@@ -159,7 +160,7 @@
       overflow: hidden;
     }
     .supplier_table{
-      table-layout: fixed;
+      /*table-layout: fixed;*/
       border-collapse: collapse;
     }
     .supplier_table1{
@@ -462,7 +463,7 @@
                </thead>
                <tbody class="supplier_tbody">
                  <tr>
-                   <td class="crecweb_tablekey" rowspan="2">资质要求</td>
+                   <td class="crecweb_tablekey crecweb_tablekey_rowspan" rowspan="2">资质要求</td>
                    <td class="crecweb_tableValue">要求资质名称</td>
                    <td class="crecweb_tableValue">要求资质名称</td>
                  </tr>
@@ -518,5 +519,10 @@
        </div>
      </div>
    </div>
+   <script>
+//     $(function () {
+//       $(".crecweb_tablekey_rowspan").attr('rowspan','3')
+//     })
+   </script>
 </body>
 </html>
