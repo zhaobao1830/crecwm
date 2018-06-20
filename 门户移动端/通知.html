@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>通知</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <style>
+    html,body{
+      width: 7.5rem;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    ul,p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    .notice_container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .notice_content{
+      width: 100%;
+      min-height: 100%;
+    }
+    .notice_con{
+      position: relative;
+      padding-bottom: 0.8rem;
+      margin: 0.3rem 0.3rem 0;
+    }
+    .notice_title{
+      border-bottom: 1px solid #d01e00;
+      overflow: hidden;
+    }
+    .notice_title p{
+      padding: 0.1rem;
+      text-align: center;
+      font-size: 0.26rem;
+      color: #fff;
+      background-color: #d01e00;
+      float: left;
+    }
+
+
+    .crecweb_footer{
+      display: flex;
+      width: 100%;
+      background-color: #e5e5e5;
+      position: relative;
+      clear: both;
+      margin-top: -0.8rem;
+    }
+    .footer_con_line{
+      flex: 1;
+      position: relative;
+      border-bottom: 1px solid #c6c6c6;
+      top: -0.38rem;
+    }
+    .footer_con_text{
+      padding: 0 0.17rem;
+      font-size: 0.2rem;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      color: #a9a7a7;
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+<script>
+  setSize()
+
+  window.addEventListener('resize', () => {
+    setSize()
+  }, false)
+
+
+  function setSize() {
+    //       设置字体
+    var deviceWidth = document.documentElement.clientWidth;
+    if (deviceWidth < 320) {
+      deviceWidth = 320
+    }
+    if(deviceWidth > 750) {
+      deviceWidth = 750
+    }
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  }
+</script>
+<div class="notice_container">
+  <div class="notice_content">
+    <div class="notice_con">
+      <div class="notice_title">
+        <p>文章内容</p>
+      </div>
+    </div>
+  </div>
+  <div class="crecweb_footer">
+    <div class="footer_con_line"></div>
+    <div class="footer_con_text">中铁鲁班商务网</div>
+    <div class="footer_con_line"></div>
+  </div>
+</div>
+</body>
+</html>

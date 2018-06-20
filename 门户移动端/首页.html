@@ -200,7 +200,6 @@
     .swiper-slide ul li span,.crecweb_content ul li span{
       display: block;
       height: auto;
-      /*max-height: 0.6rem;*/
       font-size: 0.22rem;
       overflow: hidden;
     }
@@ -420,8 +419,10 @@
         $(this).find('span').text($(this).find('span').text().trim().substring(0, maxWidth))
         $(this).find('span').text( $(this).find('span').text() + '...')
       }
-      if($(this).find('span').text().trim().length > 21) {
-        $(this).find('span').css({'height':'0.72rem'})
+      if($(this).find('span').text().trim().length > 21 && $(this).find('span').text().trim().length < 31) {
+        $(this).find('span').css({'height':'0.6rem'})
+      }else{
+        $(this).find('span').css({'height':''})
       }
     })
 

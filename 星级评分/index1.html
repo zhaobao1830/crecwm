@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+  <div class="demo"></div>
+  <script src="demo/js/jquery.min.js"></script>
+  <script src="lib/jquery.raty.js"></script>
+  <script>
+    $(function () {
+      $.fn.raty.defaults.path = 'lib/imgNew';
+      $('.demo').raty({
+        size: 18
+      });
+    })
+  </script>
+</body>
+</html>
