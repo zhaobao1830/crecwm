@@ -5,31 +5,36 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
-  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-  <style>
-    .test ul li{
-      float: left;
-    }
-    .test1{
-      width: 100px;
-      height: 50px;
-      background-color: red;
-    }
-  </style>
 </head>
 <body>
-  <div class="ss"></div>
-  <script type="text/javascript" src="jquery-3.1.1.js"></script>
-  <script>
-    (function ($) {
-      $.extend({
-        become: function () {
-          console.log('wwwww')
-          return this
-        }
-      })
-    })(jQuery)
-    $.become()
-  </script>
+   <script>
+     let arr = [1,2,3,4]
+     // 遍历
+     arr.forEach(v => {
+       console.log(v)
+     })
+//     循环操作
+     console.log(arr.map(v => v*2))
+//     循环判断
+     console.log(arr.every(v => v > 2))
+     // 过滤
+     console.log(arr.filter(v => v <= 3))
+//     数组去重
+     let arr1 = [1,2,3,4,5,2]
+     let arr2 = [4,5,6,7]
+     console.log([...new Set(arr1)])
+//     并集
+     console.log(arr1.concat(arr2))
+//     去重并集
+     console.log([...new Set([...arr1,...arr2])])
+
+     const obj1 = {
+       name: 'zb',
+       age: '28'
+     }
+     Object.keys(obj1).forEach(v => {
+       console.log(v +':'+ obj1[v])
+     })
+   </script>
 </body>
 </html>

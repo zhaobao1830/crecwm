@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>树形</title>
+</head>
+<body>
+   <div class="content">
+
+   </div>
+   <script type="text/javascript" src="jquery-3.1.1.js"></script>
+  <script>
+    var list = [
+      {
+        id: '1',
+        name: '测试1',
+        children: [
+          {
+            id: '1_1',
+            name: '测试1_1'
+          },
+          {
+            id: '1_2',
+            name: '测试1_2'
+          },
+          {
+            id: '1_3',
+            name: '测试1_3'
+          }
+        ]
+      },
+      {
+        id: '2',
+        name: '测试2',
+        children: [
+          {
+            id: '2_1',
+            name: '测试2_1'
+          },
+          {
+            id: '2_2',
+            name: '测试2_2'
+          },
+          {
+            id: '2_3',
+            name: '测试2_3'
+          },
+          {
+            id: '2_4',
+            name: '测试2_4'
+          }
+        ]
+      }
+    ]
+
+    var first = ''
+    var second = ''
+    for(var i = 0;i < list.length; i++) {
+      first += '<div class="list_first"><label><input type="checkbox" value="'+list[i].name+'">'+list[i].name+'</label></div>'
+      if (list[i].length > 0) {
+        second += '<ul></ul>'
+        for (var j = 0; j < list[i].length; j++) {
+          second += '<li><div class="list_second"><label><input type="checkbox" value=""></label></div></li>'
+        }
+        $('.list_first').append(second)
+      }
+    }
+    $('.content').append(first)
+  </script>
+</body>
+</html>

@@ -50,7 +50,7 @@
     .queryPage_con_show{
       margin-top: 0.3rem;
     }
-    .queryPage_con_show ul li{
+    .queryPage_con_show_li{
       border-top: 1px solid #e5e5e5;
       list-style: none;
       position: relative;
@@ -61,11 +61,11 @@
       padding-left: 15px;
       margin-bottom: 0.2rem;
     }
-    .queryPage_con_show ul li:first-child{
+    .queryPage_con_show_li:first-child{
       border-top: none;
       background-position: 2px 0.1rem;
     }
-    .queryPage_con_show ul li .queryPage_li_title{
+    .queryPage_con_show_li .queryPage_li_title{
       font-size: 0.24rem;
       color: #2d2d2d;
       width: 6.9rem;
@@ -154,7 +154,7 @@
       </div>
       <div class="queryPage_con_show">
         <ul>
-          <li>
+          <li class="queryPage_con_show_li">
             <a href="javascript:;">
                <p class="queryPage_li_title">中铁隧道集团有限公司兴泉铁路宁泉段XQNQ-5标段项目</p>
                <span class="queryPage_li_con">中铁隧道集团三处有限公司上饶坑口货场物流园物流大道（上饶西货站至新320国道连接线）道路工程设计施工总承包项目经理部钢材</span>
@@ -164,7 +164,7 @@
               </em>
             </a>
           </li>
-          <li>
+          <li class="queryPage_con_show_li">
             <a href="javascript:;">
               <p class="queryPage_li_title">中铁隧道集团有限公司兴泉铁路宁泉段XQNQ-5标段项目</p>
               <span class="queryPage_li_con">中铁隧道集团三处有限公司上饶坑口货场物流园物流大道（上饶西货站至新320国道连接线）道路工程设计施工总承包项目经理部钢材</span>
@@ -174,7 +174,37 @@
               </em>
             </a>
           </li>
-          <li>
+          <li class="queryPage_con_show_li">
+            <a href="javascript:;">
+              <p class="queryPage_li_title">中铁隧道集团有限公司兴泉铁路宁泉段XQNQ-5标段项目</p>
+              <span class="queryPage_li_con">中铁隧道集团三处有限公司上饶坑口是大的他热舞人热二味儿法第三</span>
+              <em class="queryPage_li_region_data">
+                <span class="queryPage_li_region">华东区</span>
+                <span class="queryPage_li_data">2018年5月30日</span>
+              </em>
+            </a>
+          </li>
+          <li class="queryPage_con_show_li">
+            <a href="javascript:;">
+              <p class="queryPage_li_title">中铁隧道集团有限公司兴泉铁路宁泉段XQNQ-5标段项目</p>
+              <span class="queryPage_li_con">中铁隧道集团三处有限公司上饶坑口是大的他热舞人热二味儿法第三</span>
+              <em class="queryPage_li_region_data">
+                <span class="queryPage_li_region">华东区</span>
+                <span class="queryPage_li_data">2018年5月30日</span>
+              </em>
+            </a>
+          </li>
+          <li class="queryPage_con_show_li">
+            <a href="javascript:;">
+              <p class="queryPage_li_title">中铁隧道集团有限公司兴泉铁路宁泉段XQNQ-5标段项目</p>
+              <span class="queryPage_li_con">中铁隧道集团三处有限公司上饶坑口是大的他热舞人热二味儿法第三</span>
+              <em class="queryPage_li_region_data">
+                <span class="queryPage_li_region">华东区</span>
+                <span class="queryPage_li_data">2018年5月30日</span>
+              </em>
+            </a>
+          </li>
+          <li class="queryPage_con_show_li">
             <a href="javascript:;">
               <p class="queryPage_li_title">中铁隧道集团有限公司兴泉铁路宁泉段XQNQ-5标段项目</p>
               <span class="queryPage_li_con">中铁隧道集团三处有限公司上饶坑口是大的他热舞人热二味儿法第三</span>
@@ -198,16 +228,14 @@
 <script>
   $(function () {
     var maxWidth = 36
-    $(".queryPage_con_show ul li").each(function () {
+    $(".queryPage_con_show_li").each(function () {
 
       if($(this).find('.queryPage_li_con').text().trim().length > maxWidth) {
         $(this).find('.queryPage_li_con').text($(this).find('.queryPage_li_con').text().trim().substring(0, maxWidth))
         $(this).find('.queryPage_li_con').text( $(this).find('.queryPage_li_con').text() + '...')
       }
-      console.log($(this).find('span[class=queryPage_li_con]').text().trim())
-      console.log($(this).find('span[class=queryPage_li_con]').text().trim().length)
       if($(this).find('span[class=queryPage_li_con]').text().trim().length > 21 && $(this).find('span[class=queryPage_li_con]').text().trim().length < 31) {
-        $(this).find('span[class=queryPage_li_con]').css({'height':'0.6rem'})
+        $(this).find('span[class=queryPage_li_con]').css({'height':'0.7rem'})
       } else {
         $(this).find('span[class=queryPage_li_con]').css({'height':''})
       }

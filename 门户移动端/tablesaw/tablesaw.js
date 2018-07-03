@@ -3130,7 +3130,7 @@ if (Tablesaw.mustard) {
 	function createSwipeTable(tbl, $table) {
 		var tblsaw = $table.data("tablesaw");
 
-		var $btns = $("<div class='tablesaw-advance' style='display: none'></div>");
+		var $btns = $("<div class='tablesaw-advance'></div>");
 		// TODO next major version: remove .btn
 		var $prevBtn = $(
 			"<a href='#' class='btn tablesaw-nav-btn tablesaw-btn btn-micro left'>" +
