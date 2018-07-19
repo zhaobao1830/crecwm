@@ -16,23 +16,29 @@
 			curTarget: null,
 			curTmpTarget: null,
 			noSel: function() {
+			  console.log('noSel')
 				try {
 					window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
 				} catch(e){}
 			},
 			dragTree2Dom: function(treeId, treeNodes) {
+        console.log('dragTree2Dom')
 				return !treeNodes[0].isParent;
 			},
 			prevTree: function(treeId, treeNodes, targetNode) {
+        console.log('prevTree')
 				return !targetNode.isParent && targetNode.parentTId == treeNodes[0].parentTId;
 			},
 			nextTree: function(treeId, treeNodes, targetNode) {
+        console.log('nextTree')
 				return !targetNode.isParent && targetNode.parentTId == treeNodes[0].parentTId;
 			},
 			innerTree: function(treeId, treeNodes, targetNode) {
+        console.log('innerTree')
 				return targetNode!=null && targetNode.isParent && targetNode.tId == treeNodes[0].parentTId;
 			},
 			dragMove: function(e, treeId, treeNodes) {
+        console.log('dragMove')
 				var p = null, pId = 'dom_' + treeNodes[0].pId;
 				if (e.target.id == pId) {
 					p = $(e.target);
@@ -49,6 +55,7 @@
 				}
 			},
 			dropTree2Dom: function(e, treeId, treeNodes, targetNode, moveType) {
+        console.log('dropTree2Dom')
 				var domId = "dom_" + treeNodes[0].getParentNode().id;
 				if (moveType == null && (domId == e.target.id || $(e.target).parents("#" + domId).length > 0)) {
 					var zTree = $.fn.zTree.getZTreeObj("treeDemo");
@@ -67,6 +74,8 @@
 				}
 			},
 			dom2Tree: function(e, treeId, treeNode) {
+        console.log('dom2Tree')
+        console.log(treeNode)
 				var target = MoveTest.curTarget, tmpTarget = MoveTest.curTmpTarget;
 				if (!target) return;
 				var zTree = $.fn.zTree.getZTreeObj("treeDemo"), parentNode;
@@ -90,6 +99,7 @@
 				MoveTest.curTmpTarget = null;
 			},
 			updateType: function() {
+        console.log('updateType')
 				var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
 				nodes = zTree.getNodes();
 				for (var i=0, l=nodes.length; i<l; i++) {
@@ -99,40 +109,52 @@
 				}
 			},
 			bindDom: function() {
+        console.log('bindDom')
 				$(".domBtnDiv").bind("mousedown", MoveTest.bindMouseDown);
 			},
 			bindMouseDown: function(e) {
+        console.log('bindMouseDown')
 				var target = e.target;
+        console.log(target)
 				if (target!=null && target.className=="domBtn") {
 					var doc = $(document), target = $(target),
 					docScrollTop = doc.scrollTop(),
 					docScrollLeft = doc.scrollLeft();
 					target.addClass("domBtn_Disabled");
 					target.removeClass("domBtn");
-					curDom = $("<span class='dom_tmp domBtn'>" + target.text() + "</span>");
-					curDom.appendTo("body");
-
-					curDom.css({
-						"top": (e.clientY + docScrollTop + 3) + "px",
-						"left": (e.clientX + docScrollLeft + 3) + "px"
-					});
+//					curDom = $("<span class='dom_tmp domBtn'>" + target.text() + "</span>");
+//					curDom.appendTo("body");
+//          console.log('...........')
+//          console.log(curDom)
+//					curDom.css({
+//						"top": (e.clientY + docScrollTop + 3) + "px",
+//						"left": (e.clientX + docScrollLeft + 3) + "px"
+//					});
 					MoveTest.curTarget = target;
-					MoveTest.curTmpTarget = curDom;
+//					MoveTest.curTmpTarget = curDom;
 
 					doc.bind("mousemove", MoveTest.bindMouseMove);
 					doc.bind("mouseup", MoveTest.bindMouseUp);
-					doc.bind("selectstart", MoveTest.docSelect);
 				}
 				if(e.preventDefault) {
 					e.preventDefault();
 				}
 			},
 			bindMouseMove: function(e) {
+        console.log('bindMouseMove')
 				MoveTest.noSel();
-				var doc = $(document), 
+				var doc = $(document),
 				docScrollTop = doc.scrollTop(),
 				docScrollLeft = doc.scrollLeft(),
-				tmpTarget = MoveTest.curTmpTarget;
+          tmpTarget;
+				if(!MoveTest.curTmpTarget){
+          curDom = $("<span class='dom_tmp domBtn'>第三方发送到的神烦大叔</span>");
+          curDom.appendTo("body");
+          MoveTest.curTmpTarget = curDom
+        }
+
+        console.log(MoveTest.curTmpTarget)
+        tmpTarget = curDom
 				if (tmpTarget) {
 					tmpTarget.css({
 						"top": (e.clientY + docScrollTop + 3) + "px",
@@ -142,24 +164,28 @@
 				return false;
 			},
 			bindMouseUp: function(e) {
+        console.log('bindMouseUp')
 				var doc = $(document);
 				doc.unbind("mousemove", MoveTest.bindMouseMove);
 				doc.unbind("mouseup", MoveTest.bindMouseUp);
-				doc.unbind("selectstart", MoveTest.docSelect);
-
+        console.log('oooooooooooooo')
+        console.log(MoveTest.curTarget)
+        console.log(MoveTest.curTmpTarget)
 				var target = MoveTest.curTarget, tmpTarget = MoveTest.curTmpTarget;
 				if (tmpTarget) tmpTarget.remove();
 
 				if ($(e.target).parents("#treeDemo").length == 0) {
+				  console.log('ooooooooooooooooooooooooooo')
 					if (target) {
-						target.removeClass("domBtn_Disabled");
-						target.addClass("domBtn");
+
+//						target.removeClass("domBtn_Disabled");
 					}
 					MoveTest.curTarget = null;
 					MoveTest.curTmpTarget = null;
 				}
 			},
 			bindSelect: function() {
+        console.log('bindSelect')
 				return false;
 			}
 		};
