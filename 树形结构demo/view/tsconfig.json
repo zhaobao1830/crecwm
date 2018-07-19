@@ -1,0 +1,74 @@
+[{
+  "id": "10",
+  "cid": "2",
+  "parentid": "0",
+  "label": "我是学生",
+  "target": "",
+  "href": "a:2:{s:6:"
+  action ";s:17:"
+  Portal / Page / index ";s:5:"
+  param ";a:1:{s:2:"
+  id ";s:1:"
+  2 ";}}",
+  "icon": "",
+  "status": "1",
+  "listorder": "0",
+  "path": "0-10",
+  "childs": [{
+    "id": "11",
+    "cid": "2",
+    "parentid": "10",
+    "label": "如何注册",
+    "target": "",
+    "href": "https://passport.crecgec.com/login",
+    "icon": "",
+    "status": "1",
+    "listorder": "0",
+    "path": "0-10-11"
+  }, {
+    "id": "12",
+    "cid": "2",
+    "parentid": "10",
+    "label": "购买课程",
+    "target": "",
+    "href": "./index.php?g=Course&m=Course&a=coursecenter",
+    "icon": "",
+    "status": "1",
+    "listorder": "0",
+    "path": "0-10-12"
+  }]
+}, {
+  "id": "5",
+  "cid": "2",
+  "parentid": "0",
+  "label": "我是教师",
+  "target": "",
+  "href": "on",
+  "icon": "",
+  "status": "1",
+  "listorder": "1",
+  "path": "0-5",
+  "childs": [{
+    "id": "8",
+    "cid": "2",
+    "parentid": "5",
+    "label": "成为教师",
+    "target": "",
+    "href": "https://passport.crecgec.com/login",
+    "icon": "",
+    "status": "1",
+    "listorder": "0",
+    "path": "0-5-8"
+  }, {
+    "id": "7",
+    "cid": "2",
+    "parentid": "5",
+    "label": "发布课程",
+    "target": "",
+    "href": "./index.php?g=teacher&m=Center&a=createcourse",
+    "icon": "",
+    "status": "1",
+    "listorder": "0",
+    "path": "0-5-7"
+  }]
+}]

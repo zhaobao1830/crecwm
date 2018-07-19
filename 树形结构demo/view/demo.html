@@ -30,6 +30,34 @@
     }
   </style>
 </head>
+<script>
+  function iEsc(){ return false; }
+  function iRec(){ return true; }
+  function DisableKeys() {
+    if(event.ctrlKey || event.shiftKey || event.altKey)  {
+      window.event.returnValue=false;
+      iEsc();}
+  }
+  document.ondragstart=iEsc;
+  document.onkeydown=DisableKeys;
+  document.oncontextmenu=iEsc;
+  if (typeof document.onselectstart !="undefined")
+    document.onselectstart=iEsc;
+  else{//qsyz.net
+    document.onmousedown=iEsc;
+    document.onmouseup=iRec;
+  }
+  function DisableRightClick(www_qsyz_net){
+    if (window.Event){
+      if (www_qsyz_net.which == 2 || www_qsyz_net.which == 3)
+        iEsc();}
+    else
+    if (event.button == 2 || event.button == 3){
+      event.cancelBubble = true
+      event.returnValue = false;
+      iEsc();}
+  }
+</script>
 <body>
 <div class="content_wrap">
   <div class="zTreeDemoBackground left">
@@ -52,9 +80,36 @@
     </ul>
   </div>
 </div>
+
+<!--<SCRIPT type="text/javascript">-->
+  <!--var setting = {-->
+    <!--view: {-->
+      <!--fontCss: getFont,-->
+      <!--nameIsHTML: true-->
+    <!--}-->
+  <!--};-->
+  <!--var zNodes =[-->
+    <!--{ name:"粗体字", font:{'font-weight':'bold'} },-->
+    <!--{ name:"斜体字", font:{'font-style':'italic'}},-->
+    <!--{ name:"有背景的字", font:{'background-color':'black', 'color':'white'}},-->
+    <!--{ name:"红色字", font:{'color':'red'}},-->
+    <!--{ name:"蓝色字", font:{'color':'blue'}},-->
+    <!--{ name:"<span style='color:blue;margin-right:0px;'>view</span>.<span style='color:red;margin-right:0px;'>nameIsHTML</span>"},-->
+    <!--{ name:"zTree 默认样式"}-->
+  <!--];-->
+  <!--function getFont(treeId, node) {-->
+    <!--return node.font ? node.font : {};-->
+  <!--}-->
+  <!--$(document).ready(function(){-->
+    <!--$.fn.zTree.init($("#treeDemo"), setting, zNodes);-->
+  <!--});-->
+
+<!--</script>-->
+
   <script>
     var setting = {
       view: {
+        fontCss: getFont,
         selectedMulti: false, // 是否允许同时选中多个节点
         addHoverDom:addHoverDom, // 鼠标移动到节点触发的事件
         removeHoverDom:removeHoverDom // 鼠标移开节点触发的事件
@@ -65,9 +120,9 @@
         removeTitle:'删除',
         renameTitle:'重命名'
       },
-      check: {
-        enable: true
-      },
+//      check: {
+//        enable: true
+//      },
       data: {
         key: {
           title: "title"
@@ -87,7 +142,7 @@
       }
     };
     var zNodes =[
-      { id:1, pId:0, name:"父节点1", title:"", open:true},
+      { id:1, pId:0, name:"父节点1", title:"", open:true, font:{'color':'red'}},
       { id:11, pId:1, name:"父节点11", title:""},
       { id:111, pId:11, name:"叶子节点111", title:""},
       { id:112, pId:11, name:"叶子节点112", title:""},
@@ -132,6 +187,7 @@
 //    }
     var newCount = 1;
     function addHoverDom(treeId,treeNode){
+//      console.log(treeNode.level)
       var sObj = $("#" + treeNode.tId + "_span");
       if (treeNode.editNameFlag || $("#addBtn_"+treeNode.tId).length>0) return;
       var addStr = "<span class='button add' id='addBtn_" + treeNode.tId
@@ -139,6 +195,7 @@
       sObj.after(addStr);
       var btn = $("#addBtn_"+treeNode.tId);
       if (btn) btn.bind("click", function(){
+        console.log('这是添加子节点')
         //在这里向后台发送请求保存一个新建的叶子节点，父id为treeNode.id,让后将下面的100+newCount换成返回的id
         var zTree = $.fn.zTree.getZTreeObj("treeDemo");
         zTree.addNodes(treeNode, {id:(100 + newCount), pId:treeNode.id, name:"new node" + (newCount++)});
@@ -191,7 +248,27 @@
       $("#sy").on("change", setCheck);
       $("#pn").on("change", setCheck);
       $("#sn").on("change", setCheck);
+
+      //获得树形图对象
+      var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+      //获取根节点个数,getNodes获取的是根节点的集合
+      var nodeList = zTree.getNodes();
+      //展开第一个根节点
+      zTree.expandNode(nodeList[0], true);
+      // 根节点id
+      var nodeList_0_id = nodeList[0].id
+      // 通过ID获取节点
+      var nodeList = zTree.getNodeByParam("id", nodeList_0_id, null)
+
+      if(null != nodeList){
+        nodeList.font = {'color':'red'}
+        zTree.updateNode(nodeList);
+        console.log(nodeList)
+      }
     });
+    function getFont(treeId, node) {
+      return node.font ? node.font : {};
+    }
   </script>
 </body>
 </html>
