@@ -136,7 +136,7 @@
 
   function setSize() {
     //       设置字体
-    var deviceWidth = document.documentElement.clientWidth;
+    var deviceWidth = document.documentElement.clientWidth || document.body.clientWidth;
     if (deviceWidth < 320) {
       deviceWidth = 320
     }
