@@ -43,7 +43,7 @@
 		function beforeDrag(treeId, treeNodes) {
 			return false;
 		}
-		
+
 		function setEdit() {
 			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
 			remove = $("#remove").attr("checked"),
@@ -64,7 +64,7 @@
 				code.append("<li>"+str[i]+"</li>");
 			}
 		}
-		
+
 		$(document).ready(function(){
 			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
 			setEdit();
