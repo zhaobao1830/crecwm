@@ -11,15 +11,17 @@
     table{
       width: 100%;
       table-layout: fixed;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
     }
     thead{
       font-size: 14px;
       text-align: center;
       background-color: #eeeeee;
     }
-    thead tr, thead td {
+    thead td {
       border: 1px solid #dddddd;
+      /*border-bottom: none;*/
       color: black;
       height: 35px;
     }
@@ -28,8 +30,8 @@
       text-align: center;
     }
    tbody td {
-      border: 1px solid #dddddd;
-      /*border-top: none;*/
+      border: 1px solid;
+      border-color:  #dddddd;
       color: #222222;
     }
     tbody tr.parentTitle{
@@ -64,6 +66,12 @@
       color: #222222;
       margin-left: 20px;
       margin-top: -2px;
+    }
+    .borderBottomColor{
+      border-bottom-color: red !important;
+    }
+    .borderTopColor{
+      border-top-color: red !important;
     }
   </style>
 </head>
@@ -135,14 +143,15 @@
         $("tr.parentTitle").click(function () {  //获取所谓的父行
           //添加/删除高亮效果             //  隐藏/显示所谓的子行
           $(this).toggleClass("selected").siblings(".child_" + this.id).toggle();
+          var s = "child_" + this.id
           if($(this).hasClass("selected")){
+            $(this).find("td").removeClass('borderTopColor')
             $(this).removeClass("trNowClick")
+            $("tr[class= "+s+"]:last").find("td").removeClass('borderBottomColor')
           } else {
             $(this).addClass("trNowClick")
-            var s = $(".child_" + this.id)[$(".child_" + this.id).length-1]
-            console.log(s)
-            console.log($(s).querySelectorAll('td'))
-            $(s).find("td").style.borderBottomColor = "red"
+            $(this).find("td").addClass('borderTopColor')
+            $("tr[class= "+s+"]:last").find("td").addClass('borderBottomColor')
           }
           //想让表格一加载就折叠，需要加上click事件触发就行了
         }).click();
