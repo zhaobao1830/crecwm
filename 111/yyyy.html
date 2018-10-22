@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <style>
+    /*table*/
+    table{
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    thead{
+      font-size: 14px;
+      text-align: center;
+      background-color: #eeeeee;
+    }
+    thead tr, thead td {
+      border: 1px solid #dddddd;
+      color: black;
+      height: 35px;
+    }
+    tbody{
+      font-size: 12px;
+      text-align: center;
+    }
+   tbody td {
+      border: 1px solid #dddddd;
+      /*border-top: none;*/
+      color: #222222;
+    }
+    tbody tr.parentTitle{
+      cursor: pointer;
+    }
+    tbody tr.childTitle{
+      background-color: #f6f6f6;
+    }
+    tbody td {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 10px 5px;
+    }
+    .trNowClick{
+      background-color: #f6f6f6;
+      border-top-color: red !important;
+    }
+    tbody td a {
+      width: 12px;
+      height: 12px;
+      display: block;
+      float: left;
+      color: #77afea;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    tbody td span {
+      width: 12px;
+      height: 12px;
+      float: left;
+      color: #222222;
+      margin-left: 20px;
+      margin-top: -2px;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <td colspan="2" width="200">序号</td>
+    <td colspan="2">昵称</td>
+    <td colspan="2">课程数</td>
+    <td colspan="2">课时数</td>
+  </tr>
+  </thead>
+  <tbody class="tbody-con">
+  </tbody>
+</table>
+
+<script>
+  $(function () {
+
+    var tbodyList=""
+    var datas = ''
+    var bzNum = 0
+    var bzChildNum = 0
+    var startValue = 0
+    $.ajax({
+      url: 'yyyy.json',
+      success: function (data) {
+        datas = data
+        if (datas) {
+          for(var i in datas) {
+            bzNum = Number(startValue) + Number(bzNum) + 1
+            tbodyList += "<tr class='parentTitle' id="+datas[i].id+">"
+            tbodyList += "<td colspan='2'>"+bzNum+"</td>"
+            tbodyList += "<td colspan='2'>"+datas[i].user_nicename+"</td>"
+            tbodyList += "<td colspan='2'>"+datas[i].data.length+"</td>"
+            tbodyList += "<td colspan='2'>"+getSectionnum(datas[i].data)+"</td>"
+            tbodyList += "</tr>"
+            if (datas[i].data.length > 0) {
+              tbodyList += "<tr class='childTitle child_"+datas[i].id+"'>"
+              tbodyList += "<td width='70'>序号</td>"
+              tbodyList += "<td>讲师姓名</td>"
+              tbodyList += "<td>讲师昵称</td>"
+              tbodyList += "<td>课程名称</td>"
+              tbodyList += "<td>课程分类</td>"
+              tbodyList += "<td>课时数量</td>"
+              tbodyList += "<td>课程订阅量</td>"
+              tbodyList += "<td width='200'>课程创建时间</td>"
+              tbodyList += "</tr>"
+              for (var j = 0; j < datas[i].data.length; j++) {
+                bzChildNum = j +1
+                tbodyList += "<tr class='child_"+datas[i].id+"'>"
+                tbodyList += "<td>"+bzChildNum+"</td>"
+                tbodyList += "<td>"+datas[i].user_login+"</td>"
+                tbodyList += "<td>"+datas[i].user_nicename+"</td>"
+                tbodyList += "<td title='"+datas[i].data[j].cs_name+"'>"+datas[i].data[j].cs_name+"</td>"
+                tbodyList += "<td>"+datas[i].data[j].cs_type.name+"</td>"
+                tbodyList += "<td>"+datas[i].data[j].sectionnum+"</td>"
+                tbodyList += "<td>"+datas[i].data[j].xueyuannum+"</td>"
+                tbodyList += "<td>"+datas[i].data[j].cs_addtime+"</td>"
+                tbodyList += "</tr>"
+              }
+            }
+          }
+        }
+        $(".tbody-con").append(tbodyList)
+
+        //表格的展开和收缩实现代码
+        $("tr.parentTitle").click(function () {  //获取所谓的父行
+          //添加/删除高亮效果             //  隐藏/显示所谓的子行
+          $(this).toggleClass("selected").siblings(".child_" + this.id).toggle();
+          if($(this).hasClass("selected")){
+            $(this).removeClass("trNowClick")
+          } else {
+            $(this).addClass("trNowClick")
+            var s = $(".child_" + this.id)[$(".child_" + this.id).length-1]
+            console.log(s)
+            console.log($(s).querySelectorAll('td'))
+            $(s).find("td").style.borderBottomColor = "red"
+          }
+          //想让表格一加载就折叠，需要加上click事件触发就行了
+        }).click();
+      }
+    })
+    
+    function getSectionnum(data) {
+      var sectionNum = 0
+      for (var i = 0; i <  data.length; i++) {
+        sectionNum += Number(data[i].sectionnum)
+      }
+      return sectionNum
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+{
+  "39": {
+    "id": "39",
+    "user_login": "admin1",
+    "user_nicename": "admin1",
+    "data": []
+  },
+  "26": {
+    "id": "26",
+    "user_login": "zhanglianwei",
+    "user_nicename": "张连伟",
+    "data": [{
+      "id": "71",
+      "cs_teacher": "26",
+      "cs_name": "新版中国中铁工程项目物资管理系统(持续更新中......)",
+      "ty_id": "36",
+      "secnum": "23",
+      "cs_addtime": "2018-06-28 15:26:55",
+      "xueyuannum": 0,
+      "sectionnum": "23",
+      "cs_type": {
+        "term_id": "36",
+        "name": "test",
+        "slug": "",
+        "description": "",
+        "parent": "27",
+        "count": "0",
+        "path": "0-6-27-36",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "40",
+      "cs_teacher": "26",
+      "cs_name": "竞价采购",
+      "ty_id": "16",
+      "secnum": "10",
+      "cs_addtime": "2018-05-22 15:54:16",
+      "xueyuannum": 0,
+      "sectionnum": "10",
+      "cs_type": {
+        "term_id": "16",
+        "name": "动态竞价采购",
+        "slug": "",
+        "description": "标准化程度高、有一定采购批量且市场竞争充分的产品或服务。",
+        "parent": "9",
+        "count": "0",
+        "path": "0-9-16",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "60",
+      "cs_teacher": "26",
+      "cs_name": "询价采购",
+      "ty_id": "28",
+      "secnum": "3",
+      "cs_addtime": "2018-05-26 11:49:48",
+      "xueyuannum": 4,
+      "sectionnum": "3",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }]
+  },
+  "31": {
+    "id": "31",
+    "user_login": "shangmaochang",
+    "user_nicename": "尚茂常",
+    "data": [{
+      "id": "65",
+      "cs_teacher": "31",
+      "cs_name": "直报系统",
+      "ty_id": "13",
+      "secnum": "2",
+      "cs_addtime": "2018-05-28 11:12:34",
+      "xueyuannum": 5,
+      "sectionnum": "2",
+      "cs_type": {
+        "term_id": "13",
+        "name": "直报系统",
+        "slug": "",
+        "description": "直报系统",
+        "parent": "0",
+        "count": "0",
+        "path": "0-13",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "6",
+        "status": "1"
+      }
+    }]
+  },
+  "24": {
+    "id": "24",
+    "user_login": "huanghui",
+    "user_nicename": "黄辉",
+    "data": [{
+      "id": "59",
+      "cs_teacher": "24",
+      "cs_name": "操作手册",
+      "ty_id": "14",
+      "secnum": "6",
+      "cs_addtime": "2018-05-26 10:19:58",
+      "xueyuannum": 0,
+      "sectionnum": "6",
+      "cs_type": {
+        "term_id": "14",
+        "name": "操作手册",
+        "slug": "",
+        "description": "操作手册",
+        "parent": "0",
+        "count": "0",
+        "path": "0-14",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "7",
+        "status": "1"
+      }
+    }, {
+      "id": "61",
+      "cs_teacher": "24",
+      "cs_name": "竞争性谈判",
+      "ty_id": "24",
+      "secnum": "6",
+      "cs_addtime": "2018-05-26 15:40:36",
+      "xueyuannum": 5,
+      "sectionnum": "6",
+      "cs_type": {
+        "term_id": "24",
+        "name": "物资、设备",
+        "slug": "",
+        "description": "物资、设备",
+        "parent": "17",
+        "count": "0",
+        "path": "0-9-17-24",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "39",
+      "cs_teacher": "24",
+      "cs_name": "劳务竞争性谈判劳务竞争性谈判劳务竞争性谈判劳务竞争性谈判劳务竞争性谈判劳务竞争性谈判",
+      "ty_id": "25",
+      "secnum": "5",
+      "cs_addtime": "2018-05-22 15:01:12",
+      "xueyuannum": 3,
+      "sectionnum": "5",
+      "cs_type": {
+        "term_id": "25",
+        "name": "劳务",
+        "slug": "",
+        "description": "劳务",
+        "parent": "17",
+        "count": "0",
+        "path": "0-9-17-25",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "38",
+      "cs_teacher": "24",
+      "cs_name": "计划管理",
+      "ty_id": "28",
+      "secnum": "3",
+      "cs_addtime": "2018-06-28 14:35:09",
+      "xueyuannum": 0,
+      "sectionnum": "3",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }]
+  },
+  "27": {
+    "id": "27",
+    "user_login": "dongbin",
+    "user_nicename": "董斌",
+    "data": [{
+      "id": "43",
+      "cs_teacher": "27",
+      "cs_name": "招标采购",
+      "ty_id": "28",
+      "secnum": "6",
+      "cs_addtime": "2018-05-22 16:42:16",
+      "xueyuannum": 3,
+      "sectionnum": "6",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "70",
+      "cs_teacher": "27",
+      "cs_name": "测试课程",
+      "ty_id": "28",
+      "secnum": "2",
+      "cs_addtime": "2018-06-26 09:49:04",
+      "xueyuannum": 6,
+      "sectionnum": "2",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "103",
+      "cs_teacher": "27",
+      "cs_name": "组织测试",
+      "ty_id": "28",
+      "secnum": "1",
+      "cs_addtime": "2018-09-03 14:21:42",
+      "xueyuannum": 0,
+      "sectionnum": "1",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "105",
+      "cs_teacher": "27",
+      "cs_name": "直播测试",
+      "ty_id": "28",
+      "secnum": "1",
+      "cs_addtime": "2018-10-22 08:50:11",
+      "xueyuannum": 0,
+      "sectionnum": "1",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }, {
+      "id": "67",
+      "cs_teacher": "27",
+      "cs_name": "测试课程11",
+      "ty_id": "29",
+      "secnum": "1",
+      "cs_addtime": "2018-05-08 09:27:55",
+      "xueyuannum": 2,
+      "sectionnum": "1",
+      "cs_type": {
+        "term_id": "29",
+        "name": "供应商",
+        "slug": "",
+        "description": "供应商注册、企业认证、购买服务、投标报价",
+        "parent": "28",
+        "count": "0",
+        "path": "0-28-29",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }]
+  },
+  "28": {
+    "id": "28",
+    "user_login": "liuleiadmin",
+    "user_nicename": "刘磊",
+    "data": [{
+      "id": "41",
+      "cs_teacher": "28",
+      "cs_name": "系统管理",
+      "ty_id": "28",
+      "secnum": "2",
+      "cs_addtime": "2018-05-22 16:10:15",
+      "xueyuannum": 1,
+      "sectionnum": "2",
+      "cs_type": {
+        "term_id": "28",
+        "name": "供应商管理",
+        "slug": "",
+        "description": "",
+        "parent": "0",
+        "count": "0",
+        "path": "0-28",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }]
+  },
+  "29": {
+    "id": "29",
+    "user_login": "dailiyun",
+    "user_nicename": "戴藜芸",
+    "data": [{
+      "id": "42",
+      "cs_teacher": "29",
+      "cs_name": "供应商评价",
+      "ty_id": "30",
+      "secnum": "4",
+      "cs_addtime": "2018-05-22 16:27:52",
+      "xueyuannum": 1,
+      "sectionnum": "4",
+      "cs_type": {
+        "term_id": "30",
+        "name": "供应商管理（内部用户）",
+        "slug": "",
+        "description": "合格供应商、优质供应商、战略供应商",
+        "parent": "28",
+        "count": "0",
+        "path": "0-28-30",
+        "seo_title": "",
+        "seo_keywords": "",
+        "seo_description": "",
+        "listorder": "0",
+        "status": "1"
+      }
+    }]
+  }
+}
