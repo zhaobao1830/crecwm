@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1，minimum-scale=1,maximum-sacle=1，user-scalable=no">
+</head>
+<body>
+  <script>
+    var url = "https://www.imooc.com/course/programdetail?p=2&s=3"
+
+    var newUrl = changeURLArg(url,'p',1)
+    console.log(newUrl)
+    function changeURLArg(url,arg,arg_val){
+      var pattern=arg+'=([^&]*)';
+      var replaceText=arg+'='+arg_val;
+      if(url.match(pattern)){
+        var tmp='/('+ arg+'=)([^&]*)/gi';
+        tmp=url.replace(eval(tmp),replaceText);
+        return tmp;
+      }else{
+        if(url.match('[\?]')){
+          return url+'&'+replaceText;
+        }else{
+          return url+'?'+replaceText;
+        }
+      }
+      return url+'\n'+arg+'\n'+arg_val;
+    }
+  </script>
+</body>
+</html>
